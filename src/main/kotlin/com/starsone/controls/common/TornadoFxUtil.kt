@@ -1,6 +1,5 @@
-package com.starsone.demo.util
+package com.starsone.controls.common
 
-import com.starsone.controls.common.DialogBuilder
 import com.starsone.controls.model.UpdateInfo
 import javafx.scene.input.Clipboard
 import javafx.scene.input.ClipboardContent

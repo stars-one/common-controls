@@ -1,7 +1,6 @@
 package com.starsone.controls.view
 
-import com.starsone.controls.common.DialogBuilder
-import com.starsone.demo.util.*
+import com.starsone.controls.common.*
 import javafx.scene.input.KeyCombination
 import kfoenix.jfxbutton
 import tornadofx.*

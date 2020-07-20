@@ -2,7 +2,6 @@ package com.starsone.controls.common
 
 import com.jfoenix.controls.*
 import com.starsone.controls.model.UpdateInfo
-import com.starsone.demo.util.TornadoFxUtil
 import com.starsone.icontext.MaterialDesignIconTextFactory
 import javafx.geometry.Pos
 import javafx.scene.Node

@@ -1,13 +1,12 @@
-package com.starsone.demo.util
+package com.starsone.controls.common
 
 import com.jfoenix.controls.JFXAlert
 import com.jfoenix.controls.JFXButton
 import com.jfoenix.controls.JFXSnackbar
 import com.jfoenix.controls.JFXSpinner
-import com.starsone.controls.common.DialogBuilder
+import com.starsone.controls.common.TornadoFxUtil.Companion.completeUrl
 import com.starsone.controls.download.HttpDownloader
 import com.starsone.controls.download.LanzouParse
-import com.starsone.demo.util.TornadoFxUtil.Companion.completeUrl
 import com.starsone.icontext.icontext
 import javafx.beans.property.SimpleDoubleProperty
 import javafx.beans.property.SimpleStringProperty

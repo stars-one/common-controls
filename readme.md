@@ -1,18 +1,16 @@
-# CommonControlFx
-自己打造的关于TornadoFx的控件与工具
+# CommonControl
+为TornadoFx的封装的常用控件与工具,基于Jfoenix,借鉴Kfoenix
+
+[](https://jitpack.io/v/Stars-One/common-controls.svg)
 
 ## 介绍
 控件主要分为以下几个大类:
 
 - 对话框
-- Toast
-- 下载进度条
-- 图标按钮
-- 输入框
-- 下载工具
-- 自动检测更新
-- 常用工具类
-- 下载框架
+- 检测更新
+- 常用方法
+- 常用控件
+- 下载框架(可能考虑独立出来?)
 
 ## 1.常用对话框
 对话框提供了整合了之前的DiglogBuilder,并新增加了加载对话框和自定义对话框内容,参考了Kf项目,我把有些对话框整合成了Kotlin中的DSL方式调用,有些对话框就没有
