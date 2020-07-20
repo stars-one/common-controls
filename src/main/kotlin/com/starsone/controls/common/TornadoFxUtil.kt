@@ -3,6 +3,7 @@ package com.starsone.controls.common
 import com.starsone.controls.model.UpdateInfo
 import javafx.scene.input.Clipboard
 import javafx.scene.input.ClipboardContent
+import javafx.scene.layout.Pane
 import javafx.stage.Stage
 import org.jsoup.Jsoup
 import tornadofx.*
@@ -102,10 +103,11 @@ class TornadoFxUtil {
             }
             return "https://$url"
         }
+
         /**
          * 检测版本更新
          */
-        fun checkVersion(stage: Stage?, url: String, currentVersionCode: Int, currentVersion: String) {
+        fun checkVersion(stage: Stage?, url: String, currentVersionCode: Int, currentVersion: String, pane: Pane? = null) {
             DialogBuilder(stage)
                     .setTitle("检测更新")
                     .setLoadingMessage("新版本检测中") { alert ->
@@ -125,11 +127,15 @@ class TornadoFxUtil {
                                         .setMessage(info!!, currentVersion)
                                         .setNegativeBtn("取消")
                                         .setPositiveBtn("升级") {
-//                                            DownloadDialogView(stage, info!!.updateUrl)
-                                            DownloadDialogView(stage, "https://stars-one.lanzous.com/b0cpr90ti")
+                                            DownloadDialogView(stage, info!!.updateUrl)
+//                                            DownloadDialogView(stage, "https://stars-one.lanzous.com/b0cpr90ti")
                                                     .show()
                                         }
                                         .create()
+                            } else {
+                                if (pane != null) {
+                                    showToast(pane, "当前已经是最新版本")
+                                }
                             }
                         }
                     }
