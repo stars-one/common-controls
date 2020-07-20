@@ -1,7 +1,7 @@
 # CommonControl
 为TornadoFx的封装的常用控件与工具,基于Jfoenix,借鉴Kfoenix
 
-[](https://jitpack.io/v/Stars-One/common-controls.svg)
+![](https://jitpack.io/v/Stars-One/common-controls.svg)
 
 ## 介绍
 控件主要分为以下几个大类:
