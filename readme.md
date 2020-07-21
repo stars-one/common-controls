@@ -1,8 +1,68 @@
 # CommonControl
 为TornadoFx的封装的常用控件与工具,基于Jfoenix,借鉴Kfoenix
+<meta name="referrer" content="no-referrer">
 
-![](https://jitpack.io/v/Stars-One/common-controls.svg)
+<img src="https://jitpack.io/v/Stars-One/common-controls.svg" />
 
+这个开源库原本我也不想开源出来的,毕竟花费了自己很久的时间,但是想到TornadoFx国内实在没有多少人用,便是想开源出来了,国内TornadoFx资料较少,有些组件并没有,只能靠自己来造。
+
+在这个前端为主的时代，可能只有我这种人还在独自坚持研究这种小众的技术吧（至少国内是这样的情况）
+
+**希望你在使用之前可以根据自己的实际情况给予打赏，算是对我的鼓励，你的打赏是我后期维护并积极更新的动力！谢谢**
+
+![](https://img2020.cnblogs.com/blog/1210268/202003/1210268-20200316120825333-1551152974.png)
+
+TornadoFX交流群：1071184701
+
+[TornadoFx中文文档](https://stars-one.gitee.io/tornadofx-guide-chinese) 目前还在翻译中
+
+本库包含了之前的[IconText](https://github.com/Stars-One/IconTextFx)和[DialogBuilder](https://github.com/Stars-One/DialogBuilder)
+
+- **IconText:** 5000+个Material Design字体图标库
+
+- **DialogBuilder** 基于Jfoenix的对话框生成器
+
+## 引入依赖
+
+### Maven引入
+
+**1. 添加仓库**
+
+由于jar包是上传在jitpack仓库中,所以得在项目的pom.xml添加仓库
+```
+<repositories>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+
+**2.添加依赖**
+```
+<dependency>
+	<groupId>com.github.Stars-One</groupId>
+	<artifactId>common-controls</artifactId>
+	<version>1.3</version>
+</dependency>
+```
+
+### Gradle引入
+
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+```
+dependencies {
+	implementation 'com.github.Stars-One:common-controls:1.3'
+}
+```
 ## 介绍
 控件主要分为以下几个大类:
 
