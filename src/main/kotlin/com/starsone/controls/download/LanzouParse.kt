@@ -176,6 +176,13 @@ class LanzouParse {
                 sign = line.substring(line.indexOf("'") + 1, line.lastIndex - 1)
                 break
             }
+            if (line.contains("_")) {
+                val split = line.split("'")
+                sign = split.find { it.contains("_") }?: ""
+                if (sign.isNotBlank()) {
+                    break
+                }
+            }
             if (line.contains("data") && !line.contains("//") && line.contains("sign")) {
                 val splitList = line.split("'").sortedByDescending { it.length }
                 sign = splitList[0]
