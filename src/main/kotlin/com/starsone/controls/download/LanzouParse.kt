@@ -176,6 +176,7 @@ class LanzouParse {
                 sign = line.substring(line.indexOf("'") + 1, line.lastIndex - 1)
                 break
             }
+
             if (line.contains("_")) {
                 val split = line.split("'")
                 sign = split.find { it.contains("_") }?: ""
