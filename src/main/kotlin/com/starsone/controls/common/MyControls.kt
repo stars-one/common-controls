@@ -255,10 +255,11 @@ fun loadingDialog(stage: Stage?, title: String, message: String,onLoadingListene
 
 /**
  * 文件输入框+选择按钮
- *
+ * - [fileTypes] 文件类型,以逗号隔开 ,例如:`java,xml`
+ * - [fileDesc] 文件提示
+ * - [imgPath] 图片路径
  */
-fun EventTarget.filetextfield(imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
-    //todo 待完善,文件格式筛选
+fun EventTarget.filetextfield(fileTypes: String,fileDesc:String,imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
     val hbox = hbox {
 
         val tf = textfield {
@@ -274,7 +275,9 @@ fun EventTarget.filetextfield(imgPath: String = "", imgWidth: Int = 0, imgHeight
             //普通按钮
             jfxbutton(graphic = icontext("folder-open", "20px", "blue")) {
                 action {
-                    val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter("java文件", "*.java")))
+                    val split = fileTypes.split(",")
+                    val fileTypeList = split.map { "*.$it" }
+                    val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter(fileDesc, fileTypeList)))
                     if (files.isNotEmpty()) {
                         tf.text = files[0].path
                     }
@@ -284,7 +287,9 @@ fun EventTarget.filetextfield(imgPath: String = "", imgWidth: Int = 0, imgHeight
             //图片按钮
             jfxbutton(imgPath, imgWidth, imgHeight) {
                 action {
-                    val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter("java文件", "*.java")))
+                    val split = fileTypes.split(",")
+                    val fileTypeList = split.map { "*.$it" }
+                    val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter(fileDesc, fileTypeList)))
                     if (files.isNotEmpty()) {
                         tf.text = files[0].path
                     }
