@@ -2,6 +2,7 @@ package com.starsone.controls.common
 
 import com.jfoenix.controls.*
 import com.starsone.controls.model.UpdateInfo
+import com.starsone.icontext.MaterialDesignIconText
 import com.starsone.icontext.MaterialDesignIconTextFactory
 import javafx.geometry.Pos
 import javafx.scene.Node
@@ -38,6 +39,9 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
     private var alert: JFXAlert<String> = JFXAlert(stage)
     private var onInputListener: ((text: String) -> Unit)? = null
     private var onLoadingListener: ((alert: JFXAlert<String>) -> Unit)? = null
+
+    //右上角的关闭按钮
+    lateinit var closeBtn:MaterialDesignIconText
     //是否采用自定义内容
     private var isCustom = false
 
@@ -48,11 +52,8 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
 
     fun setTitle(title: String): DialogBuilder {
         val title = Label(title)
-        val closeBtn = MaterialDesignIconTextFactory.getIconText("close")
+        closeBtn = MaterialDesignIconTextFactory.getIconText("close")
         closeBtn.setSize("20px")
-        closeBtn.setOnMouseClicked {
-            alert.hideWithAnimation()
-        }
         AnchorPane.setLeftAnchor(title, 0.0)
         //设置关闭按钮显示在右上角
         AnchorPane.setRightAnchor(closeBtn, 0.0)
@@ -168,6 +169,11 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
         negativeBtn!!.textFill = negativeBtnPaint
         negativeBtn!!.buttonType = JFXButton.ButtonType.FLAT
         negativeBtn!!.setOnAction { _ ->
+            alert.hideWithAnimation()
+            negativeBtnOnclickListener?.invoke()
+        }
+        //右上角的关闭按钮与取消按钮绑定同样的事件
+        closeBtn.setOnMouseClicked {
             alert.hideWithAnimation()
             negativeBtnOnclickListener?.invoke()
         }

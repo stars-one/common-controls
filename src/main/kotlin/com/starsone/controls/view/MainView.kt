@@ -12,6 +12,12 @@ class MainView : View() {
 
         setPrefSize(500.0, 300.0)
 
+
+        jfxbutton("显示Toast") {
+            action {
+                showLoadingDialog(currentStage, "提示", "解析中")
+            }
+        }
         jfxbutton("显示Toast") {
             action {
                 showToast(this@vbox, "这是测试Toast")
@@ -22,7 +28,7 @@ class MainView : View() {
         jfxbutton("测试消息") {
 
             action {
-                jfxdialog(currentStage, "测试对话框", "这是对话框内容")
+                showDialog(currentStage, "测试对话框", "这是对话框内容")
             }
         }
         jfxbutton("测试确认对话框") {
@@ -31,49 +37,50 @@ class MainView : View() {
                         .setTitle(title)
                         .setTitle("标题")
                         .setMessage("内容")
-                        .setNegativeBtn("取消"){ println("点击了取消按钮")}
-                        .setPositiveBtn("确定") { println("点击了确定按钮")}
+                        .setNegativeBtn("取消") { println("点击了取消按钮") }
+                        .setPositiveBtn("确定") { println("点击了确定按钮") }
                         .create()
             }
         }
         jfxbutton("测试输入对话框") {
 
             action {
-                jfxdialog(currentStage, "带输入框的对话框", "输入整数内容", { text -> println(text) })
+                showDialog(currentStage, "带输入框的对话框", "输入整数内容", { text -> println(text) })
             }
         }
 
         jfxbutton("测试输出对话框") {
             action {
                 //文件
-                jfxdialog(currentStage, "带链接的输入框", "输出目录为","D:\\text.txt"
-                        ,false)
+                showDialog(currentStage, "带链接的输入框", "输出目录为", "D:\\text.txt"
+                        , false)
                 //网址
-                jfxdialog(currentStage, "带链接的输入框", "输出目录为","stars-one.site"
-                        ,true)
+                showDialog(currentStage, "带链接的输入框", "输出目录为", "stars-one.site"
+                        , true)
             }
         }
 
         jfxbutton("测试加载对话框") {
             action {
-                loadingDialog(currentStage,"标题","内容"){alert ->
+                showLoadingDialog(currentStage, "标题", "内容", "取消", { alert ->
                     runAsync {
                         for (i in 0..3) {
-                            Thread.sleep(200)
+                            Thread.sleep(1000)
                             println(i)
                         }
-                    } ui{
+                    } ui {
                         //或alert.close()
                         alert.hideWithAnimation()
                     }
-
+                }) {
+                    println("取消")
                 }
 
             }
         }
         jfxbutton("关闭程序对话框") {
             action {
-                stopDialog(currentStage,"标题","点击确定结束当前程序")
+                showStopDialog(currentStage, "标题", "点击确定结束当前程序")
             }
         }
         jfxbutton("检测更新") {
@@ -95,12 +102,12 @@ class MainView : View() {
             }
         }
 
-        urlLink("博客地址","stars-one.site")
+        urlLink("博客地址", "stars-one.site")
 
         jfxbutton("右键菜单") {
             contextMenu = contextmenu {
-                iconItem("文件","x5.jpg",keyCombination = KeyCombination.keyCombination("ctrl+u")){
-                    action{
+                iconItem("文件", "x5.jpg", keyCombination = KeyCombination.keyCombination("ctrl+u")) {
+                    action {
 
                     }
                 }
@@ -108,7 +115,7 @@ class MainView : View() {
         }
 
 
-        circlejfxbutton("x5.jpg",20)
+        circlejfxbutton("x5.jpg", 20)
 
 
     }

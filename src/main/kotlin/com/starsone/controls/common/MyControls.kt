@@ -1,34 +1,22 @@
 package com.starsone.controls.common
 
-import com.jfoenix.controls.JFXAlert
 import com.jfoenix.controls.JFXButton
-import com.jfoenix.controls.JFXSnackbar
-import com.jfoenix.controls.JFXSpinner
 import com.starsone.controls.common.TornadoFxUtil.Companion.completeUrl
-import com.starsone.controls.download.HttpDownloader
-import com.starsone.controls.download.LanzouParse
 import com.starsone.icontext.icontext
-import javafx.beans.property.SimpleDoubleProperty
-import javafx.beans.property.SimpleStringProperty
 import javafx.event.EventTarget
-import javafx.geometry.Pos
 import javafx.scene.Node
-import javafx.scene.control.*
+import javafx.scene.control.ContextMenu
+import javafx.scene.control.Hyperlink
+import javafx.scene.control.MenuItem
+import javafx.scene.control.TextField
 import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCombination
 import javafx.scene.layout.HBox
-import javafx.scene.layout.Pane
-import javafx.scene.layout.VBox
-import javafx.scene.text.Text
 import javafx.stage.FileChooser
-import javafx.stage.Modality
-import javafx.stage.Stage
 import kfoenix.jfxbutton
 import tornadofx.*
 import java.awt.Desktop
-import java.io.IOException
 import java.net.URI
-
 
 /**
  * 常用Control的封装
@@ -154,6 +142,15 @@ fun EventTarget.jfxbutton(imgPath: String, imgWidth: Int, imgHeight: Int = 0, op
     return opcr(this, button, op)
 }
 
+/**
+ * 圆形的图标按钮,鼠标悬浮上去会有圆形的阴影
+ *
+ * @param imgPath 图片的路径
+ * @param imgWidth 按钮的宽度,长宽都一样
+ * @param op
+ * @receiver
+ * @return
+ */
 fun EventTarget.circlejfxbutton(imgPath: String,imgWidth: Int, op: (JFXButton.() -> Unit) = {}): JFXButton {
     val jfxbutton = jfxbutton {
         graphic = imageview(imgPath,imgWidth)
@@ -193,65 +190,6 @@ fun EventTarget.circlejfxbutton(icon: Node, op: (JFXButton.() -> Unit) = {}): JF
     }
     return opcr(this, jfxbutton, op)
 }
-
-/**
- * 输出对话框
- */
-fun jfxdialog(stage: Stage?, title: String = "", message: String,
-              url: String ,
-              isUrl:Boolean,
-              positiveBtnText: String = "确定",
-              modality: Modality = Modality.APPLICATION_MODAL
-): JFXAlert<String> {
-    return DialogBuilder(stage, modality)
-            .setTitle(title)
-            .setMessage(message)
-            .setHyperLink(url,isUrl)
-            .setPositiveBtn(positiveBtnText)
-            .create()
-
-}
-/**
- * 消息提示框(只有确定按钮)
- */
-fun jfxdialog(stage: Stage?, title: String = "", message: String,
-              positiveBtnText: String = "确定",
-              modality: Modality = Modality.APPLICATION_MODAL
-): JFXAlert<String> {
-    return DialogBuilder(stage, modality)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveBtn(positiveBtnText)
-            .create()
-}
-
-/**
- * 带输入框的对话框
- */
-fun jfxdialog(stage: Stage?, title: String,
-              inputHint: String = "输入",
-              listener: ((text: String) -> Unit),
-              modality: Modality = Modality.APPLICATION_MODAL,
-              negativeBtnText: String = "取消", positiveBtnText: String = "确定"
-): JFXAlert<String> {
-    return DialogBuilder(stage, modality)
-            .setTitle(title)
-            .setTextFieldText(inputHint, listener)
-            .setPositiveBtn(positiveBtnText).setNegativeBtn(negativeBtnText)
-            .create()
-}
-
-/**
- * 加载对话框
- */
-fun loadingDialog(stage: Stage?, title: String, message: String,onLoadingListener:((alert: JFXAlert<String>)->Unit)): JFXAlert<String> {
-    return DialogBuilder(stage)
-            .setTitle(title)
-            .setLoadingMessage(message,onLoadingListener)
-            .setPositiveBtn("确定")
-            .create()
-}
-
 
 /**
  * 文件输入框+选择按钮
@@ -299,99 +237,4 @@ fun EventTarget.filetextfield(fileTypes: String,fileDesc:String,imgPath: String 
 
     }
     return opcr(this, hbox, op)
-}
-
-/**
- * 显示Toast
- */
-fun showToast(pane: Pane, message: String) {
-    val snackbar = JFXSnackbar(pane)
-    snackbar.prefWidth = 300.0
-    val label = Text(message)
-    label.style {
-        fill = c("white")
-    }
-    val hBox = HBox(label)
-    hBox.style {
-        backgroundColor += c("#323232")
-        alignment = Pos.CENTER
-    }
-    snackbar.fireEvent(JFXSnackbar.SnackbarEvent(hBox))
-}
-
-/**
- * 关闭程序的对话框
- */
-fun stopDialog(stage: Stage?, title: String, message: String): JFXAlert<String> {
-    return DialogBuilder(stage)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveBtn("确定") { stage?.close() }
-            .create()
-}
-
-/**
- * 下载进度对话框
- */
-class DownloadDialogView(val stage: Stage?, val url: String, val file: String = "") {
-
-    val speedSSP = SimpleStringProperty("")
-    val simpleDoubleProperty = SimpleDoubleProperty(0.0)
-    val content = generateDownloadView()
-
-    fun show() {
-        //todo 取消下载
-        val alert = DialogBuilder(stage)
-                .setCustomContext(content)
-                .setNegativeBtn("后台下载")
-                .create()
-        runAsync {
-            val downloadUrl = if (url.contains("lanzou")) {
-                LanzouParse().parseUrl(url, "")
-            } else {
-                url
-            }
-            HttpDownloader(downloadUrl, file)
-                    .startDownload(object : HttpDownloader.OnDownloading {
-                        override fun onProgress(progress: Double, percent: Int, speed: String) {
-                            simpleDoubleProperty.set(progress / 100)
-                            speedSSP.set(speed)
-                        }
-
-                        override fun onFinish() {
-                            runLater {
-                                stopDialog(stage, "提示", "新版本已下载,请点击确定结束当前程序,之后打开新版本使用吧~")
-                            }
-                            alert.close()
-                        }
-
-                        override fun onError(e: IOException) {
-                            println(e.message)
-                            alert.close()
-                        }
-                    })
-        }
-    }
-
-    /**
-     * 动态生成下载对话框的内容布局
-     */
-    private fun generateDownloadView(): Node {
-        val jfxSp = JFXSpinner(0.0)
-        jfxSp.bind(simpleDoubleProperty)
-        val speedLabel = Text()
-        speedLabel.bind(speedSSP)
-        val label = Label("下载中,请稍后")
-        val vBox = VBox(10.0, speedLabel, label)
-        vBox.style {
-            alignment = Pos.CENTER_LEFT
-        }
-        val space = Label()
-        space.setPrefSize(30.0, 2.0)
-        val hbox = HBox(20.0, space, jfxSp, vBox)
-        hbox.style {
-            alignment = Pos.CENTER_LEFT
-        }
-        return hbox
-    }
 }
