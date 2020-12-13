@@ -50,18 +50,19 @@ fun showToast(pane: Pane, message: String) {
  */
 fun showDialog(stage: Stage?, title: String = "", message: String,
                url: String,
-               isUrl:Boolean,
+               isUrl: Boolean,
                positiveBtnText: String = "确定",
                modality: Modality = Modality.APPLICATION_MODAL
 ): JFXAlert<String> {
     return DialogBuilder(stage, modality)
             .setTitle(title)
             .setMessage(message)
-            .setHyperLink(url,isUrl)
+            .setHyperLink(url, isUrl)
             .setPositiveBtn(positiveBtnText)
             .create()
 
 }
+
 /**
  * 消息提示框(只有确定按钮)
  */
@@ -95,11 +96,11 @@ fun showDialog(stage: Stage?, title: String,
 /**
  * 加载对话框
  */
-fun showLoadingDialog(stage: Stage?, title: String, message: String, negativeBtnText: String, onLoadingListener:((alert: JFXAlert<String>)->Unit), negativeBtnOnclickListener: (() -> Unit)? = null): JFXAlert<String> {
+fun showLoadingDialog(stage: Stage?, title: String, message: String, negativeBtnText: String, negativeBtnOnclickListener: (() -> Unit)? = null, onLoadingListener: ((alert: JFXAlert<String>) -> Unit) ): JFXAlert<String> {
     return DialogBuilder(stage)
             .setTitle(title)
-            .setLoadingMessage(message,onLoadingListener)
-            .setNegativeBtn(negativeBtnText,negativeBtnOnclickListener)
+            .setLoadingMessage(message, onLoadingListener)
+            .setNegativeBtn(negativeBtnText, negativeBtnOnclickListener)
             .create()
 }
 

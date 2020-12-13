@@ -62,7 +62,7 @@ class MainView : View() {
 
         jfxbutton("测试加载对话框") {
             action {
-                showLoadingDialog(currentStage, "标题", "内容", "取消", { alert ->
+                showLoadingDialog(currentStage, "标题", "内容", "取消", { println("取消")}) { alert ->
                     runAsync {
                         for (i in 0..3) {
                             Thread.sleep(1000)
@@ -72,8 +72,6 @@ class MainView : View() {
                         //或alert.close()
                         alert.hideWithAnimation()
                     }
-                }) {
-                    println("取消")
                 }
 
             }
