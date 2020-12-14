@@ -296,3 +296,113 @@ HttpDownloader(downloadUrl, file).startDownload(object : HttpDownloader.OnDownlo
 ```
 
 
+## 6.FxRecyclerView的用法
+
+### 1.创建bean类
+这个没啥好说的，就是一个存数据的bean类，如一个`Person`类，根据自己的情况与需求创建
+```
+data class Person(var name: String,var age:String)
+```
+### 2.创建ItemView
+这个就是列表中的每一项View，**需要继承tornadofx中的View**，我这里就是显示Person的name和age属性，比较简单演示一下
+
+**为了简单起见，我的ItemView起名为ItemView，各位使用的过程中可以自由更改名字**
+```
+import javafx.scene.control.Button
+import javafx.scene.text.Text
+import tornadofx.*
+
+/**
+ *
+ * @author StarsOne
+ * @date Create in  2020/1/21 0021 18:36
+ * @description
+ *
+ */
+class ItemView : View("My View") {
+    var nameTv by singleAssign<Text>()
+    var ageTv by singleAssign<Text>()
+    var deleteBtn by singleAssign<Button>()
+    override val root = hbox {
+        spacing = 20.0
+        nameTv = text()
+        ageTv = text()
+        deleteBtn = button("删除")
+
+    }
+}
+data class Person(var name: String,var age:String)
+
+```
+### 3.界面添加FxRecyclerView
+```
+package com.example.demo.view
+
+import tornadofx.*
+
+class MainView : View("Hello TornadoFX") {
+	//创建FxRecyclerView需要使用到泛型，第一个是bean类，第二个是ItemView
+    val rv = FxRecyclerView<Person,ItemView>()
+    override val root = vbox {
+        //省略...
+		this+=rv
+    }
+}
+```
+### 4.创建RvAdapter
+RvAdapter是抽象类，所以得通过继承并实现其中的几个方法
+```
+//创建数据
+val dataList = arrayListOf<Person>()
+for (i in 0..10) {
+	dataList.add(Person("张三$i",(18+i).toString()))
+}
+//重写RVAdapter的方法
+val adapter = object :RVAdapter<Person,ItemView>(dataList){
+
+	override fun onRightClick(itemView: ItemView, position: Int) {
+		//右击事件
+		println("右击$position")
+	}
+
+	override fun onClick(itemView: ItemView, position: Int) {
+		//单击事件
+		println("单击$position")
+	}
+
+	override fun onCreateView(): ItemView {
+		//必须实现
+		//返回ItemVIew的实例
+		return ItemView()
+	}
+
+	override fun onBindData(itemView: ItemView, bean: Person, position: Int) {
+		//必须实现
+		//将bean类中的数据绑定到itemView中
+		itemView.nameTv.text = bean.name
+		itemView.ageTv.text  = bean.age
+		itemView.deleteBtn.setOnAction {
+			rv.remove(position)
+		}
+	}
+}
+//设置FxRecyclerView的adapter
+rv.adapter = adapter
+```
+### 5.使用补充
+PS：以下的方法都是rv调用（FxRecyclerView对象）
+
+|方法名							|参数说明	|方法说明				|
+|--								|--			|--						|
+|setWidth(double)				|double类型的数值			|设置宽度				|
+|setHegiht(double)				|double类型的数值			|设置高度				|
+|setIsShowHorizontalBar(String)	|显示方式，never(不显示） always（一直显示） asneed（自动根据需要显示）			|设置是否显示水平滚动条	|
+|addList(arraylist)				|ArrayList类型的一组数据			|添加一组数据，同时更新视图			|
+|addList(list)					|List类型的一组数据			|添加一组数据，同时更新视图			|
+|add(beanT)						|			|添加一个数据，同时更新视图			|
+|add(bean,int)					|			|在列表的指定位置插入指定bean数据对应的itemView。 将当前位于该位置的itemView（如果有）和任何后续的itemView（向其索引添加一个）移动。			|
+|update(bean,int)				|			|更新指定位置的数据及itemView视图						|
+|update(bean,oldBean)			|			|更新列表中存在的数据，替换为新的数据，同时更新视图						|
+|remove(bean)					|			|移出某个数据，同时更新视图						|
+|remove(index)					|			|移出列表中指定位置的数据，同时更新视图						|
+|removeAll()					|			|移出列表所有数据，同时更新视图						|
