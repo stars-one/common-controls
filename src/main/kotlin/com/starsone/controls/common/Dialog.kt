@@ -152,6 +152,7 @@ class DownloadDialogView(val stage: Stage?, val url: String, val file: String = 
     fun show() {
         //todo 取消下载
         val alert = DialogBuilder(stage)
+                .setTitle("提示")
                 .setCustomContext(content)
                 .setNegativeBtn("后台下载")
                 .create()

@@ -1,5 +1,6 @@
 package com.starsone.controls.common
 
+import javafx.collections.ObservableList
 import javafx.scene.control.ScrollPane
 import javafx.scene.input.MouseButton
 import javafx.scene.layout.VBox
@@ -248,6 +249,19 @@ class FxRecyclerView<beanT : Any, itemViewT : View> : View {
 abstract class RVAdapter<beanT : Any, itemViewT : View> {
     val beanList = arrayListOf<beanT>()
     val itemViewList = arrayListOf<itemViewT>()
+
+    lateinit var observableList: ObservableList<beanT>
+
+    constructor(observableList: ObservableList<beanT>){
+        this.observableList = observableList
+        observableList.onChange {
+            change -> change.next()
+            when{
+                change.wasAdded() -> beanList.addAll(change.addedSubList)
+                change.wasRemoved() -> beanList.removeAll(change.removed)
+            }
+        }
+    }
 
     constructor(bean: beanT) {
         beanList.add(bean)

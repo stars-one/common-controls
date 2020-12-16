@@ -146,7 +146,7 @@ class LanzouParse {
         //重复请求,实现翻页
         params["pg"] = 1.toString()
         Thread.sleep(800)
-        val result = Jsoup.connect("https://www.lanzous.com/filemoreajax.php")
+        val result = Jsoup.connect("https://lanzous.com/filemoreajax.php")
                 .headers(header)
                 .data(params)
                 .post()
@@ -155,7 +155,7 @@ class LanzouParse {
         val zt = jsonObject.getInt("zt")
         if (zt == 1) {
             val itemId = jsonObject.getJsonArray("text")[0].asJsonObject().getString("id")
-            val lastestUrl = "https://www.lanzous.com/${itemId}"
+            val lastestUrl = "https://lanzous.com/${itemId}"
             return getDownloadLink(lastestUrl)
         }
         return ""
@@ -191,11 +191,11 @@ class LanzouParse {
             }
         }
 
-        val postUrl = "https://www.lanzous.com/ajaxm.php"
+        val postUrl = "https://lanzous.com/ajaxm.php"
         //请求头参数
         val header = HashMap<String, String>()
         header["Accept-Language"] = "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2"
-        header["referer"] = "https://www.lanzous.com"
+        header["referer"] = "https://lanzous.com"
         //请求参数
         val params = LinkedHashMap<String, String>()
         params["action"] = "downprocess"
@@ -242,7 +242,7 @@ class LanzouParse {
                 .userAgent("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA)")
                 .get()
         val result = doc.getElementsByTag("iframe")[0].attr("src")
-        return "https://www.lanzous.com$result"
+        return "https://lanzous.com$result"
     }
 
 
