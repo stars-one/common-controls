@@ -27,7 +27,7 @@ import java.net.URI
 /**
  * 设置hypeLink的文本为[text],点击之后打开[url],[url]默认与text相同,右键可复制网址
  */
-fun EventTarget.urlLink(text: String, url: String = "", op: (Hyperlink.() -> Unit) = {}): Hyperlink {
+fun EventTarget.xUrlLink(text: String, url: String = "", op: (Hyperlink.() -> Unit) = {}): Hyperlink {
     //处理得到正确的网址
 
     val webUrl = if (url.isBlank()) {
@@ -62,7 +62,7 @@ fun EventTarget.urlLink(text: String, url: String = "", op: (Hyperlink.() -> Uni
 /**
  * 创建指定宽高的ImageView,单独指定[imgWidth]会生成正方形的图形
  */
-fun EventTarget.imageview(url: String, imgWidth: Int, imgHeight: Int = 0, lazyload: Boolean = true, op: ImageView.() -> Unit = {}): ImageView {
+fun EventTarget.xImageView(url: String, imgWidth: Int, imgHeight: Int = 0, lazyload: Boolean = true, op: ImageView.() -> Unit = {}): ImageView {
     val img = imageview(url) {
         fitWidth = imgWidth.toDouble()
         fitHeight = if (imgHeight == 0) {
@@ -78,7 +78,7 @@ fun EventTarget.imageview(url: String, imgWidth: Int, imgHeight: Int = 0, lazylo
  * 带图标的Context MenuItem(可设置快捷键)
  * -[keyCombination] 快捷键设置:`KeyCombination.keyCombination("ctrl+y")`
  */
-fun ContextMenu.iconItem(name: String, imgPath: String, imgWidth: Int = 40, imgHeight: Int = 40, keyCombination: KeyCombination? = null, op: MenuItem.() -> Unit = {}) {
+fun ContextMenu.xIconItem(name: String, imgPath: String, imgWidth: Int = 40, imgHeight: Int = 40, keyCombination: KeyCombination? = null, op: MenuItem.() -> Unit = {}) {
 
     if (imgPath.isBlank()) {
         MenuItem(name).also {
@@ -103,7 +103,7 @@ fun ContextMenu.iconItem(name: String, imgPath: String, imgWidth: Int = 40, imgH
 /**
  * 可选择的文本框(本质是TextField)
  */
-fun EventTarget.selectText(text: String, op: (TextField.() -> Unit) = {}): TextField {
+fun EventTarget.xSelectText(text: String, op: (TextField.() -> Unit) = {}): TextField {
 
     val selectTf = textfield(text) {
         isEditable = false
@@ -119,12 +119,12 @@ fun EventTarget.selectText(text: String, op: (TextField.() -> Unit) = {}): TextF
 /**
  * 图标扁平按钮,单独设置[imgWidth]为正方形按钮
  */
-fun EventTarget.jfxbutton(imgPath: String, imgWidth: Int, imgHeight: Int = 0, op: (JFXButton.() -> Unit) = {}): JFXButton {
+fun EventTarget.xJfxButton(imgPath: String, imgWidth: Int, imgHeight: Int = 0, op: (JFXButton.() -> Unit) = {}): JFXButton {
     val button = jfxbutton {
         graphic = if (imgHeight == 0) {
-            imageview(imgPath, imgWidth)
+            xImageView(imgPath, imgWidth)
         } else {
-            imageview(imgPath, imgWidth, imgHeight)
+            xImageView(imgPath, imgWidth, imgHeight)
         }
         setOnMouseEntered {
             style {
@@ -151,9 +151,9 @@ fun EventTarget.jfxbutton(imgPath: String, imgWidth: Int, imgHeight: Int = 0, op
  * @receiver
  * @return
  */
-fun EventTarget.circlejfxbutton(imgPath: String,imgWidth: Int, op: (JFXButton.() -> Unit) = {}): JFXButton {
+fun EventTarget.xCircleJfxButton(imgPath: String,imgWidth: Int, op: (JFXButton.() -> Unit) = {}): JFXButton {
     val jfxbutton = jfxbutton {
-        graphic = imageview(imgPath,imgWidth)
+        graphic = xImageView(imgPath,imgWidth)
         setOnMouseEntered {
             style {
                 backgroundColor += c(0, 0, 0, 0.1)
@@ -172,7 +172,7 @@ fun EventTarget.circlejfxbutton(imgPath: String,imgWidth: Int, op: (JFXButton.()
 /**
  * 圆形图标扁平按钮(鼠标滑过会有阴影)
  */
-fun EventTarget.circlejfxbutton(icon: Node, op: (JFXButton.() -> Unit) = {}): JFXButton {
+fun EventTarget.xCircleJfxButton(icon: Node, op: (JFXButton.() -> Unit) = {}): JFXButton {
     val jfxbutton = jfxbutton {
         graphic = icon
         setOnMouseEntered {
@@ -197,7 +197,7 @@ fun EventTarget.circlejfxbutton(icon: Node, op: (JFXButton.() -> Unit) = {}): JF
  * - [fileDesc] 文件提示
  * - [imgPath] 图片路径
  */
-fun EventTarget.filetextfield(fileTypes: String,fileDesc:String,imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
+fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc:String, imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
     val hbox = hbox {
 
         val tf = textfield {
@@ -223,7 +223,7 @@ fun EventTarget.filetextfield(fileTypes: String,fileDesc:String,imgPath: String 
             }
         } else {
             //图片按钮
-            jfxbutton(imgPath, imgWidth, imgHeight) {
+            xJfxButton(imgPath, imgWidth, imgHeight) {
                 action {
                     val split = fileTypes.split(",")
                     val fileTypeList = split.map { "*.$it" }

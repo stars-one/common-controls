@@ -64,17 +64,13 @@ dependencies {
 }
 ```
 ## 介绍
-
-注意:考虑到查找的方便,1.6版本之后控件的名字发生了变化,**控件名多个前缀x,且采用了驼峰命名法**,如`jfxbutton`变为了`xJfxButton`**,其他依次类推
-
-
 控件主要分为以下几个大类:
 
 - 对话框
 - 检测更新
 - 常用方法
 - 常用控件
-- 下载框架(另有独立版,不过暂未发布,敬请期待)
+- 下载框架(可能考虑独立出来?)
 
 ## 1.常用对话框
 对话框提供了整合了之前的DiglogBuilder,并新增加了加载对话框和自定义对话框内容,参考了Kf项目,我把有些对话框整合成了Kotlin中的DSL方式调用,有些对话框就没有
@@ -300,14 +296,7 @@ HttpDownloader(downloadUrl, file).startDownload(object : HttpDownloader.OnDownlo
 ```
 
 
-## 6.XRecyclerView的用法
-
-仿造Android中的RecyclerView用法写的一个控件,主要实现将一个List数据以列表的方式显示出来
-
-旧版本(及命名为FxRecyclerView)使用方法详见[Tornadofx控件库(2)——FxRecyclerView | Stars-One的杂货小窝](https://stars-one.site/2020/07/31/fxrecyclerview)
-
-**XRecyclerView为使用MVVM模式重构的版本,使用起来更为的方便**
-
+## 6.FxRecyclerView的用法
 
 ### 1.创建bean类
 这个没啥好说的，就是一个存数据的bean类，如一个`Person`类，根据自己的情况与需求创建

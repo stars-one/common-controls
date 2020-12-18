@@ -14,11 +14,11 @@ import tornadofx.*
 class TestView : View("My View") {
     override val root = hbox(20.0) {
 
-        jfxspinner{
-            progress=0.6245
+        jfxspinner {
+            progress = 0.6245
         }
         vbox(10.0) {
-            style{
+            style {
                 alignment = Pos.CENTER
             }
 //            label("20.4%")
@@ -56,4 +56,30 @@ class TestView : View("My View") {
             }
         }*/
     }
+}
+
+fun main() {
+    val observableList = observableListOf(0, 1, 2, 3)
+
+    println(observableList)
+    observableList.onChange { change ->
+        while (change.next()) {
+
+            when {
+                change.wasPermutated() -> println("permutated (${change.from} ,${change.to})")
+                change.wasUpdated() -> println("update (${change.from} ,${change.to})")
+                change.wasReplaced() -> println("replace (${change.from} ,${change.to})")
+                else -> {
+                    when {
+                        change.wasAdded() -> println("add (${change.from} ,${change.to})")
+                        change.wasRemoved() -> println("remove (${change.from} ,${change.to})")
+                    }
+                    change.removed
+                }
+            }
+        }
+    }
+
+    observableList.moveAt(1,3)
+    println(observableList)
 }

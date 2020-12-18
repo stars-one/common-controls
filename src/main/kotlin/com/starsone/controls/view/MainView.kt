@@ -113,7 +113,7 @@ class MainView : View() {
         }
 
 
-        circlejfxbutton("x5.jpg", 20)
+        xCircleJfxButton("x5.jpg", 20)
 
 
     }

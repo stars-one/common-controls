@@ -3,12 +3,12 @@ import javafx.scene.input.MouseButton
 import tornadofx.*
 
 /**
- * RecyclerView
+ * XRecyclerView
  * @author StarsOne
  * @url <a href="http://stars-one.site">http://stars-one.site</a>
  * @date create in  2020/11/19 10:21
  */
-class RecyclerView<beanT : Any, itemViewT : View> : View() {
+class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
     override val root = scrollpane()
 
@@ -192,9 +192,6 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
     fun add(bean: beanT) {
         beanObList.add(bean)
     }
-
-    //move的使用研究
-    //move原理是先移除,后添加
 
     /**
      * 指定坐标插入新数据

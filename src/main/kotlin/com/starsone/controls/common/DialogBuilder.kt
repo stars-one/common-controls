@@ -41,7 +41,8 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
     private var onLoadingListener: ((alert: JFXAlert<String>) -> Unit)? = null
 
     //右上角的关闭按钮
-    lateinit var closeBtn:MaterialDesignIconText
+    lateinit var closeBtn: MaterialDesignIconText
+
     //是否采用自定义内容
     private var isCustom = false
 
@@ -172,10 +173,12 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
             alert.hideWithAnimation()
             negativeBtnOnclickListener?.invoke()
         }
-        //右上角的关闭按钮与取消按钮绑定同样的事件
-        closeBtn.setOnMouseClicked {
-            alert.hideWithAnimation()
-            negativeBtnOnclickListener?.invoke()
+        if (this::closeBtn.isInitialized) {
+            //右上角的关闭按钮与取消按钮绑定同样的事件
+            closeBtn.setOnMouseClicked {
+                alert.hideWithAnimation()
+                negativeBtnOnclickListener?.invoke()
+            }
         }
         return this
     }
