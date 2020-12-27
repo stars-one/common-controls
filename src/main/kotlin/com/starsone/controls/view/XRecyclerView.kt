@@ -1,4 +1,5 @@
-import javafx.scene.control.ScrollPane
+import javafx.scene.Node
+import javafx.scene.control.*
 import javafx.scene.input.MouseButton
 import tornadofx.*
 
@@ -319,4 +320,39 @@ abstract class RvAdapter<beanT : Any, itemViewT : View>(val rvDataObservableList
 //    abstract fun onDoubleClick(itemView: itemViewT, position: Int)//双击
 
     abstract fun onRightClick(itemView: itemViewT, position: Int)//右击
+}
+
+abstract class ItemViewBase<beanT : Any, itemViewT : View>(title: String?, icon: Node?) : View(title, icon) {
+    var isFirst = true
+
+    lateinit var bean: beanT
+    lateinit var obList: RvDataObservableList<beanT, itemViewT>
+
+    abstract fun inputChange()
+
+    abstract fun bindData(beanT: beanT)
+
+    fun bindData(obList: RvDataObservableList<beanT, itemViewT>, index: Int){
+        this.obList = obList
+        this.bean = obList.beanObList[index]
+        bindData(bean)
+        isFirst = false
+    }
+
+    private fun dataChange() {
+        if (!isFirst) {
+            inputChange()
+        }
+    }
+
+    fun setDataChange(vararg fields: Control) {
+        fields.forEach {
+            when {
+                it is TextField -> it.textProperty().onChange { dataChange() }
+                it is Button -> it.textProperty().onChange { dataChange() }
+                it is Label -> it.textProperty().onChange { dataChange() }
+            }
+        }
+
+    }
 }

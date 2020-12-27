@@ -22,6 +22,9 @@ TornadoFX交流群：1071184701
 
 - **[DialogBuilder](https://github.com/Stars-One/DialogBuilder)** 基于Jfoenix的对话框生成器
 
+
+最新版本1.7
+
 ## 引入依赖
 
 ### Maven引入
