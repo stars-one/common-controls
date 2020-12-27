@@ -7,7 +7,9 @@ import javafx.scene.layout.Pane
 import javafx.stage.Stage
 import org.jsoup.Jsoup
 import tornadofx.*
+import java.awt.Desktop
 import java.io.File
+import java.net.URI
 import java.net.URL
 import java.util.zip.GZIPInputStream
 
@@ -143,6 +145,18 @@ class TornadoFxUtil {
                     .create()
         }
 
+        /**
+         * 打开网址(会自动加上http)
+         *
+         * @param url 网址
+         */
+        fun openUrl(url:String){
+            if (url.contains("http")) {
+                Desktop.getDesktop().browse(URI(url));
+            } else {
+                Desktop.getDesktop().browse(URI("http://$url"));
+            }
+        }
     }
 }
 

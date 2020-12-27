@@ -14,7 +14,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
     lateinit var adapter: RvAdapter<beanT, itemViewT>
 
-    fun setRvAdapter(adapter: RvAdapter<beanT, itemViewT>) {
+    fun setRvAdapter(adapter: RvAdapter<beanT, itemViewT>) :XRecyclerView<beanT, itemViewT>{
         this.adapter = adapter
         val beanObList = adapter.rvDataObservableList.beanObList
         val itemViewObList = adapter.rvDataObservableList.itemViewObList
@@ -96,7 +96,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
                 itemViewObList.add(createItemView(bean, index))
             }
         }
-
+        return this
     }
 
     /**
@@ -222,6 +222,17 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
     }
 
     /**
+     * 更新某个对象
+     *
+     * @param bean
+     * @param newBean
+     */
+    fun update(bean: beanT,newBean:beanT) {
+        val index = beanObList.indexOf(bean)
+        beanObList[index] = newBean
+    }
+
+    /**
      * 移除某个数据
      *
      * @param bean
@@ -261,6 +272,11 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
         }
     }
 
+    fun remove(vararg indexList:Int) {
+        indexList.forEach {
+            remove(it)
+        }
+    }
     /**
      * 移除[from,to)的数据,包含from,不包含to
      */

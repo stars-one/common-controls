@@ -43,7 +43,7 @@ TornadoFX交流群：1071184701
 <dependency>
 	<groupId>com.github.Stars-One</groupId>
 	<artifactId>common-controls</artifactId>
-	<version>1.3</version>
+	<version>1.6</version>
 </dependency>
 ```
 
@@ -60,13 +60,12 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.Stars-One:common-controls:1.3'
+	implementation 'com.github.Stars-One:common-controls:1.6'
 }
 ```
 ## 介绍
 
 注意:考虑到查找的方便,1.6版本之后控件的名字发生了变化,**控件名多个前缀x,且采用了驼峰命名法**,如`jfxbutton`变为了`xJfxButton`**,其他依次类推
-
 
 控件主要分为以下几个大类:
 
@@ -261,19 +260,20 @@ jfxbutton("检测更新") {
 - 复制文字到粘贴板`copyTextToClipboard`
 - 自动补全网址`completeUrl`
 - 检测版本更新`checkVersion`
+- 打开网址`openUrl`
 
 ## 4.常用控件
 以下的控件其实本质上都是一个方法,使用了TornadoFx内置的DSL语法进行书写,使用的时候和TornadoFx编写布局的代码是一样的
 
 |控件	|控件名称	|例子|
 |--	|--	|--	|
-|urlLink	|可选择的超链接文本	|urlLink("博客地址","stars-one.site")|
-|imageview	|生成指定宽高的图片,正方形的图片可省略高度参数	|imageview("xx.jpg",50,50)	|
-|iconItem	|生成带图标的右键菜单(ContextMenu),每个控件都有setContextMenu方法	|![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200719114145732-112475743.png)|
-|selectText|可选择的文本框|selectText("内容")|
-|jfxbutton|指定宽高的扁平按钮,正方形可省略高度参数|jfxbutton("xx.jpg",50,50)|
-|circlejfxbutton|圆形图标扁平按钮(鼠标滑过会有阴影),传递一个node参数|circlejfxbutton(imageview("xx.jpg",50))|
-|filetextfield|文件输入+选择|selectText("内容")|
+|xUrlLink	|可选择的超链接文本	|urlLink("博客地址","stars-one.site")|
+|xImageView	|生成指定宽高的图片,正方形的图片可省略高度参数	|imageview("xx.jpg",50,50)	|
+|xIconItem	|生成带图标的右键菜单(ContextMenu),每个控件都有setContextMenu方法	|![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200719114145732-112475743.png)|
+|xSelectText|可选择的文本框|selectText("内容")|
+|xFfxButton|指定宽高的扁平按钮,正方形可省略高度参数|jfxbutton("xx.jpg",50,50)|
+|xCircleJfxbutton|圆形图标扁平按钮(鼠标滑过会有阴影),传递一个node参数|circlejfxbutton(imageview("xx.jpg",50))|
+|xFileTextField|文件输入+选择|selectText("内容")|
 |showToast|显示Toast|![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200719122328168-1367451505.png)
 |
 
@@ -299,7 +299,6 @@ HttpDownloader(downloadUrl, file).startDownload(object : HttpDownloader.OnDownlo
 })
 ```
 
-
 ## 6.XRecyclerView的用法
 
 仿造Android中的RecyclerView用法写的一个控件,主要实现将一个List数据以列表的方式显示出来
@@ -307,7 +306,6 @@ HttpDownloader(downloadUrl, file).startDownload(object : HttpDownloader.OnDownlo
 旧版本(及命名为FxRecyclerView)使用方法详见[Tornadofx控件库(2)——FxRecyclerView | Stars-One的杂货小窝](https://stars-one.site/2020/07/31/fxrecyclerview)
 
 **XRecyclerView为使用MVVM模式重构的版本,使用起来更为的方便**
-
 
 ### 1.创建bean类
 这个没啥好说的，就是一个存数据的bean类，如一个`Person`类，根据自己的情况与需求创建
@@ -317,103 +315,145 @@ data class Person(var name: String,var age:String)
 ### 2.创建ItemView
 这个就是列表中的每一项View，**需要继承tornadofx中的View**，我这里就是显示Person的name和age属性，比较简单演示一下
 
-**为了简单起见，我的ItemView起名为ItemView，各位使用的过程中可以自由更改名字**
-```
-import javafx.scene.control.Button
-import javafx.scene.text.Text
-import tornadofx.*
+**PS:我自己封装了一个抽象类ItemViewBase,可以直接实现此类即可**
 
-/**
- *
- * @author StarsOne
- * @date Create in  2020/1/21 0021 18:36
- * @description
- *
- */
-class ItemView : View("My View") {
-    var nameTv by singleAssign<Text>()
-    var ageTv by singleAssign<Text>()
-    var deleteBtn by singleAssign<Button>()
+```
+class MyItemView : ItemViewBase<Person, MyItemView>(null,null){
+    var nameText by singleAssign<TextField>()
+    var ageText by singleAssign<TextField>()
+
+    /**
+     * 设置输入的改变,当用户输入内容时候,同时改变obList中的beanList数据
+     *
+     */
+    override fun inputChange() {
+        val name = nameText.text
+        val age = ageText.text
+        val copy = bean.copy()
+        copy.name = name
+        copy.age = age
+        obList.update(bean, copy)
+    }
+
+    /**
+     * 初次设置数值,直接设置相关控件对象的数值
+     *
+     * @param beanT
+     */
+    override fun bindData(beanT: Person) {
+        nameText.text = beanT.name
+        ageText.text = beanT.age
+    }
+
     override val root = hbox {
-        spacing = 20.0
-        nameTv = text()
-        ageTv = text()
-        deleteBtn = button("删除")
+        nameText = textfield() {
 
+        }
+        ageText = textfield {
+        }
+
+        //这里必须要调用此方法,将当前所有输入控件传入,进行设置数值变化监听
+        setDataChange(nameText,ageText)
     }
 }
-data class Person(var name: String,var age:String)
+```
+
+### 3.创建RvDataObservableList和RvAdapter
+
+RvDataObservableList里面包含了beanList和itemViewList,**后续只需要调用其相关的方法即可实现对列表数据进行的增删改查,且会同步itemVIew进行修改(即界面会同步根据数据改变)**
+
+**PS:建议把此类RvDataObservableList声明为全局变量**
 
 ```
-### 3.界面添加FxRecyclerView
+//Person是bean的实体类,MyItemView则是itemview的类
+val dataList = RvDataObservableList<Person,MyItemView>()
+
+val adapter = object : RvAdapter<Person, MyItemView>(dataList) {
+
+    override fun onBindData(itemView: MyItemView, bean: Person, position: Int) {
+        //这里bindData是ItemViewBase中定义的方法
+        itemView.bindData(dataList,position)
+    }
+
+    //itemView的单击事件
+    override fun onClick(itemView: MyItemView, position: Int) {
+        println("单击$position")
+    }
+
+    //itemView的右击事件
+    override fun onRightClick(itemView: MyItemView, position: Int) {
+        println("右击$position")
+    }
+
+    override fun onCreateView(): MyItemView {
+        return MyItemView()
+    }
+
+}
 ```
-package com.example.demo.view
 
-import tornadofx.*
+### 4.界面添加FxRecyclerView
+```
+class RvTestView : View("My View") {
+    val dataList = RvDataObservableList<Person,MyItemView>()
 
-class MainView : View("Hello TornadoFX") {
-	//创建FxRecyclerView需要使用到泛型，第一个是bean类，第二个是ItemView
-    val rv = FxRecyclerView<Person,ItemView>()
     override val root = vbox {
-        //省略...
-		this+=rv
+        setPrefSize(1000.0, 400.0)       
+
+        val adapter = object : RvAdapter<Person, MyItemView>(dataList) {
+
+            override fun onBindData(itemView: MyItemView, bean: Person, position: Int) {
+                itemView.bindData(dataList,position)
+            }
+
+            override fun onClick(itemView: MyItemView, position: Int) {
+                println("单击$position")
+            }
+
+            override fun onRightClick(itemView: MyItemView, position: Int) {
+                println("右击$position")
+            }
+
+            override fun onCreateView(): MyItemView {
+                return MyItemView()
+            }
+        }
+
+        this+=XRecyclerView<Person, MyItemView>().setRvAdapter(adapter)
     }
 }
 ```
-### 4.创建RvAdapter
-RvAdapter是抽象类，所以得通过继承并实现其中的几个方法
-```
-//创建数据
-val dataList = arrayListOf<Person>()
-for (i in 0..10) {
-	dataList.add(Person("张三$i",(18+i).toString()))
-}
-//重写RVAdapter的方法
-val adapter = object :RVAdapter<Person,ItemView>(dataList){
 
-	override fun onRightClick(itemView: ItemView, position: Int) {
-		//右击事件
-		println("右击$position")
-	}
+### 5.方法补充
 
-	override fun onClick(itemView: ItemView, position: Int) {
-		//单击事件
-		println("单击$position")
-	}
-
-	override fun onCreateView(): ItemView {
-		//必须实现
-		//返回ItemVIew的实例
-		return ItemView()
-	}
-
-	override fun onBindData(itemView: ItemView, bean: Person, position: Int) {
-		//必须实现
-		//将bean类中的数据绑定到itemView中
-		itemView.nameTv.text = bean.name
-		itemView.ageTv.text  = bean.age
-		itemView.deleteBtn.setOnAction {
-			rv.remove(position)
-		}
-	}
-}
-//设置FxRecyclerView的adapter
-rv.adapter = adapter
-```
-### 5.使用补充
-PS：以下的方法都是rv调用（FxRecyclerView对象）
+**XRecyclerView:**
 
 |方法名							|参数说明	|方法说明				|
 |--								|--			|--						|
 |setWidth(double)				|double类型的数值			|设置宽度				|
 |setHegiht(double)				|double类型的数值			|设置高度				|
 |setIsShowHorizontalBar(String)	|显示方式，never(不显示） always（一直显示） asneed（自动根据需要显示）			|设置是否显示水平滚动条	|
-|addList(arraylist)				|ArrayList类型的一组数据			|添加一组数据，同时更新视图			|
-|addList(list)					|List类型的一组数据			|添加一组数据，同时更新视图			|
-|add(beanT)						|			|添加一个数据，同时更新视图			|
-|add(bean,int)					|			|在列表的指定位置插入指定bean数据对应的itemView。 将当前位于该位置的itemView（如果有）和任何后续的itemView（向其索引添加一个）移动。			|
-|update(bean,int)				|			|更新指定位置的数据及itemView视图						|
-|update(bean,oldBean)			|			|更新列表中存在的数据，替换为新的数据，同时更新视图						|
-|remove(bean)					|			|移出某个数据，同时更新视图						|
-|remove(index)					|			|移出列表中指定位置的数据，同时更新视图						|
-|removeAll()					|			|移出列表所有数据，同时更新视图						|
+
+**RvDataObservableList:**
+
+**注意:下面涉及到对beanList的修改,都会同步对界面进行修改**
+
+|方法名							|参数说明	|方法说明				|
+|--								|--			|--						|
+|getItemView(bean: beanT)			|bean对象		|根据bean对象获取itemView				|
+|getItemView(index: Int)				|double类型的数值			|设置高度				|
+|add(beanT)						|			|添加一个数据			|
+|add(index,beanT)						|			|指定坐标插入新数据		|
+|addAll(list: List<beanT>)						|			|添加多个新数据		|
+|addAll(vararg bean: beanT)					|			|添加多个新数据	|
+|update(index: Int, bean: beanT)				|			|更新指定坐标数据		|
+|update(bean: beanT,newBean:beanT)				|			|把某个对象更新为新对象newBean		|
+|remove(bean: beanT)				|			|指定坐标插入新数据		|
+|remove(index: Int)				|			|移除指定下标		|
+|remove(vararg indexList:Int)			|			|移除指定的多个下标		|
+|remove(indexList: List<Int>)			|			|移除指定的多个下标		|
+|fun remove(from: Int, to: Int)			|			|移除连续的多个指定下标( 区间为[from,to) )		|
+|removeLast()				|			|移除最后一个数据		|
+|clear				|			|清除所有数据		|
+
+
