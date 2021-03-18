@@ -109,34 +109,79 @@ class TornadoFxUtil {
         /**
          * 检测版本更新
          */
-        fun checkVersion(stage: Stage?, url: String, currentVersionCode: Int, currentVersion: String, pane: Pane? = null) {
+        fun checkVersion(stage: Stage?, url: String, appName: String, currentVersionCode: Int, currentVersion: String, pane: Pane? = null) {
             DialogBuilder(stage)
                     .setTitle("检测更新")
                     .setLoadingMessage("新版本检测中") { alert ->
                         var info: com.starsone.controls.model.UpdateInfo? = null
-                        runAsync {
-                            val doc = Jsoup.connect(url)
-                                    .userAgent("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA)")
-                                    .get()
-                            val tds = doc.getElementsByTag("tr")[1].getElementsByTag("td")
-                            info = UpdateInfo(tds[0].text(), tds[1].text(), tds[2].text(), tds[3].text(), tds[4].text())
-                        } ui {
-                            alert.close()
-                            //对比版本号
-                            if (info!!.versionCode.toInt() > currentVersionCode) {
-                                DialogBuilder(stage)
-                                        .setTitle("发现新版本")
-                                        .setMessage(info!!, currentVersion)
-                                        .setNegativeBtn("取消")
-                                        .setPositiveBtn("升级") {
-                                            DownloadDialogView(stage, info!!.updateUrl)
-//                                            DownloadDialogView(stage, "https://stars-one.lanzous.com/b0cpr90ti")
-                                                    .show()
+                        if (url.contains("cnblogs")) {
+                            //博客园的更新地址
+                            runAsync {
+                                val doc = Jsoup.connect(url)
+                                        .userAgent("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA)")
+                                        .get()
+                                val tds = doc.getElementsByTag("tr")[1].getElementsByTag("td")
+                                info = UpdateInfo(tds[0].text(), tds[1].text(), tds[2].text(), tds[3].text(), tds[4].text())
+                            } ui {
+                                alert.close()
+                                //对比版本号
+                                if (info!!.versionCode.toInt() > currentVersionCode) {
+                                    DialogBuilder(stage)
+                                            .setTitle("发现新版本")
+                                            .setMessage(info!!, currentVersion)
+                                            .setNegativeBtn("取消")
+                                            .setPositiveBtn("升级") {
+                                                DownloadDialogView(stage, info!!.updateUrl).show()
+                                            }
+                                            .create()
+                                } else {
+                                    if (pane != null) {
+                                        showToast(pane, "当前已经是最新版本")
+                                    }
+                                }
+                            }
+                        } else {
+                            //自己的更新系统
+                            runAsync {
+                                try {
+                                    val doc = Jsoup.connect("${url}?versionCode=${currentVersionCode}")
+                                            .userAgent("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA)")
+                                            .ignoreContentType(true)
+                                            .get()
+                                    val json = doc.body().text()
+
+                                    val resJsonObject = loadJsonObject(json)
+                                    val code = resJsonObject.getInt("code")
+                                    if (code == 200) {
+                                        val jsonObject = resJsonObject.getJsonObject("data")
+                                        val forceUpdate = jsonObject.getBoolean("forceUpdate", false)
+
+                                        info = UpdateInfo(jsonObject.getString("appVersionName"), jsonObject.getInt("appVersionCode").toString(), jsonObject.getString("createTime"), jsonObject.getString("updateMessage"), jsonObject.getString("fileDownloadUrl"))
+                                        info?.let {
+                                            runLater {
+                                                val dialogBuilder = DialogBuilder(stage)
+                                                        .setTitle("发现新版本")
+                                                        .setMessage(it, currentVersion)
+                                                        .setPositiveBtn("升级") {
+                                                            DownloadDialogView(stage, it.updateUrl, "${appName}${it.version}.jar").show()
+                                                        }
+                                                if (forceUpdate) {
+                                                    dialogBuilder.create()
+                                                } else {
+                                                    dialogBuilder.setNegativeBtn("取消").create()
+                                                }
+                                            }
                                         }
-                                        .create()
-                            } else {
-                                if (pane != null) {
-                                    showToast(pane, "当前已经是最新版本")
+                                    } else {
+                                        alert.close()
+                                        pane?.let {
+                                            runLater {
+                                                showToast(pane, "当前已经是最新版本")
+                                            }
+                                        }
+                                    }
+                                } catch (e: Exception) {
+                                    throw e
                                 }
                             }
                         }
@@ -150,7 +195,7 @@ class TornadoFxUtil {
          *
          * @param url 网址
          */
-        fun openUrl(url:String){
+        fun openUrl(url: String) {
             if (url.contains("http")) {
                 Desktop.getDesktop().browse(URI(url));
             } else {

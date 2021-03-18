@@ -17,15 +17,6 @@ import kotlin.collections.set
  */
 class LanzouParse {
 
-    //解析匹配的正则表达式
-    private var signRegex: String
-
-    init {
-        val doc = Jsoup.connect("https://www.cnblogs.com/stars-one/articles/13156594.html")
-                .userAgent("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA)")
-                .get()
-        signRegex = doc.body().getElementsByTag("h3")[0].text()
-    }
 
     /**
      * 获得请求体参数
@@ -172,10 +163,6 @@ class LanzouParse {
         for (line in lines) {
             //正则匹配，获得sign（之后post请求需要此数据）
             //todo 蓝奏云官方请求参数会改变,需要修改
-            if (line.contains(Regex(signRegex))) {
-                sign = line.substring(line.indexOf("'") + 1, line.lastIndex - 1)
-                break
-            }
 
             if (line.contains("_")) {
                 val split = line.split("'")
