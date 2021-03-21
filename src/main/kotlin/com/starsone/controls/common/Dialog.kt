@@ -9,13 +9,17 @@ import javafx.beans.property.SimpleDoubleProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Pos
 import javafx.scene.Node
+import javafx.scene.Scene
 import javafx.scene.control.Label
+import javafx.scene.image.ImageView
+import javafx.scene.layout.Background
 import javafx.scene.layout.HBox
 import javafx.scene.layout.Pane
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
 import javafx.stage.Modality
 import javafx.stage.Stage
+import javafx.stage.StageStyle
 import tornadofx.*
 import java.io.IOException
 
@@ -96,7 +100,7 @@ fun showDialog(stage: Stage?, title: String,
 /**
  * 加载对话框
  */
-fun showLoadingDialog(stage: Stage?, title: String, message: String, negativeBtnText: String, negativeBtnOnclickListener: (() -> Unit)? = null, onLoadingListener: ((alert: JFXAlert<String>) -> Unit) ): JFXAlert<String> {
+fun showLoadingDialog(stage: Stage?, title: String, message: String, negativeBtnText: String, negativeBtnOnclickListener: (() -> Unit)? = null, onLoadingListener: ((alert: JFXAlert<String>) -> Unit)): JFXAlert<String> {
     return DialogBuilder(stage)
             .setTitle(title)
             .setLoadingMessage(message, onLoadingListener)
@@ -205,4 +209,51 @@ class DownloadDialogView(val stage: Stage?, val url: String, val file: String = 
         }
         return hbox
     }
+}
+
+/**
+ * 展示加载对话框(动态图+文字 居中显示)
+ *
+ * @param parent
+ * @param imgUrl
+ * @param labelText
+ * @param task
+ * @receiver
+ */
+fun showLoadingDialog(parent: Stage?, iv: ImageView, stageWidth: Double, stageHeight: Double, labelText: String = "加载中", task: (stage: Stage) -> Unit) {
+    val stage = Stage()
+
+    stage.initOwner(parent)
+    // style
+    stage.initStyle(StageStyle.UNDECORATED)
+    stage.initStyle(StageStyle.TRANSPARENT)
+    stage.initModality(Modality.APPLICATION_MODAL)
+
+    //val iv = resources.imageview("/img/loading.gif")
+    val label = Text(labelText)
+    val vbox = VBox(10.0)
+    vbox.prefWidth = stageWidth
+    vbox.prefHeight = stageHeight
+    vbox.alignment = Pos.CENTER
+    vbox.background = Background.EMPTY
+    vbox.children.addAll(iv, label)
+
+
+    // scene
+    val scene = Scene(vbox)
+    scene.fill = null
+    stage.scene = scene
+    stage.width = vbox.prefWidth
+    stage.height = vbox.prefHeight
+    parent?.let {
+        // show center of parent
+        val x = parent.x + (parent.width - stage.width) / 2
+        val y = parent.y + (parent.height - stage.height) / 2
+        stage.x = x
+        stage.y = y
+        task.invoke(stage)
+
+        stage.show()
+    }
+
 }
