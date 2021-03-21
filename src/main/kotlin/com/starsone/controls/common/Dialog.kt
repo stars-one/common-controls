@@ -220,7 +220,7 @@ class DownloadDialogView(val stage: Stage?, val url: String, val file: String = 
  * 展示不确定进度加载对话框(动态图+文字 居中显示)
  *
  * @param parent
- * @param iv 传null则显示material的圆形进度条
+ * @param iv 传null则显示material的圆形进度条,使用resources.imageView方法构造imageview
  * @param stageWidth 加载框的宽度
  * @param stageHeight 加载框的高度
  * @param labelText 文字
