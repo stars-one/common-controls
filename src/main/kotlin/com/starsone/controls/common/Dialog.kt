@@ -233,7 +233,7 @@ fun showLoadingDialog(parent: Stage?, iv: ImageView?, stageWidth: Double, stageH
     // style
     stage.initStyle(StageStyle.UNDECORATED)
     stage.initStyle(StageStyle.TRANSPARENT)
-    stage.initModality(Modality.APPLICATION_MODAL)
+    stage.initModality(Modality.NONE)
 
     val vbox = VBox(10.0)
     val label = Text(labelText)
