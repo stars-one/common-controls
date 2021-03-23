@@ -63,11 +63,11 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
         val container = vbox()
 
-        /*container.fitToParentHeight()
+        container.fitToParentHeight()
         container.fitToParentWidth()
-        root.fitToParentHeight()
-        root.fitToParentWidth()*/
         root.add(container)
+        root.fitToParentHeight()
+        root.fitToParentWidth()
 
 
         itemViewObList.onChange { change ->
@@ -125,8 +125,9 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
             }
         } else {
             noDataVBox?.let {
-                container.fitToParentWidth()
-                container.fitToParentHeight()
+                //减少20,保持scrollpane不显示滚动条
+                container.prefHeight  = root.prefHeight-20
+                container.prefWidth = root.prefWidth-20
                 container.alignment = Pos.CENTER
                 container.children.add(it)
             }
@@ -258,11 +259,19 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
     }
 
     fun addAll(list: List<beanT>) {
-        beanObList.addAll(list)
+        //使用addAll方法,onBindData回调会有问题,只会回调首个
+        //beanObList.addAll(list)
+        list.forEach {
+            beanObList.add(it)
+        }
     }
 
     fun addAll(vararg bean: beanT) {
-        beanObList.addAll(bean)
+        //使用addAll方法,onBindData回调会有问题,只会回调首个
+        //beanObList.addAll(bean)
+        bean.forEach {
+            beanObList.add(it)
+        }
     }
 
     /**
