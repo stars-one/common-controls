@@ -13,10 +13,8 @@ import javafx.scene.Node
 import javafx.scene.Scene
 import javafx.scene.control.Label
 import javafx.scene.image.ImageView
-import javafx.scene.layout.Background
-import javafx.scene.layout.HBox
-import javafx.scene.layout.Pane
-import javafx.scene.layout.VBox
+import javafx.scene.layout.*
+import javafx.scene.paint.Color
 import javafx.scene.text.Text
 import javafx.stage.Modality
 import javafx.stage.Stage
@@ -156,12 +154,12 @@ class DownloadDialogView(val stage: Stage?, val url: String, val file: String = 
 
     fun show() {
         //取消下载
-        var task:Task<Unit>? = null
+        var task: Task<Unit>? = null
         val alert = DialogBuilder(stage)
                 .setTitle("提示")
                 .setCustomContext(content)
                 .setNegativeBtn("后台下载")
-                .setPositiveBtn("取消"){
+                .setPositiveBtn("取消") {
                     task?.cancel()
                 }
                 .create()
@@ -224,9 +222,10 @@ class DownloadDialogView(val stage: Stage?, val url: String, val file: String = 
  * @param stageWidth 加载框的宽度
  * @param stageHeight 加载框的高度
  * @param labelText 文字
+ * @param hasBackGround 是否有背景,true则显示白色背景,false即透明
  * @param task 异步任务,里面需要开启一个子线程,需要在耗时任务结束后手动调用stage.hide方法关闭对话框
  */
-fun showLoadingDialog(parent: Stage?, iv: ImageView?, stageWidth: Double, stageHeight: Double, labelText: String = "加载中", task: (stage: Stage) -> Unit) {
+fun showLoadingDialog(parent: Stage?, iv: ImageView?, stageWidth: Double, stageHeight: Double, labelText: String = "加载中", hasBackGround: Boolean = false, task: (stage: Stage) -> Unit) {
     val stage = Stage()
 
     stage.initOwner(parent)
@@ -236,11 +235,15 @@ fun showLoadingDialog(parent: Stage?, iv: ImageView?, stageWidth: Double, stageH
     stage.initModality(Modality.NONE)
 
     val vbox = VBox(10.0)
+    if (hasBackGround) {
+        vbox.background = Background(BackgroundFill(Color.WHITE, null, null))
+    } else {
+        vbox.background = Background.EMPTY
+    }
     val label = Text(labelText)
     vbox.prefWidth = stageWidth
     vbox.prefHeight = stageHeight
     vbox.alignment = Pos.CENTER
-    vbox.background = Background.EMPTY
     if (iv == null) {
         val jfxSp = JFXSpinner(-1.0)
         vbox.children.addAll(jfxSp)
