@@ -1,6 +1,9 @@
+import javafx.geometry.Pos
 import javafx.scene.Node
 import javafx.scene.control.*
+import javafx.scene.image.ImageView
 import javafx.scene.input.MouseButton
+import javafx.scene.layout.VBox
 import tornadofx.*
 
 /**
@@ -15,7 +18,9 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
     lateinit var adapter: RvAdapter<beanT, itemViewT>
 
-    fun setRvAdapter(adapter: RvAdapter<beanT, itemViewT>) :XRecyclerView<beanT, itemViewT>{
+    var noDataVBox: VBox? = null
+
+    fun setRvAdapter(adapter: RvAdapter<beanT, itemViewT>): XRecyclerView<beanT, itemViewT> {
         this.adapter = adapter
         val beanObList = adapter.rvDataObservableList.beanObList
         val itemViewObList = adapter.rvDataObservableList.itemViewObList
@@ -58,10 +63,23 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
         val container = vbox()
 
+        /*container.fitToParentHeight()
+        container.fitToParentWidth()
+        root.fitToParentHeight()
+        root.fitToParentWidth()*/
         root.add(container)
 
+
         itemViewObList.onChange { change ->
+
             val nodeList = container.children
+
+            //如果存在暂无数据视图,则清除
+            if (nodeList.contains(noDataVBox)) {
+                nodeList.clear()
+                container.alignment = Pos.TOP_LEFT
+            }
+
             while (change.next()) {
                 val from = change.from
                 val to = change.to
@@ -82,11 +100,20 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
                                 if (beanObList.size == 0 && from == 0 && to == 0) {
                                     nodeList.clear()
+
+                                    //当数据为0时,显示暂无数据占位图
+                                    noDataVBox?.let {
+                                        container.fitToParentWidth()
+                                        container.fitToParentHeight()
+                                        container.alignment = Pos.CENTER
+                                        nodeList.add(it)
+                                    }
                                 } else {
                                     nodeList.remove(from, from + 1)
                                 }
                             }
                         }
+
                     }
                 }
             }
@@ -96,7 +123,15 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
             beanObList.forEachIndexed { index, bean ->
                 itemViewObList.add(createItemView(bean, index))
             }
+        } else {
+            noDataVBox?.let {
+                container.fitToParentWidth()
+                container.fitToParentHeight()
+                container.alignment = Pos.CENTER
+                container.children.add(it)
+            }
         }
+
         return this
     }
 
@@ -132,15 +167,33 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
     /**
      * 设置宽度
      */
-    fun setWidth(width: Double) {
+    fun setWidth(width: Double): XRecyclerView<beanT, itemViewT> {
         root.prefWidth = width
+        return this
     }
 
     /**
      * 设置[height]
      */
-    fun setHeight(height: Double) {
+    fun setHeight(height: Double): XRecyclerView<beanT, itemViewT> {
         root.prefHeight = height
+        return this
+    }
+
+    /**
+     * 设置暂无数据的占位图
+     *
+     * @param iv
+     * @return
+     */
+    fun setNoDataMsg(iv: ImageView,tip:String=""): XRecyclerView<beanT, itemViewT> {
+        noDataVBox = vbox {
+            alignment = Pos.CENTER
+            this += iv
+            text(tip)
+        }
+
+        return this
     }
 
     /**
@@ -228,7 +281,7 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
      * @param bean
      * @param newBean
      */
-    fun update(bean: beanT,newBean:beanT) {
+    fun update(bean: beanT, newBean: beanT) {
         val index = beanObList.indexOf(bean)
         beanObList[index] = newBean
     }
@@ -273,11 +326,12 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
         }
     }
 
-    fun remove(vararg indexList:Int) {
+    fun remove(vararg indexList: Int) {
         indexList.forEach {
             remove(it)
         }
     }
+
     /**
      * 移除[from,to)的数据,包含from,不包含to
      */
@@ -292,7 +346,6 @@ class RvDataObservableList<beanT : Any, itemViewT : View> {
     fun clear() {
         beanObList.clear()
     }
-
 
 
     private fun checkIndex(index: Int): Boolean {
@@ -332,7 +385,7 @@ abstract class ItemViewBase<beanT : Any, itemViewT : View>(title: String?, icon:
 
     abstract fun bindData(beanT: beanT)
 
-    fun bindData(obList: RvDataObservableList<beanT, itemViewT>, index: Int){
+    fun bindData(obList: RvDataObservableList<beanT, itemViewT>, index: Int) {
         this.obList = obList
         this.bean = obList.beanObList[index]
         bindData(bean)
