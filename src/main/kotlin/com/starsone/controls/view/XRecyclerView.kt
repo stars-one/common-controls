@@ -1,8 +1,12 @@
+
+import javafx.geometry.Orientation
 import javafx.geometry.Pos
 import javafx.scene.Node
 import javafx.scene.control.*
 import javafx.scene.image.ImageView
 import javafx.scene.input.MouseButton
+import javafx.scene.layout.FlowPane
+import javafx.scene.layout.Pane
 import javafx.scene.layout.VBox
 import tornadofx.*
 
@@ -20,7 +24,14 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
     var noDataVBox: VBox? = null
 
-    fun setRvAdapter(adapter: RvAdapter<beanT, itemViewT>): XRecyclerView<beanT, itemViewT> {
+    /**
+     * 设置adapter
+     *
+     * @param adapter
+     * @param isGrid 是否网格排列
+     * @return
+     */
+    fun setRvAdapter(adapter: RvAdapter<beanT, itemViewT>, gridLayoutSetting: GridLayoutSetting? = null): XRecyclerView<beanT, itemViewT> {
         this.adapter = adapter
         val beanObList = adapter.rvDataObservableList.beanObList
         val itemViewObList = adapter.rvDataObservableList.itemViewObList
@@ -61,7 +72,16 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
         }
 
-        val container = vbox()
+
+        val container = if (gridLayoutSetting != null) {
+            val pane = FlowPane(Orientation.HORIZONTAL)
+            pane.hgap = gridLayoutSetting.hspace
+            pane.vgap = gridLayoutSetting.vspace
+            pane.padding = insets(10)
+            pane
+        } else {
+            VBox()
+        }
 
         container.fitToParentHeight()
         container.fitToParentWidth()
@@ -77,7 +97,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
             //如果存在暂无数据视图,则清除
             if (nodeList.contains(noDataVBox)) {
                 nodeList.clear()
-                container.alignment = Pos.TOP_LEFT
+                container.setAlignment(gridLayoutSetting!=null, Pos.TOP_LEFT)
             }
 
             while (change.next()) {
@@ -105,7 +125,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
                                     noDataVBox?.let {
                                         container.fitToParentWidth()
                                         container.fitToParentHeight()
-                                        container.alignment = Pos.CENTER
+                                        container.setAlignment(gridLayoutSetting!=null, Pos.CENTER)
                                         nodeList.add(it)
                                     }
                                 } else {
@@ -126,9 +146,9 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
         } else {
             noDataVBox?.let {
                 //减少20,保持scrollpane不显示滚动条
-                container.prefHeight  = root.prefHeight-20
-                container.prefWidth = root.prefWidth-20
-                container.alignment = Pos.CENTER
+                container.prefHeight = root.prefHeight - 20
+                container.prefWidth = root.prefWidth - 20
+                container.setAlignment(gridLayoutSetting!=null, Pos.CENTER)
                 container.children.add(it)
             }
         }
@@ -187,7 +207,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
      * @param iv
      * @return
      */
-    fun setNoDataMsg(iv: ImageView,tip:String=""): XRecyclerView<beanT, itemViewT> {
+    fun setNoDataMsg(iv: ImageView, tip: String = ""): XRecyclerView<beanT, itemViewT> {
         noDataVBox = vbox {
             alignment = Pos.CENTER
             this += iv
@@ -207,6 +227,16 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
             "always" -> root.hbarPolicy = ScrollPane.ScrollBarPolicy.ALWAYS
             "asneed" -> root.hbarPolicy = ScrollPane.ScrollBarPolicy.AS_NEEDED
         }
+    }
+}
+
+fun Pane.setAlignment(isFlowPane: Boolean, alignment: Pos) {
+    if (isFlowPane) {
+        val tempPane = this as FlowPane
+        tempPane.alignment = alignment
+    } else {
+        val tempPane = this as VBox
+        tempPane.alignment = alignment
     }
 }
 
@@ -418,3 +448,13 @@ abstract class ItemViewBase<beanT : Any, itemViewT : View>(title: String?, icon:
 
     }
 }
+
+
+
+/**
+ *
+ * @property vspace 每个item的垂直间距
+ * @property hspace 每个item的水平间距
+ * @constructor Create empty Grid layout setting
+ */
+data class GridLayoutSetting(var vspace: Double, var hspace: Double)
