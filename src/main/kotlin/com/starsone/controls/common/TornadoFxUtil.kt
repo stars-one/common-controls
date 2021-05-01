@@ -202,6 +202,32 @@ class TornadoFxUtil {
                 Desktop.getDesktop().browse(URI("http://$url"));
             }
         }
+
+        /**
+         * 打开文件所在目录
+         *
+         * @param file
+         */
+        fun openFileDir(file: File) {
+            val prop = System.getProperties()
+
+            val os = prop.getProperty("os.name")
+            if (os.contains("win", true)) {
+                Runtime.getRuntime().exec("explorer /select, ${file.path}");//打开资源管理器，选择该文件
+            } else {
+                Desktop.getDesktop().open(file.parentFile)
+            }
+        }
+
+        /**
+         * 打开文件(使用相关默认应用)
+         *
+         * @param file
+         */
+        fun openFile(file: File) {
+            Desktop.getDesktop().open(file)
+        }
+
     }
 }
 
