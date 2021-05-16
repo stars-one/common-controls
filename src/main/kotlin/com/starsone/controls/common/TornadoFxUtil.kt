@@ -181,7 +181,12 @@ class TornadoFxUtil {
                                         }
                                     }
                                 } catch (e: Exception) {
-                                    throw e
+                                    runLater {
+                                        alert.close()
+                                        if (pane != null) {
+                                            showToast(pane, "更新失败,网络异常")
+                                        }
+                                    }
                                 }
                             }
                         }
