@@ -233,6 +233,34 @@ class TornadoFxUtil {
             Desktop.getDesktop().open(file)
         }
 
+        /**
+         * 处理文件名 如将 test*.java 替换成test＊.java(后面和这个星号是中文的星号)
+         *
+         * **处理说明:**
+         * - 星号替换为中文星号
+         * - 问号替换为中文问号
+         * - 冒号替换为中文呢冒号
+         * - `\` `/` `|`替换为`-`
+         * - 剩下则直接替换成空白字符串
+         * @param fileName 文件名(不能是路径,单纯的文件名)
+         * @return
+         */
+        fun handleFileName(fileName: String): String {
+            //需要对文件名进行处理,否则会产生无法下载问题
+            // \ / : * ? " < > |
+            var result = fileName
+            listOf("\\", "/", "*", "?", "<", ">", "|", ":").forEach {
+                result = when (it) {
+                    "*" -> result.replace(it, "＊")
+                    "?" -> result.replace(it, "？")
+                    ":" -> result.replace(it, "：")
+                    "/", "\\", "|" -> result.replace(it,"-")
+                    else -> result.replace(it, "")
+                }
+            }
+            return result
+        }
+
     }
 }
 
