@@ -4,6 +4,7 @@ import com.starsone.controls.model.UpdateInfo
 import javafx.scene.input.Clipboard
 import javafx.scene.input.ClipboardContent
 import javafx.scene.layout.Pane
+import javafx.stage.Screen
 import javafx.stage.Stage
 import org.jsoup.Jsoup
 import tornadofx.*
@@ -261,6 +262,23 @@ class TornadoFxUtil {
             return result
         }
 
+        /**
+         * 获取当前显示器的宽度
+         *
+         * @return
+         */
+        fun getScreenWidth():Double {
+            return Screen.getPrimary().bounds.width
+        }
+
+        /**
+         * 获取当前显示器的高度
+         *
+         * @return
+         */
+        fun getScreenHeight(): Double {
+            return Screen.getPrimary().bounds.height
+        }
     }
 }
 
