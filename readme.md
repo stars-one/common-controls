@@ -266,6 +266,9 @@ jfxbutton("检测更新") {
 - 打开网址`openUrl`
 - 打开文件所在文件夹 `openFileDir`
 - 打开文件(使用默认关联应用程序) `openFile`
+- 获取当前显示器的宽度 `getScreenWidth`
+- 获取当前显示器的高度 `getScreenHeight`
+- 处理文件名(替换掉文件名中非法的字符) `handleFileName`
 ## 4.常用控件
 以下的控件其实本质上都是一个方法,使用了TornadoFx内置的DSL语法进行书写,使用的时候和TornadoFx编写布局的代码是一样的
 
