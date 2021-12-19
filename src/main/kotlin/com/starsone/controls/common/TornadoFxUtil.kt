@@ -254,7 +254,7 @@ class TornadoFxUtil {
                     "*" -> result.replace(it, "＊")
                     "?" -> result.replace(it, "？")
                     ":" -> result.replace(it, "：")
-                    "/", "\\", "|" -> result.replace(it,"-")
+                    "/", "\\", "|" -> result.replace(it,"&")
                     else -> result.replace(it, "")
                 }
             }
