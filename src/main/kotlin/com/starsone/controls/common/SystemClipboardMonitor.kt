@@ -26,7 +26,7 @@ class SystemClipboardMonitor : ClipboardOwner {
 
     override fun lostOwnership(clipboard: Clipboard?, contents: Transferable?) {
         try {
-            Thread.sleep(1)
+            Thread.sleep(10)
             var text = ""
             if (clipboard?.isDataFlavorAvailable(DataFlavor.stringFlavor) == true) {
                 text = clipboard.getData(DataFlavor.stringFlavor).toString()
