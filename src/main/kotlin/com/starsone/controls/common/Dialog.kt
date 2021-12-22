@@ -15,8 +15,10 @@ import javafx.scene.control.Label
 import javafx.scene.image.ImageView
 import javafx.scene.layout.*
 import javafx.scene.paint.Color
+import javafx.scene.text.FontWeight
 import javafx.scene.text.Text
 import javafx.stage.Modality
+import javafx.stage.Popup
 import javafx.stage.Stage
 import javafx.stage.StageStyle
 import tornadofx.*
@@ -269,5 +271,49 @@ fun showLoadingDialog(parent: Stage?, iv: ImageView?, stageWidth: Double, stageH
 
         stage.show()
     }
+}
 
+/**
+ * 右下角弹出提示
+ *
+ * @param stage 窗口
+ * @param title 标题
+ * @param content 内容
+ * @param closeTime 自动关闭倒计时(s) 默认为3s
+ */
+fun showDialogPopup(stage: Stage?, title: String, content: String, closeTime: Double = 3.0) {
+    val popup = Popup()
+    val vbox = VBox()
+    vbox.style {
+        backgroundColor += c("black")
+        padding = box(20.px)
+    }
+    vbox.prefWidth = 300.0
+    val title = Text(title)
+    title.style {
+        fill = c("white")
+        fontWeight = FontWeight.BOLD
+        fontSize = 18.px
+    }
+    val content = Text(content)
+    content.wrappingWidth = 300.0
+    content.style {
+        fontSize = 16.px
+        fill = c("white")
+    }
+
+    vbox.spacing = 20.0
+    vbox.children.add(title)
+    vbox.children.add(content)
+    popup.content.add(vbox)
+    popup.show(stage, TornadoFxUtil.getScreenWidth(), TornadoFxUtil.getScreenHeight())
+
+    //倒计时关闭
+    runAsync {
+        Thread.sleep((closeTime * 1000).toLong())
+    } ui {
+        popup.hide()
+    }
+
+    //todo 实现队列弹窗
 }
