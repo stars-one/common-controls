@@ -1,6 +1,7 @@
 package com.starsone.controls.common
 
 import com.starsone.controls.model.UpdateInfo
+import javafx.application.Platform
 import javafx.scene.input.Clipboard
 import javafx.scene.input.ClipboardContent
 import javafx.scene.layout.Pane
@@ -215,10 +216,7 @@ class TornadoFxUtil {
          * @param file
          */
         fun openFileDir(file: File) {
-            val prop = System.getProperties()
-
-            val os = prop.getProperty("os.name")
-            if (os.contains("win", true)) {
+            if (isWin()) {
                 Runtime.getRuntime().exec("explorer /select, ${file.path}");//打开资源管理器，选择该文件
             } else {
                 Desktop.getDesktop().open(file.parentFile)
@@ -255,7 +253,7 @@ class TornadoFxUtil {
                     "*" -> result.replace(it, "＊")
                     "?" -> result.replace(it, "？")
                     ":" -> result.replace(it, "：")
-                    "/", "\\", "|" -> result.replace(it,"&")
+                    "/", "\\", "|" -> result.replace(it, "&")
                     else -> result.replace(it, "")
                 }
             }
@@ -267,7 +265,7 @@ class TornadoFxUtil {
          *
          * @return
          */
-        fun getScreenWidth():Double {
+        fun getScreenWidth(): Double {
             return Screen.getPrimary().bounds.width
         }
 
@@ -278,6 +276,55 @@ class TornadoFxUtil {
          */
         fun getScreenHeight(): Double {
             return Screen.getPrimary().bounds.height
+        }
+
+        /**
+         * 获取当前jar包的文件路径
+         *
+         * @param url 在View中使用resources.url("")获取的参数
+         * @return
+         */
+        fun getCurrentJarPath(url: URL): File {
+            val filePath = url.path.substringBeforeLast("!/")
+            return File(URI.create(filePath))
+        }
+
+        /**
+         * 重启当前应用
+         *
+         * @param url 在View中使用resources.url("")获取的参数
+         */
+        fun restartApp(url: URL) {
+            val jarFile = getCurrentJarPath(url)
+            //开启新应用
+            Runtime.getRuntime().exec("cmd.exe /c javaw -jar ${jarFile.path}")
+            //关闭当前应用
+            Platform.exit()
+        }
+
+        /**
+         * 打开指定jar文件
+         *
+         * @param jarFile
+         */
+        fun openApp(jarFile: File) {
+            if (jarFile.extension.toLowerCase() == "jar") {
+                if (isWin()) {
+                    Runtime.getRuntime().exec("cmd.exe /c javaw -jar ${jarFile.path}")
+                } else {//linux或mac(未实践过)
+                    Runtime.getRuntime().exec("javaw -jar ${jarFile.path}")
+                }
+            }
+        }
+
+        /**
+         * 当前系统是否为window系统
+         */
+        fun isWin(): Boolean {
+            val prop = System.getProperties()
+
+            val os = prop.getProperty("os.name")
+            return os.contains("win", true)
         }
     }
 }

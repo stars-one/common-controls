@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXSnackbar
 import com.jfoenix.controls.JFXSpinner
 import com.starsone.controls.download.HttpDownloader
 import com.starsone.controls.download.LanzouParse
+import javafx.application.Platform
 import javafx.beans.property.SimpleDoubleProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.concurrent.Task
@@ -22,6 +23,7 @@ import javafx.stage.Popup
 import javafx.stage.Stage
 import javafx.stage.StageStyle
 import tornadofx.*
+import java.io.File
 import java.io.IOException
 
 /**
@@ -110,6 +112,29 @@ fun showLoadingDialog(stage: Stage?, title: String, message: String, negativeBtn
 }
 
 /**
+ * 关闭程序并打开新版本的对话框
+ *
+ * @param stage
+ * @param title
+ * @param message
+ * @param file 下载后的包
+ * @return
+ */
+fun showStopDialog(stage: Stage?, title: String, message: String, file: File): JFXAlert<String> {
+    return DialogBuilder(stage)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveBtn("确定") {
+                //判断是否为jar文件
+                TornadoFxUtil.openFile(file)
+                //关闭当前应用
+                stage?.close()
+                Platform.exit()
+            }
+            .create()
+}
+
+/**
  * 关闭程序的对话框
  */
 fun showStopDialog(stage: Stage?, title: String, message: String): JFXAlert<String> {
@@ -180,7 +205,7 @@ class DownloadDialogView(val stage: Stage?, val url: String, val file: String = 
 
                         override fun onFinish() {
                             runLater {
-                                showStopDialog(stage, "提示", "新版本已下载,请点击确定结束当前程序,之后打开新版本使用吧~")
+                                showStopDialog(stage, "提示", "新版本已成功下载,点击确认即可打开新版本!", File(file))
                             }
                             alert.close()
                         }
