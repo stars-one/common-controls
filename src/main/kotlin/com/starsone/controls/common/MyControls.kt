@@ -2,7 +2,6 @@ package com.starsone.controls.common
 
 import com.jfoenix.controls.JFXButton
 import com.starsone.controls.common.TornadoFxUtil.Companion.completeUrl
-import com.starsone.icontext.icontext
 import javafx.event.EventTarget
 import javafx.scene.Node
 import javafx.scene.control.ContextMenu
@@ -211,7 +210,14 @@ fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc:String, imgPath: St
         }
         if (imgPath.isBlank()) {
             //普通按钮
-            jfxbutton(graphic = icontext("folder-open", "20px", "blue")) {
+            jfxbutton {
+                graphic=text {
+                    text="\ueac5"
+                    style{
+                        font = loadFont("/ttf/iconfont.ttf",18.0)!!
+                        fill= c("#ffad42")
+                    }
+                }
                 action {
                     val split = fileTypes.split(",")
                     val fileTypeList = split.map { "*.$it" }

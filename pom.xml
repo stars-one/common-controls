@@ -7,7 +7,7 @@
     <groupId>site.starsone</groupId>
     <artifactId>common-controls</artifactId>
     <!--版本-->
-    <version>1.3</version>
+    <version>1.4</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -100,11 +100,11 @@
         </repository>
     </repositories>
     <dependencies>
-        <dependency>
-            <groupId>com.github.Stars-One</groupId>
-            <artifactId>IconTextFx</artifactId>
-            <version>1.2</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--    <groupId>com.github.Stars-One</groupId>-->
+        <!--    <artifactId>IconTextFx</artifactId>-->
+        <!--    <version>1.2</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>no.tornado</groupId>
             <artifactId>tornadofx</artifactId>

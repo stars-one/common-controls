@@ -2,8 +2,6 @@ package com.starsone.controls.common
 
 import com.jfoenix.controls.*
 import com.starsone.controls.model.UpdateInfo
-import com.starsone.icontext.MaterialDesignIconText
-import com.starsone.icontext.MaterialDesignIconTextFactory
 import javafx.geometry.Pos
 import javafx.scene.Node
 import javafx.scene.control.Hyperlink
@@ -15,6 +13,7 @@ import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.paint.Paint
 import javafx.scene.text.FontWeight
+import javafx.scene.text.Text
 import javafx.stage.Modality
 import javafx.stage.Stage
 import tornadofx.*
@@ -41,7 +40,7 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
     private var onLoadingListener: ((alert: JFXAlert<String>) -> Unit)? = null
 
     //右上角的关闭按钮
-    lateinit var closeBtn: MaterialDesignIconText
+    lateinit var closeBtn: Text
 
     //是否采用自定义内容
     private var isCustom = false
@@ -53,8 +52,11 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
 
     fun setTitle(title: String): DialogBuilder {
         val title = Label(title)
-        closeBtn = MaterialDesignIconTextFactory.getIconText("close")
-        closeBtn.setSize("20px")
+        closeBtn = Text()
+        closeBtn.style {
+            font = loadFont("/ttf/iconfont.ttf", 15.0)!!
+        }
+        closeBtn.text = "\ue646"
         AnchorPane.setLeftAnchor(title, 0.0)
         //设置关闭按钮显示在右上角
         AnchorPane.setRightAnchor(closeBtn, 0.0)
