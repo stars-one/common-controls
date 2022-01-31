@@ -18,7 +18,7 @@ import tornadofx.*
  */
 class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
-    override val root = scrollpane()
+    override val root = scrollpane(true)
 
     lateinit var adapter: RvAdapter<beanT, itemViewT>
 
@@ -165,7 +165,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
      */
     private fun createItemView(bean: beanT, index: Int): itemViewT {
         adapter.let { ada ->
-            val itemView = ada.onCreateView()
+            val itemView = ada.onCreateView(bean,index)
             //绑定bean数据到itemView
             ada.onBindData(itemView, bean, index)
             //设置监听器
@@ -403,7 +403,7 @@ abstract class RvAdapter<beanT : Any, itemViewT : View>(val rvDataObservableList
     /**
      * 设置返回ItemView
      */
-    abstract fun onCreateView(): itemViewT
+    abstract fun onCreateView(bean: beanT, position: Int): itemViewT
 
     abstract fun onBindData(itemView: itemViewT, bean: beanT, position: Int)
 
