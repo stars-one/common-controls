@@ -279,14 +279,32 @@ class TornadoFxUtil {
         }
 
         /**
-         * 获取当前jar包的文件路径
+         * 获取当前jar包的文件路径(如果不是jar包打开,则是获取当前项目的根路径)
          *
          * @param url 在View中使用resources.url("")获取的参数
          * @return
          */
         fun getCurrentJarPath(url: URL): File {
-            val filePath = url.path.substringBeforeLast("!/")
+            val path = url.path
+            val filePath = path.substringBeforeLast("!/")
             return File(URI.create(filePath))
+        }
+
+        /**
+         * 获取当前jar包的文件夹路径(如果不是jar包打开,会出现异常!!)
+         *
+         * @param url 在View中使用resources.url("")获取的参数
+         * @return
+         */
+        fun getCurrentJarDirPath(url: URL) :File{
+            val jarFlag = "!/"
+            val path = url.path
+            return if (path.contains(jarFlag)) {
+                val filePath = path.substringBeforeLast("!/")
+                File(URI.create(filePath)).parentFile
+            }else{
+                File("").absoluteFile
+            }
         }
 
         /**
