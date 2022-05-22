@@ -25,6 +25,43 @@ TornadoFX交流群：1071184701
 
 最新版本1.7
 
+> PS:2.0版本进行了包名结构优化,出现报错,请重新导包即可
+
+## 目录
+
+* [CommonControl](#commoncontrol)
+  * [目录](#目录)
+  * [引入依赖](#引入依赖)
+    * [Maven引入](#maven引入)
+    * [Gradle引入](#gradle引入)
+  * [介绍](#介绍)
+  * [1.常用对话框](#1常用对话框)
+    * [普通对话框](#普通对话框)
+    * [确认对话框](#确认对话框)
+    * [输入对话框](#输入对话框)
+    * [输出对话框](#输出对话框)
+    * [下载对话框](#下载对话框)
+    * [加载对话框](#加载对话框)
+    * [关闭程序对话框](#关闭程序对话框)
+    * [右下角弹窗](#右下角弹窗)
+    * [检测更新对话框](#检测更新对话框)
+    * [自定义对话框](#自定义对话框)
+  * [2.检测更新功能](#2检测更新功能)
+  * [3.常用方法](#3常用方法)
+  * [4.常用控件](#4常用控件)
+  * [5.下载框架](#5下载框架)
+  * [6.XRecyclerView的用法](#6xrecyclerview的用法)
+    * [1.创建bean类](#1创建bean类)
+    * [2.创建ItemView](#2创建itemview)
+    * [3.创建RvDataObservableList和RvAdapter](#3创建rvdataobservablelist和rvadapter)
+    * [4.界面添加FxRecyclerView](#4界面添加fxrecyclerview)
+    * [5.方法补充](#5方法补充)
+  * [7.配置存储类](#7配置存储类)
+    * [1.常量池创建](#1常量池创建)
+    * [2.工具类的创建](#2工具类的创建)
+    * [3.关于GlobalDataConfig方法补充](#3关于globaldataconfig方法补充)
+
+
 ## 引入依赖
 
 ### Maven引入
@@ -482,3 +519,56 @@ class RvTestView : View("My View") {
 |clear				|			|清除所有数据		|
 
 
+## 7.配置存储类
+
+在多数情况下,软件会有设置项的存储,需要本地存储下用户的设置
+
+这里便是自己琢磨了下,写了个配置存储的功能(`GlobalDataConfig`类),但此类并不是能直接使用,所以下面介绍下使用方法
+
+下面以一个开关设置来讲解使用
+### 1.常量池创建
+```
+class Constants {
+    companion object {
+        const val FLAG_OPEN_OPTION = "flag_open_option"
+    }
+}
+```
+### 2.工具类的创建
+```
+class GlobalData {
+    companion object {
+
+        //某项功能开关
+        val openFlag = GlobalDataConfig(Constants.FLAG_OPEN_OPTION, false) {
+            //这里统一这样写即可,boolean根据情况来
+            it.setValue(it.storageSave.config.boolean(it.key,it.defaultValue))
+        }
+
+    }
+}
+```
+
+这里说明下,`GlobalDataConfig`的构造函数为key和defaultValue,之后会以键值对的形式存储在本地的一个properties文件中
+
+`defaultValue`即默认值,之后有个方法,主要是初始化会调用(从本地文件读取数值,若是没有数值,则取默认数值)
+
+`it.storageSave.config`这个和TornadoFx中View中的config是同个东西,用法这里不多说,唯一要注意的就是,后面的方法需要根据你传的数值来
+
+**比如说,我们这里是开关,所以选用了boolean,如果是存储其他int类型或string类型,记得修改即可**
+
+
+### 3.关于GlobalDataConfig方法补充
+
+经过上面的步骤,现在我们就可以使用`GlobalData.openFlag`来进行使用了,这里补充说明下`GlobalDataConfig`中含有的方法
+
+```
+//当前数值
+GlobalData.openFlag.currentValue
+
+//更改数值(更改会自动同步更新本地配置文件里的保存的数值)
+GlobalData.openFlag.setValue()
+
+//恢复默认值
+GlobalData.openFlag.resetValue()
+```
