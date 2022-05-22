@@ -1,4 +1,4 @@
-package com.starsone.controls.common
+package com.starsone.controls.utils
 
 import javafx.geometry.Insets
 import javafx.scene.control.Button

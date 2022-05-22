@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXSnackbar
 import com.jfoenix.controls.JFXSpinner
 import com.starsone.controls.download.HttpDownloader
 import com.starsone.controls.download.LanzouParse
+import com.starsone.controls.utils.TornadoFxUtil
 import javafx.application.Platform
 import javafx.beans.property.SimpleDoubleProperty
 import javafx.beans.property.SimpleStringProperty

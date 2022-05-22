@@ -2,6 +2,7 @@ package com.starsone.controls.common
 
 import com.jfoenix.controls.*
 import com.starsone.controls.model.UpdateInfo
+import com.starsone.controls.utils.TornadoFxUtil
 import javafx.geometry.Pos
 import javafx.scene.Node
 import javafx.scene.control.Hyperlink

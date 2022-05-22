@@ -1,7 +1,8 @@
 package com.starsone.controls.common
 
 import com.jfoenix.controls.JFXButton
-import com.starsone.controls.common.TornadoFxUtil.Companion.completeUrl
+import com.starsone.controls.utils.TornadoFxUtil
+import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
 import javafx.event.EventTarget
 import javafx.scene.Node
 import javafx.scene.control.ContextMenu

@@ -1,5 +1,8 @@
-package com.starsone.controls.common
+package com.starsone.controls.utils
 
+import com.starsone.controls.common.DialogBuilder
+import com.starsone.controls.common.DownloadDialogView
+import com.starsone.controls.common.showToast
 import com.starsone.controls.model.UpdateInfo
 import javafx.application.Platform
 import javafx.scene.input.Clipboard

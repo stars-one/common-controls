@@ -1,10 +1,10 @@
-
+package com.starsone.controls.utils
 
 import java.io.File
 import javax.swing.filechooser.FileSystemView
 
 class ShortCutUtils{
-    
+
     companion object{
         /**
          * 创建快捷方式
@@ -17,7 +17,7 @@ class ShortCutUtils{
                 println("当前系统不是window系统,无法创建快捷方式!!")
                 return
             }
-            
+
             val targetPath = targetFile.path
             if (!lnkFile.parentFile.exists()) {
                 lnkFile.mkdirs()
@@ -38,7 +38,7 @@ class ShortCutUtils{
         /**
          * 设置软件开机启动
          *
-         * @param targetFile 源文件 
+         * @param targetFile 源文件
          */
         fun setAppStartup(targetFile: File) {
             val lnkFile = File(targetFile.parentFile, "temp.lnk")
