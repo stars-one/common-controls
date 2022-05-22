@@ -1,29 +1,8 @@
-package com.starsone.controls.common
+package com.starsone.controls.utils
 
 import tornadofx.*
 import java.nio.charset.Charset
 import java.nio.file.Path
-
-
-class Constants {
-    companion object {
-        const val SP_USER_STATUS = "sp_user_status"
-    }
-}
-
-/**
- * 主要是仿写不可变的常量
- */
-class GlobalData {
-    companion object {
-
-        //
-        val userStatus = GlobalDataConfig(Constants.SP_USER_STATUS, false) {
-            it.setValue(it.storageSave.config.boolean(it.key,it.defaultValue))
-        }
-
-    }
-}
 
 class GlobalDataConfig<T>(
         val key: String,
