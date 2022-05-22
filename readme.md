@@ -572,3 +572,31 @@ GlobalData.openFlag.setValue()
 //恢复默认值
 GlobalData.openFlag.resetValue()
 ```
+
+## 8.系统剪贴板监听
+
+**此功能仅在window平台上可用!!!**
+
+使用:
+```
+val monitor = SystemClipboardMonitor()
+monitor.addClipboardListener(object :GlobalClipBoardListener{
+    override fun onCopy(text: String?, clipboard: Clipboard?, contents: Transferable?) {
+        //这里可以加上相关的判断来测试内容是否是符合自己的定义的条件才触发对应的操作
+        println("已监听到方法...")
+        println(text)
+    }
+})
+```
+
+考虑到会有设置的选项,就定义了两个开关方法,可以在需要的时候进行开关的设置(默认是剪切板的监听就是开启的)
+
+```
+//开启监听
+monitor.stopListen()
+
+//停止监听
+monitor.startListen()
+```
+
+不过测试的时候,发现还是会有些小问题...
