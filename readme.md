@@ -573,6 +573,100 @@ GlobalData.openFlag.setValue()
 GlobalData.openFlag.resetValue()
 ```
 
+对于TornadoFx应用,一般推荐我们将TextField与ViewModel中的属性进行绑定,这里也是新增了工具类去快速实现使用
+
+有四个类型的方法,各自获取不同类型的Property属性
+
+- GlobalDataConfigUtil.getSimpleBooleanProperty
+- GlobalDataConfigUtil.getSimpleStringProperty
+- GlobalDataConfigUtil.getSimpleDoubleProperty
+- GlobalDataConfigUtil.getSimpleIntegerProperty
+
+具体的使用示例代码如下
+
+<details>
+<summary>点击展开代码</summary>
+
+```kotlin
+package com.starsone.controls.test
+
+import com.starsone.controls.utils.GlobalDataConfig
+import com.starsone.controls.utils.GlobalDataConfigUtil
+import tornadofx.*
+
+
+class GlobalDataTestView : View("My View") {
+    val viewModel by inject<GlobalDataTestViewModel>()
+
+    override val root = vbox {
+
+        prefWidth = 800.0
+        prefHeight = 500.0
+
+        checkbox("开启某功能", viewModel.booleanFlag)
+
+        hbox {
+            text("string绑定")
+            textfield(viewModel.stringFlag)
+        }
+        hbox{
+            text("int绑定")
+            textfield(viewModel.intFlag)
+        }
+        hbox{
+            text("double绑定")
+            textfield(viewModel.doubleFlag)
+        }
+    }
+
+}
+
+class GlobalDataTestViewModel : ViewModel() {
+    val booleanFlag = GlobalDataConfigUtil.getSimpleBooleanProperty(GlobalData.booleanFlag)
+    val stringFlag = GlobalDataConfigUtil.getSimpleStringProperty(GlobalData.stringFlag)
+    val doubleFlag = GlobalDataConfigUtil.getSimpleDoubleProperty(GlobalData.doubleFlag)
+    val intFlag = GlobalDataConfigUtil.getSimpleIntegerProperty(GlobalData.intFlag)
+
+}
+
+
+class Constants {
+    companion object {
+        const val BOOLEAN_FLAG = "Boolean_FLAG"
+        const val STRING_FLAG = "String_FLAG"
+        const val INT_FLAG = "Int_FLAG"
+        const val DOUBLE_FLAG = "Double_FLAG"
+    }
+}
+
+/**
+ * 主要是仿写不可变的常量
+ */
+class GlobalData {
+    companion object {
+
+        val booleanFlag = GlobalDataConfig(Constants.BOOLEAN_FLAG, false) {
+            it.setValue(it.storageSave.config.boolean(it.key, it.defaultValue))
+        }
+
+        val doubleFlag = GlobalDataConfig(Constants.DOUBLE_FLAG, 0.0) {
+            it.setValue(it.storageSave.config.double(it.key, it.defaultValue))
+        }
+
+        val stringFlag = GlobalDataConfig(Constants.STRING_FLAG, "") {
+            it.setValue(it.storageSave.config.string(it.key, it.defaultValue))
+        }
+
+        val intFlag = GlobalDataConfig(Constants.INT_FLAG, 1) {
+            it.setValue(it.storageSave.config.int(it.key, it.defaultValue))
+        }
+
+    }
+}
+
+```
+</details>
+
 ## 8.系统剪贴板监听
 
 **此功能仅在window平台上可用!!!**
