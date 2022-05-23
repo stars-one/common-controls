@@ -1,8 +1,14 @@
 package com.starsone.controls.utils
 
+import javafx.beans.property.SimpleBooleanProperty
+import javafx.beans.property.SimpleDoubleProperty
+import javafx.beans.property.SimpleIntegerProperty
+import javafx.beans.property.SimpleStringProperty
 import tornadofx.*
 import java.nio.charset.Charset
 import java.nio.file.Path
+
+
 
 class GlobalDataConfig<T>(
         val key: String,
@@ -10,6 +16,7 @@ class GlobalDataConfig<T>(
         var currentValue: T = defaultValue,
         val initLbd: (GlobalDataConfig<T>) -> Unit
 ) {
+
     val storageSave = TornadoFxStorageSave<T>()
 
     private val callBackList = arrayListOf<(() -> Unit)>()
@@ -59,6 +66,7 @@ class GlobalDataConfig<T>(
     private fun updateLocalStorage(value: T) {
         storageSave.updateLocalStorage(key, value)
     }
+
 }
 
 class TornadoFxStorageSave<T> : InterfaceStorageSave<T>, Configurable {
@@ -81,6 +89,44 @@ class TornadoFxStorageSave<T> : InterfaceStorageSave<T>, Configurable {
 
 interface InterfaceStorageSave<T> {
     fun updateLocalStorage(key: String, value: T)
+}
+
+class GlobalDataConfigUtil {
+    companion object {
+        fun getSimpleBooleanProperty(config: GlobalDataConfig<Boolean>): SimpleBooleanProperty {
+            return SimpleBooleanProperty(config.currentValue).apply {
+                onChange {
+                    config.setValue(it)
+                }
+            }
+        }
+
+        fun getSimpleStringProperty(config: GlobalDataConfig<String>): SimpleStringProperty {
+            return SimpleStringProperty(config.currentValue).apply {
+                onChange {
+                    it?.let {
+                        config.setValue(it)
+                    }
+                }
+            }
+        }
+
+        fun getSimpleDoubleProperty(config: GlobalDataConfig<Double>): SimpleDoubleProperty {
+            return SimpleDoubleProperty(config.currentValue).apply {
+                onChange {
+                    config.setValue(it)
+                }
+            }
+        }
+
+        fun getSimpleIntegerProperty(config: GlobalDataConfig<Int>): SimpleIntegerProperty {
+            return SimpleIntegerProperty(config.currentValue).apply {
+                onChange {
+                    config.setValue(it)
+                }
+            }
+        }
+    }
 }
 
 
