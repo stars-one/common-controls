@@ -9,21 +9,37 @@ import java.nio.charset.Charset
 import java.nio.file.Path
 
 
-
 class GlobalDataConfig<T>(
         val key: String,
         val defaultValue: T,
-        var currentValue: T = defaultValue,
-        val initLbd: (GlobalDataConfig<T>) -> Unit
+        var currentValue: T = defaultValue
 ) {
 
-    val storageSave = TornadoFxStorageSave<T>()
+    var storageSave = TornadoFxStorageSave<T>()
 
     private val callBackList = arrayListOf<(() -> Unit)>()
 
     init {
         run {
-            initLbd.invoke(this)
+            when {
+                defaultValue is Boolean -> {
+                    val item = this as GlobalDataConfig<Boolean>
+                    item.setValue(storageSave.config.boolean(key, defaultValue))
+                }
+                defaultValue is String -> {
+                    val item = this as GlobalDataConfig<String>
+                    item.setValue(storageSave.config.string(key, defaultValue))
+                }
+                defaultValue is Int -> {
+                    val item = this as GlobalDataConfig<Int>
+                    item.setValue(storageSave.config.int(key, defaultValue))
+                }
+                defaultValue is Double -> {
+                    val item = this as GlobalDataConfig<Double>
+                    item.setValue(storageSave.config.double(key, defaultValue))
+                }
+                else -> kotlin.error("不支持的数据类型!!目前只支持string,boolean,intdouble四种类型")
+            }
         }
     }
 
@@ -64,6 +80,8 @@ class GlobalDataConfig<T>(
      * 更新本地存储
      */
     private fun updateLocalStorage(value: T) {
+        //每次更新数值,重新读取一次保存的数据(不然会出现保存数值被覆盖的问题)
+        storageSave = TornadoFxStorageSave()
         storageSave.updateLocalStorage(key, value)
     }
 
