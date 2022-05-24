@@ -540,10 +540,7 @@ class GlobalData {
     companion object {
 
         //某项功能开关
-        val openFlag = GlobalDataConfig(Constants.FLAG_OPEN_OPTION, false) {
-            //这里统一这样写即可,boolean根据情况来
-            it.setValue(it.storageSave.config.boolean(it.key,it.defaultValue))
-        }
+        val openFlag = GlobalDataConfig(Constants.FLAG_OPEN_OPTION, false) 
 
     }
 }
@@ -553,10 +550,7 @@ class GlobalData {
 
 `defaultValue`即默认值,之后有个方法,主要是初始化会调用(从本地文件读取数值,若是没有数值,则取默认数值)
 
-`it.storageSave.config`这个和TornadoFx中View中的config是同个东西,用法这里不多说,唯一要注意的就是,后面的方法需要根据你传的数值来
-
-**比如说,我们这里是开关,所以选用了boolean,如果是存储其他int类型或string类型,记得修改即可**
-
+> 注意:目前框架**只支持4种类型**,`string`,`double`,`int`,`boolean`
 
 ### 3.关于GlobalDataConfig方法补充
 
@@ -582,7 +576,7 @@ GlobalData.openFlag.resetValue()
 - GlobalDataConfigUtil.getSimpleDoubleProperty
 - GlobalDataConfigUtil.getSimpleIntegerProperty
 
-具体的使用示例代码如下
+具体的使用示例代码如下(包含四种类型的使用)
 
 <details>
 <summary>点击展开代码</summary>
@@ -611,6 +605,7 @@ class GlobalDataTestView : View("My View") {
         }
         hbox{
             text("int绑定")
+            //注意,这里如果数字数值过大,会出现逗号
             textfield(viewModel.intFlag)
         }
         hbox{
@@ -645,25 +640,16 @@ class Constants {
 class GlobalData {
     companion object {
 
-        val booleanFlag = GlobalDataConfig(Constants.BOOLEAN_FLAG, false) {
-            it.setValue(it.storageSave.config.boolean(it.key, it.defaultValue))
-        }
+        val booleanFlag = GlobalDataConfig(Constants.BOOLEAN_FLAG, false)
 
-        val doubleFlag = GlobalDataConfig(Constants.DOUBLE_FLAG, 0.0) {
-            it.setValue(it.storageSave.config.double(it.key, it.defaultValue))
-        }
+        val doubleFlag = GlobalDataConfig(Constants.DOUBLE_FLAG, 0.0)
 
-        val stringFlag = GlobalDataConfig(Constants.STRING_FLAG, "") {
-            it.setValue(it.storageSave.config.string(it.key, it.defaultValue))
-        }
+        val stringFlag = GlobalDataConfig(Constants.STRING_FLAG, "")
 
-        val intFlag = GlobalDataConfig(Constants.INT_FLAG, 1) {
-            it.setValue(it.storageSave.config.int(it.key, it.defaultValue))
-        }
+        val intFlag = GlobalDataConfig(Constants.INT_FLAG, 1)
 
     }
 }
-
 ```
 </details>
 
