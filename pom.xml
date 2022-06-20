@@ -13,7 +13,7 @@
     <properties>
         <!--打包的文件名-->
         <app.name>common-controls-${version}</app.name>
-        <kotlin.version>1.3.20</kotlin.version>
+        <kotlin.version>1.6.0</kotlin.version>
         <tornadofx.version>1.7.20</tornadofx.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
