@@ -274,6 +274,8 @@ fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String,
                     myfilepath.set(files.first().path)
                 }
             }
+            promptText="输入文件路径或拖放文件到此处"
+            prefWidth = 400.0
         }
 
         if (imgPath.isBlank()) {
