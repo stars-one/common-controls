@@ -12,6 +12,7 @@ import javafx.scene.control.MenuItem
 import javafx.scene.control.TextField
 import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCombination
+import javafx.scene.input.TransferMode
 import javafx.scene.layout.HBox
 import javafx.stage.FileChooser
 import kfoenix.jfxbutton
@@ -262,6 +263,9 @@ fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String,
     val hbox = hbox {
 
         textfield(myfilepath){
+            setOnDragOver {
+                it.acceptTransferModes(TransferMode.LINK,TransferMode.COPY,TransferMode.MOVE)
+            }
             setOnDragExited {
                 val dragboard = it.dragboard
                 val flag = dragboard.hasFiles()
