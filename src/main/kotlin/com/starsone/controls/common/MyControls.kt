@@ -3,6 +3,7 @@ package com.starsone.controls.common
 import com.jfoenix.controls.JFXButton
 import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
+import javafx.beans.property.SimpleStringProperty
 import javafx.event.EventTarget
 import javafx.scene.Node
 import javafx.scene.control.ContextMenu
@@ -192,7 +193,8 @@ fun EventTarget.xCircleJfxButton(icon: Node, op: (JFXButton.() -> Unit) = {}): J
 }
 
 /**
- * 文件输入框+选择按钮
+ *
+ * 文件输入框+选择按钮(过时方法,请改成x
  * - [fileTypes] 文件类型,以逗号隔开 ,例如:`java,xml`
  * - [fileDesc] 文件提示
  * - [imgPath] 图片路径
@@ -237,6 +239,67 @@ fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc:String, imgPath: St
                     val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter(fileDesc, fileTypeList)))
                     if (files.isNotEmpty()) {
                         tf.text = files[0].path
+                    }
+                }
+            }
+        }
+
+    }
+    return opcr(this, hbox, op)
+}
+
+/**
+ * 选择文件(含输入框和按钮),允许拖动文件到输入框自动输入(此功能需要用不是管理员权限打开java引用)
+ *
+ * @param - [myfilepath] 可观察的String(SimpleStringProperty),与ViewModel里某字段绑定
+ * @param - [fileTypes] 文件类型,以逗号隔开 ,例如:`java,xml`
+ * @param - [fileDesc] 文件描述
+ * @param - [imgPath]
+ * @param - [imgWidth]
+ * @param - [imgHeight]
+ */
+fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String, fileDesc: String, imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
+    val hbox = hbox {
+
+        textfield(myfilepath){
+            setOnDragExited {
+                val dragboard = it.dragboard
+                val flag = dragboard.hasFiles()
+                if (flag) {
+                    val files = dragboard.files
+                    myfilepath.set(files.first().path)
+                }
+            }
+        }
+
+        if (imgPath.isBlank()) {
+            //普通按钮
+            jfxbutton {
+                graphic = text {
+                    text = "\ueac5"
+                    style {
+                        font = loadFont("/ttf/iconfont.ttf", 18.0)!!
+                        fill = c("#ffad42")
+                    }
+                }
+                action {
+                    val split = fileTypes.split(",")
+                    val fileTypeList = split.map { "*.$it" }
+                    val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter(fileDesc, fileTypeList)))
+                    if (files.isNotEmpty()) {
+                        myfilepath.set(files.first().path)
+                    }
+                }
+            }
+        } else {
+            //图片按钮
+            xJfxButton(imgPath, imgWidth, imgHeight) {
+                action {
+                    val split = fileTypes.split(",")
+                    val fileTypeList = split.map { "*.$it" }
+                    val files = chooseFile("选择文件", arrayOf(FileChooser.ExtensionFilter(fileDesc, fileTypeList)))
+                    if (files.isNotEmpty()) {
+                        myfilepath.set(files.first().path)
                     }
                 }
             }
