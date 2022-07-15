@@ -337,7 +337,7 @@ jfxbutton("检测更新") {
 |xSelectText|可选择的文本框|selectText("内容")|
 |xFfxButton|指定宽高的扁平按钮,正方形可省略高度参数|jfxbutton("xx.jpg",50,50)|
 |xCircleJfxbutton|圆形图标扁平按钮(鼠标滑过会有阴影),传递一个node参数|circlejfxbutton(imageview("xx.jpg",50))|
-|xChooseFile|文件输入+选择|selectText("内容")|
+|xChooseFile|文件输入+选择| xChooseFile(viewModel.mdFilePath, "md,markdown", "markdown文件") {|
 |showToast|显示Toast|![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200719122328168-1367451505.png)|
 
 ## 5.下载框架
