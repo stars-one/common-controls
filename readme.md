@@ -324,6 +324,8 @@ jfxbutton("检测更新") {
 - 重启当前jar文件 `restartApp`
 - 获取当前jar文件的根目录 `getCurrentJarPath`
 - 判断是否是window平台 `isWin`
+- 执行cmd命令(支持linux和macOs) `execCmd`
+
 ## 4.常用控件
 以下的控件其实本质上都是一个方法,使用了TornadoFx内置的DSL语法进行书写,使用的时候和TornadoFx编写布局的代码是一样的
 
