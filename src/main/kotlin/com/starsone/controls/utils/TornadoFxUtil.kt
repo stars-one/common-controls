@@ -4,6 +4,7 @@ import com.starsone.controls.common.DialogBuilder
 import com.starsone.controls.common.DownloadDialogView
 import com.starsone.controls.common.showToast
 import com.starsone.controls.model.UpdateInfo
+import com.sun.xml.internal.messaging.saaj.util.TeeInputStream
 import javafx.application.Platform
 import javafx.scene.input.Clipboard
 import javafx.scene.input.ClipboardContent
@@ -13,10 +14,11 @@ import javafx.stage.Stage
 import org.jsoup.Jsoup
 import tornadofx.*
 import java.awt.Desktop
-import java.io.File
+import java.io.*
 import java.net.URI
 import java.net.URL
 import java.util.zip.GZIPInputStream
+import kotlin.concurrent.thread
 
 
 /**
@@ -299,13 +301,13 @@ class TornadoFxUtil {
          * @param url 在View中使用resources.url("")获取的参数
          * @return
          */
-        fun getCurrentJarDirPath(url: URL) :File{
+        fun getCurrentJarDirPath(url: URL): File {
             val jarFlag = "!/"
             val path = url.path
             return if (path.contains(jarFlag)) {
                 val filePath = path.substringBeforeLast("!/")
                 File(URI.create(filePath)).parentFile
-            }else{
+            } else {
                 File("").absoluteFile
             }
         }
@@ -346,6 +348,70 @@ class TornadoFxUtil {
 
             val os = prop.getProperty("os.name")
             return os.contains("win", true)
+        }
+
+        /**
+         * 执行命令行,并等待命令执行完毕,同时将过程中的控制台输出日志写入日志文件中
+         * - [cmd] 命令,window记得要使用cmd /c开头,如cmd /c ipconfig
+         * - [dir] 命令行所在路径
+         * - [logFile] 日志文件
+         */
+         fun execCmd(cmd: String, dir: File, logFile: File) {
+            val process = Runtime.getRuntime().exec(cmd, null, dir)
+            val inputStream = process.inputStream
+
+            //开启两个线程用来读取流，否则会造成死锁问题
+            thread {
+                var fileOutputStream: FileOutputStream? = null
+                var teeInputStream: TeeInputStream? = null
+                var bufferedReader: BufferedReader? = null
+                try {
+                    fileOutputStream = FileOutputStream(logFile, true)
+                    //使用分流器，日志文件和
+                    teeInputStream = TeeInputStream(inputStream, fileOutputStream)
+                    //区分不同平台
+                    bufferedReader = if (isWin()) {
+                        BufferedReader(InputStreamReader(teeInputStream, "gbk"))
+                    } else {
+                        BufferedReader(InputStreamReader(teeInputStream, "utf-8"))
+                    }
+                    var line: String?
+                    while (bufferedReader.readLine().also { line = it } != null) {
+                        println(line)
+                    }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                } finally {
+                    try {
+                        bufferedReader!!.close()
+                        teeInputStream!!.close()
+                        fileOutputStream!!.close()
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                    }
+                }
+            }
+            thread {
+                val err = InputStreamReader(process.errorStream)
+                val bferr = BufferedReader(err)
+                var errline = ""
+                try {
+                    while (bferr.readLine().also { errline = it } != null) {
+                        println("流错误：$errline")
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                } finally {
+                    try {
+                        bferr.close()
+                        err.close()
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                    }
+                }
+            }
+            process.waitFor()
+            process.destroy()
         }
     }
 }
