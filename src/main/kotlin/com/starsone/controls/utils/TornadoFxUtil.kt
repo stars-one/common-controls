@@ -165,6 +165,7 @@ class TornadoFxUtil {
 
                                         info = UpdateInfo(jsonObject.getString("appVersionName"), jsonObject.getInt("appVersionCode").toString(), jsonObject.getString("createTime"), jsonObject.getString("updateMessage"), jsonObject.getString("fileDownloadUrl"))
                                         info?.let {
+                                            alert.hideWithAnimation()
                                             runLater {
                                                 val dialogBuilder = DialogBuilder(stage)
                                                         .setTitle("发现新版本")
