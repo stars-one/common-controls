@@ -1,0 +1,9086 @@
+[
+  {
+    "name": "24-hours-fill",
+    "unicode": "\\uEA01"
+  },
+  {
+    "name": "24-hours-line",
+    "unicode": "\\uEA02"
+  },
+  {
+    "name": "4k-fill",
+    "unicode": "\\uEA03"
+  },
+  {
+    "name": "4k-line",
+    "unicode": "\\uEA04"
+  },
+  {
+    "name": "a-b",
+    "unicode": "\\uEA05"
+  },
+  {
+    "name": "account-box-fill",
+    "unicode": "\\uEA06"
+  },
+  {
+    "name": "account-box-line",
+    "unicode": "\\uEA07"
+  },
+  {
+    "name": "account-circle-fill",
+    "unicode": "\\uEA08"
+  },
+  {
+    "name": "account-circle-line",
+    "unicode": "\\uEA09"
+  },
+  {
+    "name": "account-pin-box-fill",
+    "unicode": "\\uEA0A"
+  },
+  {
+    "name": "account-pin-box-line",
+    "unicode": "\\uEA0B"
+  },
+  {
+    "name": "account-pin-circle-fill",
+    "unicode": "\\uEA0C"
+  },
+  {
+    "name": "account-pin-circle-line",
+    "unicode": "\\uEA0D"
+  },
+  {
+    "name": "add-box-fill",
+    "unicode": "\\uEA0E"
+  },
+  {
+    "name": "add-box-line",
+    "unicode": "\\uEA0F"
+  },
+  {
+    "name": "add-circle-fill",
+    "unicode": "\\uEA10"
+  },
+  {
+    "name": "add-circle-line",
+    "unicode": "\\uEA11"
+  },
+  {
+    "name": "add-fill",
+    "unicode": "\\uEA12"
+  },
+  {
+    "name": "add-line",
+    "unicode": "\\uEA13"
+  },
+  {
+    "name": "admin-fill",
+    "unicode": "\\uEA14"
+  },
+  {
+    "name": "admin-line",
+    "unicode": "\\uEA15"
+  },
+  {
+    "name": "advertisement-fill",
+    "unicode": "\\uEA16"
+  },
+  {
+    "name": "advertisement-line",
+    "unicode": "\\uEA17"
+  },
+  {
+    "name": "airplay-fill",
+    "unicode": "\\uEA18"
+  },
+  {
+    "name": "airplay-line",
+    "unicode": "\\uEA19"
+  },
+  {
+    "name": "alarm-fill",
+    "unicode": "\\uEA1A"
+  },
+  {
+    "name": "alarm-line",
+    "unicode": "\\uEA1B"
+  },
+  {
+    "name": "alarm-warning-fill",
+    "unicode": "\\uEA1C"
+  },
+  {
+    "name": "alarm-warning-line",
+    "unicode": "\\uEA1D"
+  },
+  {
+    "name": "album-fill",
+    "unicode": "\\uEA1E"
+  },
+  {
+    "name": "album-line",
+    "unicode": "\\uEA1F"
+  },
+  {
+    "name": "alert-fill",
+    "unicode": "\\uEA20"
+  },
+  {
+    "name": "alert-line",
+    "unicode": "\\uEA21"
+  },
+  {
+    "name": "aliens-fill",
+    "unicode": "\\uEA22"
+  },
+  {
+    "name": "aliens-line",
+    "unicode": "\\uEA23"
+  },
+  {
+    "name": "align-bottom",
+    "unicode": "\\uEA24"
+  },
+  {
+    "name": "align-center",
+    "unicode": "\\uEA25"
+  },
+  {
+    "name": "align-justify",
+    "unicode": "\\uEA26"
+  },
+  {
+    "name": "align-left",
+    "unicode": "\\uEA27"
+  },
+  {
+    "name": "align-right",
+    "unicode": "\\uEA28"
+  },
+  {
+    "name": "align-top",
+    "unicode": "\\uEA29"
+  },
+  {
+    "name": "align-vertically",
+    "unicode": "\\uEA2A"
+  },
+  {
+    "name": "alipay-fill",
+    "unicode": "\\uEA2B"
+  },
+  {
+    "name": "alipay-line",
+    "unicode": "\\uEA2C"
+  },
+  {
+    "name": "amazon-fill",
+    "unicode": "\\uEA2D"
+  },
+  {
+    "name": "amazon-line",
+    "unicode": "\\uEA2E"
+  },
+  {
+    "name": "anchor-fill",
+    "unicode": "\\uEA2F"
+  },
+  {
+    "name": "anchor-line",
+    "unicode": "\\uEA30"
+  },
+  {
+    "name": "ancient-gate-fill",
+    "unicode": "\\uEA31"
+  },
+  {
+    "name": "ancient-gate-line",
+    "unicode": "\\uEA32"
+  },
+  {
+    "name": "ancient-pavilion-fill",
+    "unicode": "\\uEA33"
+  },
+  {
+    "name": "ancient-pavilion-line",
+    "unicode": "\\uEA34"
+  },
+  {
+    "name": "android-fill",
+    "unicode": "\\uEA35"
+  },
+  {
+    "name": "android-line",
+    "unicode": "\\uEA36"
+  },
+  {
+    "name": "angularjs-fill",
+    "unicode": "\\uEA37"
+  },
+  {
+    "name": "angularjs-line",
+    "unicode": "\\uEA38"
+  },
+  {
+    "name": "anticlockwise-2-fill",
+    "unicode": "\\uEA39"
+  },
+  {
+    "name": "anticlockwise-2-line",
+    "unicode": "\\uEA3A"
+  },
+  {
+    "name": "anticlockwise-fill",
+    "unicode": "\\uEA3B"
+  },
+  {
+    "name": "anticlockwise-line",
+    "unicode": "\\uEA3C"
+  },
+  {
+    "name": "app-store-fill",
+    "unicode": "\\uEA3D"
+  },
+  {
+    "name": "app-store-line",
+    "unicode": "\\uEA3E"
+  },
+  {
+    "name": "apple-fill",
+    "unicode": "\\uEA3F"
+  },
+  {
+    "name": "apple-line",
+    "unicode": "\\uEA40"
+  },
+  {
+    "name": "apps-2-fill",
+    "unicode": "\\uEA41"
+  },
+  {
+    "name": "apps-2-line",
+    "unicode": "\\uEA42"
+  },
+  {
+    "name": "apps-fill",
+    "unicode": "\\uEA43"
+  },
+  {
+    "name": "apps-line",
+    "unicode": "\\uEA44"
+  },
+  {
+    "name": "archive-drawer-fill",
+    "unicode": "\\uEA45"
+  },
+  {
+    "name": "archive-drawer-line",
+    "unicode": "\\uEA46"
+  },
+  {
+    "name": "archive-fill",
+    "unicode": "\\uEA47"
+  },
+  {
+    "name": "archive-line",
+    "unicode": "\\uEA48"
+  },
+  {
+    "name": "arrow-down-circle-fill",
+    "unicode": "\\uEA49"
+  },
+  {
+    "name": "arrow-down-circle-line",
+    "unicode": "\\uEA4A"
+  },
+  {
+    "name": "arrow-down-fill",
+    "unicode": "\\uEA4B"
+  },
+  {
+    "name": "arrow-down-line",
+    "unicode": "\\uEA4C"
+  },
+  {
+    "name": "arrow-down-s-fill",
+    "unicode": "\\uEA4D"
+  },
+  {
+    "name": "arrow-down-s-line",
+    "unicode": "\\uEA4E"
+  },
+  {
+    "name": "arrow-drop-down-fill",
+    "unicode": "\\uEA4F"
+  },
+  {
+    "name": "arrow-drop-down-line",
+    "unicode": "\\uEA50"
+  },
+  {
+    "name": "arrow-drop-left-fill",
+    "unicode": "\\uEA51"
+  },
+  {
+    "name": "arrow-drop-left-line",
+    "unicode": "\\uEA52"
+  },
+  {
+    "name": "arrow-drop-right-fill",
+    "unicode": "\\uEA53"
+  },
+  {
+    "name": "arrow-drop-right-line",
+    "unicode": "\\uEA54"
+  },
+  {
+    "name": "arrow-drop-up-fill",
+    "unicode": "\\uEA55"
+  },
+  {
+    "name": "arrow-drop-up-line",
+    "unicode": "\\uEA56"
+  },
+  {
+    "name": "arrow-go-back-fill",
+    "unicode": "\\uEA57"
+  },
+  {
+    "name": "arrow-go-back-line",
+    "unicode": "\\uEA58"
+  },
+  {
+    "name": "arrow-go-forward-fill",
+    "unicode": "\\uEA59"
+  },
+  {
+    "name": "arrow-go-forward-line",
+    "unicode": "\\uEA5A"
+  },
+  {
+    "name": "arrow-left-circle-fill",
+    "unicode": "\\uEA5B"
+  },
+  {
+    "name": "arrow-left-circle-line",
+    "unicode": "\\uEA5C"
+  },
+  {
+    "name": "arrow-left-down-fill",
+    "unicode": "\\uEA5D"
+  },
+  {
+    "name": "arrow-left-down-line",
+    "unicode": "\\uEA5E"
+  },
+  {
+    "name": "arrow-left-fill",
+    "unicode": "\\uEA5F"
+  },
+  {
+    "name": "arrow-left-line",
+    "unicode": "\\uEA60"
+  },
+  {
+    "name": "arrow-left-right-fill",
+    "unicode": "\\uEA61"
+  },
+  {
+    "name": "arrow-left-right-line",
+    "unicode": "\\uEA62"
+  },
+  {
+    "name": "arrow-left-s-fill",
+    "unicode": "\\uEA63"
+  },
+  {
+    "name": "arrow-left-s-line",
+    "unicode": "\\uEA64"
+  },
+  {
+    "name": "arrow-left-up-fill",
+    "unicode": "\\uEA65"
+  },
+  {
+    "name": "arrow-left-up-line",
+    "unicode": "\\uEA66"
+  },
+  {
+    "name": "arrow-right-circle-fill",
+    "unicode": "\\uEA67"
+  },
+  {
+    "name": "arrow-right-circle-line",
+    "unicode": "\\uEA68"
+  },
+  {
+    "name": "arrow-right-down-fill",
+    "unicode": "\\uEA69"
+  },
+  {
+    "name": "arrow-right-down-line",
+    "unicode": "\\uEA6A"
+  },
+  {
+    "name": "arrow-right-fill",
+    "unicode": "\\uEA6B"
+  },
+  {
+    "name": "arrow-right-line",
+    "unicode": "\\uEA6C"
+  },
+  {
+    "name": "arrow-right-s-fill",
+    "unicode": "\\uEA6D"
+  },
+  {
+    "name": "arrow-right-s-line",
+    "unicode": "\\uEA6E"
+  },
+  {
+    "name": "arrow-right-up-fill",
+    "unicode": "\\uEA6F"
+  },
+  {
+    "name": "arrow-right-up-line",
+    "unicode": "\\uEA70"
+  },
+  {
+    "name": "arrow-up-circle-fill",
+    "unicode": "\\uEA71"
+  },
+  {
+    "name": "arrow-up-circle-line",
+    "unicode": "\\uEA72"
+  },
+  {
+    "name": "arrow-up-down-fill",
+    "unicode": "\\uEA73"
+  },
+  {
+    "name": "arrow-up-down-line",
+    "unicode": "\\uEA74"
+  },
+  {
+    "name": "arrow-up-fill",
+    "unicode": "\\uEA75"
+  },
+  {
+    "name": "arrow-up-line",
+    "unicode": "\\uEA76"
+  },
+  {
+    "name": "arrow-up-s-fill",
+    "unicode": "\\uEA77"
+  },
+  {
+    "name": "arrow-up-s-line",
+    "unicode": "\\uEA78"
+  },
+  {
+    "name": "artboard-2-fill",
+    "unicode": "\\uEA79"
+  },
+  {
+    "name": "artboard-2-line",
+    "unicode": "\\uEA7A"
+  },
+  {
+    "name": "artboard-fill",
+    "unicode": "\\uEA7B"
+  },
+  {
+    "name": "artboard-line",
+    "unicode": "\\uEA7C"
+  },
+  {
+    "name": "article-fill",
+    "unicode": "\\uEA7D"
+  },
+  {
+    "name": "article-line",
+    "unicode": "\\uEA7E"
+  },
+  {
+    "name": "aspect-ratio-fill",
+    "unicode": "\\uEA7F"
+  },
+  {
+    "name": "aspect-ratio-line",
+    "unicode": "\\uEA80"
+  },
+  {
+    "name": "asterisk",
+    "unicode": "\\uEA81"
+  },
+  {
+    "name": "at-fill",
+    "unicode": "\\uEA82"
+  },
+  {
+    "name": "at-line",
+    "unicode": "\\uEA83"
+  },
+  {
+    "name": "attachment-2",
+    "unicode": "\\uEA84"
+  },
+  {
+    "name": "attachment-fill",
+    "unicode": "\\uEA85"
+  },
+  {
+    "name": "attachment-line",
+    "unicode": "\\uEA86"
+  },
+  {
+    "name": "auction-fill",
+    "unicode": "\\uEA87"
+  },
+  {
+    "name": "auction-line",
+    "unicode": "\\uEA88"
+  },
+  {
+    "name": "award-fill",
+    "unicode": "\\uEA89"
+  },
+  {
+    "name": "award-line",
+    "unicode": "\\uEA8A"
+  },
+  {
+    "name": "baidu-fill",
+    "unicode": "\\uEA8B"
+  },
+  {
+    "name": "baidu-line",
+    "unicode": "\\uEA8C"
+  },
+  {
+    "name": "ball-pen-fill",
+    "unicode": "\\uEA8D"
+  },
+  {
+    "name": "ball-pen-line",
+    "unicode": "\\uEA8E"
+  },
+  {
+    "name": "bank-card-2-fill",
+    "unicode": "\\uEA8F"
+  },
+  {
+    "name": "bank-card-2-line",
+    "unicode": "\\uEA90"
+  },
+  {
+    "name": "bank-card-fill",
+    "unicode": "\\uEA91"
+  },
+  {
+    "name": "bank-card-line",
+    "unicode": "\\uEA92"
+  },
+  {
+    "name": "bank-fill",
+    "unicode": "\\uEA93"
+  },
+  {
+    "name": "bank-line",
+    "unicode": "\\uEA94"
+  },
+  {
+    "name": "bar-chart-2-fill",
+    "unicode": "\\uEA95"
+  },
+  {
+    "name": "bar-chart-2-line",
+    "unicode": "\\uEA96"
+  },
+  {
+    "name": "bar-chart-box-fill",
+    "unicode": "\\uEA97"
+  },
+  {
+    "name": "bar-chart-box-line",
+    "unicode": "\\uEA98"
+  },
+  {
+    "name": "bar-chart-fill",
+    "unicode": "\\uEA99"
+  },
+  {
+    "name": "bar-chart-grouped-fill",
+    "unicode": "\\uEA9A"
+  },
+  {
+    "name": "bar-chart-grouped-line",
+    "unicode": "\\uEA9B"
+  },
+  {
+    "name": "bar-chart-horizontal-fill",
+    "unicode": "\\uEA9C"
+  },
+  {
+    "name": "bar-chart-horizontal-line",
+    "unicode": "\\uEA9D"
+  },
+  {
+    "name": "bar-chart-line",
+    "unicode": "\\uEA9E"
+  },
+  {
+    "name": "barcode-box-fill",
+    "unicode": "\\uEA9F"
+  },
+  {
+    "name": "barcode-box-line",
+    "unicode": "\\uEAA0"
+  },
+  {
+    "name": "barcode-fill",
+    "unicode": "\\uEAA1"
+  },
+  {
+    "name": "barcode-line",
+    "unicode": "\\uEAA2"
+  },
+  {
+    "name": "barricade-fill",
+    "unicode": "\\uEAA3"
+  },
+  {
+    "name": "barricade-line",
+    "unicode": "\\uEAA4"
+  },
+  {
+    "name": "base-station-fill",
+    "unicode": "\\uEAA5"
+  },
+  {
+    "name": "base-station-line",
+    "unicode": "\\uEAA6"
+  },
+  {
+    "name": "basketball-fill",
+    "unicode": "\\uEAA7"
+  },
+  {
+    "name": "basketball-line",
+    "unicode": "\\uEAA8"
+  },
+  {
+    "name": "battery-2-charge-fill",
+    "unicode": "\\uEAA9"
+  },
+  {
+    "name": "battery-2-charge-line",
+    "unicode": "\\uEAAA"
+  },
+  {
+    "name": "battery-2-fill",
+    "unicode": "\\uEAAB"
+  },
+  {
+    "name": "battery-2-line",
+    "unicode": "\\uEAAC"
+  },
+  {
+    "name": "battery-charge-fill",
+    "unicode": "\\uEAAD"
+  },
+  {
+    "name": "battery-charge-line",
+    "unicode": "\\uEAAE"
+  },
+  {
+    "name": "battery-fill",
+    "unicode": "\\uEAAF"
+  },
+  {
+    "name": "battery-line",
+    "unicode": "\\uEAB0"
+  },
+  {
+    "name": "battery-low-fill",
+    "unicode": "\\uEAB1"
+  },
+  {
+    "name": "battery-low-line",
+    "unicode": "\\uEAB2"
+  },
+  {
+    "name": "battery-saver-fill",
+    "unicode": "\\uEAB3"
+  },
+  {
+    "name": "battery-saver-line",
+    "unicode": "\\uEAB4"
+  },
+  {
+    "name": "battery-share-fill",
+    "unicode": "\\uEAB5"
+  },
+  {
+    "name": "battery-share-line",
+    "unicode": "\\uEAB6"
+  },
+  {
+    "name": "bear-smile-fill",
+    "unicode": "\\uEAB7"
+  },
+  {
+    "name": "bear-smile-line",
+    "unicode": "\\uEAB8"
+  },
+  {
+    "name": "behance-fill",
+    "unicode": "\\uEAB9"
+  },
+  {
+    "name": "behance-line",
+    "unicode": "\\uEABA"
+  },
+  {
+    "name": "bell-fill",
+    "unicode": "\\uEABB"
+  },
+  {
+    "name": "bell-line",
+    "unicode": "\\uEABC"
+  },
+  {
+    "name": "bike-fill",
+    "unicode": "\\uEABD"
+  },
+  {
+    "name": "bike-line",
+    "unicode": "\\uEABE"
+  },
+  {
+    "name": "bilibili-fill",
+    "unicode": "\\uEABF"
+  },
+  {
+    "name": "bilibili-line",
+    "unicode": "\\uEAC0"
+  },
+  {
+    "name": "bill-fill",
+    "unicode": "\\uEAC1"
+  },
+  {
+    "name": "bill-line",
+    "unicode": "\\uEAC2"
+  },
+  {
+    "name": "billiards-fill",
+    "unicode": "\\uEAC3"
+  },
+  {
+    "name": "billiards-line",
+    "unicode": "\\uEAC4"
+  },
+  {
+    "name": "bit-coin-fill",
+    "unicode": "\\uEAC5"
+  },
+  {
+    "name": "bit-coin-line",
+    "unicode": "\\uEAC6"
+  },
+  {
+    "name": "blaze-fill",
+    "unicode": "\\uEAC7"
+  },
+  {
+    "name": "blaze-line",
+    "unicode": "\\uEAC8"
+  },
+  {
+    "name": "bluetooth-connect-fill",
+    "unicode": "\\uEAC9"
+  },
+  {
+    "name": "bluetooth-connect-line",
+    "unicode": "\\uEACA"
+  },
+  {
+    "name": "bluetooth-fill",
+    "unicode": "\\uEACB"
+  },
+  {
+    "name": "bluetooth-line",
+    "unicode": "\\uEACC"
+  },
+  {
+    "name": "blur-off-fill",
+    "unicode": "\\uEACD"
+  },
+  {
+    "name": "blur-off-line",
+    "unicode": "\\uEACE"
+  },
+  {
+    "name": "body-scan-fill",
+    "unicode": "\\uEACF"
+  },
+  {
+    "name": "body-scan-line",
+    "unicode": "\\uEAD0"
+  },
+  {
+    "name": "bold",
+    "unicode": "\\uEAD1"
+  },
+  {
+    "name": "book-2-fill",
+    "unicode": "\\uEAD2"
+  },
+  {
+    "name": "book-2-line",
+    "unicode": "\\uEAD3"
+  },
+  {
+    "name": "book-3-fill",
+    "unicode": "\\uEAD4"
+  },
+  {
+    "name": "book-3-line",
+    "unicode": "\\uEAD5"
+  },
+  {
+    "name": "book-fill",
+    "unicode": "\\uEAD6"
+  },
+  {
+    "name": "book-line",
+    "unicode": "\\uEAD7"
+  },
+  {
+    "name": "book-mark-fill",
+    "unicode": "\\uEAD8"
+  },
+  {
+    "name": "book-mark-line",
+    "unicode": "\\uEAD9"
+  },
+  {
+    "name": "book-open-fill",
+    "unicode": "\\uEADA"
+  },
+  {
+    "name": "book-open-line",
+    "unicode": "\\uEADB"
+  },
+  {
+    "name": "book-read-fill",
+    "unicode": "\\uEADC"
+  },
+  {
+    "name": "book-read-line",
+    "unicode": "\\uEADD"
+  },
+  {
+    "name": "booklet-fill",
+    "unicode": "\\uEADE"
+  },
+  {
+    "name": "booklet-line",
+    "unicode": "\\uEADF"
+  },
+  {
+    "name": "bookmark-2-fill",
+    "unicode": "\\uEAE0"
+  },
+  {
+    "name": "bookmark-2-line",
+    "unicode": "\\uEAE1"
+  },
+  {
+    "name": "bookmark-3-fill",
+    "unicode": "\\uEAE2"
+  },
+  {
+    "name": "bookmark-3-line",
+    "unicode": "\\uEAE3"
+  },
+  {
+    "name": "bookmark-fill",
+    "unicode": "\\uEAE4"
+  },
+  {
+    "name": "bookmark-line",
+    "unicode": "\\uEAE5"
+  },
+  {
+    "name": "boxing-fill",
+    "unicode": "\\uEAE6"
+  },
+  {
+    "name": "boxing-line",
+    "unicode": "\\uEAE7"
+  },
+  {
+    "name": "braces-fill",
+    "unicode": "\\uEAE8"
+  },
+  {
+    "name": "braces-line",
+    "unicode": "\\uEAE9"
+  },
+  {
+    "name": "brackets-fill",
+    "unicode": "\\uEAEA"
+  },
+  {
+    "name": "brackets-line",
+    "unicode": "\\uEAEB"
+  },
+  {
+    "name": "briefcase-2-fill",
+    "unicode": "\\uEAEC"
+  },
+  {
+    "name": "briefcase-2-line",
+    "unicode": "\\uEAED"
+  },
+  {
+    "name": "briefcase-3-fill",
+    "unicode": "\\uEAEE"
+  },
+  {
+    "name": "briefcase-3-line",
+    "unicode": "\\uEAEF"
+  },
+  {
+    "name": "briefcase-4-fill",
+    "unicode": "\\uEAF0"
+  },
+  {
+    "name": "briefcase-4-line",
+    "unicode": "\\uEAF1"
+  },
+  {
+    "name": "briefcase-5-fill",
+    "unicode": "\\uEAF2"
+  },
+  {
+    "name": "briefcase-5-line",
+    "unicode": "\\uEAF3"
+  },
+  {
+    "name": "briefcase-fill",
+    "unicode": "\\uEAF4"
+  },
+  {
+    "name": "briefcase-line",
+    "unicode": "\\uEAF5"
+  },
+  {
+    "name": "bring-forward",
+    "unicode": "\\uEAF6"
+  },
+  {
+    "name": "bring-to-front",
+    "unicode": "\\uEAF7"
+  },
+  {
+    "name": "broadcast-fill",
+    "unicode": "\\uEAF8"
+  },
+  {
+    "name": "broadcast-line",
+    "unicode": "\\uEAF9"
+  },
+  {
+    "name": "brush-2-fill",
+    "unicode": "\\uEAFA"
+  },
+  {
+    "name": "brush-2-line",
+    "unicode": "\\uEAFB"
+  },
+  {
+    "name": "brush-3-fill",
+    "unicode": "\\uEAFC"
+  },
+  {
+    "name": "brush-3-line",
+    "unicode": "\\uEAFD"
+  },
+  {
+    "name": "brush-4-fill",
+    "unicode": "\\uEAFE"
+  },
+  {
+    "name": "brush-4-line",
+    "unicode": "\\uEAFF"
+  },
+  {
+    "name": "brush-fill",
+    "unicode": "\\uEB00"
+  },
+  {
+    "name": "brush-line",
+    "unicode": "\\uEB01"
+  },
+  {
+    "name": "bubble-chart-fill",
+    "unicode": "\\uEB02"
+  },
+  {
+    "name": "bubble-chart-line",
+    "unicode": "\\uEB03"
+  },
+  {
+    "name": "bug-2-fill",
+    "unicode": "\\uEB04"
+  },
+  {
+    "name": "bug-2-line",
+    "unicode": "\\uEB05"
+  },
+  {
+    "name": "bug-fill",
+    "unicode": "\\uEB06"
+  },
+  {
+    "name": "bug-line",
+    "unicode": "\\uEB07"
+  },
+  {
+    "name": "building-2-fill",
+    "unicode": "\\uEB08"
+  },
+  {
+    "name": "building-2-line",
+    "unicode": "\\uEB09"
+  },
+  {
+    "name": "building-3-fill",
+    "unicode": "\\uEB0A"
+  },
+  {
+    "name": "building-3-line",
+    "unicode": "\\uEB0B"
+  },
+  {
+    "name": "building-4-fill",
+    "unicode": "\\uEB0C"
+  },
+  {
+    "name": "building-4-line",
+    "unicode": "\\uEB0D"
+  },
+  {
+    "name": "building-fill",
+    "unicode": "\\uEB0E"
+  },
+  {
+    "name": "building-line",
+    "unicode": "\\uEB0F"
+  },
+  {
+    "name": "bus-2-fill",
+    "unicode": "\\uEB10"
+  },
+  {
+    "name": "bus-2-line",
+    "unicode": "\\uEB11"
+  },
+  {
+    "name": "bus-fill",
+    "unicode": "\\uEB12"
+  },
+  {
+    "name": "bus-line",
+    "unicode": "\\uEB13"
+  },
+  {
+    "name": "bus-wifi-fill",
+    "unicode": "\\uEB14"
+  },
+  {
+    "name": "bus-wifi-line",
+    "unicode": "\\uEB15"
+  },
+  {
+    "name": "cactus-fill",
+    "unicode": "\\uEB16"
+  },
+  {
+    "name": "cactus-line",
+    "unicode": "\\uEB17"
+  },
+  {
+    "name": "cake-2-fill",
+    "unicode": "\\uEB18"
+  },
+  {
+    "name": "cake-2-line",
+    "unicode": "\\uEB19"
+  },
+  {
+    "name": "cake-3-fill",
+    "unicode": "\\uEB1A"
+  },
+  {
+    "name": "cake-3-line",
+    "unicode": "\\uEB1B"
+  },
+  {
+    "name": "cake-fill",
+    "unicode": "\\uEB1C"
+  },
+  {
+    "name": "cake-line",
+    "unicode": "\\uEB1D"
+  },
+  {
+    "name": "calculator-fill",
+    "unicode": "\\uEB1E"
+  },
+  {
+    "name": "calculator-line",
+    "unicode": "\\uEB1F"
+  },
+  {
+    "name": "calendar-2-fill",
+    "unicode": "\\uEB20"
+  },
+  {
+    "name": "calendar-2-line",
+    "unicode": "\\uEB21"
+  },
+  {
+    "name": "calendar-check-fill",
+    "unicode": "\\uEB22"
+  },
+  {
+    "name": "calendar-check-line",
+    "unicode": "\\uEB23"
+  },
+  {
+    "name": "calendar-event-fill",
+    "unicode": "\\uEB24"
+  },
+  {
+    "name": "calendar-event-line",
+    "unicode": "\\uEB25"
+  },
+  {
+    "name": "calendar-fill",
+    "unicode": "\\uEB26"
+  },
+  {
+    "name": "calendar-line",
+    "unicode": "\\uEB27"
+  },
+  {
+    "name": "calendar-todo-fill",
+    "unicode": "\\uEB28"
+  },
+  {
+    "name": "calendar-todo-line",
+    "unicode": "\\uEB29"
+  },
+  {
+    "name": "camera-2-fill",
+    "unicode": "\\uEB2A"
+  },
+  {
+    "name": "camera-2-line",
+    "unicode": "\\uEB2B"
+  },
+  {
+    "name": "camera-3-fill",
+    "unicode": "\\uEB2C"
+  },
+  {
+    "name": "camera-3-line",
+    "unicode": "\\uEB2D"
+  },
+  {
+    "name": "camera-fill",
+    "unicode": "\\uEB2E"
+  },
+  {
+    "name": "camera-lens-fill",
+    "unicode": "\\uEB2F"
+  },
+  {
+    "name": "camera-lens-line",
+    "unicode": "\\uEB30"
+  },
+  {
+    "name": "camera-line",
+    "unicode": "\\uEB31"
+  },
+  {
+    "name": "camera-off-fill",
+    "unicode": "\\uEB32"
+  },
+  {
+    "name": "camera-off-line",
+    "unicode": "\\uEB33"
+  },
+  {
+    "name": "camera-switch-fill",
+    "unicode": "\\uEB34"
+  },
+  {
+    "name": "camera-switch-line",
+    "unicode": "\\uEB35"
+  },
+  {
+    "name": "capsule-fill",
+    "unicode": "\\uEB36"
+  },
+  {
+    "name": "capsule-line",
+    "unicode": "\\uEB37"
+  },
+  {
+    "name": "car-fill",
+    "unicode": "\\uEB38"
+  },
+  {
+    "name": "car-line",
+    "unicode": "\\uEB39"
+  },
+  {
+    "name": "car-washing-fill",
+    "unicode": "\\uEB3A"
+  },
+  {
+    "name": "car-washing-line",
+    "unicode": "\\uEB3B"
+  },
+  {
+    "name": "caravan-fill",
+    "unicode": "\\uEB3C"
+  },
+  {
+    "name": "caravan-line",
+    "unicode": "\\uEB3D"
+  },
+  {
+    "name": "cast-fill",
+    "unicode": "\\uEB3E"
+  },
+  {
+    "name": "cast-line",
+    "unicode": "\\uEB3F"
+  },
+  {
+    "name": "cellphone-fill",
+    "unicode": "\\uEB40"
+  },
+  {
+    "name": "cellphone-line",
+    "unicode": "\\uEB41"
+  },
+  {
+    "name": "celsius-fill",
+    "unicode": "\\uEB42"
+  },
+  {
+    "name": "celsius-line",
+    "unicode": "\\uEB43"
+  },
+  {
+    "name": "centos-fill",
+    "unicode": "\\uEB44"
+  },
+  {
+    "name": "centos-line",
+    "unicode": "\\uEB45"
+  },
+  {
+    "name": "character-recognition-fill",
+    "unicode": "\\uEB46"
+  },
+  {
+    "name": "character-recognition-line",
+    "unicode": "\\uEB47"
+  },
+  {
+    "name": "charging-pile-2-fill",
+    "unicode": "\\uEB48"
+  },
+  {
+    "name": "charging-pile-2-line",
+    "unicode": "\\uEB49"
+  },
+  {
+    "name": "charging-pile-fill",
+    "unicode": "\\uEB4A"
+  },
+  {
+    "name": "charging-pile-line",
+    "unicode": "\\uEB4B"
+  },
+  {
+    "name": "chat-1-fill",
+    "unicode": "\\uEB4C"
+  },
+  {
+    "name": "chat-1-line",
+    "unicode": "\\uEB4D"
+  },
+  {
+    "name": "chat-2-fill",
+    "unicode": "\\uEB4E"
+  },
+  {
+    "name": "chat-2-line",
+    "unicode": "\\uEB4F"
+  },
+  {
+    "name": "chat-3-fill",
+    "unicode": "\\uEB50"
+  },
+  {
+    "name": "chat-3-line",
+    "unicode": "\\uEB51"
+  },
+  {
+    "name": "chat-4-fill",
+    "unicode": "\\uEB52"
+  },
+  {
+    "name": "chat-4-line",
+    "unicode": "\\uEB53"
+  },
+  {
+    "name": "chat-check-fill",
+    "unicode": "\\uEB54"
+  },
+  {
+    "name": "chat-check-line",
+    "unicode": "\\uEB55"
+  },
+  {
+    "name": "chat-delete-fill",
+    "unicode": "\\uEB56"
+  },
+  {
+    "name": "chat-delete-line",
+    "unicode": "\\uEB57"
+  },
+  {
+    "name": "chat-download-fill",
+    "unicode": "\\uEB58"
+  },
+  {
+    "name": "chat-download-line",
+    "unicode": "\\uEB59"
+  },
+  {
+    "name": "chat-follow-up-fill",
+    "unicode": "\\uEB5A"
+  },
+  {
+    "name": "chat-follow-up-line",
+    "unicode": "\\uEB5B"
+  },
+  {
+    "name": "chat-forward-fill",
+    "unicode": "\\uEB5C"
+  },
+  {
+    "name": "chat-forward-line",
+    "unicode": "\\uEB5D"
+  },
+  {
+    "name": "chat-heart-fill",
+    "unicode": "\\uEB5E"
+  },
+  {
+    "name": "chat-heart-line",
+    "unicode": "\\uEB5F"
+  },
+  {
+    "name": "chat-history-fill",
+    "unicode": "\\uEB60"
+  },
+  {
+    "name": "chat-history-line",
+    "unicode": "\\uEB61"
+  },
+  {
+    "name": "chat-new-fill",
+    "unicode": "\\uEB62"
+  },
+  {
+    "name": "chat-new-line",
+    "unicode": "\\uEB63"
+  },
+  {
+    "name": "chat-off-fill",
+    "unicode": "\\uEB64"
+  },
+  {
+    "name": "chat-off-line",
+    "unicode": "\\uEB65"
+  },
+  {
+    "name": "chat-poll-fill",
+    "unicode": "\\uEB66"
+  },
+  {
+    "name": "chat-poll-line",
+    "unicode": "\\uEB67"
+  },
+  {
+    "name": "chat-private-fill",
+    "unicode": "\\uEB68"
+  },
+  {
+    "name": "chat-private-line",
+    "unicode": "\\uEB69"
+  },
+  {
+    "name": "chat-quote-fill",
+    "unicode": "\\uEB6A"
+  },
+  {
+    "name": "chat-quote-line",
+    "unicode": "\\uEB6B"
+  },
+  {
+    "name": "chat-settings-fill",
+    "unicode": "\\uEB6C"
+  },
+  {
+    "name": "chat-settings-line",
+    "unicode": "\\uEB6D"
+  },
+  {
+    "name": "chat-smile-2-fill",
+    "unicode": "\\uEB6E"
+  },
+  {
+    "name": "chat-smile-2-line",
+    "unicode": "\\uEB6F"
+  },
+  {
+    "name": "chat-smile-3-fill",
+    "unicode": "\\uEB70"
+  },
+  {
+    "name": "chat-smile-3-line",
+    "unicode": "\\uEB71"
+  },
+  {
+    "name": "chat-smile-fill",
+    "unicode": "\\uEB72"
+  },
+  {
+    "name": "chat-smile-line",
+    "unicode": "\\uEB73"
+  },
+  {
+    "name": "chat-upload-fill",
+    "unicode": "\\uEB74"
+  },
+  {
+    "name": "chat-upload-line",
+    "unicode": "\\uEB75"
+  },
+  {
+    "name": "chat-voice-fill",
+    "unicode": "\\uEB76"
+  },
+  {
+    "name": "chat-voice-line",
+    "unicode": "\\uEB77"
+  },
+  {
+    "name": "check-double-fill",
+    "unicode": "\\uEB78"
+  },
+  {
+    "name": "check-double-line",
+    "unicode": "\\uEB79"
+  },
+  {
+    "name": "check-fill",
+    "unicode": "\\uEB7A"
+  },
+  {
+    "name": "check-line",
+    "unicode": "\\uEB7B"
+  },
+  {
+    "name": "checkbox-blank-circle-fill",
+    "unicode": "\\uEB7C"
+  },
+  {
+    "name": "checkbox-blank-circle-line",
+    "unicode": "\\uEB7D"
+  },
+  {
+    "name": "checkbox-blank-fill",
+    "unicode": "\\uEB7E"
+  },
+  {
+    "name": "checkbox-blank-line",
+    "unicode": "\\uEB7F"
+  },
+  {
+    "name": "checkbox-circle-fill",
+    "unicode": "\\uEB80"
+  },
+  {
+    "name": "checkbox-circle-line",
+    "unicode": "\\uEB81"
+  },
+  {
+    "name": "checkbox-fill",
+    "unicode": "\\uEB82"
+  },
+  {
+    "name": "checkbox-indeterminate-fill",
+    "unicode": "\\uEB83"
+  },
+  {
+    "name": "checkbox-indeterminate-line",
+    "unicode": "\\uEB84"
+  },
+  {
+    "name": "checkbox-line",
+    "unicode": "\\uEB85"
+  },
+  {
+    "name": "checkbox-multiple-blank-fill",
+    "unicode": "\\uEB86"
+  },
+  {
+    "name": "checkbox-multiple-blank-line",
+    "unicode": "\\uEB87"
+  },
+  {
+    "name": "checkbox-multiple-fill",
+    "unicode": "\\uEB88"
+  },
+  {
+    "name": "checkbox-multiple-line",
+    "unicode": "\\uEB89"
+  },
+  {
+    "name": "china-railway-fill",
+    "unicode": "\\uEB8A"
+  },
+  {
+    "name": "china-railway-line",
+    "unicode": "\\uEB8B"
+  },
+  {
+    "name": "chrome-fill",
+    "unicode": "\\uEB8C"
+  },
+  {
+    "name": "chrome-line",
+    "unicode": "\\uEB8D"
+  },
+  {
+    "name": "clapperboard-fill",
+    "unicode": "\\uEB8E"
+  },
+  {
+    "name": "clapperboard-line",
+    "unicode": "\\uEB8F"
+  },
+  {
+    "name": "clipboard-fill",
+    "unicode": "\\uEB90"
+  },
+  {
+    "name": "clipboard-line",
+    "unicode": "\\uEB91"
+  },
+  {
+    "name": "clockwise-2-fill",
+    "unicode": "\\uEB92"
+  },
+  {
+    "name": "clockwise-2-line",
+    "unicode": "\\uEB93"
+  },
+  {
+    "name": "clockwise-fill",
+    "unicode": "\\uEB94"
+  },
+  {
+    "name": "clockwise-line",
+    "unicode": "\\uEB95"
+  },
+  {
+    "name": "close-circle-fill",
+    "unicode": "\\uEB96"
+  },
+  {
+    "name": "close-circle-line",
+    "unicode": "\\uEB97"
+  },
+  {
+    "name": "close-fill",
+    "unicode": "\\uEB98"
+  },
+  {
+    "name": "close-line",
+    "unicode": "\\uEB99"
+  },
+  {
+    "name": "closed-captioning-fill",
+    "unicode": "\\uEB9A"
+  },
+  {
+    "name": "closed-captioning-line",
+    "unicode": "\\uEB9B"
+  },
+  {
+    "name": "cloud-fill",
+    "unicode": "\\uEB9C"
+  },
+  {
+    "name": "cloud-line",
+    "unicode": "\\uEB9D"
+  },
+  {
+    "name": "cloud-off-fill",
+    "unicode": "\\uEB9E"
+  },
+  {
+    "name": "cloud-off-line",
+    "unicode": "\\uEB9F"
+  },
+  {
+    "name": "cloud-windy-fill",
+    "unicode": "\\uEBA0"
+  },
+  {
+    "name": "cloud-windy-line",
+    "unicode": "\\uEBA1"
+  },
+  {
+    "name": "cloudy-2-fill",
+    "unicode": "\\uEBA2"
+  },
+  {
+    "name": "cloudy-2-line",
+    "unicode": "\\uEBA3"
+  },
+  {
+    "name": "cloudy-fill",
+    "unicode": "\\uEBA4"
+  },
+  {
+    "name": "cloudy-line",
+    "unicode": "\\uEBA5"
+  },
+  {
+    "name": "code-box-fill",
+    "unicode": "\\uEBA6"
+  },
+  {
+    "name": "code-box-line",
+    "unicode": "\\uEBA7"
+  },
+  {
+    "name": "code-fill",
+    "unicode": "\\uEBA8"
+  },
+  {
+    "name": "code-line",
+    "unicode": "\\uEBA9"
+  },
+  {
+    "name": "code-s-fill",
+    "unicode": "\\uEBAA"
+  },
+  {
+    "name": "code-s-line",
+    "unicode": "\\uEBAB"
+  },
+  {
+    "name": "code-s-slash-fill",
+    "unicode": "\\uEBAC"
+  },
+  {
+    "name": "code-s-slash-line",
+    "unicode": "\\uEBAD"
+  },
+  {
+    "name": "code-view",
+    "unicode": "\\uEBAE"
+  },
+  {
+    "name": "codepen-fill",
+    "unicode": "\\uEBAF"
+  },
+  {
+    "name": "codepen-line",
+    "unicode": "\\uEBB0"
+  },
+  {
+    "name": "coin-fill",
+    "unicode": "\\uEBB1"
+  },
+  {
+    "name": "coin-line",
+    "unicode": "\\uEBB2"
+  },
+  {
+    "name": "coins-fill",
+    "unicode": "\\uEBB3"
+  },
+  {
+    "name": "coins-line",
+    "unicode": "\\uEBB4"
+  },
+  {
+    "name": "collage-fill",
+    "unicode": "\\uEBB5"
+  },
+  {
+    "name": "collage-line",
+    "unicode": "\\uEBB6"
+  },
+  {
+    "name": "command-fill",
+    "unicode": "\\uEBB7"
+  },
+  {
+    "name": "command-line",
+    "unicode": "\\uEBB8"
+  },
+  {
+    "name": "community-fill",
+    "unicode": "\\uEBB9"
+  },
+  {
+    "name": "community-line",
+    "unicode": "\\uEBBA"
+  },
+  {
+    "name": "compass-2-fill",
+    "unicode": "\\uEBBB"
+  },
+  {
+    "name": "compass-2-line",
+    "unicode": "\\uEBBC"
+  },
+  {
+    "name": "compass-3-fill",
+    "unicode": "\\uEBBD"
+  },
+  {
+    "name": "compass-3-line",
+    "unicode": "\\uEBBE"
+  },
+  {
+    "name": "compass-4-fill",
+    "unicode": "\\uEBBF"
+  },
+  {
+    "name": "compass-4-line",
+    "unicode": "\\uEBC0"
+  },
+  {
+    "name": "compass-discover-fill",
+    "unicode": "\\uEBC1"
+  },
+  {
+    "name": "compass-discover-line",
+    "unicode": "\\uEBC2"
+  },
+  {
+    "name": "compass-fill",
+    "unicode": "\\uEBC3"
+  },
+  {
+    "name": "compass-line",
+    "unicode": "\\uEBC4"
+  },
+  {
+    "name": "compasses-2-fill",
+    "unicode": "\\uEBC5"
+  },
+  {
+    "name": "compasses-2-line",
+    "unicode": "\\uEBC6"
+  },
+  {
+    "name": "compasses-fill",
+    "unicode": "\\uEBC7"
+  },
+  {
+    "name": "compasses-line",
+    "unicode": "\\uEBC8"
+  },
+  {
+    "name": "computer-fill",
+    "unicode": "\\uEBC9"
+  },
+  {
+    "name": "computer-line",
+    "unicode": "\\uEBCA"
+  },
+  {
+    "name": "contacts-book-2-fill",
+    "unicode": "\\uEBCB"
+  },
+  {
+    "name": "contacts-book-2-line",
+    "unicode": "\\uEBCC"
+  },
+  {
+    "name": "contacts-book-fill",
+    "unicode": "\\uEBCD"
+  },
+  {
+    "name": "contacts-book-line",
+    "unicode": "\\uEBCE"
+  },
+  {
+    "name": "contacts-book-upload-fill",
+    "unicode": "\\uEBCF"
+  },
+  {
+    "name": "contacts-book-upload-line",
+    "unicode": "\\uEBD0"
+  },
+  {
+    "name": "contacts-fill",
+    "unicode": "\\uEBD1"
+  },
+  {
+    "name": "contacts-line",
+    "unicode": "\\uEBD2"
+  },
+  {
+    "name": "contrast-2-fill",
+    "unicode": "\\uEBD3"
+  },
+  {
+    "name": "contrast-2-line",
+    "unicode": "\\uEBD4"
+  },
+  {
+    "name": "contrast-drop-2-fill",
+    "unicode": "\\uEBD5"
+  },
+  {
+    "name": "contrast-drop-2-line",
+    "unicode": "\\uEBD6"
+  },
+  {
+    "name": "contrast-drop-fill",
+    "unicode": "\\uEBD7"
+  },
+  {
+    "name": "contrast-drop-line",
+    "unicode": "\\uEBD8"
+  },
+  {
+    "name": "contrast-fill",
+    "unicode": "\\uEBD9"
+  },
+  {
+    "name": "contrast-line",
+    "unicode": "\\uEBDA"
+  },
+  {
+    "name": "copper-coin-fill",
+    "unicode": "\\uEBDB"
+  },
+  {
+    "name": "copper-coin-line",
+    "unicode": "\\uEBDC"
+  },
+  {
+    "name": "copper-diamond-fill",
+    "unicode": "\\uEBDD"
+  },
+  {
+    "name": "copper-diamond-line",
+    "unicode": "\\uEBDE"
+  },
+  {
+    "name": "copyleft-fill",
+    "unicode": "\\uEBDF"
+  },
+  {
+    "name": "copyleft-line",
+    "unicode": "\\uEBE0"
+  },
+  {
+    "name": "copyright-fill",
+    "unicode": "\\uEBE1"
+  },
+  {
+    "name": "copyright-line",
+    "unicode": "\\uEBE2"
+  },
+  {
+    "name": "coreos-fill",
+    "unicode": "\\uEBE3"
+  },
+  {
+    "name": "coreos-line",
+    "unicode": "\\uEBE4"
+  },
+  {
+    "name": "coupon-2-fill",
+    "unicode": "\\uEBE5"
+  },
+  {
+    "name": "coupon-2-line",
+    "unicode": "\\uEBE6"
+  },
+  {
+    "name": "coupon-3-fill",
+    "unicode": "\\uEBE7"
+  },
+  {
+    "name": "coupon-3-line",
+    "unicode": "\\uEBE8"
+  },
+  {
+    "name": "coupon-4-fill",
+    "unicode": "\\uEBE9"
+  },
+  {
+    "name": "coupon-4-line",
+    "unicode": "\\uEBEA"
+  },
+  {
+    "name": "coupon-5-fill",
+    "unicode": "\\uEBEB"
+  },
+  {
+    "name": "coupon-5-line",
+    "unicode": "\\uEBEC"
+  },
+  {
+    "name": "coupon-fill",
+    "unicode": "\\uEBED"
+  },
+  {
+    "name": "coupon-line",
+    "unicode": "\\uEBEE"
+  },
+  {
+    "name": "cpu-fill",
+    "unicode": "\\uEBEF"
+  },
+  {
+    "name": "cpu-line",
+    "unicode": "\\uEBF0"
+  },
+  {
+    "name": "creative-commons-by-fill",
+    "unicode": "\\uEBF1"
+  },
+  {
+    "name": "creative-commons-by-line",
+    "unicode": "\\uEBF2"
+  },
+  {
+    "name": "creative-commons-fill",
+    "unicode": "\\uEBF3"
+  },
+  {
+    "name": "creative-commons-line",
+    "unicode": "\\uEBF4"
+  },
+  {
+    "name": "creative-commons-nc-fill",
+    "unicode": "\\uEBF5"
+  },
+  {
+    "name": "creative-commons-nc-line",
+    "unicode": "\\uEBF6"
+  },
+  {
+    "name": "creative-commons-nd-fill",
+    "unicode": "\\uEBF7"
+  },
+  {
+    "name": "creative-commons-nd-line",
+    "unicode": "\\uEBF8"
+  },
+  {
+    "name": "creative-commons-sa-fill",
+    "unicode": "\\uEBF9"
+  },
+  {
+    "name": "creative-commons-sa-line",
+    "unicode": "\\uEBFA"
+  },
+  {
+    "name": "creative-commons-zero-fill",
+    "unicode": "\\uEBFB"
+  },
+  {
+    "name": "creative-commons-zero-line",
+    "unicode": "\\uEBFC"
+  },
+  {
+    "name": "criminal-fill",
+    "unicode": "\\uEBFD"
+  },
+  {
+    "name": "criminal-line",
+    "unicode": "\\uEBFE"
+  },
+  {
+    "name": "crop-2-fill",
+    "unicode": "\\uEBFF"
+  },
+  {
+    "name": "crop-2-line",
+    "unicode": "\\uEC00"
+  },
+  {
+    "name": "crop-fill",
+    "unicode": "\\uEC01"
+  },
+  {
+    "name": "crop-line",
+    "unicode": "\\uEC02"
+  },
+  {
+    "name": "css3-fill",
+    "unicode": "\\uEC03"
+  },
+  {
+    "name": "css3-line",
+    "unicode": "\\uEC04"
+  },
+  {
+    "name": "cup-fill",
+    "unicode": "\\uEC05"
+  },
+  {
+    "name": "cup-line",
+    "unicode": "\\uEC06"
+  },
+  {
+    "name": "currency-fill",
+    "unicode": "\\uEC07"
+  },
+  {
+    "name": "currency-line",
+    "unicode": "\\uEC08"
+  },
+  {
+    "name": "cursor-fill",
+    "unicode": "\\uEC09"
+  },
+  {
+    "name": "cursor-line",
+    "unicode": "\\uEC0A"
+  },
+  {
+    "name": "customer-service-2-fill",
+    "unicode": "\\uEC0B"
+  },
+  {
+    "name": "customer-service-2-line",
+    "unicode": "\\uEC0C"
+  },
+  {
+    "name": "customer-service-fill",
+    "unicode": "\\uEC0D"
+  },
+  {
+    "name": "customer-service-line",
+    "unicode": "\\uEC0E"
+  },
+  {
+    "name": "dashboard-2-fill",
+    "unicode": "\\uEC0F"
+  },
+  {
+    "name": "dashboard-2-line",
+    "unicode": "\\uEC10"
+  },
+  {
+    "name": "dashboard-3-fill",
+    "unicode": "\\uEC11"
+  },
+  {
+    "name": "dashboard-3-line",
+    "unicode": "\\uEC12"
+  },
+  {
+    "name": "dashboard-fill",
+    "unicode": "\\uEC13"
+  },
+  {
+    "name": "dashboard-line",
+    "unicode": "\\uEC14"
+  },
+  {
+    "name": "database-2-fill",
+    "unicode": "\\uEC15"
+  },
+  {
+    "name": "database-2-line",
+    "unicode": "\\uEC16"
+  },
+  {
+    "name": "database-fill",
+    "unicode": "\\uEC17"
+  },
+  {
+    "name": "database-line",
+    "unicode": "\\uEC18"
+  },
+  {
+    "name": "delete-back-2-fill",
+    "unicode": "\\uEC19"
+  },
+  {
+    "name": "delete-back-2-line",
+    "unicode": "\\uEC1A"
+  },
+  {
+    "name": "delete-back-fill",
+    "unicode": "\\uEC1B"
+  },
+  {
+    "name": "delete-back-line",
+    "unicode": "\\uEC1C"
+  },
+  {
+    "name": "delete-bin-2-fill",
+    "unicode": "\\uEC1D"
+  },
+  {
+    "name": "delete-bin-2-line",
+    "unicode": "\\uEC1E"
+  },
+  {
+    "name": "delete-bin-3-fill",
+    "unicode": "\\uEC1F"
+  },
+  {
+    "name": "delete-bin-3-line",
+    "unicode": "\\uEC20"
+  },
+  {
+    "name": "delete-bin-4-fill",
+    "unicode": "\\uEC21"
+  },
+  {
+    "name": "delete-bin-4-line",
+    "unicode": "\\uEC22"
+  },
+  {
+    "name": "delete-bin-5-fill",
+    "unicode": "\\uEC23"
+  },
+  {
+    "name": "delete-bin-5-line",
+    "unicode": "\\uEC24"
+  },
+  {
+    "name": "delete-bin-6-fill",
+    "unicode": "\\uEC25"
+  },
+  {
+    "name": "delete-bin-6-line",
+    "unicode": "\\uEC26"
+  },
+  {
+    "name": "delete-bin-7-fill",
+    "unicode": "\\uEC27"
+  },
+  {
+    "name": "delete-bin-7-line",
+    "unicode": "\\uEC28"
+  },
+  {
+    "name": "delete-bin-fill",
+    "unicode": "\\uEC29"
+  },
+  {
+    "name": "delete-bin-line",
+    "unicode": "\\uEC2A"
+  },
+  {
+    "name": "delete-column",
+    "unicode": "\\uEC2B"
+  },
+  {
+    "name": "delete-row",
+    "unicode": "\\uEC2C"
+  },
+  {
+    "name": "device-fill",
+    "unicode": "\\uEC2D"
+  },
+  {
+    "name": "device-line",
+    "unicode": "\\uEC2E"
+  },
+  {
+    "name": "device-recover-fill",
+    "unicode": "\\uEC2F"
+  },
+  {
+    "name": "device-recover-line",
+    "unicode": "\\uEC30"
+  },
+  {
+    "name": "dingding-fill",
+    "unicode": "\\uEC31"
+  },
+  {
+    "name": "dingding-line",
+    "unicode": "\\uEC32"
+  },
+  {
+    "name": "direction-fill",
+    "unicode": "\\uEC33"
+  },
+  {
+    "name": "direction-line",
+    "unicode": "\\uEC34"
+  },
+  {
+    "name": "disc-fill",
+    "unicode": "\\uEC35"
+  },
+  {
+    "name": "disc-line",
+    "unicode": "\\uEC36"
+  },
+  {
+    "name": "discord-fill",
+    "unicode": "\\uEC37"
+  },
+  {
+    "name": "discord-line",
+    "unicode": "\\uEC38"
+  },
+  {
+    "name": "discuss-fill",
+    "unicode": "\\uEC39"
+  },
+  {
+    "name": "discuss-line",
+    "unicode": "\\uEC3A"
+  },
+  {
+    "name": "dislike-fill",
+    "unicode": "\\uEC3B"
+  },
+  {
+    "name": "dislike-line",
+    "unicode": "\\uEC3C"
+  },
+  {
+    "name": "disqus-fill",
+    "unicode": "\\uEC3D"
+  },
+  {
+    "name": "disqus-line",
+    "unicode": "\\uEC3E"
+  },
+  {
+    "name": "divide-fill",
+    "unicode": "\\uEC3F"
+  },
+  {
+    "name": "divide-line",
+    "unicode": "\\uEC40"
+  },
+  {
+    "name": "donut-chart-fill",
+    "unicode": "\\uEC41"
+  },
+  {
+    "name": "donut-chart-line",
+    "unicode": "\\uEC42"
+  },
+  {
+    "name": "door-closed-fill",
+    "unicode": "\\uEC43"
+  },
+  {
+    "name": "door-closed-line",
+    "unicode": "\\uEC44"
+  },
+  {
+    "name": "door-fill",
+    "unicode": "\\uEC45"
+  },
+  {
+    "name": "door-line",
+    "unicode": "\\uEC46"
+  },
+  {
+    "name": "door-lock-box-fill",
+    "unicode": "\\uEC47"
+  },
+  {
+    "name": "door-lock-box-line",
+    "unicode": "\\uEC48"
+  },
+  {
+    "name": "door-lock-fill",
+    "unicode": "\\uEC49"
+  },
+  {
+    "name": "door-lock-line",
+    "unicode": "\\uEC4A"
+  },
+  {
+    "name": "door-open-fill",
+    "unicode": "\\uEC4B"
+  },
+  {
+    "name": "door-open-line",
+    "unicode": "\\uEC4C"
+  },
+  {
+    "name": "dossier-fill",
+    "unicode": "\\uEC4D"
+  },
+  {
+    "name": "dossier-line",
+    "unicode": "\\uEC4E"
+  },
+  {
+    "name": "douban-fill",
+    "unicode": "\\uEC4F"
+  },
+  {
+    "name": "douban-line",
+    "unicode": "\\uEC50"
+  },
+  {
+    "name": "double-quotes-l",
+    "unicode": "\\uEC51"
+  },
+  {
+    "name": "double-quotes-r",
+    "unicode": "\\uEC52"
+  },
+  {
+    "name": "download-2-fill",
+    "unicode": "\\uEC53"
+  },
+  {
+    "name": "download-2-line",
+    "unicode": "\\uEC54"
+  },
+  {
+    "name": "download-cloud-2-fill",
+    "unicode": "\\uEC55"
+  },
+  {
+    "name": "download-cloud-2-line",
+    "unicode": "\\uEC56"
+  },
+  {
+    "name": "download-cloud-fill",
+    "unicode": "\\uEC57"
+  },
+  {
+    "name": "download-cloud-line",
+    "unicode": "\\uEC58"
+  },
+  {
+    "name": "download-fill",
+    "unicode": "\\uEC59"
+  },
+  {
+    "name": "download-line",
+    "unicode": "\\uEC5A"
+  },
+  {
+    "name": "draft-fill",
+    "unicode": "\\uEC5B"
+  },
+  {
+    "name": "draft-line",
+    "unicode": "\\uEC5C"
+  },
+  {
+    "name": "drag-drop-fill",
+    "unicode": "\\uEC5D"
+  },
+  {
+    "name": "drag-drop-line",
+    "unicode": "\\uEC5E"
+  },
+  {
+    "name": "drag-move-2-fill",
+    "unicode": "\\uEC5F"
+  },
+  {
+    "name": "drag-move-2-line",
+    "unicode": "\\uEC60"
+  },
+  {
+    "name": "drag-move-fill",
+    "unicode": "\\uEC61"
+  },
+  {
+    "name": "drag-move-line",
+    "unicode": "\\uEC62"
+  },
+  {
+    "name": "dribbble-fill",
+    "unicode": "\\uEC63"
+  },
+  {
+    "name": "dribbble-line",
+    "unicode": "\\uEC64"
+  },
+  {
+    "name": "drive-fill",
+    "unicode": "\\uEC65"
+  },
+  {
+    "name": "drive-line",
+    "unicode": "\\uEC66"
+  },
+  {
+    "name": "drizzle-fill",
+    "unicode": "\\uEC67"
+  },
+  {
+    "name": "drizzle-line",
+    "unicode": "\\uEC68"
+  },
+  {
+    "name": "drop-fill",
+    "unicode": "\\uEC69"
+  },
+  {
+    "name": "drop-line",
+    "unicode": "\\uEC6A"
+  },
+  {
+    "name": "dropbox-fill",
+    "unicode": "\\uEC6B"
+  },
+  {
+    "name": "dropbox-line",
+    "unicode": "\\uEC6C"
+  },
+  {
+    "name": "dual-sim-1-fill",
+    "unicode": "\\uEC6D"
+  },
+  {
+    "name": "dual-sim-1-line",
+    "unicode": "\\uEC6E"
+  },
+  {
+    "name": "dual-sim-2-fill",
+    "unicode": "\\uEC6F"
+  },
+  {
+    "name": "dual-sim-2-line",
+    "unicode": "\\uEC70"
+  },
+  {
+    "name": "dv-fill",
+    "unicode": "\\uEC71"
+  },
+  {
+    "name": "dv-line",
+    "unicode": "\\uEC72"
+  },
+  {
+    "name": "dvd-fill",
+    "unicode": "\\uEC73"
+  },
+  {
+    "name": "dvd-line",
+    "unicode": "\\uEC74"
+  },
+  {
+    "name": "e-bike-2-fill",
+    "unicode": "\\uEC75"
+  },
+  {
+    "name": "e-bike-2-line",
+    "unicode": "\\uEC76"
+  },
+  {
+    "name": "e-bike-fill",
+    "unicode": "\\uEC77"
+  },
+  {
+    "name": "e-bike-line",
+    "unicode": "\\uEC78"
+  },
+  {
+    "name": "earth-fill",
+    "unicode": "\\uEC79"
+  },
+  {
+    "name": "earth-line",
+    "unicode": "\\uEC7A"
+  },
+  {
+    "name": "earthquake-fill",
+    "unicode": "\\uEC7B"
+  },
+  {
+    "name": "earthquake-line",
+    "unicode": "\\uEC7C"
+  },
+  {
+    "name": "edge-fill",
+    "unicode": "\\uEC7D"
+  },
+  {
+    "name": "edge-line",
+    "unicode": "\\uEC7E"
+  },
+  {
+    "name": "edit-2-fill",
+    "unicode": "\\uEC7F"
+  },
+  {
+    "name": "edit-2-line",
+    "unicode": "\\uEC80"
+  },
+  {
+    "name": "edit-box-fill",
+    "unicode": "\\uEC81"
+  },
+  {
+    "name": "edit-box-line",
+    "unicode": "\\uEC82"
+  },
+  {
+    "name": "edit-circle-fill",
+    "unicode": "\\uEC83"
+  },
+  {
+    "name": "edit-circle-line",
+    "unicode": "\\uEC84"
+  },
+  {
+    "name": "edit-fill",
+    "unicode": "\\uEC85"
+  },
+  {
+    "name": "edit-line",
+    "unicode": "\\uEC86"
+  },
+  {
+    "name": "eject-fill",
+    "unicode": "\\uEC87"
+  },
+  {
+    "name": "eject-line",
+    "unicode": "\\uEC88"
+  },
+  {
+    "name": "emotion-2-fill",
+    "unicode": "\\uEC89"
+  },
+  {
+    "name": "emotion-2-line",
+    "unicode": "\\uEC8A"
+  },
+  {
+    "name": "emotion-fill",
+    "unicode": "\\uEC8B"
+  },
+  {
+    "name": "emotion-happy-fill",
+    "unicode": "\\uEC8C"
+  },
+  {
+    "name": "emotion-happy-line",
+    "unicode": "\\uEC8D"
+  },
+  {
+    "name": "emotion-laugh-fill",
+    "unicode": "\\uEC8E"
+  },
+  {
+    "name": "emotion-laugh-line",
+    "unicode": "\\uEC8F"
+  },
+  {
+    "name": "emotion-line",
+    "unicode": "\\uEC90"
+  },
+  {
+    "name": "emotion-normal-fill",
+    "unicode": "\\uEC91"
+  },
+  {
+    "name": "emotion-normal-line",
+    "unicode": "\\uEC92"
+  },
+  {
+    "name": "emotion-sad-fill",
+    "unicode": "\\uEC93"
+  },
+  {
+    "name": "emotion-sad-line",
+    "unicode": "\\uEC94"
+  },
+  {
+    "name": "emotion-unhappy-fill",
+    "unicode": "\\uEC95"
+  },
+  {
+    "name": "emotion-unhappy-line",
+    "unicode": "\\uEC96"
+  },
+  {
+    "name": "empathize-fill",
+    "unicode": "\\uEC97"
+  },
+  {
+    "name": "empathize-line",
+    "unicode": "\\uEC98"
+  },
+  {
+    "name": "emphasis-cn",
+    "unicode": "\\uEC99"
+  },
+  {
+    "name": "emphasis",
+    "unicode": "\\uEC9A"
+  },
+  {
+    "name": "english-input",
+    "unicode": "\\uEC9B"
+  },
+  {
+    "name": "equalizer-fill",
+    "unicode": "\\uEC9C"
+  },
+  {
+    "name": "equalizer-line",
+    "unicode": "\\uEC9D"
+  },
+  {
+    "name": "eraser-fill",
+    "unicode": "\\uEC9E"
+  },
+  {
+    "name": "eraser-line",
+    "unicode": "\\uEC9F"
+  },
+  {
+    "name": "error-warning-fill",
+    "unicode": "\\uECA0"
+  },
+  {
+    "name": "error-warning-line",
+    "unicode": "\\uECA1"
+  },
+  {
+    "name": "evernote-fill",
+    "unicode": "\\uECA2"
+  },
+  {
+    "name": "evernote-line",
+    "unicode": "\\uECA3"
+  },
+  {
+    "name": "exchange-box-fill",
+    "unicode": "\\uECA4"
+  },
+  {
+    "name": "exchange-box-line",
+    "unicode": "\\uECA5"
+  },
+  {
+    "name": "exchange-cny-fill",
+    "unicode": "\\uECA6"
+  },
+  {
+    "name": "exchange-cny-line",
+    "unicode": "\\uECA7"
+  },
+  {
+    "name": "exchange-dollar-fill",
+    "unicode": "\\uECA8"
+  },
+  {
+    "name": "exchange-dollar-line",
+    "unicode": "\\uECA9"
+  },
+  {
+    "name": "exchange-fill",
+    "unicode": "\\uECAA"
+  },
+  {
+    "name": "exchange-funds-fill",
+    "unicode": "\\uECAB"
+  },
+  {
+    "name": "exchange-funds-line",
+    "unicode": "\\uECAC"
+  },
+  {
+    "name": "exchange-line",
+    "unicode": "\\uECAD"
+  },
+  {
+    "name": "external-link-fill",
+    "unicode": "\\uECAE"
+  },
+  {
+    "name": "external-link-line",
+    "unicode": "\\uECAF"
+  },
+  {
+    "name": "eye-2-fill",
+    "unicode": "\\uECB0"
+  },
+  {
+    "name": "eye-2-line",
+    "unicode": "\\uECB1"
+  },
+  {
+    "name": "eye-close-fill",
+    "unicode": "\\uECB2"
+  },
+  {
+    "name": "eye-close-line",
+    "unicode": "\\uECB3"
+  },
+  {
+    "name": "eye-fill",
+    "unicode": "\\uECB4"
+  },
+  {
+    "name": "eye-line",
+    "unicode": "\\uECB5"
+  },
+  {
+    "name": "eye-off-fill",
+    "unicode": "\\uECB6"
+  },
+  {
+    "name": "eye-off-line",
+    "unicode": "\\uECB7"
+  },
+  {
+    "name": "facebook-box-fill",
+    "unicode": "\\uECB8"
+  },
+  {
+    "name": "facebook-box-line",
+    "unicode": "\\uECB9"
+  },
+  {
+    "name": "facebook-circle-fill",
+    "unicode": "\\uECBA"
+  },
+  {
+    "name": "facebook-circle-line",
+    "unicode": "\\uECBB"
+  },
+  {
+    "name": "facebook-fill",
+    "unicode": "\\uECBC"
+  },
+  {
+    "name": "facebook-line",
+    "unicode": "\\uECBD"
+  },
+  {
+    "name": "fahrenheit-fill",
+    "unicode": "\\uECBE"
+  },
+  {
+    "name": "fahrenheit-line",
+    "unicode": "\\uECBF"
+  },
+  {
+    "name": "feedback-fill",
+    "unicode": "\\uECC0"
+  },
+  {
+    "name": "feedback-line",
+    "unicode": "\\uECC1"
+  },
+  {
+    "name": "file-2-fill",
+    "unicode": "\\uECC2"
+  },
+  {
+    "name": "file-2-line",
+    "unicode": "\\uECC3"
+  },
+  {
+    "name": "file-3-fill",
+    "unicode": "\\uECC4"
+  },
+  {
+    "name": "file-3-line",
+    "unicode": "\\uECC5"
+  },
+  {
+    "name": "file-4-fill",
+    "unicode": "\\uECC6"
+  },
+  {
+    "name": "file-4-line",
+    "unicode": "\\uECC7"
+  },
+  {
+    "name": "file-add-fill",
+    "unicode": "\\uECC8"
+  },
+  {
+    "name": "file-add-line",
+    "unicode": "\\uECC9"
+  },
+  {
+    "name": "file-chart-2-fill",
+    "unicode": "\\uECCA"
+  },
+  {
+    "name": "file-chart-2-line",
+    "unicode": "\\uECCB"
+  },
+  {
+    "name": "file-chart-fill",
+    "unicode": "\\uECCC"
+  },
+  {
+    "name": "file-chart-line",
+    "unicode": "\\uECCD"
+  },
+  {
+    "name": "file-cloud-fill",
+    "unicode": "\\uECCE"
+  },
+  {
+    "name": "file-cloud-line",
+    "unicode": "\\uECCF"
+  },
+  {
+    "name": "file-code-fill",
+    "unicode": "\\uECD0"
+  },
+  {
+    "name": "file-code-line",
+    "unicode": "\\uECD1"
+  },
+  {
+    "name": "file-copy-2-fill",
+    "unicode": "\\uECD2"
+  },
+  {
+    "name": "file-copy-2-line",
+    "unicode": "\\uECD3"
+  },
+  {
+    "name": "file-copy-fill",
+    "unicode": "\\uECD4"
+  },
+  {
+    "name": "file-copy-line",
+    "unicode": "\\uECD5"
+  },
+  {
+    "name": "file-damage-fill",
+    "unicode": "\\uECD6"
+  },
+  {
+    "name": "file-damage-line",
+    "unicode": "\\uECD7"
+  },
+  {
+    "name": "file-download-fill",
+    "unicode": "\\uECD8"
+  },
+  {
+    "name": "file-download-line",
+    "unicode": "\\uECD9"
+  },
+  {
+    "name": "file-edit-fill",
+    "unicode": "\\uECDA"
+  },
+  {
+    "name": "file-edit-line",
+    "unicode": "\\uECDB"
+  },
+  {
+    "name": "file-excel-2-fill",
+    "unicode": "\\uECDC"
+  },
+  {
+    "name": "file-excel-2-line",
+    "unicode": "\\uECDD"
+  },
+  {
+    "name": "file-excel-fill",
+    "unicode": "\\uECDE"
+  },
+  {
+    "name": "file-excel-line",
+    "unicode": "\\uECDF"
+  },
+  {
+    "name": "file-fill",
+    "unicode": "\\uECE0"
+  },
+  {
+    "name": "file-forbid-fill",
+    "unicode": "\\uECE1"
+  },
+  {
+    "name": "file-forbid-line",
+    "unicode": "\\uECE2"
+  },
+  {
+    "name": "file-gif-fill",
+    "unicode": "\\uECE3"
+  },
+  {
+    "name": "file-gif-line",
+    "unicode": "\\uECE4"
+  },
+  {
+    "name": "file-history-fill",
+    "unicode": "\\uECE5"
+  },
+  {
+    "name": "file-history-line",
+    "unicode": "\\uECE6"
+  },
+  {
+    "name": "file-hwp-fill",
+    "unicode": "\\uECE7"
+  },
+  {
+    "name": "file-hwp-line",
+    "unicode": "\\uECE8"
+  },
+  {
+    "name": "file-info-fill",
+    "unicode": "\\uECE9"
+  },
+  {
+    "name": "file-info-line",
+    "unicode": "\\uECEA"
+  },
+  {
+    "name": "file-line",
+    "unicode": "\\uECEB"
+  },
+  {
+    "name": "file-list-2-fill",
+    "unicode": "\\uECEC"
+  },
+  {
+    "name": "file-list-2-line",
+    "unicode": "\\uECED"
+  },
+  {
+    "name": "file-list-3-fill",
+    "unicode": "\\uECEE"
+  },
+  {
+    "name": "file-list-3-line",
+    "unicode": "\\uECEF"
+  },
+  {
+    "name": "file-list-fill",
+    "unicode": "\\uECF0"
+  },
+  {
+    "name": "file-list-line",
+    "unicode": "\\uECF1"
+  },
+  {
+    "name": "file-lock-fill",
+    "unicode": "\\uECF2"
+  },
+  {
+    "name": "file-lock-line",
+    "unicode": "\\uECF3"
+  },
+  {
+    "name": "file-mark-fill",
+    "unicode": "\\uECF4"
+  },
+  {
+    "name": "file-mark-line",
+    "unicode": "\\uECF5"
+  },
+  {
+    "name": "file-music-fill",
+    "unicode": "\\uECF6"
+  },
+  {
+    "name": "file-music-line",
+    "unicode": "\\uECF7"
+  },
+  {
+    "name": "file-paper-2-fill",
+    "unicode": "\\uECF8"
+  },
+  {
+    "name": "file-paper-2-line",
+    "unicode": "\\uECF9"
+  },
+  {
+    "name": "file-paper-fill",
+    "unicode": "\\uECFA"
+  },
+  {
+    "name": "file-paper-line",
+    "unicode": "\\uECFB"
+  },
+  {
+    "name": "file-pdf-fill",
+    "unicode": "\\uECFC"
+  },
+  {
+    "name": "file-pdf-line",
+    "unicode": "\\uECFD"
+  },
+  {
+    "name": "file-ppt-2-fill",
+    "unicode": "\\uECFE"
+  },
+  {
+    "name": "file-ppt-2-line",
+    "unicode": "\\uECFF"
+  },
+  {
+    "name": "file-ppt-fill",
+    "unicode": "\\uED00"
+  },
+  {
+    "name": "file-ppt-line",
+    "unicode": "\\uED01"
+  },
+  {
+    "name": "file-reduce-fill",
+    "unicode": "\\uED02"
+  },
+  {
+    "name": "file-reduce-line",
+    "unicode": "\\uED03"
+  },
+  {
+    "name": "file-search-fill",
+    "unicode": "\\uED04"
+  },
+  {
+    "name": "file-search-line",
+    "unicode": "\\uED05"
+  },
+  {
+    "name": "file-settings-fill",
+    "unicode": "\\uED06"
+  },
+  {
+    "name": "file-settings-line",
+    "unicode": "\\uED07"
+  },
+  {
+    "name": "file-shield-2-fill",
+    "unicode": "\\uED08"
+  },
+  {
+    "name": "file-shield-2-line",
+    "unicode": "\\uED09"
+  },
+  {
+    "name": "file-shield-fill",
+    "unicode": "\\uED0A"
+  },
+  {
+    "name": "file-shield-line",
+    "unicode": "\\uED0B"
+  },
+  {
+    "name": "file-shred-fill",
+    "unicode": "\\uED0C"
+  },
+  {
+    "name": "file-shred-line",
+    "unicode": "\\uED0D"
+  },
+  {
+    "name": "file-text-fill",
+    "unicode": "\\uED0E"
+  },
+  {
+    "name": "file-text-line",
+    "unicode": "\\uED0F"
+  },
+  {
+    "name": "file-transfer-fill",
+    "unicode": "\\uED10"
+  },
+  {
+    "name": "file-transfer-line",
+    "unicode": "\\uED11"
+  },
+  {
+    "name": "file-unknow-fill",
+    "unicode": "\\uED12"
+  },
+  {
+    "name": "file-unknow-line",
+    "unicode": "\\uED13"
+  },
+  {
+    "name": "file-upload-fill",
+    "unicode": "\\uED14"
+  },
+  {
+    "name": "file-upload-line",
+    "unicode": "\\uED15"
+  },
+  {
+    "name": "file-user-fill",
+    "unicode": "\\uED16"
+  },
+  {
+    "name": "file-user-line",
+    "unicode": "\\uED17"
+  },
+  {
+    "name": "file-warning-fill",
+    "unicode": "\\uED18"
+  },
+  {
+    "name": "file-warning-line",
+    "unicode": "\\uED19"
+  },
+  {
+    "name": "file-word-2-fill",
+    "unicode": "\\uED1A"
+  },
+  {
+    "name": "file-word-2-line",
+    "unicode": "\\uED1B"
+  },
+  {
+    "name": "file-word-fill",
+    "unicode": "\\uED1C"
+  },
+  {
+    "name": "file-word-line",
+    "unicode": "\\uED1D"
+  },
+  {
+    "name": "file-zip-fill",
+    "unicode": "\\uED1E"
+  },
+  {
+    "name": "file-zip-line",
+    "unicode": "\\uED1F"
+  },
+  {
+    "name": "film-fill",
+    "unicode": "\\uED20"
+  },
+  {
+    "name": "film-line",
+    "unicode": "\\uED21"
+  },
+  {
+    "name": "filter-2-fill",
+    "unicode": "\\uED22"
+  },
+  {
+    "name": "filter-2-line",
+    "unicode": "\\uED23"
+  },
+  {
+    "name": "filter-3-fill",
+    "unicode": "\\uED24"
+  },
+  {
+    "name": "filter-3-line",
+    "unicode": "\\uED25"
+  },
+  {
+    "name": "filter-fill",
+    "unicode": "\\uED26"
+  },
+  {
+    "name": "filter-line",
+    "unicode": "\\uED27"
+  },
+  {
+    "name": "filter-off-fill",
+    "unicode": "\\uED28"
+  },
+  {
+    "name": "filter-off-line",
+    "unicode": "\\uED29"
+  },
+  {
+    "name": "find-replace-fill",
+    "unicode": "\\uED2A"
+  },
+  {
+    "name": "find-replace-line",
+    "unicode": "\\uED2B"
+  },
+  {
+    "name": "finder-fill",
+    "unicode": "\\uED2C"
+  },
+  {
+    "name": "finder-line",
+    "unicode": "\\uED2D"
+  },
+  {
+    "name": "fingerprint-2-fill",
+    "unicode": "\\uED2E"
+  },
+  {
+    "name": "fingerprint-2-line",
+    "unicode": "\\uED2F"
+  },
+  {
+    "name": "fingerprint-fill",
+    "unicode": "\\uED30"
+  },
+  {
+    "name": "fingerprint-line",
+    "unicode": "\\uED31"
+  },
+  {
+    "name": "fire-fill",
+    "unicode": "\\uED32"
+  },
+  {
+    "name": "fire-line",
+    "unicode": "\\uED33"
+  },
+  {
+    "name": "firefox-fill",
+    "unicode": "\\uED34"
+  },
+  {
+    "name": "firefox-line",
+    "unicode": "\\uED35"
+  },
+  {
+    "name": "first-aid-kit-fill",
+    "unicode": "\\uED36"
+  },
+  {
+    "name": "first-aid-kit-line",
+    "unicode": "\\uED37"
+  },
+  {
+    "name": "flag-2-fill",
+    "unicode": "\\uED38"
+  },
+  {
+    "name": "flag-2-line",
+    "unicode": "\\uED39"
+  },
+  {
+    "name": "flag-fill",
+    "unicode": "\\uED3A"
+  },
+  {
+    "name": "flag-line",
+    "unicode": "\\uED3B"
+  },
+  {
+    "name": "flashlight-fill",
+    "unicode": "\\uED3C"
+  },
+  {
+    "name": "flashlight-line",
+    "unicode": "\\uED3D"
+  },
+  {
+    "name": "flask-fill",
+    "unicode": "\\uED3E"
+  },
+  {
+    "name": "flask-line",
+    "unicode": "\\uED3F"
+  },
+  {
+    "name": "flight-land-fill",
+    "unicode": "\\uED40"
+  },
+  {
+    "name": "flight-land-line",
+    "unicode": "\\uED41"
+  },
+  {
+    "name": "flight-takeoff-fill",
+    "unicode": "\\uED42"
+  },
+  {
+    "name": "flight-takeoff-line",
+    "unicode": "\\uED43"
+  },
+  {
+    "name": "flood-fill",
+    "unicode": "\\uED44"
+  },
+  {
+    "name": "flood-line",
+    "unicode": "\\uED45"
+  },
+  {
+    "name": "flow-chart",
+    "unicode": "\\uED46"
+  },
+  {
+    "name": "flutter-fill",
+    "unicode": "\\uED47"
+  },
+  {
+    "name": "flutter-line",
+    "unicode": "\\uED48"
+  },
+  {
+    "name": "focus-2-fill",
+    "unicode": "\\uED49"
+  },
+  {
+    "name": "focus-2-line",
+    "unicode": "\\uED4A"
+  },
+  {
+    "name": "focus-3-fill",
+    "unicode": "\\uED4B"
+  },
+  {
+    "name": "focus-3-line",
+    "unicode": "\\uED4C"
+  },
+  {
+    "name": "focus-fill",
+    "unicode": "\\uED4D"
+  },
+  {
+    "name": "focus-line",
+    "unicode": "\\uED4E"
+  },
+  {
+    "name": "foggy-fill",
+    "unicode": "\\uED4F"
+  },
+  {
+    "name": "foggy-line",
+    "unicode": "\\uED50"
+  },
+  {
+    "name": "folder-2-fill",
+    "unicode": "\\uED51"
+  },
+  {
+    "name": "folder-2-line",
+    "unicode": "\\uED52"
+  },
+  {
+    "name": "folder-3-fill",
+    "unicode": "\\uED53"
+  },
+  {
+    "name": "folder-3-line",
+    "unicode": "\\uED54"
+  },
+  {
+    "name": "folder-4-fill",
+    "unicode": "\\uED55"
+  },
+  {
+    "name": "folder-4-line",
+    "unicode": "\\uED56"
+  },
+  {
+    "name": "folder-5-fill",
+    "unicode": "\\uED57"
+  },
+  {
+    "name": "folder-5-line",
+    "unicode": "\\uED58"
+  },
+  {
+    "name": "folder-add-fill",
+    "unicode": "\\uED59"
+  },
+  {
+    "name": "folder-add-line",
+    "unicode": "\\uED5A"
+  },
+  {
+    "name": "folder-chart-2-fill",
+    "unicode": "\\uED5B"
+  },
+  {
+    "name": "folder-chart-2-line",
+    "unicode": "\\uED5C"
+  },
+  {
+    "name": "folder-chart-fill",
+    "unicode": "\\uED5D"
+  },
+  {
+    "name": "folder-chart-line",
+    "unicode": "\\uED5E"
+  },
+  {
+    "name": "folder-download-fill",
+    "unicode": "\\uED5F"
+  },
+  {
+    "name": "folder-download-line",
+    "unicode": "\\uED60"
+  },
+  {
+    "name": "folder-fill",
+    "unicode": "\\uED61"
+  },
+  {
+    "name": "folder-forbid-fill",
+    "unicode": "\\uED62"
+  },
+  {
+    "name": "folder-forbid-line",
+    "unicode": "\\uED63"
+  },
+  {
+    "name": "folder-history-fill",
+    "unicode": "\\uED64"
+  },
+  {
+    "name": "folder-history-line",
+    "unicode": "\\uED65"
+  },
+  {
+    "name": "folder-info-fill",
+    "unicode": "\\uED66"
+  },
+  {
+    "name": "folder-info-line",
+    "unicode": "\\uED67"
+  },
+  {
+    "name": "folder-keyhole-fill",
+    "unicode": "\\uED68"
+  },
+  {
+    "name": "folder-keyhole-line",
+    "unicode": "\\uED69"
+  },
+  {
+    "name": "folder-line",
+    "unicode": "\\uED6A"
+  },
+  {
+    "name": "folder-lock-fill",
+    "unicode": "\\uED6B"
+  },
+  {
+    "name": "folder-lock-line",
+    "unicode": "\\uED6C"
+  },
+  {
+    "name": "folder-music-fill",
+    "unicode": "\\uED6D"
+  },
+  {
+    "name": "folder-music-line",
+    "unicode": "\\uED6E"
+  },
+  {
+    "name": "folder-open-fill",
+    "unicode": "\\uED6F"
+  },
+  {
+    "name": "folder-open-line",
+    "unicode": "\\uED70"
+  },
+  {
+    "name": "folder-received-fill",
+    "unicode": "\\uED71"
+  },
+  {
+    "name": "folder-received-line",
+    "unicode": "\\uED72"
+  },
+  {
+    "name": "folder-reduce-fill",
+    "unicode": "\\uED73"
+  },
+  {
+    "name": "folder-reduce-line",
+    "unicode": "\\uED74"
+  },
+  {
+    "name": "folder-settings-fill",
+    "unicode": "\\uED75"
+  },
+  {
+    "name": "folder-settings-line",
+    "unicode": "\\uED76"
+  },
+  {
+    "name": "folder-shared-fill",
+    "unicode": "\\uED77"
+  },
+  {
+    "name": "folder-shared-line",
+    "unicode": "\\uED78"
+  },
+  {
+    "name": "folder-shield-2-fill",
+    "unicode": "\\uED79"
+  },
+  {
+    "name": "folder-shield-2-line",
+    "unicode": "\\uED7A"
+  },
+  {
+    "name": "folder-shield-fill",
+    "unicode": "\\uED7B"
+  },
+  {
+    "name": "folder-shield-line",
+    "unicode": "\\uED7C"
+  },
+  {
+    "name": "folder-transfer-fill",
+    "unicode": "\\uED7D"
+  },
+  {
+    "name": "folder-transfer-line",
+    "unicode": "\\uED7E"
+  },
+  {
+    "name": "folder-unknow-fill",
+    "unicode": "\\uED7F"
+  },
+  {
+    "name": "folder-unknow-line",
+    "unicode": "\\uED80"
+  },
+  {
+    "name": "folder-upload-fill",
+    "unicode": "\\uED81"
+  },
+  {
+    "name": "folder-upload-line",
+    "unicode": "\\uED82"
+  },
+  {
+    "name": "folder-user-fill",
+    "unicode": "\\uED83"
+  },
+  {
+    "name": "folder-user-line",
+    "unicode": "\\uED84"
+  },
+  {
+    "name": "folder-warning-fill",
+    "unicode": "\\uED85"
+  },
+  {
+    "name": "folder-warning-line",
+    "unicode": "\\uED86"
+  },
+  {
+    "name": "folder-zip-fill",
+    "unicode": "\\uED87"
+  },
+  {
+    "name": "folder-zip-line",
+    "unicode": "\\uED88"
+  },
+  {
+    "name": "folders-fill",
+    "unicode": "\\uED89"
+  },
+  {
+    "name": "folders-line",
+    "unicode": "\\uED8A"
+  },
+  {
+    "name": "font-color",
+    "unicode": "\\uED8B"
+  },
+  {
+    "name": "font-size-2",
+    "unicode": "\\uED8C"
+  },
+  {
+    "name": "font-size",
+    "unicode": "\\uED8D"
+  },
+  {
+    "name": "football-fill",
+    "unicode": "\\uED8E"
+  },
+  {
+    "name": "football-line",
+    "unicode": "\\uED8F"
+  },
+  {
+    "name": "footprint-fill",
+    "unicode": "\\uED90"
+  },
+  {
+    "name": "footprint-line",
+    "unicode": "\\uED91"
+  },
+  {
+    "name": "forbid-2-fill",
+    "unicode": "\\uED92"
+  },
+  {
+    "name": "forbid-2-line",
+    "unicode": "\\uED93"
+  },
+  {
+    "name": "forbid-fill",
+    "unicode": "\\uED94"
+  },
+  {
+    "name": "forbid-line",
+    "unicode": "\\uED95"
+  },
+  {
+    "name": "format-clear",
+    "unicode": "\\uED96"
+  },
+  {
+    "name": "fridge-fill",
+    "unicode": "\\uED97"
+  },
+  {
+    "name": "fridge-line",
+    "unicode": "\\uED98"
+  },
+  {
+    "name": "fullscreen-exit-fill",
+    "unicode": "\\uED99"
+  },
+  {
+    "name": "fullscreen-exit-line",
+    "unicode": "\\uED9A"
+  },
+  {
+    "name": "fullscreen-fill",
+    "unicode": "\\uED9B"
+  },
+  {
+    "name": "fullscreen-line",
+    "unicode": "\\uED9C"
+  },
+  {
+    "name": "function-fill",
+    "unicode": "\\uED9D"
+  },
+  {
+    "name": "function-line",
+    "unicode": "\\uED9E"
+  },
+  {
+    "name": "functions",
+    "unicode": "\\uED9F"
+  },
+  {
+    "name": "funds-box-fill",
+    "unicode": "\\uEDA0"
+  },
+  {
+    "name": "funds-box-line",
+    "unicode": "\\uEDA1"
+  },
+  {
+    "name": "funds-fill",
+    "unicode": "\\uEDA2"
+  },
+  {
+    "name": "funds-line",
+    "unicode": "\\uEDA3"
+  },
+  {
+    "name": "gallery-fill",
+    "unicode": "\\uEDA4"
+  },
+  {
+    "name": "gallery-line",
+    "unicode": "\\uEDA5"
+  },
+  {
+    "name": "gallery-upload-fill",
+    "unicode": "\\uEDA6"
+  },
+  {
+    "name": "gallery-upload-line",
+    "unicode": "\\uEDA7"
+  },
+  {
+    "name": "game-fill",
+    "unicode": "\\uEDA8"
+  },
+  {
+    "name": "game-line",
+    "unicode": "\\uEDA9"
+  },
+  {
+    "name": "gamepad-fill",
+    "unicode": "\\uEDAA"
+  },
+  {
+    "name": "gamepad-line",
+    "unicode": "\\uEDAB"
+  },
+  {
+    "name": "gas-station-fill",
+    "unicode": "\\uEDAC"
+  },
+  {
+    "name": "gas-station-line",
+    "unicode": "\\uEDAD"
+  },
+  {
+    "name": "gatsby-fill",
+    "unicode": "\\uEDAE"
+  },
+  {
+    "name": "gatsby-line",
+    "unicode": "\\uEDAF"
+  },
+  {
+    "name": "genderless-fill",
+    "unicode": "\\uEDB0"
+  },
+  {
+    "name": "genderless-line",
+    "unicode": "\\uEDB1"
+  },
+  {
+    "name": "ghost-2-fill",
+    "unicode": "\\uEDB2"
+  },
+  {
+    "name": "ghost-2-line",
+    "unicode": "\\uEDB3"
+  },
+  {
+    "name": "ghost-fill",
+    "unicode": "\\uEDB4"
+  },
+  {
+    "name": "ghost-line",
+    "unicode": "\\uEDB5"
+  },
+  {
+    "name": "ghost-smile-fill",
+    "unicode": "\\uEDB6"
+  },
+  {
+    "name": "ghost-smile-line",
+    "unicode": "\\uEDB7"
+  },
+  {
+    "name": "gift-2-fill",
+    "unicode": "\\uEDB8"
+  },
+  {
+    "name": "gift-2-line",
+    "unicode": "\\uEDB9"
+  },
+  {
+    "name": "gift-fill",
+    "unicode": "\\uEDBA"
+  },
+  {
+    "name": "gift-line",
+    "unicode": "\\uEDBB"
+  },
+  {
+    "name": "git-branch-fill",
+    "unicode": "\\uEDBC"
+  },
+  {
+    "name": "git-branch-line",
+    "unicode": "\\uEDBD"
+  },
+  {
+    "name": "git-commit-fill",
+    "unicode": "\\uEDBE"
+  },
+  {
+    "name": "git-commit-line",
+    "unicode": "\\uEDBF"
+  },
+  {
+    "name": "git-merge-fill",
+    "unicode": "\\uEDC0"
+  },
+  {
+    "name": "git-merge-line",
+    "unicode": "\\uEDC1"
+  },
+  {
+    "name": "git-pull-request-fill",
+    "unicode": "\\uEDC2"
+  },
+  {
+    "name": "git-pull-request-line",
+    "unicode": "\\uEDC3"
+  },
+  {
+    "name": "git-repository-commits-fill",
+    "unicode": "\\uEDC4"
+  },
+  {
+    "name": "git-repository-commits-line",
+    "unicode": "\\uEDC5"
+  },
+  {
+    "name": "git-repository-fill",
+    "unicode": "\\uEDC6"
+  },
+  {
+    "name": "git-repository-line",
+    "unicode": "\\uEDC7"
+  },
+  {
+    "name": "git-repository-private-fill",
+    "unicode": "\\uEDC8"
+  },
+  {
+    "name": "git-repository-private-line",
+    "unicode": "\\uEDC9"
+  },
+  {
+    "name": "github-fill",
+    "unicode": "\\uEDCA"
+  },
+  {
+    "name": "github-line",
+    "unicode": "\\uEDCB"
+  },
+  {
+    "name": "gitlab-fill",
+    "unicode": "\\uEDCC"
+  },
+  {
+    "name": "gitlab-line",
+    "unicode": "\\uEDCD"
+  },
+  {
+    "name": "global-fill",
+    "unicode": "\\uEDCE"
+  },
+  {
+    "name": "global-line",
+    "unicode": "\\uEDCF"
+  },
+  {
+    "name": "globe-fill",
+    "unicode": "\\uEDD0"
+  },
+  {
+    "name": "globe-line",
+    "unicode": "\\uEDD1"
+  },
+  {
+    "name": "goblet-fill",
+    "unicode": "\\uEDD2"
+  },
+  {
+    "name": "goblet-line",
+    "unicode": "\\uEDD3"
+  },
+  {
+    "name": "google-fill",
+    "unicode": "\\uEDD4"
+  },
+  {
+    "name": "google-line",
+    "unicode": "\\uEDD5"
+  },
+  {
+    "name": "google-play-fill",
+    "unicode": "\\uEDD6"
+  },
+  {
+    "name": "google-play-line",
+    "unicode": "\\uEDD7"
+  },
+  {
+    "name": "government-fill",
+    "unicode": "\\uEDD8"
+  },
+  {
+    "name": "government-line",
+    "unicode": "\\uEDD9"
+  },
+  {
+    "name": "gps-fill",
+    "unicode": "\\uEDDA"
+  },
+  {
+    "name": "gps-line",
+    "unicode": "\\uEDDB"
+  },
+  {
+    "name": "gradienter-fill",
+    "unicode": "\\uEDDC"
+  },
+  {
+    "name": "gradienter-line",
+    "unicode": "\\uEDDD"
+  },
+  {
+    "name": "grid-fill",
+    "unicode": "\\uEDDE"
+  },
+  {
+    "name": "grid-line",
+    "unicode": "\\uEDDF"
+  },
+  {
+    "name": "group-2-fill",
+    "unicode": "\\uEDE0"
+  },
+  {
+    "name": "group-2-line",
+    "unicode": "\\uEDE1"
+  },
+  {
+    "name": "group-fill",
+    "unicode": "\\uEDE2"
+  },
+  {
+    "name": "group-line",
+    "unicode": "\\uEDE3"
+  },
+  {
+    "name": "guide-fill",
+    "unicode": "\\uEDE4"
+  },
+  {
+    "name": "guide-line",
+    "unicode": "\\uEDE5"
+  },
+  {
+    "name": "h-1",
+    "unicode": "\\uEDE6"
+  },
+  {
+    "name": "h-2",
+    "unicode": "\\uEDE7"
+  },
+  {
+    "name": "h-3",
+    "unicode": "\\uEDE8"
+  },
+  {
+    "name": "h-4",
+    "unicode": "\\uEDE9"
+  },
+  {
+    "name": "h-5",
+    "unicode": "\\uEDEA"
+  },
+  {
+    "name": "h-6",
+    "unicode": "\\uEDEB"
+  },
+  {
+    "name": "hail-fill",
+    "unicode": "\\uEDEC"
+  },
+  {
+    "name": "hail-line",
+    "unicode": "\\uEDED"
+  },
+  {
+    "name": "hammer-fill",
+    "unicode": "\\uEDEE"
+  },
+  {
+    "name": "hammer-line",
+    "unicode": "\\uEDEF"
+  },
+  {
+    "name": "hand-coin-fill",
+    "unicode": "\\uEDF0"
+  },
+  {
+    "name": "hand-coin-line",
+    "unicode": "\\uEDF1"
+  },
+  {
+    "name": "hand-heart-fill",
+    "unicode": "\\uEDF2"
+  },
+  {
+    "name": "hand-heart-line",
+    "unicode": "\\uEDF3"
+  },
+  {
+    "name": "hand-sanitizer-fill",
+    "unicode": "\\uEDF4"
+  },
+  {
+    "name": "hand-sanitizer-line",
+    "unicode": "\\uEDF5"
+  },
+  {
+    "name": "handbag-fill",
+    "unicode": "\\uEDF6"
+  },
+  {
+    "name": "handbag-line",
+    "unicode": "\\uEDF7"
+  },
+  {
+    "name": "hard-drive-2-fill",
+    "unicode": "\\uEDF8"
+  },
+  {
+    "name": "hard-drive-2-line",
+    "unicode": "\\uEDF9"
+  },
+  {
+    "name": "hard-drive-fill",
+    "unicode": "\\uEDFA"
+  },
+  {
+    "name": "hard-drive-line",
+    "unicode": "\\uEDFB"
+  },
+  {
+    "name": "hashtag",
+    "unicode": "\\uEDFC"
+  },
+  {
+    "name": "haze-2-fill",
+    "unicode": "\\uEDFD"
+  },
+  {
+    "name": "haze-2-line",
+    "unicode": "\\uEDFE"
+  },
+  {
+    "name": "haze-fill",
+    "unicode": "\\uEDFF"
+  },
+  {
+    "name": "haze-line",
+    "unicode": "\\uEE00"
+  },
+  {
+    "name": "hd-fill",
+    "unicode": "\\uEE01"
+  },
+  {
+    "name": "hd-line",
+    "unicode": "\\uEE02"
+  },
+  {
+    "name": "heading",
+    "unicode": "\\uEE03"
+  },
+  {
+    "name": "headphone-fill",
+    "unicode": "\\uEE04"
+  },
+  {
+    "name": "headphone-line",
+    "unicode": "\\uEE05"
+  },
+  {
+    "name": "health-book-fill",
+    "unicode": "\\uEE06"
+  },
+  {
+    "name": "health-book-line",
+    "unicode": "\\uEE07"
+  },
+  {
+    "name": "heart-2-fill",
+    "unicode": "\\uEE08"
+  },
+  {
+    "name": "heart-2-line",
+    "unicode": "\\uEE09"
+  },
+  {
+    "name": "heart-3-fill",
+    "unicode": "\\uEE0A"
+  },
+  {
+    "name": "heart-3-line",
+    "unicode": "\\uEE0B"
+  },
+  {
+    "name": "heart-add-fill",
+    "unicode": "\\uEE0C"
+  },
+  {
+    "name": "heart-add-line",
+    "unicode": "\\uEE0D"
+  },
+  {
+    "name": "heart-fill",
+    "unicode": "\\uEE0E"
+  },
+  {
+    "name": "heart-line",
+    "unicode": "\\uEE0F"
+  },
+  {
+    "name": "heart-pulse-fill",
+    "unicode": "\\uEE10"
+  },
+  {
+    "name": "heart-pulse-line",
+    "unicode": "\\uEE11"
+  },
+  {
+    "name": "hearts-fill",
+    "unicode": "\\uEE12"
+  },
+  {
+    "name": "hearts-line",
+    "unicode": "\\uEE13"
+  },
+  {
+    "name": "heavy-showers-fill",
+    "unicode": "\\uEE14"
+  },
+  {
+    "name": "heavy-showers-line",
+    "unicode": "\\uEE15"
+  },
+  {
+    "name": "history-fill",
+    "unicode": "\\uEE16"
+  },
+  {
+    "name": "history-line",
+    "unicode": "\\uEE17"
+  },
+  {
+    "name": "home-2-fill",
+    "unicode": "\\uEE18"
+  },
+  {
+    "name": "home-2-line",
+    "unicode": "\\uEE19"
+  },
+  {
+    "name": "home-3-fill",
+    "unicode": "\\uEE1A"
+  },
+  {
+    "name": "home-3-line",
+    "unicode": "\\uEE1B"
+  },
+  {
+    "name": "home-4-fill",
+    "unicode": "\\uEE1C"
+  },
+  {
+    "name": "home-4-line",
+    "unicode": "\\uEE1D"
+  },
+  {
+    "name": "home-5-fill",
+    "unicode": "\\uEE1E"
+  },
+  {
+    "name": "home-5-line",
+    "unicode": "\\uEE1F"
+  },
+  {
+    "name": "home-6-fill",
+    "unicode": "\\uEE20"
+  },
+  {
+    "name": "home-6-line",
+    "unicode": "\\uEE21"
+  },
+  {
+    "name": "home-7-fill",
+    "unicode": "\\uEE22"
+  },
+  {
+    "name": "home-7-line",
+    "unicode": "\\uEE23"
+  },
+  {
+    "name": "home-8-fill",
+    "unicode": "\\uEE24"
+  },
+  {
+    "name": "home-8-line",
+    "unicode": "\\uEE25"
+  },
+  {
+    "name": "home-fill",
+    "unicode": "\\uEE26"
+  },
+  {
+    "name": "home-gear-fill",
+    "unicode": "\\uEE27"
+  },
+  {
+    "name": "home-gear-line",
+    "unicode": "\\uEE28"
+  },
+  {
+    "name": "home-heart-fill",
+    "unicode": "\\uEE29"
+  },
+  {
+    "name": "home-heart-line",
+    "unicode": "\\uEE2A"
+  },
+  {
+    "name": "home-line",
+    "unicode": "\\uEE2B"
+  },
+  {
+    "name": "home-smile-2-fill",
+    "unicode": "\\uEE2C"
+  },
+  {
+    "name": "home-smile-2-line",
+    "unicode": "\\uEE2D"
+  },
+  {
+    "name": "home-smile-fill",
+    "unicode": "\\uEE2E"
+  },
+  {
+    "name": "home-smile-line",
+    "unicode": "\\uEE2F"
+  },
+  {
+    "name": "home-wifi-fill",
+    "unicode": "\\uEE30"
+  },
+  {
+    "name": "home-wifi-line",
+    "unicode": "\\uEE31"
+  },
+  {
+    "name": "honor-of-kings-fill",
+    "unicode": "\\uEE32"
+  },
+  {
+    "name": "honor-of-kings-line",
+    "unicode": "\\uEE33"
+  },
+  {
+    "name": "honour-fill",
+    "unicode": "\\uEE34"
+  },
+  {
+    "name": "honour-line",
+    "unicode": "\\uEE35"
+  },
+  {
+    "name": "hospital-fill",
+    "unicode": "\\uEE36"
+  },
+  {
+    "name": "hospital-line",
+    "unicode": "\\uEE37"
+  },
+  {
+    "name": "hotel-bed-fill",
+    "unicode": "\\uEE38"
+  },
+  {
+    "name": "hotel-bed-line",
+    "unicode": "\\uEE39"
+  },
+  {
+    "name": "hotel-fill",
+    "unicode": "\\uEE3A"
+  },
+  {
+    "name": "hotel-line",
+    "unicode": "\\uEE3B"
+  },
+  {
+    "name": "hotspot-fill",
+    "unicode": "\\uEE3C"
+  },
+  {
+    "name": "hotspot-line",
+    "unicode": "\\uEE3D"
+  },
+  {
+    "name": "hq-fill",
+    "unicode": "\\uEE3E"
+  },
+  {
+    "name": "hq-line",
+    "unicode": "\\uEE3F"
+  },
+  {
+    "name": "html5-fill",
+    "unicode": "\\uEE40"
+  },
+  {
+    "name": "html5-line",
+    "unicode": "\\uEE41"
+  },
+  {
+    "name": "ie-fill",
+    "unicode": "\\uEE42"
+  },
+  {
+    "name": "ie-line",
+    "unicode": "\\uEE43"
+  },
+  {
+    "name": "image-2-fill",
+    "unicode": "\\uEE44"
+  },
+  {
+    "name": "image-2-line",
+    "unicode": "\\uEE45"
+  },
+  {
+    "name": "image-add-fill",
+    "unicode": "\\uEE46"
+  },
+  {
+    "name": "image-add-line",
+    "unicode": "\\uEE47"
+  },
+  {
+    "name": "image-edit-fill",
+    "unicode": "\\uEE48"
+  },
+  {
+    "name": "image-edit-line",
+    "unicode": "\\uEE49"
+  },
+  {
+    "name": "image-fill",
+    "unicode": "\\uEE4A"
+  },
+  {
+    "name": "image-line",
+    "unicode": "\\uEE4B"
+  },
+  {
+    "name": "inbox-archive-fill",
+    "unicode": "\\uEE4C"
+  },
+  {
+    "name": "inbox-archive-line",
+    "unicode": "\\uEE4D"
+  },
+  {
+    "name": "inbox-fill",
+    "unicode": "\\uEE4E"
+  },
+  {
+    "name": "inbox-line",
+    "unicode": "\\uEE4F"
+  },
+  {
+    "name": "inbox-unarchive-fill",
+    "unicode": "\\uEE50"
+  },
+  {
+    "name": "inbox-unarchive-line",
+    "unicode": "\\uEE51"
+  },
+  {
+    "name": "increase-decrease-fill",
+    "unicode": "\\uEE52"
+  },
+  {
+    "name": "increase-decrease-line",
+    "unicode": "\\uEE53"
+  },
+  {
+    "name": "indent-decrease",
+    "unicode": "\\uEE54"
+  },
+  {
+    "name": "indent-increase",
+    "unicode": "\\uEE55"
+  },
+  {
+    "name": "indeterminate-circle-fill",
+    "unicode": "\\uEE56"
+  },
+  {
+    "name": "indeterminate-circle-line",
+    "unicode": "\\uEE57"
+  },
+  {
+    "name": "information-fill",
+    "unicode": "\\uEE58"
+  },
+  {
+    "name": "information-line",
+    "unicode": "\\uEE59"
+  },
+  {
+    "name": "infrared-thermometer-fill",
+    "unicode": "\\uEE5A"
+  },
+  {
+    "name": "infrared-thermometer-line",
+    "unicode": "\\uEE5B"
+  },
+  {
+    "name": "ink-bottle-fill",
+    "unicode": "\\uEE5C"
+  },
+  {
+    "name": "ink-bottle-line",
+    "unicode": "\\uEE5D"
+  },
+  {
+    "name": "input-cursor-move",
+    "unicode": "\\uEE5E"
+  },
+  {
+    "name": "input-method-fill",
+    "unicode": "\\uEE5F"
+  },
+  {
+    "name": "input-method-line",
+    "unicode": "\\uEE60"
+  },
+  {
+    "name": "insert-column-left",
+    "unicode": "\\uEE61"
+  },
+  {
+    "name": "insert-column-right",
+    "unicode": "\\uEE62"
+  },
+  {
+    "name": "insert-row-bottom",
+    "unicode": "\\uEE63"
+  },
+  {
+    "name": "insert-row-top",
+    "unicode": "\\uEE64"
+  },
+  {
+    "name": "instagram-fill",
+    "unicode": "\\uEE65"
+  },
+  {
+    "name": "instagram-line",
+    "unicode": "\\uEE66"
+  },
+  {
+    "name": "install-fill",
+    "unicode": "\\uEE67"
+  },
+  {
+    "name": "install-line",
+    "unicode": "\\uEE68"
+  },
+  {
+    "name": "invision-fill",
+    "unicode": "\\uEE69"
+  },
+  {
+    "name": "invision-line",
+    "unicode": "\\uEE6A"
+  },
+  {
+    "name": "italic",
+    "unicode": "\\uEE6B"
+  },
+  {
+    "name": "kakao-talk-fill",
+    "unicode": "\\uEE6C"
+  },
+  {
+    "name": "kakao-talk-line",
+    "unicode": "\\uEE6D"
+  },
+  {
+    "name": "key-2-fill",
+    "unicode": "\\uEE6E"
+  },
+  {
+    "name": "key-2-line",
+    "unicode": "\\uEE6F"
+  },
+  {
+    "name": "key-fill",
+    "unicode": "\\uEE70"
+  },
+  {
+    "name": "key-line",
+    "unicode": "\\uEE71"
+  },
+  {
+    "name": "keyboard-box-fill",
+    "unicode": "\\uEE72"
+  },
+  {
+    "name": "keyboard-box-line",
+    "unicode": "\\uEE73"
+  },
+  {
+    "name": "keyboard-fill",
+    "unicode": "\\uEE74"
+  },
+  {
+    "name": "keyboard-line",
+    "unicode": "\\uEE75"
+  },
+  {
+    "name": "keynote-fill",
+    "unicode": "\\uEE76"
+  },
+  {
+    "name": "keynote-line",
+    "unicode": "\\uEE77"
+  },
+  {
+    "name": "knife-blood-fill",
+    "unicode": "\\uEE78"
+  },
+  {
+    "name": "knife-blood-line",
+    "unicode": "\\uEE79"
+  },
+  {
+    "name": "knife-fill",
+    "unicode": "\\uEE7A"
+  },
+  {
+    "name": "knife-line",
+    "unicode": "\\uEE7B"
+  },
+  {
+    "name": "landscape-fill",
+    "unicode": "\\uEE7C"
+  },
+  {
+    "name": "landscape-line",
+    "unicode": "\\uEE7D"
+  },
+  {
+    "name": "layout-2-fill",
+    "unicode": "\\uEE7E"
+  },
+  {
+    "name": "layout-2-line",
+    "unicode": "\\uEE7F"
+  },
+  {
+    "name": "layout-3-fill",
+    "unicode": "\\uEE80"
+  },
+  {
+    "name": "layout-3-line",
+    "unicode": "\\uEE81"
+  },
+  {
+    "name": "layout-4-fill",
+    "unicode": "\\uEE82"
+  },
+  {
+    "name": "layout-4-line",
+    "unicode": "\\uEE83"
+  },
+  {
+    "name": "layout-5-fill",
+    "unicode": "\\uEE84"
+  },
+  {
+    "name": "layout-5-line",
+    "unicode": "\\uEE85"
+  },
+  {
+    "name": "layout-6-fill",
+    "unicode": "\\uEE86"
+  },
+  {
+    "name": "layout-6-line",
+    "unicode": "\\uEE87"
+  },
+  {
+    "name": "layout-bottom-2-fill",
+    "unicode": "\\uEE88"
+  },
+  {
+    "name": "layout-bottom-2-line",
+    "unicode": "\\uEE89"
+  },
+  {
+    "name": "layout-bottom-fill",
+    "unicode": "\\uEE8A"
+  },
+  {
+    "name": "layout-bottom-line",
+    "unicode": "\\uEE8B"
+  },
+  {
+    "name": "layout-column-fill",
+    "unicode": "\\uEE8C"
+  },
+  {
+    "name": "layout-column-line",
+    "unicode": "\\uEE8D"
+  },
+  {
+    "name": "layout-fill",
+    "unicode": "\\uEE8E"
+  },
+  {
+    "name": "layout-grid-fill",
+    "unicode": "\\uEE8F"
+  },
+  {
+    "name": "layout-grid-line",
+    "unicode": "\\uEE90"
+  },
+  {
+    "name": "layout-left-2-fill",
+    "unicode": "\\uEE91"
+  },
+  {
+    "name": "layout-left-2-line",
+    "unicode": "\\uEE92"
+  },
+  {
+    "name": "layout-left-fill",
+    "unicode": "\\uEE93"
+  },
+  {
+    "name": "layout-left-line",
+    "unicode": "\\uEE94"
+  },
+  {
+    "name": "layout-line",
+    "unicode": "\\uEE95"
+  },
+  {
+    "name": "layout-masonry-fill",
+    "unicode": "\\uEE96"
+  },
+  {
+    "name": "layout-masonry-line",
+    "unicode": "\\uEE97"
+  },
+  {
+    "name": "layout-right-2-fill",
+    "unicode": "\\uEE98"
+  },
+  {
+    "name": "layout-right-2-line",
+    "unicode": "\\uEE99"
+  },
+  {
+    "name": "layout-right-fill",
+    "unicode": "\\uEE9A"
+  },
+  {
+    "name": "layout-right-line",
+    "unicode": "\\uEE9B"
+  },
+  {
+    "name": "layout-row-fill",
+    "unicode": "\\uEE9C"
+  },
+  {
+    "name": "layout-row-line",
+    "unicode": "\\uEE9D"
+  },
+  {
+    "name": "layout-top-2-fill",
+    "unicode": "\\uEE9E"
+  },
+  {
+    "name": "layout-top-2-line",
+    "unicode": "\\uEE9F"
+  },
+  {
+    "name": "layout-top-fill",
+    "unicode": "\\uEEA0"
+  },
+  {
+    "name": "layout-top-line",
+    "unicode": "\\uEEA1"
+  },
+  {
+    "name": "leaf-fill",
+    "unicode": "\\uEEA2"
+  },
+  {
+    "name": "leaf-line",
+    "unicode": "\\uEEA3"
+  },
+  {
+    "name": "lifebuoy-fill",
+    "unicode": "\\uEEA4"
+  },
+  {
+    "name": "lifebuoy-line",
+    "unicode": "\\uEEA5"
+  },
+  {
+    "name": "lightbulb-fill",
+    "unicode": "\\uEEA6"
+  },
+  {
+    "name": "lightbulb-flash-fill",
+    "unicode": "\\uEEA7"
+  },
+  {
+    "name": "lightbulb-flash-line",
+    "unicode": "\\uEEA8"
+  },
+  {
+    "name": "lightbulb-line",
+    "unicode": "\\uEEA9"
+  },
+  {
+    "name": "line-chart-fill",
+    "unicode": "\\uEEAA"
+  },
+  {
+    "name": "line-chart-line",
+    "unicode": "\\uEEAB"
+  },
+  {
+    "name": "line-fill",
+    "unicode": "\\uEEAC"
+  },
+  {
+    "name": "line-height",
+    "unicode": "\\uEEAD"
+  },
+  {
+    "name": "line-line",
+    "unicode": "\\uEEAE"
+  },
+  {
+    "name": "link-m",
+    "unicode": "\\uEEAF"
+  },
+  {
+    "name": "link-unlink-m",
+    "unicode": "\\uEEB0"
+  },
+  {
+    "name": "link-unlink",
+    "unicode": "\\uEEB1"
+  },
+  {
+    "name": "link",
+    "unicode": "\\uEEB2"
+  },
+  {
+    "name": "linkedin-box-fill",
+    "unicode": "\\uEEB3"
+  },
+  {
+    "name": "linkedin-box-line",
+    "unicode": "\\uEEB4"
+  },
+  {
+    "name": "linkedin-fill",
+    "unicode": "\\uEEB5"
+  },
+  {
+    "name": "linkedin-line",
+    "unicode": "\\uEEB6"
+  },
+  {
+    "name": "links-fill",
+    "unicode": "\\uEEB7"
+  },
+  {
+    "name": "links-line",
+    "unicode": "\\uEEB8"
+  },
+  {
+    "name": "list-check-2",
+    "unicode": "\\uEEB9"
+  },
+  {
+    "name": "list-check",
+    "unicode": "\\uEEBA"
+  },
+  {
+    "name": "list-ordered",
+    "unicode": "\\uEEBB"
+  },
+  {
+    "name": "list-settings-fill",
+    "unicode": "\\uEEBC"
+  },
+  {
+    "name": "list-settings-line",
+    "unicode": "\\uEEBD"
+  },
+  {
+    "name": "list-unordered",
+    "unicode": "\\uEEBE"
+  },
+  {
+    "name": "live-fill",
+    "unicode": "\\uEEBF"
+  },
+  {
+    "name": "live-line",
+    "unicode": "\\uEEC0"
+  },
+  {
+    "name": "loader-2-fill",
+    "unicode": "\\uEEC1"
+  },
+  {
+    "name": "loader-2-line",
+    "unicode": "\\uEEC2"
+  },
+  {
+    "name": "loader-3-fill",
+    "unicode": "\\uEEC3"
+  },
+  {
+    "name": "loader-3-line",
+    "unicode": "\\uEEC4"
+  },
+  {
+    "name": "loader-4-fill",
+    "unicode": "\\uEEC5"
+  },
+  {
+    "name": "loader-4-line",
+    "unicode": "\\uEEC6"
+  },
+  {
+    "name": "loader-5-fill",
+    "unicode": "\\uEEC7"
+  },
+  {
+    "name": "loader-5-line",
+    "unicode": "\\uEEC8"
+  },
+  {
+    "name": "loader-fill",
+    "unicode": "\\uEEC9"
+  },
+  {
+    "name": "loader-line",
+    "unicode": "\\uEECA"
+  },
+  {
+    "name": "lock-2-fill",
+    "unicode": "\\uEECB"
+  },
+  {
+    "name": "lock-2-line",
+    "unicode": "\\uEECC"
+  },
+  {
+    "name": "lock-fill",
+    "unicode": "\\uEECD"
+  },
+  {
+    "name": "lock-line",
+    "unicode": "\\uEECE"
+  },
+  {
+    "name": "lock-password-fill",
+    "unicode": "\\uEECF"
+  },
+  {
+    "name": "lock-password-line",
+    "unicode": "\\uEED0"
+  },
+  {
+    "name": "lock-unlock-fill",
+    "unicode": "\\uEED1"
+  },
+  {
+    "name": "lock-unlock-line",
+    "unicode": "\\uEED2"
+  },
+  {
+    "name": "login-box-fill",
+    "unicode": "\\uEED3"
+  },
+  {
+    "name": "login-box-line",
+    "unicode": "\\uEED4"
+  },
+  {
+    "name": "login-circle-fill",
+    "unicode": "\\uEED5"
+  },
+  {
+    "name": "login-circle-line",
+    "unicode": "\\uEED6"
+  },
+  {
+    "name": "logout-box-fill",
+    "unicode": "\\uEED7"
+  },
+  {
+    "name": "logout-box-line",
+    "unicode": "\\uEED8"
+  },
+  {
+    "name": "logout-box-r-fill",
+    "unicode": "\\uEED9"
+  },
+  {
+    "name": "logout-box-r-line",
+    "unicode": "\\uEEDA"
+  },
+  {
+    "name": "logout-circle-fill",
+    "unicode": "\\uEEDB"
+  },
+  {
+    "name": "logout-circle-line",
+    "unicode": "\\uEEDC"
+  },
+  {
+    "name": "logout-circle-r-fill",
+    "unicode": "\\uEEDD"
+  },
+  {
+    "name": "logout-circle-r-line",
+    "unicode": "\\uEEDE"
+  },
+  {
+    "name": "luggage-cart-fill",
+    "unicode": "\\uEEDF"
+  },
+  {
+    "name": "luggage-cart-line",
+    "unicode": "\\uEEE0"
+  },
+  {
+    "name": "luggage-deposit-fill",
+    "unicode": "\\uEEE1"
+  },
+  {
+    "name": "luggage-deposit-line",
+    "unicode": "\\uEEE2"
+  },
+  {
+    "name": "lungs-fill",
+    "unicode": "\\uEEE3"
+  },
+  {
+    "name": "lungs-line",
+    "unicode": "\\uEEE4"
+  },
+  {
+    "name": "mac-fill",
+    "unicode": "\\uEEE5"
+  },
+  {
+    "name": "mac-line",
+    "unicode": "\\uEEE6"
+  },
+  {
+    "name": "macbook-fill",
+    "unicode": "\\uEEE7"
+  },
+  {
+    "name": "macbook-line",
+    "unicode": "\\uEEE8"
+  },
+  {
+    "name": "magic-fill",
+    "unicode": "\\uEEE9"
+  },
+  {
+    "name": "magic-line",
+    "unicode": "\\uEEEA"
+  },
+  {
+    "name": "mail-add-fill",
+    "unicode": "\\uEEEB"
+  },
+  {
+    "name": "mail-add-line",
+    "unicode": "\\uEEEC"
+  },
+  {
+    "name": "mail-check-fill",
+    "unicode": "\\uEEED"
+  },
+  {
+    "name": "mail-check-line",
+    "unicode": "\\uEEEE"
+  },
+  {
+    "name": "mail-close-fill",
+    "unicode": "\\uEEEF"
+  },
+  {
+    "name": "mail-close-line",
+    "unicode": "\\uEEF0"
+  },
+  {
+    "name": "mail-download-fill",
+    "unicode": "\\uEEF1"
+  },
+  {
+    "name": "mail-download-line",
+    "unicode": "\\uEEF2"
+  },
+  {
+    "name": "mail-fill",
+    "unicode": "\\uEEF3"
+  },
+  {
+    "name": "mail-forbid-fill",
+    "unicode": "\\uEEF4"
+  },
+  {
+    "name": "mail-forbid-line",
+    "unicode": "\\uEEF5"
+  },
+  {
+    "name": "mail-line",
+    "unicode": "\\uEEF6"
+  },
+  {
+    "name": "mail-lock-fill",
+    "unicode": "\\uEEF7"
+  },
+  {
+    "name": "mail-lock-line",
+    "unicode": "\\uEEF8"
+  },
+  {
+    "name": "mail-open-fill",
+    "unicode": "\\uEEF9"
+  },
+  {
+    "name": "mail-open-line",
+    "unicode": "\\uEEFA"
+  },
+  {
+    "name": "mail-send-fill",
+    "unicode": "\\uEEFB"
+  },
+  {
+    "name": "mail-send-line",
+    "unicode": "\\uEEFC"
+  },
+  {
+    "name": "mail-settings-fill",
+    "unicode": "\\uEEFD"
+  },
+  {
+    "name": "mail-settings-line",
+    "unicode": "\\uEEFE"
+  },
+  {
+    "name": "mail-star-fill",
+    "unicode": "\\uEEFF"
+  },
+  {
+    "name": "mail-star-line",
+    "unicode": "\\uEF00"
+  },
+  {
+    "name": "mail-unread-fill",
+    "unicode": "\\uEF01"
+  },
+  {
+    "name": "mail-unread-line",
+    "unicode": "\\uEF02"
+  },
+  {
+    "name": "mail-volume-fill",
+    "unicode": "\\uEF03"
+  },
+  {
+    "name": "mail-volume-line",
+    "unicode": "\\uEF04"
+  },
+  {
+    "name": "map-2-fill",
+    "unicode": "\\uEF05"
+  },
+  {
+    "name": "map-2-line",
+    "unicode": "\\uEF06"
+  },
+  {
+    "name": "map-fill",
+    "unicode": "\\uEF07"
+  },
+  {
+    "name": "map-line",
+    "unicode": "\\uEF08"
+  },
+  {
+    "name": "map-pin-2-fill",
+    "unicode": "\\uEF09"
+  },
+  {
+    "name": "map-pin-2-line",
+    "unicode": "\\uEF0A"
+  },
+  {
+    "name": "map-pin-3-fill",
+    "unicode": "\\uEF0B"
+  },
+  {
+    "name": "map-pin-3-line",
+    "unicode": "\\uEF0C"
+  },
+  {
+    "name": "map-pin-4-fill",
+    "unicode": "\\uEF0D"
+  },
+  {
+    "name": "map-pin-4-line",
+    "unicode": "\\uEF0E"
+  },
+  {
+    "name": "map-pin-5-fill",
+    "unicode": "\\uEF0F"
+  },
+  {
+    "name": "map-pin-5-line",
+    "unicode": "\\uEF10"
+  },
+  {
+    "name": "map-pin-add-fill",
+    "unicode": "\\uEF11"
+  },
+  {
+    "name": "map-pin-add-line",
+    "unicode": "\\uEF12"
+  },
+  {
+    "name": "map-pin-fill",
+    "unicode": "\\uEF13"
+  },
+  {
+    "name": "map-pin-line",
+    "unicode": "\\uEF14"
+  },
+  {
+    "name": "map-pin-range-fill",
+    "unicode": "\\uEF15"
+  },
+  {
+    "name": "map-pin-range-line",
+    "unicode": "\\uEF16"
+  },
+  {
+    "name": "map-pin-time-fill",
+    "unicode": "\\uEF17"
+  },
+  {
+    "name": "map-pin-time-line",
+    "unicode": "\\uEF18"
+  },
+  {
+    "name": "map-pin-user-fill",
+    "unicode": "\\uEF19"
+  },
+  {
+    "name": "map-pin-user-line",
+    "unicode": "\\uEF1A"
+  },
+  {
+    "name": "mark-pen-fill",
+    "unicode": "\\uEF1B"
+  },
+  {
+    "name": "mark-pen-line",
+    "unicode": "\\uEF1C"
+  },
+  {
+    "name": "markdown-fill",
+    "unicode": "\\uEF1D"
+  },
+  {
+    "name": "markdown-line",
+    "unicode": "\\uEF1E"
+  },
+  {
+    "name": "markup-fill",
+    "unicode": "\\uEF1F"
+  },
+  {
+    "name": "markup-line",
+    "unicode": "\\uEF20"
+  },
+  {
+    "name": "mastercard-fill",
+    "unicode": "\\uEF21"
+  },
+  {
+    "name": "mastercard-line",
+    "unicode": "\\uEF22"
+  },
+  {
+    "name": "mastodon-fill",
+    "unicode": "\\uEF23"
+  },
+  {
+    "name": "mastodon-line",
+    "unicode": "\\uEF24"
+  },
+  {
+    "name": "medal-2-fill",
+    "unicode": "\\uEF25"
+  },
+  {
+    "name": "medal-2-line",
+    "unicode": "\\uEF26"
+  },
+  {
+    "name": "medal-fill",
+    "unicode": "\\uEF27"
+  },
+  {
+    "name": "medal-line",
+    "unicode": "\\uEF28"
+  },
+  {
+    "name": "medicine-bottle-fill",
+    "unicode": "\\uEF29"
+  },
+  {
+    "name": "medicine-bottle-line",
+    "unicode": "\\uEF2A"
+  },
+  {
+    "name": "medium-fill",
+    "unicode": "\\uEF2B"
+  },
+  {
+    "name": "medium-line",
+    "unicode": "\\uEF2C"
+  },
+  {
+    "name": "men-fill",
+    "unicode": "\\uEF2D"
+  },
+  {
+    "name": "men-line",
+    "unicode": "\\uEF2E"
+  },
+  {
+    "name": "mental-health-fill",
+    "unicode": "\\uEF2F"
+  },
+  {
+    "name": "mental-health-line",
+    "unicode": "\\uEF30"
+  },
+  {
+    "name": "menu-2-fill",
+    "unicode": "\\uEF31"
+  },
+  {
+    "name": "menu-2-line",
+    "unicode": "\\uEF32"
+  },
+  {
+    "name": "menu-3-fill",
+    "unicode": "\\uEF33"
+  },
+  {
+    "name": "menu-3-line",
+    "unicode": "\\uEF34"
+  },
+  {
+    "name": "menu-4-fill",
+    "unicode": "\\uEF35"
+  },
+  {
+    "name": "menu-4-line",
+    "unicode": "\\uEF36"
+  },
+  {
+    "name": "menu-5-fill",
+    "unicode": "\\uEF37"
+  },
+  {
+    "name": "menu-5-line",
+    "unicode": "\\uEF38"
+  },
+  {
+    "name": "menu-add-fill",
+    "unicode": "\\uEF39"
+  },
+  {
+    "name": "menu-add-line",
+    "unicode": "\\uEF3A"
+  },
+  {
+    "name": "menu-fill",
+    "unicode": "\\uEF3B"
+  },
+  {
+    "name": "menu-fold-fill",
+    "unicode": "\\uEF3C"
+  },
+  {
+    "name": "menu-fold-line",
+    "unicode": "\\uEF3D"
+  },
+  {
+    "name": "menu-line",
+    "unicode": "\\uEF3E"
+  },
+  {
+    "name": "menu-unfold-fill",
+    "unicode": "\\uEF3F"
+  },
+  {
+    "name": "menu-unfold-line",
+    "unicode": "\\uEF40"
+  },
+  {
+    "name": "merge-cells-horizontal",
+    "unicode": "\\uEF41"
+  },
+  {
+    "name": "merge-cells-vertical",
+    "unicode": "\\uEF42"
+  },
+  {
+    "name": "message-2-fill",
+    "unicode": "\\uEF43"
+  },
+  {
+    "name": "message-2-line",
+    "unicode": "\\uEF44"
+  },
+  {
+    "name": "message-3-fill",
+    "unicode": "\\uEF45"
+  },
+  {
+    "name": "message-3-line",
+    "unicode": "\\uEF46"
+  },
+  {
+    "name": "message-fill",
+    "unicode": "\\uEF47"
+  },
+  {
+    "name": "message-line",
+    "unicode": "\\uEF48"
+  },
+  {
+    "name": "messenger-fill",
+    "unicode": "\\uEF49"
+  },
+  {
+    "name": "messenger-line",
+    "unicode": "\\uEF4A"
+  },
+  {
+    "name": "meteor-fill",
+    "unicode": "\\uEF4B"
+  },
+  {
+    "name": "meteor-line",
+    "unicode": "\\uEF4C"
+  },
+  {
+    "name": "mic-2-fill",
+    "unicode": "\\uEF4D"
+  },
+  {
+    "name": "mic-2-line",
+    "unicode": "\\uEF4E"
+  },
+  {
+    "name": "mic-fill",
+    "unicode": "\\uEF4F"
+  },
+  {
+    "name": "mic-line",
+    "unicode": "\\uEF50"
+  },
+  {
+    "name": "mic-off-fill",
+    "unicode": "\\uEF51"
+  },
+  {
+    "name": "mic-off-line",
+    "unicode": "\\uEF52"
+  },
+  {
+    "name": "mickey-fill",
+    "unicode": "\\uEF53"
+  },
+  {
+    "name": "mickey-line",
+    "unicode": "\\uEF54"
+  },
+  {
+    "name": "microscope-fill",
+    "unicode": "\\uEF55"
+  },
+  {
+    "name": "microscope-line",
+    "unicode": "\\uEF56"
+  },
+  {
+    "name": "microsoft-fill",
+    "unicode": "\\uEF57"
+  },
+  {
+    "name": "microsoft-line",
+    "unicode": "\\uEF58"
+  },
+  {
+    "name": "mind-map",
+    "unicode": "\\uEF59"
+  },
+  {
+    "name": "mini-program-fill",
+    "unicode": "\\uEF5A"
+  },
+  {
+    "name": "mini-program-line",
+    "unicode": "\\uEF5B"
+  },
+  {
+    "name": "mist-fill",
+    "unicode": "\\uEF5C"
+  },
+  {
+    "name": "mist-line",
+    "unicode": "\\uEF5D"
+  },
+  {
+    "name": "money-cny-box-fill",
+    "unicode": "\\uEF5E"
+  },
+  {
+    "name": "money-cny-box-line",
+    "unicode": "\\uEF5F"
+  },
+  {
+    "name": "money-cny-circle-fill",
+    "unicode": "\\uEF60"
+  },
+  {
+    "name": "money-cny-circle-line",
+    "unicode": "\\uEF61"
+  },
+  {
+    "name": "money-dollar-box-fill",
+    "unicode": "\\uEF62"
+  },
+  {
+    "name": "money-dollar-box-line",
+    "unicode": "\\uEF63"
+  },
+  {
+    "name": "money-dollar-circle-fill",
+    "unicode": "\\uEF64"
+  },
+  {
+    "name": "money-dollar-circle-line",
+    "unicode": "\\uEF65"
+  },
+  {
+    "name": "money-euro-box-fill",
+    "unicode": "\\uEF66"
+  },
+  {
+    "name": "money-euro-box-line",
+    "unicode": "\\uEF67"
+  },
+  {
+    "name": "money-euro-circle-fill",
+    "unicode": "\\uEF68"
+  },
+  {
+    "name": "money-euro-circle-line",
+    "unicode": "\\uEF69"
+  },
+  {
+    "name": "money-pound-box-fill",
+    "unicode": "\\uEF6A"
+  },
+  {
+    "name": "money-pound-box-line",
+    "unicode": "\\uEF6B"
+  },
+  {
+    "name": "money-pound-circle-fill",
+    "unicode": "\\uEF6C"
+  },
+  {
+    "name": "money-pound-circle-line",
+    "unicode": "\\uEF6D"
+  },
+  {
+    "name": "moon-clear-fill",
+    "unicode": "\\uEF6E"
+  },
+  {
+    "name": "moon-clear-line",
+    "unicode": "\\uEF6F"
+  },
+  {
+    "name": "moon-cloudy-fill",
+    "unicode": "\\uEF70"
+  },
+  {
+    "name": "moon-cloudy-line",
+    "unicode": "\\uEF71"
+  },
+  {
+    "name": "moon-fill",
+    "unicode": "\\uEF72"
+  },
+  {
+    "name": "moon-foggy-fill",
+    "unicode": "\\uEF73"
+  },
+  {
+    "name": "moon-foggy-line",
+    "unicode": "\\uEF74"
+  },
+  {
+    "name": "moon-line",
+    "unicode": "\\uEF75"
+  },
+  {
+    "name": "more-2-fill",
+    "unicode": "\\uEF76"
+  },
+  {
+    "name": "more-2-line",
+    "unicode": "\\uEF77"
+  },
+  {
+    "name": "more-fill",
+    "unicode": "\\uEF78"
+  },
+  {
+    "name": "more-line",
+    "unicode": "\\uEF79"
+  },
+  {
+    "name": "motorbike-fill",
+    "unicode": "\\uEF7A"
+  },
+  {
+    "name": "motorbike-line",
+    "unicode": "\\uEF7B"
+  },
+  {
+    "name": "mouse-fill",
+    "unicode": "\\uEF7C"
+  },
+  {
+    "name": "mouse-line",
+    "unicode": "\\uEF7D"
+  },
+  {
+    "name": "movie-2-fill",
+    "unicode": "\\uEF7E"
+  },
+  {
+    "name": "movie-2-line",
+    "unicode": "\\uEF7F"
+  },
+  {
+    "name": "movie-fill",
+    "unicode": "\\uEF80"
+  },
+  {
+    "name": "movie-line",
+    "unicode": "\\uEF81"
+  },
+  {
+    "name": "music-2-fill",
+    "unicode": "\\uEF82"
+  },
+  {
+    "name": "music-2-line",
+    "unicode": "\\uEF83"
+  },
+  {
+    "name": "music-fill",
+    "unicode": "\\uEF84"
+  },
+  {
+    "name": "music-line",
+    "unicode": "\\uEF85"
+  },
+  {
+    "name": "mv-fill",
+    "unicode": "\\uEF86"
+  },
+  {
+    "name": "mv-line",
+    "unicode": "\\uEF87"
+  },
+  {
+    "name": "navigation-fill",
+    "unicode": "\\uEF88"
+  },
+  {
+    "name": "navigation-line",
+    "unicode": "\\uEF89"
+  },
+  {
+    "name": "netease-cloud-music-fill",
+    "unicode": "\\uEF8A"
+  },
+  {
+    "name": "netease-cloud-music-line",
+    "unicode": "\\uEF8B"
+  },
+  {
+    "name": "netflix-fill",
+    "unicode": "\\uEF8C"
+  },
+  {
+    "name": "netflix-line",
+    "unicode": "\\uEF8D"
+  },
+  {
+    "name": "newspaper-fill",
+    "unicode": "\\uEF8E"
+  },
+  {
+    "name": "newspaper-line",
+    "unicode": "\\uEF8F"
+  },
+  {
+    "name": "node-tree",
+    "unicode": "\\uEF90"
+  },
+  {
+    "name": "notification-2-fill",
+    "unicode": "\\uEF91"
+  },
+  {
+    "name": "notification-2-line",
+    "unicode": "\\uEF92"
+  },
+  {
+    "name": "notification-3-fill",
+    "unicode": "\\uEF93"
+  },
+  {
+    "name": "notification-3-line",
+    "unicode": "\\uEF94"
+  },
+  {
+    "name": "notification-4-fill",
+    "unicode": "\\uEF95"
+  },
+  {
+    "name": "notification-4-line",
+    "unicode": "\\uEF96"
+  },
+  {
+    "name": "notification-badge-fill",
+    "unicode": "\\uEF97"
+  },
+  {
+    "name": "notification-badge-line",
+    "unicode": "\\uEF98"
+  },
+  {
+    "name": "notification-fill",
+    "unicode": "\\uEF99"
+  },
+  {
+    "name": "notification-line",
+    "unicode": "\\uEF9A"
+  },
+  {
+    "name": "notification-off-fill",
+    "unicode": "\\uEF9B"
+  },
+  {
+    "name": "notification-off-line",
+    "unicode": "\\uEF9C"
+  },
+  {
+    "name": "npmjs-fill",
+    "unicode": "\\uEF9D"
+  },
+  {
+    "name": "npmjs-line",
+    "unicode": "\\uEF9E"
+  },
+  {
+    "name": "number-0",
+    "unicode": "\\uEF9F"
+  },
+  {
+    "name": "number-1",
+    "unicode": "\\uEFA0"
+  },
+  {
+    "name": "number-2",
+    "unicode": "\\uEFA1"
+  },
+  {
+    "name": "number-3",
+    "unicode": "\\uEFA2"
+  },
+  {
+    "name": "number-4",
+    "unicode": "\\uEFA3"
+  },
+  {
+    "name": "number-5",
+    "unicode": "\\uEFA4"
+  },
+  {
+    "name": "number-6",
+    "unicode": "\\uEFA5"
+  },
+  {
+    "name": "number-7",
+    "unicode": "\\uEFA6"
+  },
+  {
+    "name": "number-8",
+    "unicode": "\\uEFA7"
+  },
+  {
+    "name": "number-9",
+    "unicode": "\\uEFA8"
+  },
+  {
+    "name": "numbers-fill",
+    "unicode": "\\uEFA9"
+  },
+  {
+    "name": "numbers-line",
+    "unicode": "\\uEFAA"
+  },
+  {
+    "name": "nurse-fill",
+    "unicode": "\\uEFAB"
+  },
+  {
+    "name": "nurse-line",
+    "unicode": "\\uEFAC"
+  },
+  {
+    "name": "oil-fill",
+    "unicode": "\\uEFAD"
+  },
+  {
+    "name": "oil-line",
+    "unicode": "\\uEFAE"
+  },
+  {
+    "name": "omega",
+    "unicode": "\\uEFAF"
+  },
+  {
+    "name": "open-arm-fill",
+    "unicode": "\\uEFB0"
+  },
+  {
+    "name": "open-arm-line",
+    "unicode": "\\uEFB1"
+  },
+  {
+    "name": "open-source-fill",
+    "unicode": "\\uEFB2"
+  },
+  {
+    "name": "open-source-line",
+    "unicode": "\\uEFB3"
+  },
+  {
+    "name": "opera-fill",
+    "unicode": "\\uEFB4"
+  },
+  {
+    "name": "opera-line",
+    "unicode": "\\uEFB5"
+  },
+  {
+    "name": "order-play-fill",
+    "unicode": "\\uEFB6"
+  },
+  {
+    "name": "order-play-line",
+    "unicode": "\\uEFB7"
+  },
+  {
+    "name": "organization-chart",
+    "unicode": "\\uEFB8"
+  },
+  {
+    "name": "outlet-2-fill",
+    "unicode": "\\uEFB9"
+  },
+  {
+    "name": "outlet-2-line",
+    "unicode": "\\uEFBA"
+  },
+  {
+    "name": "outlet-fill",
+    "unicode": "\\uEFBB"
+  },
+  {
+    "name": "outlet-line",
+    "unicode": "\\uEFBC"
+  },
+  {
+    "name": "page-separator",
+    "unicode": "\\uEFBD"
+  },
+  {
+    "name": "pages-fill",
+    "unicode": "\\uEFBE"
+  },
+  {
+    "name": "pages-line",
+    "unicode": "\\uEFBF"
+  },
+  {
+    "name": "paint-brush-fill",
+    "unicode": "\\uEFC0"
+  },
+  {
+    "name": "paint-brush-line",
+    "unicode": "\\uEFC1"
+  },
+  {
+    "name": "paint-fill",
+    "unicode": "\\uEFC2"
+  },
+  {
+    "name": "paint-line",
+    "unicode": "\\uEFC3"
+  },
+  {
+    "name": "palette-fill",
+    "unicode": "\\uEFC4"
+  },
+  {
+    "name": "palette-line",
+    "unicode": "\\uEFC5"
+  },
+  {
+    "name": "pantone-fill",
+    "unicode": "\\uEFC6"
+  },
+  {
+    "name": "pantone-line",
+    "unicode": "\\uEFC7"
+  },
+  {
+    "name": "paragraph",
+    "unicode": "\\uEFC8"
+  },
+  {
+    "name": "parent-fill",
+    "unicode": "\\uEFC9"
+  },
+  {
+    "name": "parent-line",
+    "unicode": "\\uEFCA"
+  },
+  {
+    "name": "parentheses-fill",
+    "unicode": "\\uEFCB"
+  },
+  {
+    "name": "parentheses-line",
+    "unicode": "\\uEFCC"
+  },
+  {
+    "name": "parking-box-fill",
+    "unicode": "\\uEFCD"
+  },
+  {
+    "name": "parking-box-line",
+    "unicode": "\\uEFCE"
+  },
+  {
+    "name": "parking-fill",
+    "unicode": "\\uEFCF"
+  },
+  {
+    "name": "parking-line",
+    "unicode": "\\uEFD0"
+  },
+  {
+    "name": "passport-fill",
+    "unicode": "\\uEFD1"
+  },
+  {
+    "name": "passport-line",
+    "unicode": "\\uEFD2"
+  },
+  {
+    "name": "patreon-fill",
+    "unicode": "\\uEFD3"
+  },
+  {
+    "name": "patreon-line",
+    "unicode": "\\uEFD4"
+  },
+  {
+    "name": "pause-circle-fill",
+    "unicode": "\\uEFD5"
+  },
+  {
+    "name": "pause-circle-line",
+    "unicode": "\\uEFD6"
+  },
+  {
+    "name": "pause-fill",
+    "unicode": "\\uEFD7"
+  },
+  {
+    "name": "pause-line",
+    "unicode": "\\uEFD8"
+  },
+  {
+    "name": "pause-mini-fill",
+    "unicode": "\\uEFD9"
+  },
+  {
+    "name": "pause-mini-line",
+    "unicode": "\\uEFDA"
+  },
+  {
+    "name": "paypal-fill",
+    "unicode": "\\uEFDB"
+  },
+  {
+    "name": "paypal-line",
+    "unicode": "\\uEFDC"
+  },
+  {
+    "name": "pen-nib-fill",
+    "unicode": "\\uEFDD"
+  },
+  {
+    "name": "pen-nib-line",
+    "unicode": "\\uEFDE"
+  },
+  {
+    "name": "pencil-fill",
+    "unicode": "\\uEFDF"
+  },
+  {
+    "name": "pencil-line",
+    "unicode": "\\uEFE0"
+  },
+  {
+    "name": "pencil-ruler-2-fill",
+    "unicode": "\\uEFE1"
+  },
+  {
+    "name": "pencil-ruler-2-line",
+    "unicode": "\\uEFE2"
+  },
+  {
+    "name": "pencil-ruler-fill",
+    "unicode": "\\uEFE3"
+  },
+  {
+    "name": "pencil-ruler-line",
+    "unicode": "\\uEFE4"
+  },
+  {
+    "name": "percent-fill",
+    "unicode": "\\uEFE5"
+  },
+  {
+    "name": "percent-line",
+    "unicode": "\\uEFE6"
+  },
+  {
+    "name": "phone-camera-fill",
+    "unicode": "\\uEFE7"
+  },
+  {
+    "name": "phone-camera-line",
+    "unicode": "\\uEFE8"
+  },
+  {
+    "name": "phone-fill",
+    "unicode": "\\uEFE9"
+  },
+  {
+    "name": "phone-find-fill",
+    "unicode": "\\uEFEA"
+  },
+  {
+    "name": "phone-find-line",
+    "unicode": "\\uEFEB"
+  },
+  {
+    "name": "phone-line",
+    "unicode": "\\uEFEC"
+  },
+  {
+    "name": "phone-lock-fill",
+    "unicode": "\\uEFED"
+  },
+  {
+    "name": "phone-lock-line",
+    "unicode": "\\uEFEE"
+  },
+  {
+    "name": "picture-in-picture-2-fill",
+    "unicode": "\\uEFEF"
+  },
+  {
+    "name": "picture-in-picture-2-line",
+    "unicode": "\\uEFF0"
+  },
+  {
+    "name": "picture-in-picture-exit-fill",
+    "unicode": "\\uEFF1"
+  },
+  {
+    "name": "picture-in-picture-exit-line",
+    "unicode": "\\uEFF2"
+  },
+  {
+    "name": "picture-in-picture-fill",
+    "unicode": "\\uEFF3"
+  },
+  {
+    "name": "picture-in-picture-line",
+    "unicode": "\\uEFF4"
+  },
+  {
+    "name": "pie-chart-2-fill",
+    "unicode": "\\uEFF5"
+  },
+  {
+    "name": "pie-chart-2-line",
+    "unicode": "\\uEFF6"
+  },
+  {
+    "name": "pie-chart-box-fill",
+    "unicode": "\\uEFF7"
+  },
+  {
+    "name": "pie-chart-box-line",
+    "unicode": "\\uEFF8"
+  },
+  {
+    "name": "pie-chart-fill",
+    "unicode": "\\uEFF9"
+  },
+  {
+    "name": "pie-chart-line",
+    "unicode": "\\uEFFA"
+  },
+  {
+    "name": "pin-distance-fill",
+    "unicode": "\\uEFFB"
+  },
+  {
+    "name": "pin-distance-line",
+    "unicode": "\\uEFFC"
+  },
+  {
+    "name": "ping-pong-fill",
+    "unicode": "\\uEFFD"
+  },
+  {
+    "name": "ping-pong-line",
+    "unicode": "\\uEFFE"
+  },
+  {
+    "name": "pinterest-fill",
+    "unicode": "\\uEFFF"
+  },
+  {
+    "name": "pinterest-line",
+    "unicode": "\\uF000"
+  },
+  {
+    "name": "pinyin-input",
+    "unicode": "\\uF001"
+  },
+  {
+    "name": "pixelfed-fill",
+    "unicode": "\\uF002"
+  },
+  {
+    "name": "pixelfed-line",
+    "unicode": "\\uF003"
+  },
+  {
+    "name": "plane-fill",
+    "unicode": "\\uF004"
+  },
+  {
+    "name": "plane-line",
+    "unicode": "\\uF005"
+  },
+  {
+    "name": "plant-fill",
+    "unicode": "\\uF006"
+  },
+  {
+    "name": "plant-line",
+    "unicode": "\\uF007"
+  },
+  {
+    "name": "play-circle-fill",
+    "unicode": "\\uF008"
+  },
+  {
+    "name": "play-circle-line",
+    "unicode": "\\uF009"
+  },
+  {
+    "name": "play-fill",
+    "unicode": "\\uF00A"
+  },
+  {
+    "name": "play-line",
+    "unicode": "\\uF00B"
+  },
+  {
+    "name": "play-list-2-fill",
+    "unicode": "\\uF00C"
+  },
+  {
+    "name": "play-list-2-line",
+    "unicode": "\\uF00D"
+  },
+  {
+    "name": "play-list-add-fill",
+    "unicode": "\\uF00E"
+  },
+  {
+    "name": "play-list-add-line",
+    "unicode": "\\uF00F"
+  },
+  {
+    "name": "play-list-fill",
+    "unicode": "\\uF010"
+  },
+  {
+    "name": "play-list-line",
+    "unicode": "\\uF011"
+  },
+  {
+    "name": "play-mini-fill",
+    "unicode": "\\uF012"
+  },
+  {
+    "name": "play-mini-line",
+    "unicode": "\\uF013"
+  },
+  {
+    "name": "playstation-fill",
+    "unicode": "\\uF014"
+  },
+  {
+    "name": "playstation-line",
+    "unicode": "\\uF015"
+  },
+  {
+    "name": "plug-2-fill",
+    "unicode": "\\uF016"
+  },
+  {
+    "name": "plug-2-line",
+    "unicode": "\\uF017"
+  },
+  {
+    "name": "plug-fill",
+    "unicode": "\\uF018"
+  },
+  {
+    "name": "plug-line",
+    "unicode": "\\uF019"
+  },
+  {
+    "name": "polaroid-2-fill",
+    "unicode": "\\uF01A"
+  },
+  {
+    "name": "polaroid-2-line",
+    "unicode": "\\uF01B"
+  },
+  {
+    "name": "polaroid-fill",
+    "unicode": "\\uF01C"
+  },
+  {
+    "name": "polaroid-line",
+    "unicode": "\\uF01D"
+  },
+  {
+    "name": "police-car-fill",
+    "unicode": "\\uF01E"
+  },
+  {
+    "name": "police-car-line",
+    "unicode": "\\uF01F"
+  },
+  {
+    "name": "price-tag-2-fill",
+    "unicode": "\\uF020"
+  },
+  {
+    "name": "price-tag-2-line",
+    "unicode": "\\uF021"
+  },
+  {
+    "name": "price-tag-3-fill",
+    "unicode": "\\uF022"
+  },
+  {
+    "name": "price-tag-3-line",
+    "unicode": "\\uF023"
+  },
+  {
+    "name": "price-tag-fill",
+    "unicode": "\\uF024"
+  },
+  {
+    "name": "price-tag-line",
+    "unicode": "\\uF025"
+  },
+  {
+    "name": "printer-cloud-fill",
+    "unicode": "\\uF026"
+  },
+  {
+    "name": "printer-cloud-line",
+    "unicode": "\\uF027"
+  },
+  {
+    "name": "printer-fill",
+    "unicode": "\\uF028"
+  },
+  {
+    "name": "printer-line",
+    "unicode": "\\uF029"
+  },
+  {
+    "name": "product-hunt-fill",
+    "unicode": "\\uF02A"
+  },
+  {
+    "name": "product-hunt-line",
+    "unicode": "\\uF02B"
+  },
+  {
+    "name": "profile-fill",
+    "unicode": "\\uF02C"
+  },
+  {
+    "name": "profile-line",
+    "unicode": "\\uF02D"
+  },
+  {
+    "name": "projector-2-fill",
+    "unicode": "\\uF02E"
+  },
+  {
+    "name": "projector-2-line",
+    "unicode": "\\uF02F"
+  },
+  {
+    "name": "projector-fill",
+    "unicode": "\\uF030"
+  },
+  {
+    "name": "projector-line",
+    "unicode": "\\uF031"
+  },
+  {
+    "name": "psychotherapy-fill",
+    "unicode": "\\uF032"
+  },
+  {
+    "name": "psychotherapy-line",
+    "unicode": "\\uF033"
+  },
+  {
+    "name": "pulse-fill",
+    "unicode": "\\uF034"
+  },
+  {
+    "name": "pulse-line",
+    "unicode": "\\uF035"
+  },
+  {
+    "name": "pushpin-2-fill",
+    "unicode": "\\uF036"
+  },
+  {
+    "name": "pushpin-2-line",
+    "unicode": "\\uF037"
+  },
+  {
+    "name": "pushpin-fill",
+    "unicode": "\\uF038"
+  },
+  {
+    "name": "pushpin-line",
+    "unicode": "\\uF039"
+  },
+  {
+    "name": "qq-fill",
+    "unicode": "\\uF03A"
+  },
+  {
+    "name": "qq-line",
+    "unicode": "\\uF03B"
+  },
+  {
+    "name": "qr-code-fill",
+    "unicode": "\\uF03C"
+  },
+  {
+    "name": "qr-code-line",
+    "unicode": "\\uF03D"
+  },
+  {
+    "name": "qr-scan-2-fill",
+    "unicode": "\\uF03E"
+  },
+  {
+    "name": "qr-scan-2-line",
+    "unicode": "\\uF03F"
+  },
+  {
+    "name": "qr-scan-fill",
+    "unicode": "\\uF040"
+  },
+  {
+    "name": "qr-scan-line",
+    "unicode": "\\uF041"
+  },
+  {
+    "name": "question-answer-fill",
+    "unicode": "\\uF042"
+  },
+  {
+    "name": "question-answer-line",
+    "unicode": "\\uF043"
+  },
+  {
+    "name": "question-fill",
+    "unicode": "\\uF044"
+  },
+  {
+    "name": "question-line",
+    "unicode": "\\uF045"
+  },
+  {
+    "name": "question-mark",
+    "unicode": "\\uF046"
+  },
+  {
+    "name": "questionnaire-fill",
+    "unicode": "\\uF047"
+  },
+  {
+    "name": "questionnaire-line",
+    "unicode": "\\uF048"
+  },
+  {
+    "name": "quill-pen-fill",
+    "unicode": "\\uF049"
+  },
+  {
+    "name": "quill-pen-line",
+    "unicode": "\\uF04A"
+  },
+  {
+    "name": "radar-fill",
+    "unicode": "\\uF04B"
+  },
+  {
+    "name": "radar-line",
+    "unicode": "\\uF04C"
+  },
+  {
+    "name": "radio-2-fill",
+    "unicode": "\\uF04D"
+  },
+  {
+    "name": "radio-2-line",
+    "unicode": "\\uF04E"
+  },
+  {
+    "name": "radio-button-fill",
+    "unicode": "\\uF04F"
+  },
+  {
+    "name": "radio-button-line",
+    "unicode": "\\uF050"
+  },
+  {
+    "name": "radio-fill",
+    "unicode": "\\uF051"
+  },
+  {
+    "name": "radio-line",
+    "unicode": "\\uF052"
+  },
+  {
+    "name": "rainbow-fill",
+    "unicode": "\\uF053"
+  },
+  {
+    "name": "rainbow-line",
+    "unicode": "\\uF054"
+  },
+  {
+    "name": "rainy-fill",
+    "unicode": "\\uF055"
+  },
+  {
+    "name": "rainy-line",
+    "unicode": "\\uF056"
+  },
+  {
+    "name": "reactjs-fill",
+    "unicode": "\\uF057"
+  },
+  {
+    "name": "reactjs-line",
+    "unicode": "\\uF058"
+  },
+  {
+    "name": "record-circle-fill",
+    "unicode": "\\uF059"
+  },
+  {
+    "name": "record-circle-line",
+    "unicode": "\\uF05A"
+  },
+  {
+    "name": "record-mail-fill",
+    "unicode": "\\uF05B"
+  },
+  {
+    "name": "record-mail-line",
+    "unicode": "\\uF05C"
+  },
+  {
+    "name": "recycle-fill",
+    "unicode": "\\uF05D"
+  },
+  {
+    "name": "recycle-line",
+    "unicode": "\\uF05E"
+  },
+  {
+    "name": "red-packet-fill",
+    "unicode": "\\uF05F"
+  },
+  {
+    "name": "red-packet-line",
+    "unicode": "\\uF060"
+  },
+  {
+    "name": "reddit-fill",
+    "unicode": "\\uF061"
+  },
+  {
+    "name": "reddit-line",
+    "unicode": "\\uF062"
+  },
+  {
+    "name": "refresh-fill",
+    "unicode": "\\uF063"
+  },
+  {
+    "name": "refresh-line",
+    "unicode": "\\uF064"
+  },
+  {
+    "name": "refund-2-fill",
+    "unicode": "\\uF065"
+  },
+  {
+    "name": "refund-2-line",
+    "unicode": "\\uF066"
+  },
+  {
+    "name": "refund-fill",
+    "unicode": "\\uF067"
+  },
+  {
+    "name": "refund-line",
+    "unicode": "\\uF068"
+  },
+  {
+    "name": "registered-fill",
+    "unicode": "\\uF069"
+  },
+  {
+    "name": "registered-line",
+    "unicode": "\\uF06A"
+  },
+  {
+    "name": "remixicon-fill",
+    "unicode": "\\uF06B"
+  },
+  {
+    "name": "remixicon-line",
+    "unicode": "\\uF06C"
+  },
+  {
+    "name": "remote-control-2-fill",
+    "unicode": "\\uF06D"
+  },
+  {
+    "name": "remote-control-2-line",
+    "unicode": "\\uF06E"
+  },
+  {
+    "name": "remote-control-fill",
+    "unicode": "\\uF06F"
+  },
+  {
+    "name": "remote-control-line",
+    "unicode": "\\uF070"
+  },
+  {
+    "name": "repeat-2-fill",
+    "unicode": "\\uF071"
+  },
+  {
+    "name": "repeat-2-line",
+    "unicode": "\\uF072"
+  },
+  {
+    "name": "repeat-fill",
+    "unicode": "\\uF073"
+  },
+  {
+    "name": "repeat-line",
+    "unicode": "\\uF074"
+  },
+  {
+    "name": "repeat-one-fill",
+    "unicode": "\\uF075"
+  },
+  {
+    "name": "repeat-one-line",
+    "unicode": "\\uF076"
+  },
+  {
+    "name": "reply-all-fill",
+    "unicode": "\\uF077"
+  },
+  {
+    "name": "reply-all-line",
+    "unicode": "\\uF078"
+  },
+  {
+    "name": "reply-fill",
+    "unicode": "\\uF079"
+  },
+  {
+    "name": "reply-line",
+    "unicode": "\\uF07A"
+  },
+  {
+    "name": "reserved-fill",
+    "unicode": "\\uF07B"
+  },
+  {
+    "name": "reserved-line",
+    "unicode": "\\uF07C"
+  },
+  {
+    "name": "rest-time-fill",
+    "unicode": "\\uF07D"
+  },
+  {
+    "name": "rest-time-line",
+    "unicode": "\\uF07E"
+  },
+  {
+    "name": "restart-fill",
+    "unicode": "\\uF07F"
+  },
+  {
+    "name": "restart-line",
+    "unicode": "\\uF080"
+  },
+  {
+    "name": "restaurant-2-fill",
+    "unicode": "\\uF081"
+  },
+  {
+    "name": "restaurant-2-line",
+    "unicode": "\\uF082"
+  },
+  {
+    "name": "restaurant-fill",
+    "unicode": "\\uF083"
+  },
+  {
+    "name": "restaurant-line",
+    "unicode": "\\uF084"
+  },
+  {
+    "name": "rewind-fill",
+    "unicode": "\\uF085"
+  },
+  {
+    "name": "rewind-line",
+    "unicode": "\\uF086"
+  },
+  {
+    "name": "rewind-mini-fill",
+    "unicode": "\\uF087"
+  },
+  {
+    "name": "rewind-mini-line",
+    "unicode": "\\uF088"
+  },
+  {
+    "name": "rhythm-fill",
+    "unicode": "\\uF089"
+  },
+  {
+    "name": "rhythm-line",
+    "unicode": "\\uF08A"
+  },
+  {
+    "name": "riding-fill",
+    "unicode": "\\uF08B"
+  },
+  {
+    "name": "riding-line",
+    "unicode": "\\uF08C"
+  },
+  {
+    "name": "road-map-fill",
+    "unicode": "\\uF08D"
+  },
+  {
+    "name": "road-map-line",
+    "unicode": "\\uF08E"
+  },
+  {
+    "name": "roadster-fill",
+    "unicode": "\\uF08F"
+  },
+  {
+    "name": "roadster-line",
+    "unicode": "\\uF090"
+  },
+  {
+    "name": "robot-fill",
+    "unicode": "\\uF091"
+  },
+  {
+    "name": "robot-line",
+    "unicode": "\\uF092"
+  },
+  {
+    "name": "rocket-2-fill",
+    "unicode": "\\uF093"
+  },
+  {
+    "name": "rocket-2-line",
+    "unicode": "\\uF094"
+  },
+  {
+    "name": "rocket-fill",
+    "unicode": "\\uF095"
+  },
+  {
+    "name": "rocket-line",
+    "unicode": "\\uF096"
+  },
+  {
+    "name": "rotate-lock-fill",
+    "unicode": "\\uF097"
+  },
+  {
+    "name": "rotate-lock-line",
+    "unicode": "\\uF098"
+  },
+  {
+    "name": "rounded-corner",
+    "unicode": "\\uF099"
+  },
+  {
+    "name": "route-fill",
+    "unicode": "\\uF09A"
+  },
+  {
+    "name": "route-line",
+    "unicode": "\\uF09B"
+  },
+  {
+    "name": "router-fill",
+    "unicode": "\\uF09C"
+  },
+  {
+    "name": "router-line",
+    "unicode": "\\uF09D"
+  },
+  {
+    "name": "rss-fill",
+    "unicode": "\\uF09E"
+  },
+  {
+    "name": "rss-line",
+    "unicode": "\\uF09F"
+  },
+  {
+    "name": "ruler-2-fill",
+    "unicode": "\\uF0A0"
+  },
+  {
+    "name": "ruler-2-line",
+    "unicode": "\\uF0A1"
+  },
+  {
+    "name": "ruler-fill",
+    "unicode": "\\uF0A2"
+  },
+  {
+    "name": "ruler-line",
+    "unicode": "\\uF0A3"
+  },
+  {
+    "name": "run-fill",
+    "unicode": "\\uF0A4"
+  },
+  {
+    "name": "run-line",
+    "unicode": "\\uF0A5"
+  },
+  {
+    "name": "safari-fill",
+    "unicode": "\\uF0A6"
+  },
+  {
+    "name": "safari-line",
+    "unicode": "\\uF0A7"
+  },
+  {
+    "name": "safe-2-fill",
+    "unicode": "\\uF0A8"
+  },
+  {
+    "name": "safe-2-line",
+    "unicode": "\\uF0A9"
+  },
+  {
+    "name": "safe-fill",
+    "unicode": "\\uF0AA"
+  },
+  {
+    "name": "safe-line",
+    "unicode": "\\uF0AB"
+  },
+  {
+    "name": "sailboat-fill",
+    "unicode": "\\uF0AC"
+  },
+  {
+    "name": "sailboat-line",
+    "unicode": "\\uF0AD"
+  },
+  {
+    "name": "save-2-fill",
+    "unicode": "\\uF0AE"
+  },
+  {
+    "name": "save-2-line",
+    "unicode": "\\uF0AF"
+  },
+  {
+    "name": "save-3-fill",
+    "unicode": "\\uF0B0"
+  },
+  {
+    "name": "save-3-line",
+    "unicode": "\\uF0B1"
+  },
+  {
+    "name": "save-fill",
+    "unicode": "\\uF0B2"
+  },
+  {
+    "name": "save-line",
+    "unicode": "\\uF0B3"
+  },
+  {
+    "name": "scales-2-fill",
+    "unicode": "\\uF0B4"
+  },
+  {
+    "name": "scales-2-line",
+    "unicode": "\\uF0B5"
+  },
+  {
+    "name": "scales-3-fill",
+    "unicode": "\\uF0B6"
+  },
+  {
+    "name": "scales-3-line",
+    "unicode": "\\uF0B7"
+  },
+  {
+    "name": "scales-fill",
+    "unicode": "\\uF0B8"
+  },
+  {
+    "name": "scales-line",
+    "unicode": "\\uF0B9"
+  },
+  {
+    "name": "scan-2-fill",
+    "unicode": "\\uF0BA"
+  },
+  {
+    "name": "scan-2-line",
+    "unicode": "\\uF0BB"
+  },
+  {
+    "name": "scan-fill",
+    "unicode": "\\uF0BC"
+  },
+  {
+    "name": "scan-line",
+    "unicode": "\\uF0BD"
+  },
+  {
+    "name": "scissors-2-fill",
+    "unicode": "\\uF0BE"
+  },
+  {
+    "name": "scissors-2-line",
+    "unicode": "\\uF0BF"
+  },
+  {
+    "name": "scissors-cut-fill",
+    "unicode": "\\uF0C0"
+  },
+  {
+    "name": "scissors-cut-line",
+    "unicode": "\\uF0C1"
+  },
+  {
+    "name": "scissors-fill",
+    "unicode": "\\uF0C2"
+  },
+  {
+    "name": "scissors-line",
+    "unicode": "\\uF0C3"
+  },
+  {
+    "name": "screenshot-2-fill",
+    "unicode": "\\uF0C4"
+  },
+  {
+    "name": "screenshot-2-line",
+    "unicode": "\\uF0C5"
+  },
+  {
+    "name": "screenshot-fill",
+    "unicode": "\\uF0C6"
+  },
+  {
+    "name": "screenshot-line",
+    "unicode": "\\uF0C7"
+  },
+  {
+    "name": "sd-card-fill",
+    "unicode": "\\uF0C8"
+  },
+  {
+    "name": "sd-card-line",
+    "unicode": "\\uF0C9"
+  },
+  {
+    "name": "sd-card-mini-fill",
+    "unicode": "\\uF0CA"
+  },
+  {
+    "name": "sd-card-mini-line",
+    "unicode": "\\uF0CB"
+  },
+  {
+    "name": "search-2-fill",
+    "unicode": "\\uF0CC"
+  },
+  {
+    "name": "search-2-line",
+    "unicode": "\\uF0CD"
+  },
+  {
+    "name": "search-eye-fill",
+    "unicode": "\\uF0CE"
+  },
+  {
+    "name": "search-eye-line",
+    "unicode": "\\uF0CF"
+  },
+  {
+    "name": "search-fill",
+    "unicode": "\\uF0D0"
+  },
+  {
+    "name": "search-line",
+    "unicode": "\\uF0D1"
+  },
+  {
+    "name": "secure-payment-fill",
+    "unicode": "\\uF0D2"
+  },
+  {
+    "name": "secure-payment-line",
+    "unicode": "\\uF0D3"
+  },
+  {
+    "name": "seedling-fill",
+    "unicode": "\\uF0D4"
+  },
+  {
+    "name": "seedling-line",
+    "unicode": "\\uF0D5"
+  },
+  {
+    "name": "send-backward",
+    "unicode": "\\uF0D6"
+  },
+  {
+    "name": "send-plane-2-fill",
+    "unicode": "\\uF0D7"
+  },
+  {
+    "name": "send-plane-2-line",
+    "unicode": "\\uF0D8"
+  },
+  {
+    "name": "send-plane-fill",
+    "unicode": "\\uF0D9"
+  },
+  {
+    "name": "send-plane-line",
+    "unicode": "\\uF0DA"
+  },
+  {
+    "name": "send-to-back",
+    "unicode": "\\uF0DB"
+  },
+  {
+    "name": "sensor-fill",
+    "unicode": "\\uF0DC"
+  },
+  {
+    "name": "sensor-line",
+    "unicode": "\\uF0DD"
+  },
+  {
+    "name": "separator",
+    "unicode": "\\uF0DE"
+  },
+  {
+    "name": "server-fill",
+    "unicode": "\\uF0DF"
+  },
+  {
+    "name": "server-line",
+    "unicode": "\\uF0E0"
+  },
+  {
+    "name": "service-fill",
+    "unicode": "\\uF0E1"
+  },
+  {
+    "name": "service-line",
+    "unicode": "\\uF0E2"
+  },
+  {
+    "name": "settings-2-fill",
+    "unicode": "\\uF0E3"
+  },
+  {
+    "name": "settings-2-line",
+    "unicode": "\\uF0E4"
+  },
+  {
+    "name": "settings-3-fill",
+    "unicode": "\\uF0E5"
+  },
+  {
+    "name": "settings-3-line",
+    "unicode": "\\uF0E6"
+  },
+  {
+    "name": "settings-4-fill",
+    "unicode": "\\uF0E7"
+  },
+  {
+    "name": "settings-4-line",
+    "unicode": "\\uF0E8"
+  },
+  {
+    "name": "settings-5-fill",
+    "unicode": "\\uF0E9"
+  },
+  {
+    "name": "settings-5-line",
+    "unicode": "\\uF0EA"
+  },
+  {
+    "name": "settings-6-fill",
+    "unicode": "\\uF0EB"
+  },
+  {
+    "name": "settings-6-line",
+    "unicode": "\\uF0EC"
+  },
+  {
+    "name": "settings-fill",
+    "unicode": "\\uF0ED"
+  },
+  {
+    "name": "settings-line",
+    "unicode": "\\uF0EE"
+  },
+  {
+    "name": "shape-2-fill",
+    "unicode": "\\uF0EF"
+  },
+  {
+    "name": "shape-2-line",
+    "unicode": "\\uF0F0"
+  },
+  {
+    "name": "shape-fill",
+    "unicode": "\\uF0F1"
+  },
+  {
+    "name": "shape-line",
+    "unicode": "\\uF0F2"
+  },
+  {
+    "name": "share-box-fill",
+    "unicode": "\\uF0F3"
+  },
+  {
+    "name": "share-box-line",
+    "unicode": "\\uF0F4"
+  },
+  {
+    "name": "share-circle-fill",
+    "unicode": "\\uF0F5"
+  },
+  {
+    "name": "share-circle-line",
+    "unicode": "\\uF0F6"
+  },
+  {
+    "name": "share-fill",
+    "unicode": "\\uF0F7"
+  },
+  {
+    "name": "share-forward-2-fill",
+    "unicode": "\\uF0F8"
+  },
+  {
+    "name": "share-forward-2-line",
+    "unicode": "\\uF0F9"
+  },
+  {
+    "name": "share-forward-box-fill",
+    "unicode": "\\uF0FA"
+  },
+  {
+    "name": "share-forward-box-line",
+    "unicode": "\\uF0FB"
+  },
+  {
+    "name": "share-forward-fill",
+    "unicode": "\\uF0FC"
+  },
+  {
+    "name": "share-forward-line",
+    "unicode": "\\uF0FD"
+  },
+  {
+    "name": "share-line",
+    "unicode": "\\uF0FE"
+  },
+  {
+    "name": "shield-check-fill",
+    "unicode": "\\uF0FF"
+  },
+  {
+    "name": "shield-check-line",
+    "unicode": "\\uF100"
+  },
+  {
+    "name": "shield-cross-fill",
+    "unicode": "\\uF101"
+  },
+  {
+    "name": "shield-cross-line",
+    "unicode": "\\uF102"
+  },
+  {
+    "name": "shield-fill",
+    "unicode": "\\uF103"
+  },
+  {
+    "name": "shield-flash-fill",
+    "unicode": "\\uF104"
+  },
+  {
+    "name": "shield-flash-line",
+    "unicode": "\\uF105"
+  },
+  {
+    "name": "shield-keyhole-fill",
+    "unicode": "\\uF106"
+  },
+  {
+    "name": "shield-keyhole-line",
+    "unicode": "\\uF107"
+  },
+  {
+    "name": "shield-line",
+    "unicode": "\\uF108"
+  },
+  {
+    "name": "shield-star-fill",
+    "unicode": "\\uF109"
+  },
+  {
+    "name": "shield-star-line",
+    "unicode": "\\uF10A"
+  },
+  {
+    "name": "shield-user-fill",
+    "unicode": "\\uF10B"
+  },
+  {
+    "name": "shield-user-line",
+    "unicode": "\\uF10C"
+  },
+  {
+    "name": "ship-2-fill",
+    "unicode": "\\uF10D"
+  },
+  {
+    "name": "ship-2-line",
+    "unicode": "\\uF10E"
+  },
+  {
+    "name": "ship-fill",
+    "unicode": "\\uF10F"
+  },
+  {
+    "name": "ship-line",
+    "unicode": "\\uF110"
+  },
+  {
+    "name": "shirt-fill",
+    "unicode": "\\uF111"
+  },
+  {
+    "name": "shirt-line",
+    "unicode": "\\uF112"
+  },
+  {
+    "name": "shopping-bag-2-fill",
+    "unicode": "\\uF113"
+  },
+  {
+    "name": "shopping-bag-2-line",
+    "unicode": "\\uF114"
+  },
+  {
+    "name": "shopping-bag-3-fill",
+    "unicode": "\\uF115"
+  },
+  {
+    "name": "shopping-bag-3-line",
+    "unicode": "\\uF116"
+  },
+  {
+    "name": "shopping-bag-fill",
+    "unicode": "\\uF117"
+  },
+  {
+    "name": "shopping-bag-line",
+    "unicode": "\\uF118"
+  },
+  {
+    "name": "shopping-basket-2-fill",
+    "unicode": "\\uF119"
+  },
+  {
+    "name": "shopping-basket-2-line",
+    "unicode": "\\uF11A"
+  },
+  {
+    "name": "shopping-basket-fill",
+    "unicode": "\\uF11B"
+  },
+  {
+    "name": "shopping-basket-line",
+    "unicode": "\\uF11C"
+  },
+  {
+    "name": "shopping-cart-2-fill",
+    "unicode": "\\uF11D"
+  },
+  {
+    "name": "shopping-cart-2-line",
+    "unicode": "\\uF11E"
+  },
+  {
+    "name": "shopping-cart-fill",
+    "unicode": "\\uF11F"
+  },
+  {
+    "name": "shopping-cart-line",
+    "unicode": "\\uF120"
+  },
+  {
+    "name": "showers-fill",
+    "unicode": "\\uF121"
+  },
+  {
+    "name": "showers-line",
+    "unicode": "\\uF122"
+  },
+  {
+    "name": "shuffle-fill",
+    "unicode": "\\uF123"
+  },
+  {
+    "name": "shuffle-line",
+    "unicode": "\\uF124"
+  },
+  {
+    "name": "shut-down-fill",
+    "unicode": "\\uF125"
+  },
+  {
+    "name": "shut-down-line",
+    "unicode": "\\uF126"
+  },
+  {
+    "name": "side-bar-fill",
+    "unicode": "\\uF127"
+  },
+  {
+    "name": "side-bar-line",
+    "unicode": "\\uF128"
+  },
+  {
+    "name": "signal-tower-fill",
+    "unicode": "\\uF129"
+  },
+  {
+    "name": "signal-tower-line",
+    "unicode": "\\uF12A"
+  },
+  {
+    "name": "signal-wifi-1-fill",
+    "unicode": "\\uF12B"
+  },
+  {
+    "name": "signal-wifi-1-line",
+    "unicode": "\\uF12C"
+  },
+  {
+    "name": "signal-wifi-2-fill",
+    "unicode": "\\uF12D"
+  },
+  {
+    "name": "signal-wifi-2-line",
+    "unicode": "\\uF12E"
+  },
+  {
+    "name": "signal-wifi-3-fill",
+    "unicode": "\\uF12F"
+  },
+  {
+    "name": "signal-wifi-3-line",
+    "unicode": "\\uF130"
+  },
+  {
+    "name": "signal-wifi-error-fill",
+    "unicode": "\\uF131"
+  },
+  {
+    "name": "signal-wifi-error-line",
+    "unicode": "\\uF132"
+  },
+  {
+    "name": "signal-wifi-fill",
+    "unicode": "\\uF133"
+  },
+  {
+    "name": "signal-wifi-line",
+    "unicode": "\\uF134"
+  },
+  {
+    "name": "signal-wifi-off-fill",
+    "unicode": "\\uF135"
+  },
+  {
+    "name": "signal-wifi-off-line",
+    "unicode": "\\uF136"
+  },
+  {
+    "name": "sim-card-2-fill",
+    "unicode": "\\uF137"
+  },
+  {
+    "name": "sim-card-2-line",
+    "unicode": "\\uF138"
+  },
+  {
+    "name": "sim-card-fill",
+    "unicode": "\\uF139"
+  },
+  {
+    "name": "sim-card-line",
+    "unicode": "\\uF13A"
+  },
+  {
+    "name": "single-quotes-l",
+    "unicode": "\\uF13B"
+  },
+  {
+    "name": "single-quotes-r",
+    "unicode": "\\uF13C"
+  },
+  {
+    "name": "sip-fill",
+    "unicode": "\\uF13D"
+  },
+  {
+    "name": "sip-line",
+    "unicode": "\\uF13E"
+  },
+  {
+    "name": "skip-back-fill",
+    "unicode": "\\uF13F"
+  },
+  {
+    "name": "skip-back-line",
+    "unicode": "\\uF140"
+  },
+  {
+    "name": "skip-back-mini-fill",
+    "unicode": "\\uF141"
+  },
+  {
+    "name": "skip-back-mini-line",
+    "unicode": "\\uF142"
+  },
+  {
+    "name": "skip-forward-fill",
+    "unicode": "\\uF143"
+  },
+  {
+    "name": "skip-forward-line",
+    "unicode": "\\uF144"
+  },
+  {
+    "name": "skip-forward-mini-fill",
+    "unicode": "\\uF145"
+  },
+  {
+    "name": "skip-forward-mini-line",
+    "unicode": "\\uF146"
+  },
+  {
+    "name": "skull-2-fill",
+    "unicode": "\\uF147"
+  },
+  {
+    "name": "skull-2-line",
+    "unicode": "\\uF148"
+  },
+  {
+    "name": "skull-fill",
+    "unicode": "\\uF149"
+  },
+  {
+    "name": "skull-line",
+    "unicode": "\\uF14A"
+  },
+  {
+    "name": "skype-fill",
+    "unicode": "\\uF14B"
+  },
+  {
+    "name": "skype-line",
+    "unicode": "\\uF14C"
+  },
+  {
+    "name": "slack-fill",
+    "unicode": "\\uF14D"
+  },
+  {
+    "name": "slack-line",
+    "unicode": "\\uF14E"
+  },
+  {
+    "name": "slice-fill",
+    "unicode": "\\uF14F"
+  },
+  {
+    "name": "slice-line",
+    "unicode": "\\uF150"
+  },
+  {
+    "name": "slideshow-2-fill",
+    "unicode": "\\uF151"
+  },
+  {
+    "name": "slideshow-2-line",
+    "unicode": "\\uF152"
+  },
+  {
+    "name": "slideshow-3-fill",
+    "unicode": "\\uF153"
+  },
+  {
+    "name": "slideshow-3-line",
+    "unicode": "\\uF154"
+  },
+  {
+    "name": "slideshow-4-fill",
+    "unicode": "\\uF155"
+  },
+  {
+    "name": "slideshow-4-line",
+    "unicode": "\\uF156"
+  },
+  {
+    "name": "slideshow-fill",
+    "unicode": "\\uF157"
+  },
+  {
+    "name": "slideshow-line",
+    "unicode": "\\uF158"
+  },
+  {
+    "name": "smartphone-fill",
+    "unicode": "\\uF159"
+  },
+  {
+    "name": "smartphone-line",
+    "unicode": "\\uF15A"
+  },
+  {
+    "name": "snapchat-fill",
+    "unicode": "\\uF15B"
+  },
+  {
+    "name": "snapchat-line",
+    "unicode": "\\uF15C"
+  },
+  {
+    "name": "snowy-fill",
+    "unicode": "\\uF15D"
+  },
+  {
+    "name": "snowy-line",
+    "unicode": "\\uF15E"
+  },
+  {
+    "name": "sort-asc",
+    "unicode": "\\uF15F"
+  },
+  {
+    "name": "sort-desc",
+    "unicode": "\\uF160"
+  },
+  {
+    "name": "sound-module-fill",
+    "unicode": "\\uF161"
+  },
+  {
+    "name": "sound-module-line",
+    "unicode": "\\uF162"
+  },
+  {
+    "name": "soundcloud-fill",
+    "unicode": "\\uF163"
+  },
+  {
+    "name": "soundcloud-line",
+    "unicode": "\\uF164"
+  },
+  {
+    "name": "space-ship-fill",
+    "unicode": "\\uF165"
+  },
+  {
+    "name": "space-ship-line",
+    "unicode": "\\uF166"
+  },
+  {
+    "name": "space",
+    "unicode": "\\uF167"
+  },
+  {
+    "name": "spam-2-fill",
+    "unicode": "\\uF168"
+  },
+  {
+    "name": "spam-2-line",
+    "unicode": "\\uF169"
+  },
+  {
+    "name": "spam-3-fill",
+    "unicode": "\\uF16A"
+  },
+  {
+    "name": "spam-3-line",
+    "unicode": "\\uF16B"
+  },
+  {
+    "name": "spam-fill",
+    "unicode": "\\uF16C"
+  },
+  {
+    "name": "spam-line",
+    "unicode": "\\uF16D"
+  },
+  {
+    "name": "speaker-2-fill",
+    "unicode": "\\uF16E"
+  },
+  {
+    "name": "speaker-2-line",
+    "unicode": "\\uF16F"
+  },
+  {
+    "name": "speaker-3-fill",
+    "unicode": "\\uF170"
+  },
+  {
+    "name": "speaker-3-line",
+    "unicode": "\\uF171"
+  },
+  {
+    "name": "speaker-fill",
+    "unicode": "\\uF172"
+  },
+  {
+    "name": "speaker-line",
+    "unicode": "\\uF173"
+  },
+  {
+    "name": "spectrum-fill",
+    "unicode": "\\uF174"
+  },
+  {
+    "name": "spectrum-line",
+    "unicode": "\\uF175"
+  },
+  {
+    "name": "speed-fill",
+    "unicode": "\\uF176"
+  },
+  {
+    "name": "speed-line",
+    "unicode": "\\uF177"
+  },
+  {
+    "name": "speed-mini-fill",
+    "unicode": "\\uF178"
+  },
+  {
+    "name": "speed-mini-line",
+    "unicode": "\\uF179"
+  },
+  {
+    "name": "split-cells-horizontal",
+    "unicode": "\\uF17A"
+  },
+  {
+    "name": "split-cells-vertical",
+    "unicode": "\\uF17B"
+  },
+  {
+    "name": "spotify-fill",
+    "unicode": "\\uF17C"
+  },
+  {
+    "name": "spotify-line",
+    "unicode": "\\uF17D"
+  },
+  {
+    "name": "spy-fill",
+    "unicode": "\\uF17E"
+  },
+  {
+    "name": "spy-line",
+    "unicode": "\\uF17F"
+  },
+  {
+    "name": "stack-fill",
+    "unicode": "\\uF180"
+  },
+  {
+    "name": "stack-line",
+    "unicode": "\\uF181"
+  },
+  {
+    "name": "stack-overflow-fill",
+    "unicode": "\\uF182"
+  },
+  {
+    "name": "stack-overflow-line",
+    "unicode": "\\uF183"
+  },
+  {
+    "name": "stackshare-fill",
+    "unicode": "\\uF184"
+  },
+  {
+    "name": "stackshare-line",
+    "unicode": "\\uF185"
+  },
+  {
+    "name": "star-fill",
+    "unicode": "\\uF186"
+  },
+  {
+    "name": "star-half-fill",
+    "unicode": "\\uF187"
+  },
+  {
+    "name": "star-half-line",
+    "unicode": "\\uF188"
+  },
+  {
+    "name": "star-half-s-fill",
+    "unicode": "\\uF189"
+  },
+  {
+    "name": "star-half-s-line",
+    "unicode": "\\uF18A"
+  },
+  {
+    "name": "star-line",
+    "unicode": "\\uF18B"
+  },
+  {
+    "name": "star-s-fill",
+    "unicode": "\\uF18C"
+  },
+  {
+    "name": "star-s-line",
+    "unicode": "\\uF18D"
+  },
+  {
+    "name": "star-smile-fill",
+    "unicode": "\\uF18E"
+  },
+  {
+    "name": "star-smile-line",
+    "unicode": "\\uF18F"
+  },
+  {
+    "name": "steam-fill",
+    "unicode": "\\uF190"
+  },
+  {
+    "name": "steam-line",
+    "unicode": "\\uF191"
+  },
+  {
+    "name": "steering-2-fill",
+    "unicode": "\\uF192"
+  },
+  {
+    "name": "steering-2-line",
+    "unicode": "\\uF193"
+  },
+  {
+    "name": "steering-fill",
+    "unicode": "\\uF194"
+  },
+  {
+    "name": "steering-line",
+    "unicode": "\\uF195"
+  },
+  {
+    "name": "stethoscope-fill",
+    "unicode": "\\uF196"
+  },
+  {
+    "name": "stethoscope-line",
+    "unicode": "\\uF197"
+  },
+  {
+    "name": "sticky-note-2-fill",
+    "unicode": "\\uF198"
+  },
+  {
+    "name": "sticky-note-2-line",
+    "unicode": "\\uF199"
+  },
+  {
+    "name": "sticky-note-fill",
+    "unicode": "\\uF19A"
+  },
+  {
+    "name": "sticky-note-line",
+    "unicode": "\\uF19B"
+  },
+  {
+    "name": "stock-fill",
+    "unicode": "\\uF19C"
+  },
+  {
+    "name": "stock-line",
+    "unicode": "\\uF19D"
+  },
+  {
+    "name": "stop-circle-fill",
+    "unicode": "\\uF19E"
+  },
+  {
+    "name": "stop-circle-line",
+    "unicode": "\\uF19F"
+  },
+  {
+    "name": "stop-fill",
+    "unicode": "\\uF1A0"
+  },
+  {
+    "name": "stop-line",
+    "unicode": "\\uF1A1"
+  },
+  {
+    "name": "stop-mini-fill",
+    "unicode": "\\uF1A2"
+  },
+  {
+    "name": "stop-mini-line",
+    "unicode": "\\uF1A3"
+  },
+  {
+    "name": "store-2-fill",
+    "unicode": "\\uF1A4"
+  },
+  {
+    "name": "store-2-line",
+    "unicode": "\\uF1A5"
+  },
+  {
+    "name": "store-3-fill",
+    "unicode": "\\uF1A6"
+  },
+  {
+    "name": "store-3-line",
+    "unicode": "\\uF1A7"
+  },
+  {
+    "name": "store-fill",
+    "unicode": "\\uF1A8"
+  },
+  {
+    "name": "store-line",
+    "unicode": "\\uF1A9"
+  },
+  {
+    "name": "strikethrough-2",
+    "unicode": "\\uF1AA"
+  },
+  {
+    "name": "strikethrough",
+    "unicode": "\\uF1AB"
+  },
+  {
+    "name": "subscript-2",
+    "unicode": "\\uF1AC"
+  },
+  {
+    "name": "subscript",
+    "unicode": "\\uF1AD"
+  },
+  {
+    "name": "subtract-fill",
+    "unicode": "\\uF1AE"
+  },
+  {
+    "name": "subtract-line",
+    "unicode": "\\uF1AF"
+  },
+  {
+    "name": "subway-fill",
+    "unicode": "\\uF1B0"
+  },
+  {
+    "name": "subway-line",
+    "unicode": "\\uF1B1"
+  },
+  {
+    "name": "subway-wifi-fill",
+    "unicode": "\\uF1B2"
+  },
+  {
+    "name": "subway-wifi-line",
+    "unicode": "\\uF1B3"
+  },
+  {
+    "name": "suitcase-2-fill",
+    "unicode": "\\uF1B4"
+  },
+  {
+    "name": "suitcase-2-line",
+    "unicode": "\\uF1B5"
+  },
+  {
+    "name": "suitcase-3-fill",
+    "unicode": "\\uF1B6"
+  },
+  {
+    "name": "suitcase-3-line",
+    "unicode": "\\uF1B7"
+  },
+  {
+    "name": "suitcase-fill",
+    "unicode": "\\uF1B8"
+  },
+  {
+    "name": "suitcase-line",
+    "unicode": "\\uF1B9"
+  },
+  {
+    "name": "sun-cloudy-fill",
+    "unicode": "\\uF1BA"
+  },
+  {
+    "name": "sun-cloudy-line",
+    "unicode": "\\uF1BB"
+  },
+  {
+    "name": "sun-fill",
+    "unicode": "\\uF1BC"
+  },
+  {
+    "name": "sun-foggy-fill",
+    "unicode": "\\uF1BD"
+  },
+  {
+    "name": "sun-foggy-line",
+    "unicode": "\\uF1BE"
+  },
+  {
+    "name": "sun-line",
+    "unicode": "\\uF1BF"
+  },
+  {
+    "name": "superscript-2",
+    "unicode": "\\uF1C0"
+  },
+  {
+    "name": "superscript",
+    "unicode": "\\uF1C1"
+  },
+  {
+    "name": "surgical-mask-fill",
+    "unicode": "\\uF1C2"
+  },
+  {
+    "name": "surgical-mask-line",
+    "unicode": "\\uF1C3"
+  },
+  {
+    "name": "surround-sound-fill",
+    "unicode": "\\uF1C4"
+  },
+  {
+    "name": "surround-sound-line",
+    "unicode": "\\uF1C5"
+  },
+  {
+    "name": "survey-fill",
+    "unicode": "\\uF1C6"
+  },
+  {
+    "name": "survey-line",
+    "unicode": "\\uF1C7"
+  },
+  {
+    "name": "swap-box-fill",
+    "unicode": "\\uF1C8"
+  },
+  {
+    "name": "swap-box-line",
+    "unicode": "\\uF1C9"
+  },
+  {
+    "name": "swap-fill",
+    "unicode": "\\uF1CA"
+  },
+  {
+    "name": "swap-line",
+    "unicode": "\\uF1CB"
+  },
+  {
+    "name": "switch-fill",
+    "unicode": "\\uF1CC"
+  },
+  {
+    "name": "switch-line",
+    "unicode": "\\uF1CD"
+  },
+  {
+    "name": "sword-fill",
+    "unicode": "\\uF1CE"
+  },
+  {
+    "name": "sword-line",
+    "unicode": "\\uF1CF"
+  },
+  {
+    "name": "syringe-fill",
+    "unicode": "\\uF1D0"
+  },
+  {
+    "name": "syringe-line",
+    "unicode": "\\uF1D1"
+  },
+  {
+    "name": "t-box-fill",
+    "unicode": "\\uF1D2"
+  },
+  {
+    "name": "t-box-line",
+    "unicode": "\\uF1D3"
+  },
+  {
+    "name": "t-shirt-2-fill",
+    "unicode": "\\uF1D4"
+  },
+  {
+    "name": "t-shirt-2-line",
+    "unicode": "\\uF1D5"
+  },
+  {
+    "name": "t-shirt-air-fill",
+    "unicode": "\\uF1D6"
+  },
+  {
+    "name": "t-shirt-air-line",
+    "unicode": "\\uF1D7"
+  },
+  {
+    "name": "t-shirt-fill",
+    "unicode": "\\uF1D8"
+  },
+  {
+    "name": "t-shirt-line",
+    "unicode": "\\uF1D9"
+  },
+  {
+    "name": "table-2",
+    "unicode": "\\uF1DA"
+  },
+  {
+    "name": "table-alt-fill",
+    "unicode": "\\uF1DB"
+  },
+  {
+    "name": "table-alt-line",
+    "unicode": "\\uF1DC"
+  },
+  {
+    "name": "table-fill",
+    "unicode": "\\uF1DD"
+  },
+  {
+    "name": "table-line",
+    "unicode": "\\uF1DE"
+  },
+  {
+    "name": "tablet-fill",
+    "unicode": "\\uF1DF"
+  },
+  {
+    "name": "tablet-line",
+    "unicode": "\\uF1E0"
+  },
+  {
+    "name": "takeaway-fill",
+    "unicode": "\\uF1E1"
+  },
+  {
+    "name": "takeaway-line",
+    "unicode": "\\uF1E2"
+  },
+  {
+    "name": "taobao-fill",
+    "unicode": "\\uF1E3"
+  },
+  {
+    "name": "taobao-line",
+    "unicode": "\\uF1E4"
+  },
+  {
+    "name": "tape-fill",
+    "unicode": "\\uF1E5"
+  },
+  {
+    "name": "tape-line",
+    "unicode": "\\uF1E6"
+  },
+  {
+    "name": "task-fill",
+    "unicode": "\\uF1E7"
+  },
+  {
+    "name": "task-line",
+    "unicode": "\\uF1E8"
+  },
+  {
+    "name": "taxi-fill",
+    "unicode": "\\uF1E9"
+  },
+  {
+    "name": "taxi-line",
+    "unicode": "\\uF1EA"
+  },
+  {
+    "name": "taxi-wifi-fill",
+    "unicode": "\\uF1EB"
+  },
+  {
+    "name": "taxi-wifi-line",
+    "unicode": "\\uF1EC"
+  },
+  {
+    "name": "team-fill",
+    "unicode": "\\uF1ED"
+  },
+  {
+    "name": "team-line",
+    "unicode": "\\uF1EE"
+  },
+  {
+    "name": "telegram-fill",
+    "unicode": "\\uF1EF"
+  },
+  {
+    "name": "telegram-line",
+    "unicode": "\\uF1F0"
+  },
+  {
+    "name": "temp-cold-fill",
+    "unicode": "\\uF1F1"
+  },
+  {
+    "name": "temp-cold-line",
+    "unicode": "\\uF1F2"
+  },
+  {
+    "name": "temp-hot-fill",
+    "unicode": "\\uF1F3"
+  },
+  {
+    "name": "temp-hot-line",
+    "unicode": "\\uF1F4"
+  },
+  {
+    "name": "terminal-box-fill",
+    "unicode": "\\uF1F5"
+  },
+  {
+    "name": "terminal-box-line",
+    "unicode": "\\uF1F6"
+  },
+  {
+    "name": "terminal-fill",
+    "unicode": "\\uF1F7"
+  },
+  {
+    "name": "terminal-line",
+    "unicode": "\\uF1F8"
+  },
+  {
+    "name": "terminal-window-fill",
+    "unicode": "\\uF1F9"
+  },
+  {
+    "name": "terminal-window-line",
+    "unicode": "\\uF1FA"
+  },
+  {
+    "name": "test-tube-fill",
+    "unicode": "\\uF1FB"
+  },
+  {
+    "name": "test-tube-line",
+    "unicode": "\\uF1FC"
+  },
+  {
+    "name": "text-direction-l",
+    "unicode": "\\uF1FD"
+  },
+  {
+    "name": "text-direction-r",
+    "unicode": "\\uF1FE"
+  },
+  {
+    "name": "text-spacing",
+    "unicode": "\\uF1FF"
+  },
+  {
+    "name": "text-wrap",
+    "unicode": "\\uF200"
+  },
+  {
+    "name": "text",
+    "unicode": "\\uF201"
+  },
+  {
+    "name": "thermometer-fill",
+    "unicode": "\\uF202"
+  },
+  {
+    "name": "thermometer-line",
+    "unicode": "\\uF203"
+  },
+  {
+    "name": "thumb-down-fill",
+    "unicode": "\\uF204"
+  },
+  {
+    "name": "thumb-down-line",
+    "unicode": "\\uF205"
+  },
+  {
+    "name": "thumb-up-fill",
+    "unicode": "\\uF206"
+  },
+  {
+    "name": "thumb-up-line",
+    "unicode": "\\uF207"
+  },
+  {
+    "name": "thunderstorms-fill",
+    "unicode": "\\uF208"
+  },
+  {
+    "name": "thunderstorms-line",
+    "unicode": "\\uF209"
+  },
+  {
+    "name": "ticket-2-fill",
+    "unicode": "\\uF20A"
+  },
+  {
+    "name": "ticket-2-line",
+    "unicode": "\\uF20B"
+  },
+  {
+    "name": "ticket-fill",
+    "unicode": "\\uF20C"
+  },
+  {
+    "name": "ticket-line",
+    "unicode": "\\uF20D"
+  },
+  {
+    "name": "time-fill",
+    "unicode": "\\uF20E"
+  },
+  {
+    "name": "time-line",
+    "unicode": "\\uF20F"
+  },
+  {
+    "name": "timer-2-fill",
+    "unicode": "\\uF210"
+  },
+  {
+    "name": "timer-2-line",
+    "unicode": "\\uF211"
+  },
+  {
+    "name": "timer-fill",
+    "unicode": "\\uF212"
+  },
+  {
+    "name": "timer-flash-fill",
+    "unicode": "\\uF213"
+  },
+  {
+    "name": "timer-flash-line",
+    "unicode": "\\uF214"
+  },
+  {
+    "name": "timer-line",
+    "unicode": "\\uF215"
+  },
+  {
+    "name": "todo-fill",
+    "unicode": "\\uF216"
+  },
+  {
+    "name": "todo-line",
+    "unicode": "\\uF217"
+  },
+  {
+    "name": "toggle-fill",
+    "unicode": "\\uF218"
+  },
+  {
+    "name": "toggle-line",
+    "unicode": "\\uF219"
+  },
+  {
+    "name": "tools-fill",
+    "unicode": "\\uF21A"
+  },
+  {
+    "name": "tools-line",
+    "unicode": "\\uF21B"
+  },
+  {
+    "name": "tornado-fill",
+    "unicode": "\\uF21C"
+  },
+  {
+    "name": "tornado-line",
+    "unicode": "\\uF21D"
+  },
+  {
+    "name": "trademark-fill",
+    "unicode": "\\uF21E"
+  },
+  {
+    "name": "trademark-line",
+    "unicode": "\\uF21F"
+  },
+  {
+    "name": "traffic-light-fill",
+    "unicode": "\\uF220"
+  },
+  {
+    "name": "traffic-light-line",
+    "unicode": "\\uF221"
+  },
+  {
+    "name": "train-fill",
+    "unicode": "\\uF222"
+  },
+  {
+    "name": "train-line",
+    "unicode": "\\uF223"
+  },
+  {
+    "name": "train-wifi-fill",
+    "unicode": "\\uF224"
+  },
+  {
+    "name": "train-wifi-line",
+    "unicode": "\\uF225"
+  },
+  {
+    "name": "translate-2",
+    "unicode": "\\uF226"
+  },
+  {
+    "name": "translate",
+    "unicode": "\\uF227"
+  },
+  {
+    "name": "travesti-fill",
+    "unicode": "\\uF228"
+  },
+  {
+    "name": "travesti-line",
+    "unicode": "\\uF229"
+  },
+  {
+    "name": "treasure-map-fill",
+    "unicode": "\\uF22A"
+  },
+  {
+    "name": "treasure-map-line",
+    "unicode": "\\uF22B"
+  },
+  {
+    "name": "trello-fill",
+    "unicode": "\\uF22C"
+  },
+  {
+    "name": "trello-line",
+    "unicode": "\\uF22D"
+  },
+  {
+    "name": "trophy-fill",
+    "unicode": "\\uF22E"
+  },
+  {
+    "name": "trophy-line",
+    "unicode": "\\uF22F"
+  },
+  {
+    "name": "truck-fill",
+    "unicode": "\\uF230"
+  },
+  {
+    "name": "truck-line",
+    "unicode": "\\uF231"
+  },
+  {
+    "name": "tumblr-fill",
+    "unicode": "\\uF232"
+  },
+  {
+    "name": "tumblr-line",
+    "unicode": "\\uF233"
+  },
+  {
+    "name": "tv-2-fill",
+    "unicode": "\\uF234"
+  },
+  {
+    "name": "tv-2-line",
+    "unicode": "\\uF235"
+  },
+  {
+    "name": "tv-fill",
+    "unicode": "\\uF236"
+  },
+  {
+    "name": "tv-line",
+    "unicode": "\\uF237"
+  },
+  {
+    "name": "twitch-fill",
+    "unicode": "\\uF238"
+  },
+  {
+    "name": "twitch-line",
+    "unicode": "\\uF239"
+  },
+  {
+    "name": "twitter-fill",
+    "unicode": "\\uF23A"
+  },
+  {
+    "name": "twitter-line",
+    "unicode": "\\uF23B"
+  },
+  {
+    "name": "typhoon-fill",
+    "unicode": "\\uF23C"
+  },
+  {
+    "name": "typhoon-line",
+    "unicode": "\\uF23D"
+  },
+  {
+    "name": "u-disk-fill",
+    "unicode": "\\uF23E"
+  },
+  {
+    "name": "u-disk-line",
+    "unicode": "\\uF23F"
+  },
+  {
+    "name": "ubuntu-fill",
+    "unicode": "\\uF240"
+  },
+  {
+    "name": "ubuntu-line",
+    "unicode": "\\uF241"
+  },
+  {
+    "name": "umbrella-fill",
+    "unicode": "\\uF242"
+  },
+  {
+    "name": "umbrella-line",
+    "unicode": "\\uF243"
+  },
+  {
+    "name": "underline",
+    "unicode": "\\uF244"
+  },
+  {
+    "name": "uninstall-fill",
+    "unicode": "\\uF245"
+  },
+  {
+    "name": "uninstall-line",
+    "unicode": "\\uF246"
+  },
+  {
+    "name": "unsplash-fill",
+    "unicode": "\\uF247"
+  },
+  {
+    "name": "unsplash-line",
+    "unicode": "\\uF248"
+  },
+  {
+    "name": "upload-2-fill",
+    "unicode": "\\uF249"
+  },
+  {
+    "name": "upload-2-line",
+    "unicode": "\\uF24A"
+  },
+  {
+    "name": "upload-cloud-2-fill",
+    "unicode": "\\uF24B"
+  },
+  {
+    "name": "upload-cloud-2-line",
+    "unicode": "\\uF24C"
+  },
+  {
+    "name": "upload-cloud-fill",
+    "unicode": "\\uF24D"
+  },
+  {
+    "name": "upload-cloud-line",
+    "unicode": "\\uF24E"
+  },
+  {
+    "name": "upload-fill",
+    "unicode": "\\uF24F"
+  },
+  {
+    "name": "upload-line",
+    "unicode": "\\uF250"
+  },
+  {
+    "name": "usb-fill",
+    "unicode": "\\uF251"
+  },
+  {
+    "name": "usb-line",
+    "unicode": "\\uF252"
+  },
+  {
+    "name": "user-2-fill",
+    "unicode": "\\uF253"
+  },
+  {
+    "name": "user-2-line",
+    "unicode": "\\uF254"
+  },
+  {
+    "name": "user-3-fill",
+    "unicode": "\\uF255"
+  },
+  {
+    "name": "user-3-line",
+    "unicode": "\\uF256"
+  },
+  {
+    "name": "user-4-fill",
+    "unicode": "\\uF257"
+  },
+  {
+    "name": "user-4-line",
+    "unicode": "\\uF258"
+  },
+  {
+    "name": "user-5-fill",
+    "unicode": "\\uF259"
+  },
+  {
+    "name": "user-5-line",
+    "unicode": "\\uF25A"
+  },
+  {
+    "name": "user-6-fill",
+    "unicode": "\\uF25B"
+  },
+  {
+    "name": "user-6-line",
+    "unicode": "\\uF25C"
+  },
+  {
+    "name": "user-add-fill",
+    "unicode": "\\uF25D"
+  },
+  {
+    "name": "user-add-line",
+    "unicode": "\\uF25E"
+  },
+  {
+    "name": "user-fill",
+    "unicode": "\\uF25F"
+  },
+  {
+    "name": "user-follow-fill",
+    "unicode": "\\uF260"
+  },
+  {
+    "name": "user-follow-line",
+    "unicode": "\\uF261"
+  },
+  {
+    "name": "user-heart-fill",
+    "unicode": "\\uF262"
+  },
+  {
+    "name": "user-heart-line",
+    "unicode": "\\uF263"
+  },
+  {
+    "name": "user-line",
+    "unicode": "\\uF264"
+  },
+  {
+    "name": "user-location-fill",
+    "unicode": "\\uF265"
+  },
+  {
+    "name": "user-location-line",
+    "unicode": "\\uF266"
+  },
+  {
+    "name": "user-received-2-fill",
+    "unicode": "\\uF267"
+  },
+  {
+    "name": "user-received-2-line",
+    "unicode": "\\uF268"
+  },
+  {
+    "name": "user-received-fill",
+    "unicode": "\\uF269"
+  },
+  {
+    "name": "user-received-line",
+    "unicode": "\\uF26A"
+  },
+  {
+    "name": "user-search-fill",
+    "unicode": "\\uF26B"
+  },
+  {
+    "name": "user-search-line",
+    "unicode": "\\uF26C"
+  },
+  {
+    "name": "user-settings-fill",
+    "unicode": "\\uF26D"
+  },
+  {
+    "name": "user-settings-line",
+    "unicode": "\\uF26E"
+  },
+  {
+    "name": "user-shared-2-fill",
+    "unicode": "\\uF26F"
+  },
+  {
+    "name": "user-shared-2-line",
+    "unicode": "\\uF270"
+  },
+  {
+    "name": "user-shared-fill",
+    "unicode": "\\uF271"
+  },
+  {
+    "name": "user-shared-line",
+    "unicode": "\\uF272"
+  },
+  {
+    "name": "user-smile-fill",
+    "unicode": "\\uF273"
+  },
+  {
+    "name": "user-smile-line",
+    "unicode": "\\uF274"
+  },
+  {
+    "name": "user-star-fill",
+    "unicode": "\\uF275"
+  },
+  {
+    "name": "user-star-line",
+    "unicode": "\\uF276"
+  },
+  {
+    "name": "user-unfollow-fill",
+    "unicode": "\\uF277"
+  },
+  {
+    "name": "user-unfollow-line",
+    "unicode": "\\uF278"
+  },
+  {
+    "name": "user-voice-fill",
+    "unicode": "\\uF279"
+  },
+  {
+    "name": "user-voice-line",
+    "unicode": "\\uF27A"
+  },
+  {
+    "name": "video-add-fill",
+    "unicode": "\\uF27B"
+  },
+  {
+    "name": "video-add-line",
+    "unicode": "\\uF27C"
+  },
+  {
+    "name": "video-chat-fill",
+    "unicode": "\\uF27D"
+  },
+  {
+    "name": "video-chat-line",
+    "unicode": "\\uF27E"
+  },
+  {
+    "name": "video-download-fill",
+    "unicode": "\\uF27F"
+  },
+  {
+    "name": "video-download-line",
+    "unicode": "\\uF280"
+  },
+  {
+    "name": "video-fill",
+    "unicode": "\\uF281"
+  },
+  {
+    "name": "video-line",
+    "unicode": "\\uF282"
+  },
+  {
+    "name": "video-upload-fill",
+    "unicode": "\\uF283"
+  },
+  {
+    "name": "video-upload-line",
+    "unicode": "\\uF284"
+  },
+  {
+    "name": "vidicon-2-fill",
+    "unicode": "\\uF285"
+  },
+  {
+    "name": "vidicon-2-line",
+    "unicode": "\\uF286"
+  },
+  {
+    "name": "vidicon-fill",
+    "unicode": "\\uF287"
+  },
+  {
+    "name": "vidicon-line",
+    "unicode": "\\uF288"
+  },
+  {
+    "name": "vimeo-fill",
+    "unicode": "\\uF289"
+  },
+  {
+    "name": "vimeo-line",
+    "unicode": "\\uF28A"
+  },
+  {
+    "name": "vip-crown-2-fill",
+    "unicode": "\\uF28B"
+  },
+  {
+    "name": "vip-crown-2-line",
+    "unicode": "\\uF28C"
+  },
+  {
+    "name": "vip-crown-fill",
+    "unicode": "\\uF28D"
+  },
+  {
+    "name": "vip-crown-line",
+    "unicode": "\\uF28E"
+  },
+  {
+    "name": "vip-diamond-fill",
+    "unicode": "\\uF28F"
+  },
+  {
+    "name": "vip-diamond-line",
+    "unicode": "\\uF290"
+  },
+  {
+    "name": "vip-fill",
+    "unicode": "\\uF291"
+  },
+  {
+    "name": "vip-line",
+    "unicode": "\\uF292"
+  },
+  {
+    "name": "virus-fill",
+    "unicode": "\\uF293"
+  },
+  {
+    "name": "virus-line",
+    "unicode": "\\uF294"
+  },
+  {
+    "name": "visa-fill",
+    "unicode": "\\uF295"
+  },
+  {
+    "name": "visa-line",
+    "unicode": "\\uF296"
+  },
+  {
+    "name": "voice-recognition-fill",
+    "unicode": "\\uF297"
+  },
+  {
+    "name": "voice-recognition-line",
+    "unicode": "\\uF298"
+  },
+  {
+    "name": "voiceprint-fill",
+    "unicode": "\\uF299"
+  },
+  {
+    "name": "voiceprint-line",
+    "unicode": "\\uF29A"
+  },
+  {
+    "name": "volume-down-fill",
+    "unicode": "\\uF29B"
+  },
+  {
+    "name": "volume-down-line",
+    "unicode": "\\uF29C"
+  },
+  {
+    "name": "volume-mute-fill",
+    "unicode": "\\uF29D"
+  },
+  {
+    "name": "volume-mute-line",
+    "unicode": "\\uF29E"
+  },
+  {
+    "name": "volume-off-vibrate-fill",
+    "unicode": "\\uF29F"
+  },
+  {
+    "name": "volume-off-vibrate-line",
+    "unicode": "\\uF2A0"
+  },
+  {
+    "name": "volume-up-fill",
+    "unicode": "\\uF2A1"
+  },
+  {
+    "name": "volume-up-line",
+    "unicode": "\\uF2A2"
+  },
+  {
+    "name": "volume-vibrate-fill",
+    "unicode": "\\uF2A3"
+  },
+  {
+    "name": "volume-vibrate-line",
+    "unicode": "\\uF2A4"
+  },
+  {
+    "name": "vuejs-fill",
+    "unicode": "\\uF2A5"
+  },
+  {
+    "name": "vuejs-line",
+    "unicode": "\\uF2A6"
+  },
+  {
+    "name": "walk-fill",
+    "unicode": "\\uF2A7"
+  },
+  {
+    "name": "walk-line",
+    "unicode": "\\uF2A8"
+  },
+  {
+    "name": "wallet-2-fill",
+    "unicode": "\\uF2A9"
+  },
+  {
+    "name": "wallet-2-line",
+    "unicode": "\\uF2AA"
+  },
+  {
+    "name": "wallet-3-fill",
+    "unicode": "\\uF2AB"
+  },
+  {
+    "name": "wallet-3-line",
+    "unicode": "\\uF2AC"
+  },
+  {
+    "name": "wallet-fill",
+    "unicode": "\\uF2AD"
+  },
+  {
+    "name": "wallet-line",
+    "unicode": "\\uF2AE"
+  },
+  {
+    "name": "water-flash-fill",
+    "unicode": "\\uF2AF"
+  },
+  {
+    "name": "water-flash-line",
+    "unicode": "\\uF2B0"
+  },
+  {
+    "name": "webcam-fill",
+    "unicode": "\\uF2B1"
+  },
+  {
+    "name": "webcam-line",
+    "unicode": "\\uF2B2"
+  },
+  {
+    "name": "wechat-2-fill",
+    "unicode": "\\uF2B3"
+  },
+  {
+    "name": "wechat-2-line",
+    "unicode": "\\uF2B4"
+  },
+  {
+    "name": "wechat-fill",
+    "unicode": "\\uF2B5"
+  },
+  {
+    "name": "wechat-line",
+    "unicode": "\\uF2B6"
+  },
+  {
+    "name": "wechat-pay-fill",
+    "unicode": "\\uF2B7"
+  },
+  {
+    "name": "wechat-pay-line",
+    "unicode": "\\uF2B8"
+  },
+  {
+    "name": "weibo-fill",
+    "unicode": "\\uF2B9"
+  },
+  {
+    "name": "weibo-line",
+    "unicode": "\\uF2BA"
+  },
+  {
+    "name": "whatsapp-fill",
+    "unicode": "\\uF2BB"
+  },
+  {
+    "name": "whatsapp-line",
+    "unicode": "\\uF2BC"
+  },
+  {
+    "name": "wheelchair-fill",
+    "unicode": "\\uF2BD"
+  },
+  {
+    "name": "wheelchair-line",
+    "unicode": "\\uF2BE"
+  },
+  {
+    "name": "wifi-fill",
+    "unicode": "\\uF2BF"
+  },
+  {
+    "name": "wifi-line",
+    "unicode": "\\uF2C0"
+  },
+  {
+    "name": "wifi-off-fill",
+    "unicode": "\\uF2C1"
+  },
+  {
+    "name": "wifi-off-line",
+    "unicode": "\\uF2C2"
+  },
+  {
+    "name": "window-2-fill",
+    "unicode": "\\uF2C3"
+  },
+  {
+    "name": "window-2-line",
+    "unicode": "\\uF2C4"
+  },
+  {
+    "name": "window-fill",
+    "unicode": "\\uF2C5"
+  },
+  {
+    "name": "window-line",
+    "unicode": "\\uF2C6"
+  },
+  {
+    "name": "windows-fill",
+    "unicode": "\\uF2C7"
+  },
+  {
+    "name": "windows-line",
+    "unicode": "\\uF2C8"
+  },
+  {
+    "name": "windy-fill",
+    "unicode": "\\uF2C9"
+  },
+  {
+    "name": "windy-line",
+    "unicode": "\\uF2CA"
+  },
+  {
+    "name": "wireless-charging-fill",
+    "unicode": "\\uF2CB"
+  },
+  {
+    "name": "wireless-charging-line",
+    "unicode": "\\uF2CC"
+  },
+  {
+    "name": "women-fill",
+    "unicode": "\\uF2CD"
+  },
+  {
+    "name": "women-line",
+    "unicode": "\\uF2CE"
+  },
+  {
+    "name": "wubi-input",
+    "unicode": "\\uF2CF"
+  },
+  {
+    "name": "xbox-fill",
+    "unicode": "\\uF2D0"
+  },
+  {
+    "name": "xbox-line",
+    "unicode": "\\uF2D1"
+  },
+  {
+    "name": "xing-fill",
+    "unicode": "\\uF2D2"
+  },
+  {
+    "name": "xing-line",
+    "unicode": "\\uF2D3"
+  },
+  {
+    "name": "youtube-fill",
+    "unicode": "\\uF2D4"
+  },
+  {
+    "name": "youtube-line",
+    "unicode": "\\uF2D5"
+  },
+  {
+    "name": "zcool-fill",
+    "unicode": "\\uF2D6"
+  },
+  {
+    "name": "zcool-line",
+    "unicode": "\\uF2D7"
+  },
+  {
+    "name": "zhihu-fill",
+    "unicode": "\\uF2D8"
+  },
+  {
+    "name": "zhihu-line",
+    "unicode": "\\uF2D9"
+  },
+  {
+    "name": "zoom-in-fill",
+    "unicode": "\\uF2DA"
+  },
+  {
+    "name": "zoom-in-line",
+    "unicode": "\\uF2DB"
+  },
+  {
+    "name": "zoom-out-fill",
+    "unicode": "\\uF2DC"
+  },
+  {
+    "name": "zoom-out-line",
+    "unicode": "\\uF2DD"
+  },
+  {
+    "name": "zzz-fill",
+    "unicode": "\\uF2DE"
+  },
+  {
+    "name": "zzz-line",
+    "unicode": "\\uF2DF"
+  }
+]
