@@ -339,6 +339,8 @@ jfxbutton("检测更新") {
 |xCircleJfxbutton|圆形图标扁平按钮(鼠标滑过会有阴影),传递一个node参数|circlejfxbutton(imageview("xx.jpg",50))|
 |xChooseFile|文件输入+选择| xChooseFile(viewModel.mdFilePath, "md,markdown", "markdown文件") {|
 |showToast|显示Toast|![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200719122328168-1367451505.png)|
+|remixIconLabel|显示字体图标,[点击查看使用说明](#9字体图标组件)|![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015144542106-504390180.png)|
+|remixIconText|显示字体图标,[点击查看使用说明](#9字体图标组件)|![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015144542106-504390180.png)|
 
 ## 5.下载框架
 对应的HttpDownloader类
@@ -681,3 +683,38 @@ monitor.startListen()
 ```
 
 不过测试的时候,发现还是会有些小问题...
+
+## 9.字体图标组件
+
+此组件是2.0.2以上版本新增的组件,库增加500KB左右的大小吧,应该还能接受,有2000+个图标
+
+效果:
+
+![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015144542106-504390180.png)
+
+使用步骤:
+
+```kotlin
+hbox{
+    //1.先进行初始化
+    RemixIconData.init(resources)
+    //2.使用,传入图标名称即可
+    remixIconLabel("home-4-fill", c("red"),29)
+    remixIconText("home-4-fill", c("green"),20)
+}
+```
+
+`resources`是TornadoFx提供的一个内置对象
+
+上述我初始化是直接在页面初始化,实际上,推荐在App里进行初始化更好,如下:
+
+![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015145704475-1953839968.png)
+
+- remixIconLabel() 本质上是Label组件
+- remixIconText 本质上是Text组件
+
+可以通过[Remix Icon - Open source icon library](https://remixicon.com/)来找到对应的图标名称,目前使用的Remix Icon版本为`2.5.0`
+
+点开你需要用的图标即可看到名称,如下图所示
+
+![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015145345751-980193051.png)
