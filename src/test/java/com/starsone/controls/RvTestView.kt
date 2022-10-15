@@ -4,10 +4,7 @@ import GridLayoutSetting
 import RvAdapter
 import RvDataObservableList
 import XRecyclerView
-import com.starsone.controls.common.RemixIconData
-import com.starsone.controls.common.remixIconLabel
-import com.starsone.controls.common.showLoadingDialog
-import com.starsone.controls.common.xUrlLink
+import com.starsone.controls.common.*
 import tornadofx.*
 
 /**
@@ -28,7 +25,14 @@ class RvTestView : View("My View") {
             xUrlLink("测试","www.stars-one.site")
 
             RemixIconData.init(resources)
-            remixIconLabel("home-4-fill")
+            //remixIconLabel("home-4-fill")
+
+            remixIconButton("home-4-fill")
+
+            remixIconButton("home-4-fill")
+
+            remixIconButtonWithBorder("home-4-fill")
+
         }
 
         hbox {
