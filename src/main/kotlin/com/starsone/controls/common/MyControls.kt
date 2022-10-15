@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCombination
 import javafx.scene.input.TransferMode
 import javafx.scene.layout.HBox
+import javafx.scene.paint.Paint
 import javafx.stage.FileChooser
 import kfoenix.jfxbutton
 import tornadofx.*
@@ -65,7 +66,7 @@ fun EventTarget.xUrlLink(text: String, url: String = "", op: (Hyperlink.() -> Un
  * 创建指定宽高的ImageView,单独指定[imgWidth]会生成正方形的图形
  */
 fun EventTarget.xImageView(url: String, imgWidth: Int, imgHeight: Int = 0, lazyload: Boolean = true, op: ImageView.() -> Unit = {}): ImageView {
-    val img = imageview(url) {
+    val img = imageview(url,lazyload) {
         fitWidth = imgWidth.toDouble()
         fitHeight = if (imgHeight == 0) {
             imgWidth.toDouble()
@@ -153,9 +154,9 @@ fun EventTarget.xJfxButton(imgPath: String, imgWidth: Int, imgHeight: Int = 0, o
  * @receiver
  * @return
  */
-fun EventTarget.xCircleJfxButton(imgPath: String,imgWidth: Int, op: (JFXButton.() -> Unit) = {}): JFXButton {
+fun EventTarget.xCircleJfxButton(imgPath: String, imgWidth: Int, op: (JFXButton.() -> Unit) = {}): JFXButton {
     val jfxbutton = jfxbutton {
-        graphic = xImageView(imgPath,imgWidth)
+        graphic = xImageView(imgPath, imgWidth)
         setOnMouseEntered {
             style {
                 backgroundColor += c(0, 0, 0, 0.1)
@@ -171,6 +172,7 @@ fun EventTarget.xCircleJfxButton(imgPath: String,imgWidth: Int, op: (JFXButton.(
     }
     return opcr(this, jfxbutton, op)
 }
+
 /**
  * 圆形图标扁平按钮(鼠标滑过会有阴影)
  */
@@ -194,13 +196,49 @@ fun EventTarget.xCircleJfxButton(icon: Node, op: (JFXButton.() -> Unit) = {}): J
 }
 
 /**
+ * 圆形按钮
+ *
+ * @param node 图片
+ * @param btnBgColor 背景色,默认白色
+ * @param textColor 文本颜色,默认黑色
+ * @param buttonType 按钮类型,默认悬浮
+ * @param borderColor 边框颜色,默认为null
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.xIconButton(node: Node, btnBgColor: Paint = c("white"), textColor: Paint = c("balck"), buttonType: JFXButton.ButtonType = JFXButton.ButtonType.RAISED, borderColor: Paint? = null, op: (JFXButton.() -> Unit) = {}): JFXButton {
+    val jfxbutton = jfxbutton {
+        val width = 54.0
+        setPrefSize(width, width)
+        graphic = node
+
+        style {
+            backgroundColor += btnBgColor
+            textFill = textColor
+            borderRadius += box(50.percent)
+            backgroundRadius += box(50.percent)
+
+            borderColor?.let {
+                //设置边框和颜色
+                borderWidth += box(1.px)
+                this.borderColor += box(it)
+            }
+        }
+        this.buttonType = buttonType
+    }
+
+    return opcr(this, jfxbutton, op)
+}
+
+/**
  *
  * 文件输入框+选择按钮(过时方法,请改成x
  * - [fileTypes] 文件类型,以逗号隔开 ,例如:`java,xml`
  * - [fileDesc] 文件提示
  * - [imgPath] 图片路径
  */
-fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc:String, imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
+fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc: String, imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
     val hbox = hbox {
 
         val tf = textfield {
@@ -215,11 +253,11 @@ fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc:String, imgPath: St
         if (imgPath.isBlank()) {
             //普通按钮
             jfxbutton {
-                graphic=text {
-                    text="\ueac5"
-                    style{
-                        font = loadFont("/ttf/iconfont.ttf",18.0)!!
-                        fill= c("#ffad42")
+                graphic = text {
+                    text = "\ueac5"
+                    style {
+                        font = loadFont("/ttf/iconfont.ttf", 18.0)!!
+                        fill = c("#ffad42")
                     }
                 }
                 action {
@@ -262,9 +300,9 @@ fun EventTarget.xCircleJfxButton(fileTypes: String, fileDesc:String, imgPath: St
 fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String, fileDesc: String, imgPath: String = "", imgWidth: Int = 0, imgHeight: Int = 0, op: (HBox.() -> Unit) = {}): HBox {
     val hbox = hbox {
 
-        textfield(myfilepath){
+        textfield(myfilepath) {
             setOnDragOver {
-                it.acceptTransferModes(TransferMode.LINK,TransferMode.COPY,TransferMode.MOVE)
+                it.acceptTransferModes(TransferMode.LINK, TransferMode.COPY, TransferMode.MOVE)
             }
             setOnDragExited {
                 val dragboard = it.dragboard
@@ -274,7 +312,7 @@ fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String,
                     myfilepath.set(files.first().path)
                 }
             }
-            promptText="输入文件路径或拖放文件到此处"
+            promptText = "输入文件路径或拖放文件到此处"
             prefWidth = 400.0
         }
 

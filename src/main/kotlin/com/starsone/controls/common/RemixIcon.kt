@@ -1,5 +1,6 @@
 package com.starsone.controls.common
 
+import com.jfoenix.controls.JFXButton
 import javafx.event.EventTarget
 import javafx.scene.control.Label
 import javafx.scene.paint.Paint
@@ -64,4 +65,21 @@ fun EventTarget.remixIconLabel(name: String, fontColor: Paint = c("black"), font
         }
     }
     return opcr(this, label, op)
+}
+
+/**
+ * Remix圆形图标按钮
+ *
+ * @param name 图标名称
+ * @param fontColor 文本颜色
+ * @param fontSize 文本字体大小
+ * @param bgColor 按钮背景色
+ * @param buttonType 按钮类型
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.remixIconButton(name: String, fontColor: Paint = c("black"), fontSize: Int = 25, bgColor: Paint = c("white"), buttonType: JFXButton.ButtonType = JFXButton.ButtonType.RAISED, op: (JFXButton.() -> Unit) = {}): JFXButton {
+    val btn = xIconButton(remixIconLabel(name, fontColor, fontSize), bgColor, fontColor, buttonType,fontColor)
+    return opcr(this, btn, op)
 }
