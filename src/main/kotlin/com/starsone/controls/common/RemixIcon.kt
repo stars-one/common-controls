@@ -68,6 +68,23 @@ fun EventTarget.remixIconLabel(name: String, fontColor: Paint = c("black"), font
 }
 
 /**
+ * Remix圆形图标按钮(设置边框与文本颜色一致)
+ *
+ * @param name 图标名称
+ * @param fontColor 文本颜色
+ * @param fontSize 文本字体大小
+ * @param bgColor 按钮背景色
+ * @param buttonType 按钮类型
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.remixIconButtonWithBorder(name: String, fontColor: Paint = c("black"), fontSize: Int = 25, bgColor: Paint = c("white"), buttonType: JFXButton.ButtonType = JFXButton.ButtonType.RAISED, op: (JFXButton.() -> Unit) = {}): JFXButton {
+    val btn = xIconButton(remixIconLabel(name, fontColor, fontSize), bgColor, fontColor, buttonType, fontColor)
+    return opcr(this, btn, op)
+}
+
+/**
  * Remix圆形图标按钮
  *
  * @param name 图标名称
@@ -80,6 +97,7 @@ fun EventTarget.remixIconLabel(name: String, fontColor: Paint = c("black"), font
  * @return
  */
 fun EventTarget.remixIconButton(name: String, fontColor: Paint = c("black"), fontSize: Int = 25, bgColor: Paint = c("white"), buttonType: JFXButton.ButtonType = JFXButton.ButtonType.RAISED, op: (JFXButton.() -> Unit) = {}): JFXButton {
-    val btn = xIconButton(remixIconLabel(name, fontColor, fontSize), bgColor, fontColor, buttonType,fontColor)
+    val btn = xIconButton(remixIconLabel(name, fontColor, fontSize), bgColor, fontColor, buttonType, null)
     return opcr(this, btn, op)
 }
+
