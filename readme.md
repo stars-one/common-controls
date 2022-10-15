@@ -61,6 +61,10 @@ TornadoFX交流群：1071184701
     * [1.常量池创建](#1常量池创建)
     * [2.工具类的创建](#2工具类的创建)
     * [3.关于GlobalDataConfig方法补充](#3关于globaldataconfig方法补充)
+  * [8.系统剪贴板监听](#8系统剪贴板监听)
+  * [9.字体图标组件](#9字体图标组件)
+
+
 
 
 ## 引入依赖
@@ -339,9 +343,13 @@ jfxbutton("检测更新") {
 |xFfxButton|指定宽高的扁平按钮,正方形可省略高度参数|jfxbutton("xx.jpg",50,50)|
 |xCircleJfxbutton|圆形图标扁平按钮(鼠标滑过会有阴影),传递一个node参数|circlejfxbutton(imageview("xx.jpg",50))|
 |xChooseFile|文件输入+选择| xChooseFile(viewModel.mdFilePath, "md,markdown", "markdown文件") {|
+|xIconButton|圆形按钮| xIconButton(xImageView("/x5.jpg",30))|
 |showToast|显示Toast|![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200719122328168-1367451505.png)|
-|remixIconLabel|显示字体图标,[点击查看使用说明](#9字体图标组件)|![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015144542106-504390180.png)|
-|remixIconText|显示字体图标,[点击查看使用说明](#9字体图标组件)|![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015144542106-504390180.png)|
+|remixIconLabel|显示字体图标,[点击查看使用说明](#9字体图标组件)|remixIconLabel("home-4-fill", c("red"),29)|
+|remixIconText|显示字体图标,[点击查看使用说明](#9字体图标组件)|remixIconText("home-4-fill", c("red"),29)|
+|remixIconButton|圆形图标按钮| remixIconButton("home-4-fill")|
+|remixIconButtonWithBorder|圆形图标按钮(带边框)|remixIconButtonWithBorder("home-4-fill")|
+
 
 ## 5.下载框架
 对应的HttpDownloader类
