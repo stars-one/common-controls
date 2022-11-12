@@ -174,7 +174,10 @@ class TornadoFxUtil {
                                                             DownloadDialogView(stage, it.updateUrl, "${appName}${it.version}.jar").show()
                                                         }
                                                 if (forceUpdate) {
-                                                    dialogBuilder.create()
+                                                    //强制更新,不允许取消,只能退出程序
+                                                    dialogBuilder.setNegativeBtn("退出程序"){
+                                                        Platform.exit()
+                                                    }.create()
                                                 } else {
                                                     dialogBuilder.setNegativeBtn("取消").create()
                                                 }
