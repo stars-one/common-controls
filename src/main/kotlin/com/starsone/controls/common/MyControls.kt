@@ -373,24 +373,31 @@ fun EventTarget.xChooseFileDirectory(tip: String, myfilepath: SimpleStringProper
                 backgroundColor += c("#f5f5f5")
                 promptTextFill = c("#3e3e3e")
                 textFill = c("black")
-                backgroundRadius+= box(10.px)
+                backgroundRadius += box(10.px)
             }
             promptText = "输入或选择$tip"
         }
+        
+        val filePath = myfilepath.value
+        val dirFile = File(filePath)
+
+        val flag = !dirFile.exists()
 
         val action = {
-            val filePath = myfilepath.value
-            val dirFile = File(filePath)
             //文件路径为空或文件夹不存在,则不选中文件夹时候不打开指定目录
-            if (filePath.isBlank() || !dirFile.exists()) {
-                val file = chooseDirectory("选择$tip")
-                file?.let {
-                    myfilepath.set(it.path)
-                }
+            val file = if (filePath.isBlank() || flag) {
+                chooseDirectory("选择$tip")
             } else {
-                val file = chooseDirectory("选择$tip", dirFile)
-                file?.let {
-                    myfilepath.set(it.path)
+                chooseDirectory("选择$tip", dirFile)
+            }
+
+            if (file != null) {
+                myfilepath.set(file.path)
+            } else {
+                //没有选择,检测一下当前的路径是否正确
+                if (flag) {
+                    //文件不存在,清空数据
+                    myfilepath.set("")
                 }
             }
         }
