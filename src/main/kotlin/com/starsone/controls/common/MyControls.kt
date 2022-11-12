@@ -5,11 +5,9 @@ import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
 import javafx.beans.property.SimpleStringProperty
 import javafx.event.EventTarget
+import javafx.geometry.Pos
 import javafx.scene.Node
-import javafx.scene.control.ContextMenu
-import javafx.scene.control.Hyperlink
-import javafx.scene.control.MenuItem
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCombination
 import javafx.scene.input.TransferMode
@@ -19,6 +17,7 @@ import javafx.stage.FileChooser
 import kfoenix.jfxbutton
 import tornadofx.*
 import java.awt.Desktop
+import java.io.File
 import java.net.URI
 
 /**
@@ -66,7 +65,7 @@ fun EventTarget.xUrlLink(text: String, url: String = "", op: (Hyperlink.() -> Un
  * 创建指定宽高的ImageView,单独指定[imgWidth]会生成正方形的图形
  */
 fun EventTarget.xImageView(url: String, imgWidth: Int, imgHeight: Int = 0, lazyload: Boolean = true, op: ImageView.() -> Unit = {}): ImageView {
-    val img = imageview(url,lazyload) {
+    val img = imageview(url, lazyload) {
         fitWidth = imgWidth.toDouble()
         fitHeight = if (imgHeight == 0) {
             imgWidth.toDouble()
@@ -349,6 +348,73 @@ fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String,
             }
         }
 
+    }
+    return opcr(this, hbox, op)
+}
+
+/**
+ * 选择文件夹
+ *
+ * @param tip 提示
+ * @param myfilepath 绑定的数据
+ * @param node 选择文件的按钮(传null则使用默认)
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.xChooseFileDirectory(tip: String, myfilepath: SimpleStringProperty, node: Button? = null, op: (HBox.() -> Unit) = {}): HBox {
+    val hbox = hbox {
+        alignment = Pos.CENTER_LEFT
+
+        textfield(myfilepath) {
+            prefWidth = 400.0
+            promptText = tip
+            style {
+                backgroundColor += c("#f5f5f5")
+                promptTextFill = c("#3e3e3e")
+                textFill = c("black")
+                backgroundRadius+= box(10.px)
+            }
+            promptText = "输入或选择$tip"
+        }
+
+        val action = {
+            val filePath = myfilepath.value
+            val dirFile = File(filePath)
+            //文件路径为空或文件夹不存在,则不选中文件夹时候不打开指定目录
+            if (filePath.isBlank() || !dirFile.exists()) {
+                val file = chooseDirectory("选择$tip")
+                file?.let {
+                    myfilepath.set(it.path)
+                }
+            } else {
+                val file = chooseDirectory("选择$tip", dirFile)
+                file?.let {
+                    myfilepath.set(it.path)
+                }
+            }
+        }
+
+        if (node == null) {
+            //普通按钮
+            jfxbutton {
+                graphic = remixIconText("folder-3-line") {
+                    style {
+                        fill = c("#ffad42")
+                    }
+                }
+                action {
+                    action.invoke()
+                }
+            }
+        } else {
+            node.apply {
+                action {
+                    action.invoke()
+                }
+            }
+            add(node)
+        }
     }
     return opcr(this, hbox, op)
 }
