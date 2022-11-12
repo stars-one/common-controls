@@ -14,7 +14,7 @@ import tornadofx.*
  */
 class ControlDemoView : View("My View") {
 
-    val dirPath = SimpleStringProperty("")
+    val dirPath = SimpleStringProperty("555")
     override val root = vbox {
         setPrefSize(600.0, 400.0)
         style {
