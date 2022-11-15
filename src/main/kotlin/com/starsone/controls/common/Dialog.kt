@@ -8,6 +8,7 @@ import com.starsone.controls.download.LanzouParse
 import com.starsone.controls.utils.TornadoFxUtil
 import javafx.application.Platform
 import javafx.beans.property.SimpleDoubleProperty
+import javafx.beans.property.SimpleIntegerProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.concurrent.Task
 import javafx.geometry.Pos
@@ -23,6 +24,7 @@ import javafx.stage.Modality
 import javafx.stage.Popup
 import javafx.stage.Stage
 import javafx.stage.StageStyle
+import kfoenix.jfxradiobutton
 import tornadofx.*
 import java.io.File
 import java.io.IOException
@@ -342,4 +344,49 @@ fun showDialogPopup(stage: Stage?, title: String, content: String, closeTime: Do
     }
 
     //todo 实现队列弹窗
+}
+
+/**
+ * 显示单选框对话框
+ *
+ * @param stage
+ * @param title 提示
+ * @param list 数据源列表
+ * @param negativeBtnText 取消按钮文字
+ * @param positiveBtnText 确定按钮文字
+ * @param lambda 确认的回调函数(label: String, index: Int)
+ * @receiver
+ */
+fun showDialogRadio(stage: Stage?, title: String, list: List<String>, negativeBtnText: String = "取消", positiveBtnText: String = "确定", lambda: ((label: String, index: Int) -> Unit)) {
+    val currentSelectIndex = SimpleIntegerProperty()
+
+    val mbox = VBox().apply {
+        togglegroup() {
+            selectedToggleProperty().addListener { _, _, newValue ->
+                currentSelectIndex.set(newValue.userData.toString().toInt())
+            }
+
+            list.forEachIndexed { index, s ->
+                jfxradiobutton(s) {
+                    style {
+                        padding = box(10.px)
+                    }
+                    userData = index
+                    if (index == 0) {
+                        selectedProperty().set(true)
+                    }
+                }
+            }
+        }
+    }
+
+    DialogBuilder(stage)
+            .setTitle(title)
+            .setCustomContext(mbox)
+            .setNegativeBtn(negativeBtnText)
+            .setPositiveBtn(positiveBtnText) {
+                val index = currentSelectIndex.value
+                lambda.invoke(list[index], index)
+            }
+            .create().show()
 }
