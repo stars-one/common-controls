@@ -356,34 +356,38 @@ fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String,
  * 选择文件夹
  *
  * @param tip 提示
- * @param myfilepath 绑定的数据
+ * @param filePathProperty 绑定的数据
+ * @param textFieldWidth 输入框的宽度
  * @param node 选择文件的按钮(传null则使用默认)
  * @param op
  * @receiver
  * @return
  */
-fun EventTarget.xChooseFileDirectory(tip: String, myfilepath: SimpleStringProperty, node: Button? = null, op: (HBox.() -> Unit) = {}): HBox {
+fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleStringProperty, textFieldWidth: Double = 400.0, node: Button? = null, op: (HBox.() -> Unit) = {}): HBox {
     val hbox = hbox {
+        fitToParentSize()
+
         alignment = Pos.CENTER_LEFT
 
-        textfield(myfilepath) {
-            prefWidth = 400.0
+        textfield(filePathProperty) {
+            prefWidth = textFieldWidth
             promptText = tip
             style {
                 backgroundColor += c("#f5f5f5")
                 promptTextFill = c("#3e3e3e")
                 textFill = c("black")
                 backgroundRadius += box(10.px)
+                padding = box(10.px)
             }
             promptText = "输入或选择$tip"
         }
-        
-        val filePath = myfilepath.value
-        val dirFile = File(filePath)
-
-        val flag = !dirFile.exists()
 
         val action = {
+            val filePath = filePathProperty.value
+            val dirFile = File(filePath)
+
+            val flag = !dirFile.exists()
+
             //文件路径为空或文件夹不存在,则不选中文件夹时候不打开指定目录
             val file = if (filePath.isBlank() || flag) {
                 chooseDirectory("选择$tip")
@@ -392,12 +396,12 @@ fun EventTarget.xChooseFileDirectory(tip: String, myfilepath: SimpleStringProper
             }
 
             if (file != null) {
-                myfilepath.set(file.path)
+                filePathProperty.set(file.path)
             } else {
                 //没有选择,检测一下当前的路径是否正确
                 if (flag) {
                     //文件不存在,清空数据
-                    myfilepath.set("")
+                    filePathProperty.set("")
                 }
             }
         }
@@ -425,3 +429,4 @@ fun EventTarget.xChooseFileDirectory(tip: String, myfilepath: SimpleStringProper
     }
     return opcr(this, hbox, op)
 }
+
