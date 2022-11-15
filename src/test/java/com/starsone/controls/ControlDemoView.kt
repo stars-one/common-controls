@@ -23,7 +23,7 @@ class ControlDemoView : View("My View") {
         RemixIconData.init(resources)
         xChooseFileDirectory("下载目录", dirPath)
 
-        xChooseFileDirectory("下载目录", dirPath, jfxbutton {
+        xChooseFileDirectory("下载目录", dirPath, 400.0,jfxbutton {
             graphic = remixIconText("folder-2-fill")
             text = "选择文件夹"
         })
