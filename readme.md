@@ -252,14 +252,28 @@ jfxbutton("关闭程序对话框") {
 
 ![](https://img2020.cnblogs.com/blog/1210268/202112/1210268-20211222222421744-2108565821.png)
 
-```
+```kotlin
 button {
 	action {
 		showDialogPopup(currentStage, "提示", "复制成功",3.0)
 	}
 }
 ```
+### 单选框对话框
 
+效果如下:
+
+![](https://img2022.cnblogs.com/blog/1210268/202211/1210268-20221115234038321-933322303.png)
+
+```kotlin
+button("单选按钮对话框") {
+    action {
+      showDialogRadio(currentStage,"选择选项", listOf("txt","md")){label, index ->
+          println("选中下标$index 内容:$label")
+      }
+    }
+}
+```
 
 ### 检测更新对话框
 这里单独抽出来讲解使用,详见第2部分
