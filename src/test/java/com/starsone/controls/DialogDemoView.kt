@@ -32,8 +32,15 @@ class DialogDemoView : View("My View") {
 
         button("普通对话框(含取消和确定)") {
             action {
-                //todo 封装
-                showDialog(currentStage,"提示","这是测试的文本内容","取消选择")
+                DialogBuilder(currentStage)
+                        .setTitle("标题")
+                        .setMessage("内容")
+                        .setPositiveBtn("取消"){
+                            println("点击了取消按钮")
+                        }.setNegativeBtn("确定"){
+                            println("点击了确定按钮")
+                        }
+                        .create()
             }
         }
 
