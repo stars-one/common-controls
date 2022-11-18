@@ -15,6 +15,7 @@ import javafx.scene.layout.VBox
 import javafx.scene.paint.Paint
 import javafx.scene.text.FontWeight
 import javafx.scene.text.Text
+import javafx.scene.text.TextFlow
 import javafx.stage.Modality
 import javafx.stage.Stage
 import tornadofx.*
@@ -40,6 +41,14 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
     private var onInputListener: ((text: String) -> Unit)? = null
     private var onLoadingListener: ((alert: JFXAlert<String>) -> Unit)? = null
 
+    var onNegativeBtnClickAction: (() -> Unit)? = null
+    var onPositiveBtnClickAction: (() -> Unit)? = null
+
+    /**
+     * 是否点击了确定按钮
+     */
+    var isConfirm = false
+
     //右上角的关闭按钮
     lateinit var closeBtn: Text
 
@@ -51,7 +60,14 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
         alert.isOverlayClose = false
     }
 
-    fun setTitle(title: String): DialogBuilder {
+    /**
+     * Set title
+     *
+     * @param title 标题
+     * @param showCloseBtn 是否显示右上角关闭按钮
+     * @return
+     */
+    fun setTitle(title: String,showCloseBtn:Boolean=true): DialogBuilder {
         val title = Label(title)
         closeBtn = Text()
         closeBtn.style {
@@ -66,6 +82,9 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
         //添加到对话框头部
         dialogLayout.setHeading(AnchorPane(title, closeBtn))
         title.isFocusTraversable = true
+        if (showCloseBtn) {
+            closeBtn.isVisible = false
+        }
         return this
     }
 
@@ -168,20 +187,14 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
      */
     fun setNegativeBtn(negativeBtnText: String, negativeBtnOnclickListener: (() -> Unit)?): DialogBuilder {
 
+        this.onNegativeBtnClickAction = negativeBtnOnclickListener
+
         negativeBtn = JFXButton(negativeBtnText)
         negativeBtn!!.isCancelButton = true
         negativeBtn!!.textFill = negativeBtnPaint
         negativeBtn!!.buttonType = JFXButton.ButtonType.FLAT
         negativeBtn!!.setOnAction { _ ->
-            alert.hideWithAnimation()
-            negativeBtnOnclickListener?.invoke()
-        }
-        if (this::closeBtn.isInitialized) {
-            //右上角的关闭按钮与取消按钮绑定同样的事件
-            closeBtn.setOnMouseClicked {
-                alert.hideWithAnimation()
-                negativeBtnOnclickListener?.invoke()
-            }
+            commonClick(false)
         }
         return this
     }
@@ -220,12 +233,13 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
      * @return
      */
     fun setPositiveBtn(positiveBtnText: String, positiveBtnOnclickListener: (() -> Unit)?): DialogBuilder {
+        onPositiveBtnClickAction = positiveBtnOnclickListener
+
         positiveBtn = JFXButton(positiveBtnText)
         positiveBtn!!.isDefaultButton = true
         positiveBtn!!.textFill = positiveBtnPaint
         positiveBtn!!.setOnAction { _ ->
-            alert.hideWithAnimation()
-            positiveBtnOnclickListener?.invoke()
+            commonClick(true)
         }
         return this
     }
@@ -239,19 +253,24 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
      */
     fun setHyperLink(text: String, isUrl: Boolean): DialogBuilder {
         hyperlink = Hyperlink(text)
-        hyperlink!!.border = Border.EMPTY
-        hyperlink?.action {
-            if (isUrl) {
-                val result = TornadoFxUtil.completeUrl(text)
-                Desktop.getDesktop().browse(URL(result).toURI())
-            } else {
-                if (System.getProperty("os.name").toLowerCase().contains("win")) {
-                    Runtime.getRuntime().exec("explorer.exe /select,$text")
+        hyperlink?.apply {
+            border = Border.EMPTY
+            isWrapText = true
+            maxWidth = 200.0
+            action {
+                if (isUrl) {
+                    val result = TornadoFxUtil.completeUrl(text)
+                    Desktop.getDesktop().browse(URL(result).toURI())
                 } else {
-                    Desktop.getDesktop().open(File(text))
+                    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+                        Runtime.getRuntime().exec("explorer.exe /select,$text")
+                    } else {
+                        Desktop.getDesktop().open(File(text))
+                    }
                 }
             }
         }
+
         return this
     }
 
@@ -276,8 +295,7 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
         if (!isCustom) {
             //添加hyperlink超链接文本或者是输入框
             when {
-
-                hyperlink != null -> dialogLayout.setBody(HBox(Label(this.message), hyperlink))
+                hyperlink != null -> dialogLayout.setBody(TextFlow(Label(this.message), hyperlink))
                 textField != null -> {
                     dialogLayout.setBody(VBox(Label(this.message), textField))
                     positiveBtn!!.setOnAction { _ ->
@@ -312,10 +330,34 @@ class DialogBuilder(stage: Stage?, modality: Modality = Modality.WINDOW_MODAL) {
 
         } else {
             alert.show()
+        }
 
+        //设置右上角关闭按钮的点击事件
+        if (this::closeBtn.isInitialized) {
+            //右上角的关闭按钮与取消按钮绑定同样的事件
+            closeBtn.setOnMouseClicked {
+                commonClick(false)
+            }
+        }
+
+        alert.setOnHidden {
+            if (isConfirm) {
+                onPositiveBtnClickAction?.invoke()
+            } else {
+                onNegativeBtnClickAction?.invoke()
+            }
         }
 
         return alert
     }
 
+    /**
+     * 对话框通用的点击事件,点击后关闭对话框
+     *
+     * @param flag
+     */
+    private fun commonClick(flag: Boolean) {
+        alert.hideWithAnimation()
+        isConfirm = flag
+    }
 }

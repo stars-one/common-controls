@@ -120,7 +120,7 @@ fun showLoadingDialog(stage: Stage?, title: String, message: String, negativeBtn
  * @param stage
  * @param title
  * @param message
- * @param file 下载后的包
+ * @param file 下载后的jar包
  * @return
  */
 fun showStopDialog(stage: Stage?, title: String, message: String, file: File): JFXAlert<String> {
@@ -174,7 +174,7 @@ fun showLoadingDialog(stage: Stage?, title: String, text: String = ""): JFXAlert
 
 
 /**
- * 下载进度对话框
+ * 下载进度对话框(jar软件更新用的)
  */
 class DownloadDialogView(val stage: Stage?, val url: String, val file: String = "") {
 
@@ -299,6 +299,22 @@ fun showLoadingDialog(parent: Stage?, iv: ImageView?, stageWidth: Double, stageH
 
         stage.show()
     }
+}
+
+/**
+ * 展示不确定进度加载对话框(动态图+文字 居中显示)
+ *
+ * @param parent
+ * @param ivPath 图片地址(链接或本地文件路径)
+ * @param stageWidth 加载框的宽度
+ * @param stageHeight 加载框的高度
+ * @param labelText 文字
+ * @param hasBackGround 是否有背景,true则显示白色背景,false即透明
+ * @param task 异步任务,里面需要开启一个子线程,需要在耗时任务结束后手动调用stage.hide方法关闭对话框
+ */
+fun showLoadingDialog(parent: Stage?, ivPath: String, stageWidth: Double, stageHeight: Double, labelText: String = "加载中", hasBackGround: Boolean = false, task: (stage: Stage) -> Unit) {
+    val imgView = ImageView(ivPath)
+    showLoadingDialog(parent, imgView, stageWidth, stageHeight, labelText, hasBackGround, task)
 }
 
 /**
