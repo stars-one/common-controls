@@ -2,7 +2,6 @@ package com.starsone.controls
 
 import com.starsone.controls.common.RemixIconData
 import com.starsone.controls.common.remixIconText
-import com.starsone.controls.common.showDialogRadio
 import com.starsone.controls.common.xChooseFileDirectory
 import javafx.beans.property.SimpleStringProperty
 import kfoenix.jfxbutton
@@ -28,15 +27,6 @@ class ControlDemoView : View("My View") {
             graphic = remixIconText("folder-2-fill")
             text = "选择文件夹"
         })
-
-        button("单选按钮对话框") {
-            action {
-              showDialogRadio(currentStage,"选择选项", listOf("txt","md")){label, index ->
-                  println("选中下标$index 内容:$label")
-              }
-
-            }
-        }
 
     }
 
