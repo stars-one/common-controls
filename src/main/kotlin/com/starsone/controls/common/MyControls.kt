@@ -408,7 +408,7 @@ fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleString
         if (node == null) {
             //普通按钮
             jfxbutton {
-                graphic = remixIconText("folder-3-line") {
+                graphic = remixIconText("folder-2-fill") {
                     style {
                         fill = c("#ffad42")
                     }
