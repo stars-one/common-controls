@@ -365,7 +365,6 @@ fun EventTarget.xChooseFile(myfilepath: SimpleStringProperty, fileTypes: String,
  */
 fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleStringProperty, textFieldWidth: Double = 400.0, node: Button? = null, op: (HBox.() -> Unit) = {}): HBox {
     val hbox = hbox {
-        fitToParentSize()
 
         alignment = Pos.CENTER_LEFT
 
