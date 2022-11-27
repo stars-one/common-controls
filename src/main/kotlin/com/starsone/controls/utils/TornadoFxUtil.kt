@@ -293,6 +293,7 @@ class TornadoFxUtil {
          * @param url 在View中使用resources.url("")获取的参数
          * @return
          */
+        @Deprecated("过时的方法,可使用无参的方法",replaceWith = ReplaceWith("getCurrentJarPath()"))
         fun getCurrentJarPath(url: URL): File {
             val path = url.path
             val filePath = path.substringBeforeLast("!/")
@@ -305,6 +306,7 @@ class TornadoFxUtil {
          * @param url 在View中使用resources.url("")获取的参数
          * @return
          */
+        @Deprecated("过时的方法,可使用无参的方法",replaceWith = ReplaceWith("getCurrentJarDirPath()"))
         fun getCurrentJarDirPath(url: URL): File {
             val jarFlag = "!/"
             val path = url.path
@@ -321,8 +323,43 @@ class TornadoFxUtil {
          *
          * @param url 在View中使用resources.url("")获取的参数
          */
+        @Deprecated("过时的",replaceWith = ReplaceWith("restartApp()"))
         fun restartApp(url: URL) {
             val jarFile = getCurrentJarPath(url)
+            //开启新应用
+            Runtime.getRuntime().exec("cmd.exe /c javaw -jar ${jarFile.path}")
+            //关闭当前应用
+            Platform.exit()
+        }
+
+        /**
+         * 获取当前jar包的文件路径(如果不是jar包打开,则是获取当前项目的根路径)
+         *
+         * @param url 在View中使用resources.url("")获取的参数
+         * @return
+         */
+        fun getCurrentJarPath(): File {
+            val url = ResourceLookup(this).url("/ttf/remixicon.ttf")
+            val path = url.path
+            val filePath = path.substringBeforeLast("!/")
+            return File(URI.create(filePath))
+        }
+
+        /**
+         * 获取当前jar包的文件夹路径
+         *
+         * @return
+         */
+        fun getCurrentJarDirPath(): File {
+            return File("").absoluteFile
+        }
+
+        /**
+         * 重启当前应用
+         *
+         */
+        fun restartApp() {
+            val jarFile = getCurrentJarPath()
             //开启新应用
             Runtime.getRuntime().exec("cmd.exe /c javaw -jar ${jarFile.path}")
             //关闭当前应用
