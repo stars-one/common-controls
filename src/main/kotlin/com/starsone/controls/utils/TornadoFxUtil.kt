@@ -4,6 +4,9 @@ import com.starsone.controls.common.DialogBuilder
 import com.starsone.controls.common.DownloadDialogView
 import com.starsone.controls.common.showToast
 import com.starsone.controls.model.UpdateInfo
+import com.starsone.controls.utils.snutil.Hardware4Mac
+import com.starsone.controls.utils.snutil.Hardware4Nix
+import com.starsone.controls.utils.snutil.Hardware4Win
 import com.sun.xml.internal.messaging.saaj.util.TeeInputStream
 import javafx.application.Platform
 import javafx.scene.input.Clipboard
@@ -175,7 +178,7 @@ class TornadoFxUtil {
                                                         }
                                                 if (forceUpdate) {
                                                     //强制更新,不允许取消,只能退出程序
-                                                    dialogBuilder.setNegativeBtn("退出程序"){
+                                                    dialogBuilder.setNegativeBtn("退出程序") {
                                                         Platform.exit()
                                                     }.create()
                                                 } else {
@@ -293,7 +296,7 @@ class TornadoFxUtil {
          * @param url 在View中使用resources.url("")获取的参数
          * @return
          */
-        @Deprecated("过时的方法,可使用无参的方法",replaceWith = ReplaceWith("getCurrentJarPath()"))
+        @Deprecated("过时的方法,可使用无参的方法", replaceWith = ReplaceWith("getCurrentJarPath()"))
         fun getCurrentJarPath(url: URL): File {
             val path = url.path
             val filePath = path.substringBeforeLast("!/")
@@ -306,7 +309,7 @@ class TornadoFxUtil {
          * @param url 在View中使用resources.url("")获取的参数
          * @return
          */
-        @Deprecated("过时的方法,可使用无参的方法",replaceWith = ReplaceWith("getCurrentJarDirPath()"))
+        @Deprecated("过时的方法,可使用无参的方法", replaceWith = ReplaceWith("getCurrentJarDirPath()"))
         fun getCurrentJarDirPath(url: URL): File {
             val jarFlag = "!/"
             val path = url.path
@@ -323,7 +326,7 @@ class TornadoFxUtil {
          *
          * @param url 在View中使用resources.url("")获取的参数
          */
-        @Deprecated("过时的",replaceWith = ReplaceWith("restartApp()"))
+        @Deprecated("过时的", replaceWith = ReplaceWith("restartApp()"))
         fun restartApp(url: URL) {
             val jarFile = getCurrentJarPath(url)
             //开启新应用
@@ -392,12 +395,47 @@ class TornadoFxUtil {
         }
 
         /**
+         * 当前系统是否为linux系统
+         */
+        fun isLinux(): Boolean {
+            val prop = System.getProperties()
+            val os = prop.getProperty("os.name")
+            return os.contains("linux", true)
+        }
+
+        /**
+         * 当前系统是否为linux系统
+         */
+        fun isMac(): Boolean {
+            val prop = System.getProperties()
+            val os = prop.getProperty("os.name")
+            return os.contains("mac", true)
+        }
+
+
+        /**
+         * 获取当前系统SN序列号
+         *
+         */
+        fun getDeviceSn(): String {
+            return when {
+                isWin() -> Hardware4Win.sn
+                isLinux() -> Hardware4Nix.serialNumber ?: ""
+                isMac() -> Hardware4Mac.sn
+                else->{
+                    println("未知系统,sn序列号查询失败")
+                    ""
+                }
+            }
+        }
+
+        /**
          * 执行命令行,并等待命令执行完毕,同时将过程中的控制台输出日志写入日志文件中
          * - [cmd] 命令,window记得要使用cmd /c开头,如cmd /c ipconfig
          * - [dir] 命令行所在路径
          * - [logFile] 日志文件
          */
-         fun execCmd(cmd: String, dir: File, logFile: File) {
+        fun execCmd(cmd: String, dir: File, logFile: File) {
             val process = Runtime.getRuntime().exec(cmd, null, dir)
             val inputStream = process.inputStream
 
