@@ -3,6 +3,7 @@ package com.starsone.controls
 import com.starsone.controls.common.RemixIconData
 import com.starsone.controls.common.remixIconText
 import com.starsone.controls.common.xChooseFileDirectory
+import com.starsone.controls.utils.TornadoFxUtil
 import javafx.beans.property.SimpleStringProperty
 import kfoenix.jfxbutton
 import tornadofx.*
@@ -28,6 +29,7 @@ class ControlDemoView : View("My View") {
             text = "选择文件夹"
         })
 
+        println("本机序列号为 ${TornadoFxUtil.getDeviceSn()}")
     }
 
 
