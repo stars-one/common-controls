@@ -344,7 +344,10 @@ jfxbutton("检测更新") {
 - 重启当前jar文件 `restartApp`
 - 获取当前jar文件的根目录 `getCurrentJarPath`
 - 判断是否是window平台 `isWin`
-- 执行cmd命令(支持linux和macOs) `execCmd`
+- 判断是否是Linux平台 `isLinux`
+- 判断是否是Mac平台 `isMac`
+- 获取当前设备主板SN序列号 `getDeviceSn`
+- 执行cmd命令(支持window,linux和macOs) `execCmd`
 
 ## 4.常用控件
 以下的控件其实本质上都是一个方法,使用了TornadoFx内置的DSL语法进行书写,使用的时候和TornadoFx编写布局的代码是一样的
@@ -728,6 +731,8 @@ hbox{
     remixIconText("home-4-fill", c("green"),20)
 }
 ```
+
+> PS: 从`2.0.8`版本开始,**可不用手动调用`RemixIconData.init()`进行初始化!!**
 
 `resources`是TornadoFx提供的一个内置对象
 
