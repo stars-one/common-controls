@@ -9,12 +9,10 @@ import org.apache.commons.text.StringEscapeUtils
 import tornadofx.*
 
 object RemixIconData {
-    val iconIndexMap = hashMapOf<String, String>()
 
-    val jsonPath = "/ttf/remixicon.json"
-    val fontPath = "/ttf/remixicon.ttf"
-
-    fun init(resources: ResourceLookup) {
+    val iconIndexMap by lazy{
+        val tempMap = hashMapOf<String,String>()
+        val resources = ResourceLookup(this)
         //加载图标字体文件
         val jsonArray = loadJsonArray(resources.text(jsonPath))
 
@@ -23,10 +21,13 @@ object RemixIconData {
             val jsonObject = iterator.next().asJsonObject()
             val key = jsonObject.getString("name")
             val value = jsonObject.getString("unicode")
-            iconIndexMap[key] = StringEscapeUtils.unescapeJava(value)
+            tempMap[key] = StringEscapeUtils.unescapeJava(value)
         }
+        tempMap
     }
 
+    val jsonPath = "/ttf/remixicon.json"
+    val fontPath = "/ttf/remixicon.ttf"
 }
 
 /**
