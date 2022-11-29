@@ -732,7 +732,7 @@ hbox{
 }
 ```
 
-> PS: 从`2.0.8`版本开始,**可不用手动调用`RemixIconData.init()`进行初始化!!**
+> PS: 从`2.0.9`版本开始,**可不用手动调用`RemixIconData.init()`进行初始化!!**
 
 `resources`是TornadoFx提供的一个内置对象
 
