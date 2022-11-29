@@ -1,6 +1,5 @@
 package com.starsone.controls
 
-import com.starsone.controls.common.RemixIconData
 import com.starsone.controls.common.remixIconText
 import com.starsone.controls.common.xChooseFileDirectory
 import com.starsone.controls.utils.TornadoFxUtil
@@ -21,7 +20,7 @@ class ControlDemoView : View("My View") {
         style {
             backgroundColor += c("white")
         }
-        RemixIconData.init(resources)
+
         xChooseFileDirectory("下载目录", dirPath)
 
         xChooseFileDirectory("下载目录", dirPath, 400.0, jfxbutton {
