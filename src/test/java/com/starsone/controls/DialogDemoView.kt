@@ -145,6 +145,9 @@ class DialogDemoView : View("My View") {
             //}
 
             val cfMessage = CFMessage.bindingContainer(this@stackpane)
+            //通知条出现是从下往上
+            //val cfMessage = CFMessage.bindingContainer(this@stackpane,false)
+
             button("普通弹窗") {
                 action {
                     cfMessage.create("hello")
