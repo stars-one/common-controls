@@ -1,0 +1,501 @@
+/***************************************************
+ *                                                 *
+ *   @author : ChenFei                             *
+ *   @date : 2020/06/10                            *
+ *                                                 *
+ ***************************************************/
+/**/
+/***********************************
+    CFPopover 弹出框
+***********************************/
+.cf-popup{
+    -fx-background-color:transparent;
+}
+.cf-popup .content{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10.0, 0, 0, 0);
+    -fx-background-color:rgb(255,255,255);
+    -fx-background-radius:3px;
+    -fx-padding:3px;
+}
+.cf-popup .arrow{
+    -fx-fill:rgb(255,255,255);
+}
+/***********************************
+    CFInput 文本输入框
+***********************************/
+.cf-input{
+    -fx-alignment:center;
+    -fx-background-color:transparent;
+    -fx-padding:0 5px 0 5px;
+    -fx-spacing:4px;
+    -fx-border-color:border-color;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+.cf-input.selected{
+    -fx-border-color:primary-color;
+}
+.cf-input.selected > .icon-label > .ikonli-font-icon{
+    -fx-icon-color: primary-color;
+}
+.cf-input > .input{
+    -fx-text-fill: text-color;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-border-color: transparent;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-background-insets:0;
+    -fx-background-color:transparent;
+    -fx-padding: 0px;
+    -fx-pref-height: 32px;
+}
+.cf-input > .icon-label > .ikonli-font-icon,
+.cf-input > .clear-label > .ikonli-font-icon{
+    -fx-icon-size: 18px;
+    -fx-icon-color: derive(text-color,50%);
+}
+.cf-input > .clear-label:hover > .ikonli-font-icon{
+    -fx-icon-color: derive(text-color,10%);
+}
+/***********************************
+    CFDatePicker 日期选择器
+***********************************/
+.cf-date-picker{
+    -fx-background-color:rgb(255,255,255);
+    -fx-padding:5px 0 0 0;
+    -fx-font-size:14px;
+}
+.cf-date-picker .cf-date-label{
+    -fx-pref-width:40px;
+    -fx-pref-height:40px;
+    -fx-alignment:center;
+}
+.cf-date-picker .cf-grid-pane{
+    -fx-pref-height:240px;
+}
+.cf-date-picker .cf-date-button{
+    -fx-pref-width:40px;
+    -fx-pref-height:40px;
+    -fx-font-size:13px;
+    -fx-font-weight:400;
+    -fx-padding:0px;
+    -fx-background-radius:20px;
+    -fx-background-insets:5px 5px;
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.cf-date-picker .cf-date-button:hover{
+    -fx-text-fill:primary-color;
+}
+.cf-date-picker .cf-date-button:selected{
+    -fx-background-color:primary-color;
+    -fx-text-fill:rgb(255,255,255);
+}
+.cf-date-picker .cf-b-button, .cf-date-picker .cf-b-button > .ikonli-font-icon{
+    -fx-background-color:transparent;
+}
+.cf-date-picker .cf-b-button:hover,.cf-date-picker .cf-b-button:hover > .ikonli-font-icon{
+    -fx-text-fill: primary-color;
+    -fx-icon-color: primary-color;
+}
+/***********************************
+    CFTimePicker 时间选择器
+***********************************/
+.cf-time-picker{
+    -fx-font-size:14px;
+    -fx-background-color:rgb(255,255,255);
+    -fx-pref-height:250px;
+}
+.cf-time-picker .list-view{
+    -fx-pref-width:60px;
+}
+.cf-time-but{
+    -fx-pref-width:40px;
+    -fx-pref-height:30px;
+    -fx-font-size:13px;
+    -fx-font-weight:400;
+    -fx-padding:0px;
+    -fx-background-insets:0px;
+    -fx-background-color:transparent;
+}
+.cf-time-picker .cf-time-but:selected{
+    -fx-text-fill:primary-color;
+}
+.cf-time-picker .list-view{
+    -fx-background-insets: 0px;
+    -fx-background-color:transparent;
+}
+.cf-time-picker .list-view .cell.indexed-cell.list-cell{
+    -fx-alignment:center;
+    -fx-background-color:transparent;
+}
+.cf-time-picker .list-view .cell.indexed-cell.list-cell:hover .cf-time-but{
+    -fx-background-color:rgba(0,0,0,0.1);
+}
+/***********************************
+    CFMenu 菜单栏
+***********************************/
+.cf-menu{
+    -fx-font-size:16px;
+    -fx-font-weight:600;
+    -fx-text-fill:text-color;
+    -fx-border-color:border-color;
+    -fx-border-radius:3px;
+    -fx-background-insets: 0px;
+    -fx-background-color:transparent;
+    -fx-padding:5px 0 5px 0;
+}
+.cf-menu .scroll-bar{
+    -fx-opacity:0;
+}
+.cf-menu:hover .scroll-bar{
+    -fx-opacity:1;
+}
+.cf-menu .cell.indexed-cell.list-cell{
+    -fx-background-color:transparent;
+    -fx-padding:0px;
+}
+.cf-menu .cell.indexed-cell.list-cell:empty:hover{
+    -fx-background-color:transparent;
+}
+.cf-menu .cell.indexed-cell.list-cell:hover{
+    -fx-background-color:rgba(0,0,0,0.05);
+}
+.cf-menu .cell.indexed-cell.list-cell:selected{
+    -fx-background-color:rgba(0,0,0,0.1);
+}
+.cf-menu .cell.indexed-cell.list-cell .cf-menu-item{
+    -fx-spacing:20px;
+    -fx-padding:10px 10px 10px 10px;
+    -fx-border-width:0 5px 0 5px;
+    -fx-border-color: transparent transparent transparent transparent;
+}
+.cf-menu .cell.indexed-cell.list-cell:selected .cf-menu-item{
+    -fx-border-color: transparent primary-color transparent transparent;
+    -fx-text-fill:primary-color;
+    -fx-border-width:0 5px 0 5px;
+}
+.cf-menu .cell.indexed-cell.list-cell:selected .name-label{
+    -fx-text-fill:primary-color;
+}
+.cf-menu .cell.indexed-cell.list-cell:selected .icon-label > .ikonli-font-icon{
+    -fx-icon-color: primary-color;
+}
+/***********************************
+    CFStage 窗口
+***********************************/
+.cf-stage > .stage-shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10.0,0, 0, 0);
+    -fx-background-color:rgba(255,255,255);
+    -fx-background-radius:3px;
+}
+.cf-stage > .stage-shadow > .stage-box{
+
+}
+.cf-stage > .stage-shadow > .stage-box >.title-pane{
+    -fx-padding:5px;
+    -fx-border-color:transparent transparent border-color transparent;
+}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .title-box,
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box{
+    -fx-spacing:8px;
+}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .hide-but,
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .maximize-but,
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .close-but{
+    -fx-padding:0px;
+    -fx-pref-width:18px;
+    -fx-pref-height:18px;
+    -fx-background-radius:9px;
+    -fx-background-color:red;
+    -fx-background-insets:0;
+    -fx-cursor:hand;
+}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .hide-but{-fx-background-color:info-color;}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .maximize-but{-fx-background-color:primary-color;}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .close-but{-fx-background-color:danger-color;}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .hide-but:pressed{-fx-background-color:derive(info-color,-20%);}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .maximize-but:pressed{-fx-background-color:derive(primary-color,-20%);}
+.cf-stage > .stage-shadow > .stage-box >.title-pane > .but-box > .close-but:pressed{-fx-background-color:derive(danger-color,-20%);}
+/***********************************
+    CFMessageBox 消息弹框
+***********************************/
+.cf-message-box{
+    -fx-padding:10px;
+}
+.cf-message-box > .message-content .label{
+    -fx-font-size:14px;
+}
+.cf-message-box > .message-but-bar > .message-but-box{
+    -fx-spacing:10px;
+}
+/***********************************
+    CFLoading 加载
+***********************************/
+.cf-loading{
+    -fx-background-color:rgba(0,0,0,0.6);
+}
+.cf-loading > .loading-box{
+    -fx-spacing:20px;
+    -fx-alignment:center;
+}
+.cf-loading > .loading-box > .message-label{
+    -fx-font-size:14px;
+    -fx-text-fill:primary-color;
+}
+/***********************************
+    CFSwitch 开关
+***********************************/
+.cf-switch{
+    -fx-pref-height:32px;
+    -fx-pref-width:64px;
+    -fx-min-width:64px;
+    -fx-background-color:border-color;
+    -fx-background-radius:16px;
+    -fx-padding:2px;
+    -fx-cursor:hand;
+}
+.cf-switch.open-class{
+    -fx-background-color:primary-color;
+}
+.cf-switch > .switch-label{
+    -fx-pref-height:28px;
+    -fx-pref-width:28px;
+    -fx-background-color:rgb(255,255,255);
+    -fx-background-radius:14px;
+    -fx-background-insets:0;
+    -fx-alignment:center;
+}
+.cf-switch > .switch-label > .ikonli-font-icon{
+    -fx-icon-size:25px;
+    -fx-icon-color: primary-color;
+}
+/***********************************
+    CFTooltip 文字提示
+***********************************/
+.cf-tooltip .content{
+    -fx-padding:10px;
+    -fx-background-color:rgba(0,0,0,0.8);
+}
+.cf-tooltip .arrow{
+    -fx-fill:rgba(0,0,0,0.8);
+}
+.cf-tooltip .tooltip-text{
+    -fx-font-size:14px;
+    -fx-fill:rgb(255,255,255);
+}
+/***********************************
+    CFAlert 警告
+***********************************/
+.cf-alert{
+    -fx-min-height:35px;
+    -fx-font-size:14px;
+    -fx-text-fill:primary-color;
+    -fx-background-color:derive(primary-color,90%);
+    -fx-background-radius:3px;
+    -fx-padding: 0 15px 0 15px;
+    -fx-alignment:center;
+    -fx-spacing:10px;
+    -fx-border-radius:3px;
+    -fx-border-color:derive(primary-color,70%);
+}
+.cf-alert > .text{
+    -fx-text-fill:primary-color;
+}
+.cf-alert > .icon > .ikonli-font-icon{
+    -fx-icon-color: primary-color;
+    -fx-icon-size:20px;
+}
+.cf-alert.success{-fx-background-color:derive(success-color,90%);-fx-border-color:derive(success-color,70%);}
+.cf-alert.success  > .text{-fx-text-fill:success-color;}
+.cf-alert.success > .icon > .ikonli-font-icon{-fx-icon-color: success-color;}
+.cf-alert.info{-fx-background-color:derive(info-color,90%);-fx-border-color:derive(info-color,70%);}
+.cf-alert.info  > .text{-fx-text-fill:info-color;}
+.cf-alert.info > .icon > .ikonli-font-icon{-fx-icon-color: info-color;}
+.cf-alert.warn{-fx-background-color:derive(warn-color,90%);-fx-border-color:derive(warn-color,70%);}
+.cf-alert.warn  > .text{-fx-text-fill:warn-color;}
+.cf-alert.warn > .icon > .ikonli-font-icon{-fx-icon-color: warn-color;}
+.cf-alert.danger{-fx-background-color:derive(danger-color,90%);-fx-border-color:derive(danger-color,70%);}
+.cf-alert.danger  > .text{-fx-text-fill:danger-color;}
+.cf-alert.danger > .icon > .ikonli-font-icon{-fx-icon-color: danger-color;}
+.cf-alert > .close > .ikonli-font-icon{
+    -fx-icon-color: text-color;
+}
+/***********************************
+    CFImage 图片
+***********************************/
+.cf-image{
+/*    -fx-background-color:rgb(255,255,255);
+    -fx-border-color:border-color;*/
+}
+.cf-image .view{
+    -fx-cursor:hand;
+}
+.cf-image:hover{
+    /*-fx-border-color:rgba(0, 0, 0, 0.45);*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.9), 20.0, 0, 0, 0);
+}
+/***********************************
+    CFNotification 通知
+***********************************/
+.cf-notification{
+    -fx-padding:20px;
+}
+.cf-notification > .container{
+    -fx-text-fill:text-color;
+    -fx-font-size:14px;
+    -fx-min-width:300px;
+    -fx-max-width:300px;
+    -fx-pref-height:100px;
+    -fx-padding:10px;
+    -fx-background-color:rgb(255,255,255);
+    -fx-background-radius:3px;
+    -fx-border-color:border-color;
+    -fx-border-radius:3px;
+    -fx-spacing:10px;
+}
+.cf-notification > .container > .right-box{
+    -fx-spacing:15px;
+}
+.cf-notification > .container > .icon-label > .ikonli-font-icon{
+    -fx-icon-color: primary-color;
+    -fx-icon-size:25px;
+}
+.cf-notification > .container > .icon-label.success > .ikonli-font-icon{-fx-icon-color: success-color;}
+.cf-notification > .container > .icon-label.info > .ikonli-font-icon{-fx-icon-color: info-color;}
+.cf-notification > .container > .icon-label.warn > .ikonli-font-icon{-fx-icon-color: warn-color;}
+.cf-notification > .container > .icon-label.danger > .ikonli-font-icon{-fx-icon-color: danger-color;}
+.cf-notification > .container > .right-box > .title-box > .title-label{
+    -fx-font-weight:700;
+    -fx-font-size:15px;
+}
+.cf-notification > .container > .right-box > .title-box > .close-label{
+    -fx-cursor:hand;
+}
+/***********************************
+    CFMessage 消息提示
+***********************************/
+.cf-message-box{
+    -fx-pref-width:350px;
+    -fx-spacing:10px;
+    -fx-background-color:transparent;
+}
+.cf-message-box > .cf-alert{
+    -fx-pref-height:45px;
+}
+/***********************************
+    CFMessage 消息提示
+***********************************/
+.cf-card{
+    -fx-background-color:rgb(255,255,255);
+    -fx-background-radius:3px;
+    -fx-border-color:border-color;
+    -fx-border-radius:3px;
+}
+.cf-card:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 20.0, 0, 0, 4);
+}
+.cf-card > .card-root > .container{
+    -fx-spacing:10px;
+}
+.cf-card > .card-root > .container > .title-label{
+    -fx-padding: 0 10px;
+    -fx-font-size:15px;
+    -fx-font-weight:700;
+    -fx-text-fill:text-color;
+}
+.cf-card > .card-root > .container > .describe{
+    -fx-padding: 0 10px 10px 10px;
+    -fx-font-size:14px;
+    -fx-text-fill:#606266;
+}
+.cf-card > .card-root > .but-pane{
+    -fx-background-color:rgba(0,0,0,0.1);
+}
+/***********************************
+    CFTabs 标签页
+***********************************/
+.cf-tabs{
+
+}
+.cf-tabs > .tabs-header{
+    -fx-background-color:primary-color;
+    -fx-padding: 0 5px 0 5px;
+    -fx-spacing:5px;
+    -fx-alignment:center-left;
+}
+.cf-tabs > .tab-content{
+    -fx-background-color:rgb(255,255,255);
+}
+.cf-tabs > .tabs-header > .add-tab-but,.cf-tabs > .tabs-header > .tab-list-but{
+    -fx-background-color:transparent;
+    -fx-background-insets:0;
+    -fx-background-radius:3px;
+    -fx-pref-height:30px;
+    -fx-pref-width:30px;
+    -fx-cursor:hand;
+    -fx-padding:0px;
+}
+.cf-tabs > .tabs-header > .add-tab-but:hover,.cf-tabs > .tabs-header > .tab-list-but:hover{
+    -fx-background-color:rgba(0,0,0,0.1);
+}
+.cf-tabs > .tabs-header > .add-tab-but > .ikonli-font-icon,
+.cf-tabs > .tabs-header > .tab-list-but > .ikonli-font-icon{
+    -fx-icon-size:16px;
+    -fx-icon-color:text-color;
+}
+.cf-tabs > .tabs-header > .tabs-list{
+    -fx-orientation:horizontal;
+    -fx-background-insets:0px;
+    -fx-pref-height:45px;
+    -fx-padding:0;
+    -fx-background-insets: 0px;
+    -fx-background-color:transparent;
+}
+.cf-tabs > .tabs-header > .tabs-list .scroll-bar > .thumb{-fx-opacity:0px;}
+.cf-tabs > .tabs-header > .tabs-list:hover .scroll-bar > .thumb{-fx-opacity:1px;}
+.cf-tabs > .tabs-header > .tabs-list .cell.indexed-cell.list-cell{
+    -fx-padding:0 5px 0 0;
+    -fx-alignment:center;
+    -fx-background-color:transparent;
+}
+.cf-tabs > .tabs-header > .tabs-list .cell.indexed-cell.list-cell:last-visible{
+    -fx-padding:0;
+}
+.cf-tab{
+    -fx-max-height:35px;
+    -fx-min-width:100px;
+    -fx-max-width:200px;
+    -fx-background-radius:3px;
+    -fx-alignment:center-left;
+    -fx-spacing:5px;
+    -fx-padding:5px;
+}
+.cf-tabs > .tabs-header > .tabs-list .cell.indexed-cell.list-cell:hover .cf-tab{
+    -fx-background-color:rgba(0,0,0,0.1);
+}
+.cf-tabs > .tabs-header > .tabs-list .cell.indexed-cell.list-cell:selected .cf-tab{
+    -fx-background-color:rgb(255,255,255);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 5.0, 0, 0, 0);
+}
+.cf-tabs > .tabs-header > .tabs-list .cell.indexed-cell.list-cell:selected .cf-tab > .tab-label{
+    -fx-text-fill:text-color;
+}
+.cf-tab > .tab-label{
+    -fx-font-size:14px;
+    -fx-text-fill:text-color;
+}
+.cf-tab > .tab-close-but{
+    -fx-padding:0px;
+    -fx-pref-height:16px;
+    -fx-min-width:16px;
+    -fx-background-color:transparent;
+    -fx-background-radius:8px;
+    -fx-background-insets:0;
+    -fx-font-size:12px;
+    -fx-cursor:hand;
+}
+.cf-tab > .tab-close-but:hover{
+    -fx-background-color:rgba(0,0,0,0.2);
+}
