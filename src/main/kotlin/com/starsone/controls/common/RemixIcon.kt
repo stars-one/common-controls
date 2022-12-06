@@ -10,8 +10,8 @@ import tornadofx.*
 
 object RemixIconData {
 
-    val iconIndexMap by lazy{
-        val tempMap = hashMapOf<String,String>()
+    val iconIndexMap by lazy {
+        val tempMap = hashMapOf<String, String>()
         val resources = ResourceLookup(this)
         //加载图标字体文件
         val jsonArray = loadJsonArray(resources.text(jsonPath))
@@ -28,6 +28,32 @@ object RemixIconData {
 
     val jsonPath = "/ttf/remixicon.json"
     val fontPath = "/ttf/remixicon.ttf"
+}
+
+class RemixIconText(iconName: String) : Text() {
+    var fontSize = 25
+    var fontColor = c("black")
+
+    init {
+        font = loadFont(RemixIconData.fontPath, fontSize)!!
+        text = RemixIconData.iconIndexMap[iconName]
+        style {
+            fill = fontColor
+        }
+    }
+}
+
+class RemixIconLabel(iconName: String) : Label() {
+    var fontSize = 25
+    //var fontColor = c("black")
+
+    init {
+        font = loadFont(RemixIconData.fontPath, fontSize)!!
+        text = RemixIconData.iconIndexMap[iconName]
+        //style {
+        //    fill = fontColor
+        //}
+    }
 }
 
 /**
