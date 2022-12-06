@@ -53,6 +53,7 @@ class CFMessage private constructor(stackPane: StackPane) {
         messageBox.children.add(cfAlert)
         transitionPlay(cfAlert)
     }
+
     /**
      * 创建消息提示
      *
@@ -104,20 +105,30 @@ class CFMessage private constructor(stackPane: StackPane) {
     }
 
     companion object {
+        var isTop = true
+
         /**
          * 绑定容器，一般可以定义一个顶级的容器来存放消息提示
          *
          * @param stackPane
+         * @param isTop 通知的出现顺序 true:从上往下 false:从下往上
          * @return
          */
-        fun bindingContainer(stackPane: StackPane): CFMessage {
+        fun bindingContainer(stackPane: StackPane, isTop: Boolean = true): CFMessage {
+            this.isTop = isTop
             return CFMessage(stackPane)
         }
     }
 
     init {
         stackPane.children.add(messageBox)
-        StackPane.setAlignment(messageBox, Pos.TOP_CENTER)
+        if (isTop) {
+            StackPane.setAlignment(messageBox, Pos.TOP_CENTER)
+        } else {
+            //这里可以改变顺序,从底上往上展示
+            StackPane.setAlignment(messageBox, Pos.BOTTOM_CENTER)
+        }
+
     }
 
 }
