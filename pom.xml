@@ -154,5 +154,13 @@
             <artifactId>commons-text</artifactId>
             <version>1.9</version>
         </dependency>
+        <!--https://github.com/Glavo/MaterialFX-Java8-->
+        <dependency>
+            <groupId>org.glavo.materialfx</groupId>
+            <artifactId>materialfx</artifactId>
+            <version>11.13.5</version>
+            <!--暂时测试-->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
