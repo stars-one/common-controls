@@ -1,8 +1,10 @@
 package com.starsone.controls.common
 
 import com.jfoenix.controls.JFXButton
+import com.jfoenix.controls.JFXToggleButton
 import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
+import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.event.EventTarget
 import javafx.geometry.Pos
@@ -429,3 +431,22 @@ fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleString
     return opcr(this, hbox, op)
 }
 
+/**
+ * 开关组件
+ *
+ * @param selectBooleanProperty
+ * @param desc 描述内容
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.xSwitch(selectBooleanProperty: SimpleBooleanProperty, desc: String,op: (JFXToggleButton.() -> Unit) = {}): JFXToggleButton {
+    val node = JFXToggleButton().apply {
+        text = desc
+        selectedProperty().addListener { _, _, newValue ->
+            selectBooleanProperty.set(newValue)
+        }
+        selectBooleanProperty.set(selectBooleanProperty.value)
+    }
+    return opcr(this, node, op)
+}
