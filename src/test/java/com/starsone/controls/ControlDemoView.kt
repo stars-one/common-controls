@@ -2,7 +2,9 @@ package com.starsone.controls
 
 import com.starsone.controls.common.remixIconText
 import com.starsone.controls.common.xChooseFileDirectory
+import com.starsone.controls.common.xSwitch
 import com.starsone.controls.utils.TornadoFxUtil
+import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleStringProperty
 import kfoenix.jfxbutton
 import tornadofx.*
@@ -29,6 +31,24 @@ class ControlDemoView : View("My View") {
         })
 
         println("本机序列号为 ${TornadoFxUtil.getDeviceSn()}")
+
+        val select = SimpleBooleanProperty()
+
+        xSwitch(select, "开启自动更新") {
+            toggleColor = c("blue")
+            toggleLineColor =c("red")
+
+            unToggleColor = c("green")
+            unToggleLineColor = c("orange")
+        }
+
+        button {
+            action {
+                println(select.value)
+            }
+        }
+
+
     }
 
 
