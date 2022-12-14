@@ -434,7 +434,14 @@ fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleString
 
 /**
  * 开关组件
- * 想要文字在前,图标在后,可以设置属性`nodeOrientation = NodeOrientation.RIGHT_TO_LEFT`
+ * - 想要文字在前,图标在后,可以设置属性`nodeOrientation = NodeOrientation.RIGHT_TO_LEFT`
+ * - 修改颜色属性示例代码
+ ```
+    toggleColor = c("blue")
+    toggleLineColor =c("red")
+    unToggleColor = c("green")
+    unToggleLineColor = c("orange")
+  ```
  * @param desc 描述内容
  * @param property 监听
  * @param op
