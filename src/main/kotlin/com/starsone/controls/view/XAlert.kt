@@ -12,13 +12,12 @@ import tornadofx.*
 import java.util.function.Consumer
 
 /**
- * @author ChenFei
- * @date 2022/7/8
+ * 窗口内通知条
+ * @author stars-one
+ * @date 2022-12-14 22:35:36
  *
- *
- * CFAlert 警报
  */
-class CFAlert(text: String) : HBox() {
+class XAlert(text: String) : HBox() {
     private val iconLabel = Label()
     private val textLabel = Label()
     private val closeLabel = Label()
@@ -35,11 +34,24 @@ class CFAlert(text: String) : HBox() {
     }
 
     companion object {
-        fun create(text: String): CFAlert {
-            return CFAlert(text)
+        /**
+         * 创建纯文字的提示
+         *
+         * @param text
+         * @return
+         */
+        fun create(text: String): XAlert {
+            return XAlert(text)
         }
 
-        fun create(text: String, alertLevel: AlertLevel): CFAlert {
+        /**
+         * 创建图标和文字提示
+         *
+         * @param text 文字提示
+         * @param alertLevel 等级(包含了图标)
+         * @return
+         */
+        fun create(text: String, alertLevel: AlertLevel): XAlert {
             val node = RemixIconText(alertLevel.iconName)
             node.style(true) {
                 fill = c(alertLevel.iconColor)
@@ -49,15 +61,21 @@ class CFAlert(text: String) : HBox() {
             return cfAlert
         }
 
-        fun create(text: String, node: Node): CFAlert {
+        /**
+         * 创建文本提示和节点
+         *
+         * @param text 文字
+         * @param node 节点
+         * @return
+         */
+        fun create(text: String, node: Node): XAlert {
             val cfAlert = Companion[node, text]
-            //todo 这里的等级需要调整
             cfAlert.styleClass.add("primary")
             return cfAlert
         }
 
-        private operator fun get(graphic: Node, text: String): CFAlert {
-            val cfAlert = CFAlert(text)
+        private operator fun get(graphic: Node, text: String): XAlert {
+            val cfAlert = XAlert(text)
             cfAlert.iconLabel.graphic = graphic
             return cfAlert
         }
@@ -80,6 +98,14 @@ class CFAlert(text: String) : HBox() {
     }
 }
 
+/**
+ * 通知等级,不同等级有不同颜色和图标
+ *
+ * @property level
+ * @property iconName
+ * @property iconColor
+ * @constructor Create empty Alert level
+ */
 enum class AlertLevel(val level: String, val iconName: String, val iconColor: String) {
     PRIMARY("primary", "message-3-fill", "#5C80EF"),
     SUCCESS("success", "checkbox-circle-fill", "#33C437"),
