@@ -16,9 +16,7 @@ class DialogDemoView : View("My View") {
 
     val dirPath = SimpleStringProperty("555")
     override val root = vbox {
-        importStylesheet("/chenfei/core.css")
-        importStylesheet("/chenfei/color.css")
-        importStylesheet("/chenfei/control.css")
+
 
         setPrefSize(600.0, 400.0)
         style {
