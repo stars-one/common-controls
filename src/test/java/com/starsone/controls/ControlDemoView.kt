@@ -34,7 +34,7 @@ class ControlDemoView : View("My View") {
 
         val select = SimpleBooleanProperty()
 
-        xSwitch(select, "开启自动更新") {
+        xSwitch( "开启自动更新",select) {
             toggleColor = c("blue")
             toggleLineColor =c("red")
 
