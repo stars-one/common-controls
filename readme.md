@@ -46,8 +46,10 @@ TornadoFX交流群：1071184701
     * [加载对话框](#加载对话框)
     * [关闭程序对话框](#关闭程序对话框)
     * [右下角弹窗](#右下角弹窗)
+    * [单选框对话框](#单选框对话框)
     * [检测更新对话框](#检测更新对话框)
     * [自定义对话框](#自定义对话框)
+    * [窗口通知条(新增)](#窗口通知条)
   * [2.检测更新功能](#2检测更新功能)
   * [3.常用方法](#3常用方法)
   * [4.常用控件](#4常用控件)
@@ -64,8 +66,6 @@ TornadoFX交流群：1071184701
     * [3.关于GlobalDataConfig方法补充](#3关于globaldataconfig方法补充)
   * [8.系统剪贴板监听](#8系统剪贴板监听)
   * [9.字体图标组件](#9字体图标组件)
-
-
 
 
 ## 引入依赖
@@ -289,6 +289,33 @@ val alert = DialogBuilder(currentStage)
                 .setNegativeBtn("确定")
                 .create()
 ```
+### 窗口通知条
+
+> 在版本2.1.0添加的组件
+
+效果如下:
+![](https://img2023.cnblogs.com/blog/1210268/202212/1210268-20221214234302404-1791077472.gif)
+
+使用
+```kotlin
+override val root = vbox {
+    //绑定一个当前根布局容器!
+    val cfMessage = XMessage.bindingContainer(this)
+    button("普通文字弹窗") {
+        action {
+            //弹窗
+            cfMessage.create("hello")
+        }
+    }
+    button("错误弹窗") {
+        action {
+            //可以选择不同等级的提示弹窗
+            cfMessage.create("抱歉,删除失败", AlertLevel.DANGER)
+        }
+    }
+}
+
+```
 ## 2.检测更新功能
 
 ![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200718205016359-489175058.png)
@@ -368,6 +395,7 @@ jfxbutton("检测更新") {
 |remixIconText|显示字体图标,[点击查看使用说明](#9字体图标组件)|remixIconText("home-4-fill", c("red"),29)|
 |remixIconButton|圆形图标按钮| remixIconButton("home-4-fill")|
 |remixIconButtonWithBorder|圆形图标按钮(带边框)|remixIconButtonWithBorder("home-4-fill")|
+|xSwitch|开关组件|xSwitch("功能开关")|
 
 
 ## 5.下载框架
