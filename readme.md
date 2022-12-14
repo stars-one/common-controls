@@ -291,7 +291,7 @@ val alert = DialogBuilder(currentStage)
 ```
 ### 窗口通知条
 
-> 在版本2.1.0添加的组件
+> 在版本2.1.1添加的组件
 
 效果如下:
 ![](https://img2023.cnblogs.com/blog/1210268/202212/1210268-20221214234302404-1791077472.gif)
