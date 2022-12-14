@@ -24,6 +24,10 @@ class XMessage private constructor(stackPane: StackPane) {
     private val messageBox = VBox()
 
     init {
+        importStylesheet("/chenfei/core.css")
+        importStylesheet("/chenfei/color.css")
+        importStylesheet("/chenfei/control.css")
+        
         messageBox.maxWidth = Double.NEGATIVE_INFINITY
         messageBox.maxHeight = Double.NEGATIVE_INFINITY
         //styleClass
