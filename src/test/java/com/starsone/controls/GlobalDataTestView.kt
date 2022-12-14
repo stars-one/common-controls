@@ -1,5 +1,6 @@
 package com.starsone.controls
 
+import com.starsone.controls.common.xSwitch
 import com.starsone.controls.utils.GlobalDataConfig
 import com.starsone.controls.utils.GlobalDataConfigUtil
 import tornadofx.*
@@ -24,6 +25,8 @@ class GlobalDataTestView : View("My View") {
         prefHeight = 500.0
 
         checkbox("开启某功能", viewModel.booleanFlag)
+
+        xSwitch("开启开关",viewModel.booleanFlag)
 
         hbox {
             text("string绑定")
