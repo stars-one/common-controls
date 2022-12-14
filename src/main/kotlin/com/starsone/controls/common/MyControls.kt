@@ -4,8 +4,9 @@ import com.jfoenix.controls.JFXButton
 import com.jfoenix.controls.JFXToggleButton
 import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
-import javafx.beans.property.SimpleBooleanProperty
+import javafx.beans.property.Property
 import javafx.beans.property.SimpleStringProperty
+import javafx.beans.value.ObservableValue
 import javafx.event.EventTarget
 import javafx.geometry.Pos
 import javafx.scene.Node
@@ -434,19 +435,44 @@ fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleString
 /**
  * 开关组件
  *
- * @param selectBooleanProperty
  * @param desc 描述内容
+ * @param property 监听
  * @param op
  * @receiver
  * @return
  */
-fun EventTarget.xSwitch(selectBooleanProperty: SimpleBooleanProperty, desc: String,op: (JFXToggleButton.() -> Unit) = {}): JFXToggleButton {
+fun EventTarget.xSwitch(desc: String, property: Property<Boolean>? = null, op: (JFXToggleButton.() -> Unit) = {}): JFXToggleButton {
     val node = JFXToggleButton().apply {
         text = desc
-        selectedProperty().addListener { _, _, newValue ->
-            selectBooleanProperty.set(newValue)
-        }
-        selectBooleanProperty.set(selectBooleanProperty.value)
+        if (property != null) bind(property)
     }
     return opcr(this, node, op)
 }
+
+/**
+ * Toggle button
+ *
+ * @param desc 描述
+ * @param property
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.toggleButton(desc: String, property: Property<Boolean>? = null, op: (ToggleButton.() -> Unit) = {}): ToggleButton{
+    val node = ToggleButton(desc).apply {
+        if (property != null) bind(property)
+    }
+    return opcr(this,node,op)
+}
+
+fun ToggleButton.bind(property: ObservableValue<Boolean>, readonly: Boolean = false) =
+        selectedProperty().internalBind(property, readonly)
+
+fun <T> Property<T>.internalBind(property: ObservableValue<T>, readonly: Boolean) {
+    ViewModel.register(this, property)
+
+    if (readonly || (property !is Property<*>)) bind(property) else bindBidirectional(property as Property<T>)
+}
+
+
+
