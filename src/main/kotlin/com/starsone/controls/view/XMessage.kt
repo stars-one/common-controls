@@ -37,7 +37,7 @@ class XMessage private constructor(stackPane: StackPane) {
      * @param message
      */
     fun create(message: String) {
-        val cfAlert = CFAlert.create(message)
+        val cfAlert = XAlert.create(message)
         messageBox.children.add(cfAlert)
         transitionPlay(cfAlert)
     }
@@ -48,7 +48,7 @@ class XMessage private constructor(stackPane: StackPane) {
      * @param message
      */
     fun create(message: String, node: Node) {
-        val cfAlert = CFAlert.create(message, node)
+        val cfAlert = XAlert.create(message, node)
         messageBox.children.add(cfAlert)
         transitionPlay(cfAlert)
     }
@@ -59,7 +59,7 @@ class XMessage private constructor(stackPane: StackPane) {
      * @param message
      */
     fun create(message: String, alertLevel: AlertLevel) {
-        val cfAlert = CFAlert.create(message, alertLevel)
+        val cfAlert = XAlert.create(message, alertLevel)
         messageBox.children.add(cfAlert)
         transitionPlay(cfAlert)
     }
@@ -67,13 +67,13 @@ class XMessage private constructor(stackPane: StackPane) {
     /**
      * 出现，消失动画
      *
-     * @param cfAlert
+     * @param xAlert
      */
-    private fun transitionPlay(cfAlert: CFAlert) {
+    private fun transitionPlay(xAlert: XAlert) {
         //移动动画
-        val translateTransition = TranslateTransition(Duration.millis(300.0), cfAlert)
+        val translateTransition = TranslateTransition(Duration.millis(300.0), xAlert)
         //透明度动画
-        val fadeTransition = FadeTransition(Duration.millis(300.0), cfAlert)
+        val fadeTransition = FadeTransition(Duration.millis(300.0), xAlert)
         val parallelTransition = ParallelTransition(translateTransition, fadeTransition)
         //出现动画
         translateTransition.fromY = -30.0
@@ -97,7 +97,7 @@ class XMessage private constructor(stackPane: StackPane) {
                     fadeTransition.fromValue = 1.0
                     fadeTransition.toValue = 0.0
                     parallelTransition.play()
-                    parallelTransition.onFinished = EventHandler { event1: ActionEvent? -> messageBox.children.remove(cfAlert) }
+                    parallelTransition.onFinished = EventHandler { event1: ActionEvent? -> messageBox.children.remove(xAlert) }
                 }
             }.start()
         }
