@@ -150,7 +150,7 @@ class DialogDemoView : View("My View") {
         //val cfMessage = CFMessage.bindingContainer(this@stackpane,false)
 
         val cfMessage = XMessage.bindingContainer(this)
-        button("普通弹窗") {
+        button("普通文字弹窗") {
             action {
                 cfMessage.create("hello")
             }
