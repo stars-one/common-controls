@@ -434,7 +434,7 @@ fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleString
 
 /**
  * 开关组件
- *
+ * 想要文字在前,图标在后,可以设置属性`nodeOrientation = NodeOrientation.RIGHT_TO_LEFT`
  * @param desc 描述内容
  * @param property 监听
  * @param op
