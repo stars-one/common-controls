@@ -158,6 +158,11 @@ class DialogDemoView : View("My View") {
                 cfMessage.create("抱歉,删除失败", AlertLevel.DANGER)
             }
         }
+        button("警告文字弹窗") {
+            action {
+                cfMessage.create("hello",AlertLevel.WARN)
+            }
+        }
     }
 
 }

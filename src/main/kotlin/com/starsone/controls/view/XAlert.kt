@@ -110,7 +110,7 @@ enum class AlertLevel(val level: String, val iconName: String, val iconColor: St
     PRIMARY("primary", "message-3-fill", "#5C80EF"),
     SUCCESS("success", "checkbox-circle-fill", "#33C437"),
     INFO("info", "information-fill", "#68C0FF"),
-    WARN("warn", "error-warning-fill", "#FFDC42"),
+    WARN("warn", "error-warning-fill", "#e6a23c"),
     DANGER("danger", "close-circle-fill", "#FF4B3A")
 }
 
