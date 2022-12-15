@@ -27,7 +27,7 @@ class XMessage private constructor(stackPane: StackPane) {
         importStylesheet("/chenfei/core.css")
         importStylesheet("/chenfei/color.css")
         importStylesheet("/chenfei/control.css")
-        
+
         messageBox.maxWidth = Double.NEGATIVE_INFINITY
         messageBox.maxHeight = Double.NEGATIVE_INFINITY
         //styleClass
@@ -136,6 +136,7 @@ class XMessage private constructor(stackPane: StackPane) {
             if (pane is StackPane) {
                 return bindingContainer(pane, isTop)
             } else {
+                //todo 这样替换会导致样式出现丢失,如vbox设置了space属性
                 //如果绑定的不是stackpane
                 //    1.则判断原来的pane是何种类型,将其所以节点移到同类型的一个tempPane
                 //    2.创建stackpane,将tempPane节点放入其中
