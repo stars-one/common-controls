@@ -291,31 +291,43 @@ val alert = DialogBuilder(currentStage)
 ```
 ### 窗口通知条
 
-> 在版本2.1.1添加的组件
+XMessage
+
+> 版本2.1.1添加的组件
 
 效果如下:
 ![](https://img2023.cnblogs.com/blog/1210268/202212/1210268-20221214234302404-1791077472.gif)
 
-使用
+使用：
 ```kotlin
-override val root = vbox {
-    //绑定一个当前根布局容器!
-    val cfMessage = XMessage.bindingContainer(this)
-    button("普通文字弹窗") {
-        action {
-            //弹窗
-            cfMessage.create("hello")
+class TestView : View("My View") {
+
+    var message by singleAssign<XMessage>()
+
+    override val root = vbox {
+        setPrefSize(700.0, 400.0)
+       
+        button("测试1") {
+            action{
+                message.create("HELLO", AlertLevel.DANGER)
+            }
         }
-    }
-    button("错误弹窗") {
-        action {
-            //可以选择不同等级的提示弹窗
-            cfMessage.create("抱歉,删除失败", AlertLevel.DANGER)
+        button("测试2") {
+            action{
+                message.create("HELLO222", AlertLevel.DANGER)
+            }
         }
+        //这个必须放在最后
+        message = XMessage.bindingContainer(this)
+        
     }
 }
-
 ```
+
+默认用法是要提供一个顶级的根布局，其必须是StackPane，但目前我改造了下，**可以使用任意Pane，但是需要把初始化的方法放在最后面**
+
+> PS：`bindingContainer()`绑定的布局一定不要涉及节点的变换操作（如添加，删除等），会导致样式出问题！
+
 ## 2.检测更新功能
 
 ![](https://img2020.cnblogs.com/blog/1210268/202007/1210268-20200718205016359-489175058.png)
