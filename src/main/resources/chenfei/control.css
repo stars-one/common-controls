@@ -377,7 +377,6 @@
     CFMessage 消息提示
 ***********************************/
 .cf-message-box{
-    -fx-pref-width:350px;
     -fx-spacing:10px;
     -fx-background-color:transparent;
 }
