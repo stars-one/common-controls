@@ -155,7 +155,7 @@ class DialogDemoView : View("My View") {
         }
         button("错误弹窗") {
             action {
-                cfMessage.create("抱歉,删除失败", AlertLevel.DANGER)
+                cfMessage.create("当前列表数据为空哦,请先输入音乐链接进行解析吧!", AlertLevel.DANGER)
             }
         }
         button("警告文字弹窗") {
