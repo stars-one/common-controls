@@ -218,6 +218,19 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
     }
 
     /**
+     * 设置暂无数据的占位图
+     *
+     * @param node 组件
+     * @return
+     */
+    fun setNoDataMsg(node:Node): XRecyclerView<beanT, itemViewT> {
+        noDataVBox = vbox {
+            this+=node
+        }
+        return this
+    }
+
+    /**
      * 设置水平滚动条的显示方式
      * @param way 显示方式，never(不显示） always（一直显示） asneed（自动根据需要显示）
      */
