@@ -144,7 +144,6 @@ class XMessage private constructor(stackPane: StackPane) {
                 val tempPane = when (pane) {
                     is VBox -> VBox()
                     is HBox -> HBox()
-                    is StackPane -> StackPane()
                     is AnchorPane -> AnchorPane()
                     else -> StackPane()
                 }
