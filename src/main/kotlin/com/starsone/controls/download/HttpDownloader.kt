@@ -1,5 +1,6 @@
 package com.starsone.controls.download
 
+import com.starsone.controls.utils.TornadoFxUtil
 import java.io.File
 import java.io.IOException
 import java.net.HttpURLConnection
@@ -16,6 +17,7 @@ class HttpDownloader(private val url: String, private val file: String) {
     private var lastDownload = 0
     private var sizeRead = 0
     private var speedByte = 0
+
     /**
      * 计算速度
      */
@@ -50,7 +52,7 @@ class HttpDownloader(private val url: String, private val file: String) {
                     File(defaultFileName)
                 }
             } else {
-                File(file)
+                File(TornadoFxUtil.getCurrentJarDirPath(), file)
             }
             val inputStream = httpConnection.inputStream
             val completeFileSize = httpConnection.contentLength
