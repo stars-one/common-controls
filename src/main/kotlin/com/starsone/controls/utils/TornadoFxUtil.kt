@@ -344,8 +344,14 @@ class TornadoFxUtil {
         fun getCurrentJarPath(): File {
             val url = ResourceLookup(this).url("/ttf/remixicon.ttf")
             val path = url.path
-            val filePath = path.substringBeforeLast("!/")
-            return File(URI.create(filePath))
+            if (path.contains("common-controls")) {
+                //当前打开的不是jar包
+                return File("").absoluteFile
+            } else {
+                val jarFlag = "!/"
+                val filePath = path.substringBeforeLast(jarFlag)
+                return File(URI.create(filePath))
+            }
         }
 
         /**
@@ -354,7 +360,7 @@ class TornadoFxUtil {
          * @return
          */
         fun getCurrentJarDirPath(): File {
-            return File("").absoluteFile
+            return getCurrentJarPath().parentFile
         }
 
         /**
