@@ -3,8 +3,11 @@ package com.starsone.controls.utils
 import javafx.geometry.Insets
 import javafx.scene.control.Button
 import javafx.scene.control.DialogPane
+import javafx.scene.input.KeyCodeCombination
+import javafx.scene.input.Mnemonic
 import javafx.scene.layout.*
 import javafx.scene.text.TextFlow
+import javafx.stage.Window
 import tornadofx.*
 import kotlin.reflect.full.declaredFunctions
 
@@ -33,6 +36,16 @@ fun Button.setActionHank(time:Long = 1000,op: () -> Unit) {
             op()
         }
     }
+}
+
+/**
+ * 为按钮设置快捷键,触发快捷键后会触发按钮的action操作 **（此方法需要在`onBeforeShow()`方法中调用）**
+ * @param keyCodeCombination 快捷键，如 ctrl+alt+c快捷键为`KeyCodeCombination(KeyCode.C, KeyCombination.ALT_DOWN, KeyCombination.CONTROL_DOWN)`
+ * @param currentWindow 当前窗口
+ */
+fun Button.addShortcut(keyCodeCombination: KeyCodeCombination, currentWindow: Window?) {
+    val mnemonic1 = Mnemonic(this, keyCodeCombination)
+    currentWindow?.scene?.addMnemonic(mnemonic1)
 }
 
 /**

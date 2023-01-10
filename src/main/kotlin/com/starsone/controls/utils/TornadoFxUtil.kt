@@ -11,9 +11,11 @@ import com.sun.xml.internal.messaging.saaj.util.TeeInputStream
 import javafx.application.Platform
 import javafx.scene.input.Clipboard
 import javafx.scene.input.ClipboardContent
+import javafx.scene.input.KeyCodeCombination
 import javafx.scene.layout.Pane
 import javafx.stage.Screen
 import javafx.stage.Stage
+import javafx.stage.Window
 import org.jsoup.Jsoup
 import tornadofx.*
 import java.awt.Desktop
@@ -497,6 +499,20 @@ class TornadoFxUtil {
             }
             process.waitFor()
             process.destroy()
+        }
+
+        /**
+         * 设置页面全局快捷键（焦点在页面才会触发) **（此方法需要在`onBeforeShow()`方法中调用）**
+         * @param keyCodeCombination 快捷键，如 ctrl+alt+c快捷键为`KeyCodeCombination(KeyCode.C, KeyCombination.ALT_DOWN, KeyCombination.CONTROL_DOWN)`
+         * @param currentWindow 当前窗口
+         */
+        fun addShortcut(keyCodeCombination: KeyCodeCombination, currentWindow: Window?, lambda: () -> Unit) {
+            val kc1 = keyCodeCombination
+            currentWindow?.scene?.apply {
+                accelerators[kc1] = Runnable {
+                    lambda.invoke()
+                }
+            }
         }
     }
 }
