@@ -15,7 +15,7 @@ import kotlin.reflect.full.declaredFunctions
 /**
  * 是否快速点击
  */
-fun Button.isFastClick(time:Long): Boolean {
+private fun Button.isFastClick(time:Long): Boolean {
     val lastClickTime = userData as Long?
     val currentTime = System.currentTimeMillis()
 
