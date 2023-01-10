@@ -387,6 +387,7 @@ jfxbutton("检测更新") {
 - 判断是否是Mac平台 `isMac`
 - 获取当前设备主板SN序列号 `getDeviceSn`
 - 执行cmd命令(支持window,linux和macOs) `execCmd`
+- 设置页面快捷键 `addShortcut`
 
 ## 4.常用控件
 以下的控件其实本质上都是一个方法,使用了TornadoFx内置的DSL语法进行书写,使用的时候和TornadoFx编写布局的代码是一样的
@@ -788,3 +789,18 @@ hbox{
 点开你需要用的图标即可看到名称,如下图所示
 
 ![](https://img2022.cnblogs.com/blog/1210268/202210/1210268-20221015145345751-980193051.png)
+
+## 10.扩展方法
+
+位于ViewExtend.kt文件中
+
+- `Button.setActionHank()` 按钮防抖action
+- `Button.addShortcut` 按钮设置快捷键
+- `Pane.setMargin()` pane设置margin
+
+## 11.window快捷方式生成
+
+代码位于ShortCutUtils中
+
+- `createShortCut()` 创建快捷方式
+- `setAppStartup()` 设置快捷方式为开机启动
