@@ -346,7 +346,7 @@ class TornadoFxUtil {
         fun getCurrentJarPath(): File {
             val url = ResourceLookup(this).url("/ttf/remixicon.ttf")
             val path = url.path
-            if (path.contains("common-controls")) {
+            if (path.contains("target")) {
                 //当前打开的不是jar包
                 return File("").absoluteFile
             } else {
