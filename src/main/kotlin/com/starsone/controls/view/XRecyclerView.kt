@@ -4,6 +4,7 @@ import javafx.geometry.Pos
 import javafx.scene.Node
 import javafx.scene.control.*
 import javafx.scene.image.ImageView
+import javafx.scene.input.MouseButton
 import javafx.scene.layout.FlowPane
 import javafx.scene.layout.Pane
 import javafx.scene.layout.VBox
@@ -168,16 +169,16 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
             //绑定bean数据到itemView
             ada.onBindData(itemView, bean, index)
             //取消设置设置监听器
-            //itemView.root.setOnMouseClicked {
-            //    if (it.button == MouseButton.PRIMARY) {
-            //        //单击事件回调
-            //        ada.onClick(itemView, index)
-            //    }
-            //    if (it.button == MouseButton.SECONDARY) {
-            //        //右击事件回调
-            //        ada.onRightClick(itemView, index)
-            //    }
-            //}
+            itemView.root.setOnMouseClicked {
+                if (it.button == MouseButton.PRIMARY) {
+                    //单击事件回调
+                    ada.onClick(itemView, index)
+                }
+                if (it.button == MouseButton.SECONDARY) {
+                    //右击事件回调
+                    ada.onRightClick(itemView, index)
+                }
+            }
             return itemView
         }
 
