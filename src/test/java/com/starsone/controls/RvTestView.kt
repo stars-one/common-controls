@@ -4,10 +4,8 @@ import GridLayoutSetting
 import RvAdapter
 import RvDataObservableList
 import XRecyclerView
-import com.starsone.controls.common.remixIconButton
-import com.starsone.controls.common.remixIconButtonWithBorder
-import com.starsone.controls.common.showLoadingDialog
-import com.starsone.controls.common.xUrlLink
+import com.starsone.controls.common.*
+import javafx.beans.property.SimpleStringProperty
 import tornadofx.*
 
 /**
@@ -17,6 +15,8 @@ import tornadofx.*
  */
 class RvTestView : View("My View") {
     val dataList = RvDataObservableList<Person, MyItemView>()
+
+    val btnIcon = SimpleStringProperty("home-4-fill")
 
     override val root = vbox {
         setPrefSize(1000.0, 400.0)
@@ -30,12 +30,19 @@ class RvTestView : View("My View") {
 
             //remixIconLabel("home-4-fill")
 
+            remixIconLabel(btnIcon)
+
             remixIconButton("home-4-fill")
 
             remixIconButton("home-4-fill")
 
             remixIconButtonWithBorder("home-4-fill")
 
+            button("改变图标"){
+                action{
+                    btnIcon.set("arrow-down-line")
+                }
+            }
         }
 
         hbox {
