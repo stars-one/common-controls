@@ -1,7 +1,6 @@
-package com.starsone.controls.utils
+package com.starsone.controls.utils.net
 
 import com.google.gson.Gson
-import com.starsone.controls.utils.net.NetWorkLogInterceptor
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -13,15 +12,17 @@ import java.io.IOException
  *
  * @constructor Create empty Net work util
  */
-object NetWorkUtil {
+object NetworkUtil {
 
     val JSON = "application/json;charset=utf-8".toMediaTypeOrNull()
 
     val gson by lazy { Gson() }
 
+    var isDebug = false
+
     val okHttpClient by lazy {
         val client = OkHttpClient.Builder()
-                .addInterceptor(NetWorkLogInterceptor())
+                .addInterceptor(NetworkLogInterceptor(isDebug))
                 .build()
         client
     }

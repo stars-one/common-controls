@@ -14,7 +14,7 @@ import java.nio.charset.Charset
  * @url [http://stars-one.site](http://stars-one.site)
  * @date Create in  2023/03/26 22:29
  */
-class NetWorkLogInterceptor(var isDebugger: Boolean = false) : Interceptor {
+class NetworkLogInterceptor(var isDebugger: Boolean = false) : Interceptor {
 
     val gson = Gson()
     val charset = Charset.forName("utf-8")
