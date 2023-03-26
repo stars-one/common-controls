@@ -804,3 +804,29 @@ hbox{
 
 - `createShortCut()` 创建快捷方式
 - `setAppStartup()` 设置快捷方式为开机启动
+
+## 11.网络请求库
+
+目前支持get post请求,可传json,且支持打印输出网络请求日志
+
+```kotlin
+//开启网络请求日志输出
+NetworkUtil.isDebug = true
+
+//get请求示例
+val url = "http://127.0.0.1:8099/userlogin"
+val data = hashMapOf("username" to "hello")
+//这里可以指定的实体类,可方便之后将数据转为实体类对象
+// 我这里是传了String,就是不进行实体类转换处理,直接返回json数据
+
+NetworkUtil.get(url, data, hashMapOf(), object : NetworkUtil.RespCallBack<String>() {
+
+    override fun onResponse(call: Call, data: String) {
+        //数据
+    }
+
+    override fun onFailure(call: Call, e: Exception) {
+        e.printStackTrace()
+    }
+})
+```
