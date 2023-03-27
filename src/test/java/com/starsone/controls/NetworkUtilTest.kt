@@ -10,23 +10,26 @@ import okhttp3.Call
  * @date Create in  2023/03/27 01:12
  *
  */
+class NetworkUtilTest {
 
-fun main() {
-    //开启网络请求日志输出
-    NetworkUtil.isDebug = true
-    
-    //get请求示例
-    val url = "http://127.0.0.1:8099/userlogin"
-    val data = hashMapOf("username" to "hello")
+    fun test() {
+        //开启网络请求日志输出
+        NetworkUtil.isDebug = true
 
-    NetworkUtil.get(url, data, hashMapOf(), object : NetworkUtil.RespCallBack<String>() {
+        //get请求示例
+        val url = "http://127.0.0.1:8099/userlogin"
+        val data = hashMapOf("username" to "hello")
 
-        override fun onResponse(call: Call, data: String) {
+        NetworkUtil.get(url, data, hashMapOf(), object : NetworkUtil.RespCallBack<String>() {
 
-        }
+            override fun onResponse(call: Call, data: String) {
 
-        override fun onFailure(call: Call, e: Exception) {
-            e.printStackTrace()
-        }
-    })
+            }
+
+            override fun onFailure(call: Call, e: Exception) {
+                e.printStackTrace()
+            }
+        })
+    }
 }
+
