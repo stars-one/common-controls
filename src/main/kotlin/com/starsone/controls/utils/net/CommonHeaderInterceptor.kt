@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import okhttp3.Interceptor
 import okhttp3.Response
 import tornadofx.*
+import java.net.URLEncoder
 
 
 /**
@@ -34,8 +35,8 @@ class CommonHeaderInterceptor() : Interceptor {
             }
         }
         // 添加我们请求头
-
-        requestBuilder.header("xn-device-head", deviceHead)
+        //防止中文,转换一下
+        requestBuilder.header("xn-device-head", URLEncoder.encode(deviceHead))
 
         // 建立新请求连接
         val newRequest = requestBuilder.build()
