@@ -69,6 +69,7 @@ class NetworkLogInterceptor(var isDebugger: Boolean = false) : Interceptor {
                 println("------------------------ 请求结束 ------------------------")
                 return response
             } catch (e: Exception) {
+                e.printStackTrace()
                 System.err.println("okhttp拦截器打印日志发生错误!!!!!!")
                 return chain.proceed(request)
             }
