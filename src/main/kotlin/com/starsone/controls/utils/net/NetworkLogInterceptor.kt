@@ -54,9 +54,7 @@ class NetworkLogInterceptor(var isDebugger: Boolean = false) : Interceptor {
                     val arr = request.url.query?.split("&")
                     println("请求参数:")
                     arr?.forEach {
-                        arr.forEach {
-                            println("   " + it)
-                        }
+                        println("   " + it)
                     }
                 } else {
                     val arr = URLDecoder.decode(bodyStr).split("&")
