@@ -20,10 +20,28 @@ object NetworkUtil {
 
     var isDebug = false
 
+    var okBuilder: OkHttpClient.Builder? = null
+
+    /**
+     * 初始化设置
+     *
+     * @param isDebug 是否为调试模式(调试模式开启日志输出)
+     * @param okHttpClientBuilder okhttp的构造器,用来设置相应的参数
+     */
+    fun initConfig(isDebug: Boolean = false, okHttpClientBuilder: OkHttpClient.Builder? = null) {
+        this.isDebug = isDebug
+        okBuilder = okHttpClientBuilder
+    }
+
     val okHttpClient by lazy {
-        val client = OkHttpClient.Builder()
-                .addInterceptor(NetworkLogInterceptor(isDebug))
-                .build()
+        val client = if (okBuilder == null) {
+            OkHttpClient.Builder()
+                    .addInterceptor(CommonHeaderInterceptor())
+                    .addInterceptor(NetworkLogInterceptor(isDebug))
+                    .build()
+        } else {
+            okBuilder!!.build()
+        }
         client
     }
 
@@ -43,7 +61,7 @@ object NetworkUtil {
         }
         val formBodyData = formBody.build()
         //2.构造request
-        val requestBuilder =  Request.Builder()
+        val requestBuilder = Request.Builder()
                 .url(url)
                 .post(formBodyData)
 
@@ -70,7 +88,7 @@ object NetworkUtil {
         val requestBody = gson.toJson(data).toRequestBody(JSON)
 
         //2.构造request
-        val requestBuilder =  Request.Builder()
+        val requestBuilder = Request.Builder()
                 .url(url)
                 .post(requestBody)
 
