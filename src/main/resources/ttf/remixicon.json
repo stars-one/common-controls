@@ -9082,5 +9082,797 @@
   {
     "name": "zzz-line",
     "unicode": "\\uF2DF"
+  },
+  {
+    "name": "arrow-down-double-fill",
+    "unicode": "\\uF2E0"
+  },
+  {
+    "name": "arrow-down-double-line",
+    "unicode": "\\uF2E1"
+  },
+  {
+    "name": "arrow-left-double-fill",
+    "unicode": "\\uF2E2"
+  },
+  {
+    "name": "arrow-left-double-line",
+    "unicode": "\\uF2E3"
+  },
+  {
+    "name": "arrow-right-double-fill",
+    "unicode": "\\uF2E4"
+  },
+  {
+    "name": "arrow-right-double-line",
+    "unicode": "\\uF2E5"
+  },
+  {
+    "name": "arrow-turn-back-fill",
+    "unicode": "\\uF2E6"
+  },
+  {
+    "name": "arrow-turn-back-line",
+    "unicode": "\\uF2E7"
+  },
+  {
+    "name": "arrow-turn-forward-fill",
+    "unicode": "\\uF2E8"
+  },
+  {
+    "name": "arrow-turn-forward-line",
+    "unicode": "\\uF2E9"
+  },
+  {
+    "name": "arrow-up-double-fill",
+    "unicode": "\\uF2EA"
+  },
+  {
+    "name": "arrow-up-double-line",
+    "unicode": "\\uF2EB"
+  },
+  {
+    "name": "bard-fill",
+    "unicode": "\\uF2EC"
+  },
+  {
+    "name": "bard-line",
+    "unicode": "\\uF2ED"
+  },
+  {
+    "name": "bootstrap-fill",
+    "unicode": "\\uF2EE"
+  },
+  {
+    "name": "bootstrap-line",
+    "unicode": "\\uF2EF"
+  },
+  {
+    "name": "box-1-fill",
+    "unicode": "\\uF2F0"
+  },
+  {
+    "name": "box-1-line",
+    "unicode": "\\uF2F1"
+  },
+  {
+    "name": "box-2-fill",
+    "unicode": "\\uF2F2"
+  },
+  {
+    "name": "box-2-line",
+    "unicode": "\\uF2F3"
+  },
+  {
+    "name": "box-3-fill",
+    "unicode": "\\uF2F4"
+  },
+  {
+    "name": "box-3-line",
+    "unicode": "\\uF2F5"
+  },
+  {
+    "name": "brain-fill",
+    "unicode": "\\uF2F6"
+  },
+  {
+    "name": "brain-line",
+    "unicode": "\\uF2F7"
+  },
+  {
+    "name": "candle-fill",
+    "unicode": "\\uF2F8"
+  },
+  {
+    "name": "candle-line",
+    "unicode": "\\uF2F9"
+  },
+  {
+    "name": "cash-fill",
+    "unicode": "\\uF2FA"
+  },
+  {
+    "name": "cash-line",
+    "unicode": "\\uF2FB"
+  },
+  {
+    "name": "contract-left-fill",
+    "unicode": "\\uF2FC"
+  },
+  {
+    "name": "contract-left-line",
+    "unicode": "\\uF2FD"
+  },
+  {
+    "name": "contract-left-right-fill",
+    "unicode": "\\uF2FE"
+  },
+  {
+    "name": "contract-left-right-line",
+    "unicode": "\\uF2FF"
+  },
+  {
+    "name": "contract-right-fill",
+    "unicode": "\\uF300"
+  },
+  {
+    "name": "contract-right-line",
+    "unicode": "\\uF301"
+  },
+  {
+    "name": "contract-up-down-fill",
+    "unicode": "\\uF302"
+  },
+  {
+    "name": "contract-up-down-line",
+    "unicode": "\\uF303"
+  },
+  {
+    "name": "copilot-fill",
+    "unicode": "\\uF304"
+  },
+  {
+    "name": "copilot-line",
+    "unicode": "\\uF305"
+  },
+  {
+    "name": "corner-down-left-fill",
+    "unicode": "\\uF306"
+  },
+  {
+    "name": "corner-down-left-line",
+    "unicode": "\\uF307"
+  },
+  {
+    "name": "corner-down-right-fill",
+    "unicode": "\\uF308"
+  },
+  {
+    "name": "corner-down-right-line",
+    "unicode": "\\uF309"
+  },
+  {
+    "name": "corner-left-down-fill",
+    "unicode": "\\uF30A"
+  },
+  {
+    "name": "corner-left-down-line",
+    "unicode": "\\uF30B"
+  },
+  {
+    "name": "corner-left-up-fill",
+    "unicode": "\\uF30C"
+  },
+  {
+    "name": "corner-left-up-line",
+    "unicode": "\\uF30D"
+  },
+  {
+    "name": "corner-right-down-fill",
+    "unicode": "\\uF30E"
+  },
+  {
+    "name": "corner-right-down-line",
+    "unicode": "\\uF30F"
+  },
+  {
+    "name": "corner-right-up-fill",
+    "unicode": "\\uF310"
+  },
+  {
+    "name": "corner-right-up-line",
+    "unicode": "\\uF311"
+  },
+  {
+    "name": "corner-up-left-double-fill",
+    "unicode": "\\uF312"
+  },
+  {
+    "name": "corner-up-left-double-line",
+    "unicode": "\\uF313"
+  },
+  {
+    "name": "corner-up-left-fill",
+    "unicode": "\\uF314"
+  },
+  {
+    "name": "corner-up-left-line",
+    "unicode": "\\uF315"
+  },
+  {
+    "name": "corner-up-right-double-fill",
+    "unicode": "\\uF316"
+  },
+  {
+    "name": "corner-up-right-double-line",
+    "unicode": "\\uF317"
+  },
+  {
+    "name": "corner-up-right-fill",
+    "unicode": "\\uF318"
+  },
+  {
+    "name": "corner-up-right-line",
+    "unicode": "\\uF319"
+  },
+  {
+    "name": "cross-fill",
+    "unicode": "\\uF31A"
+  },
+  {
+    "name": "cross-line",
+    "unicode": "\\uF31B"
+  },
+  {
+    "name": "edge-new-fill",
+    "unicode": "\\uF31C"
+  },
+  {
+    "name": "edge-new-line",
+    "unicode": "\\uF31D"
+  },
+  {
+    "name": "equal-fill",
+    "unicode": "\\uF31E"
+  },
+  {
+    "name": "equal-line",
+    "unicode": "\\uF31F"
+  },
+  {
+    "name": "expand-left-fill",
+    "unicode": "\\uF320"
+  },
+  {
+    "name": "expand-left-line",
+    "unicode": "\\uF321"
+  },
+  {
+    "name": "expand-left-right-fill",
+    "unicode": "\\uF322"
+  },
+  {
+    "name": "expand-left-right-line",
+    "unicode": "\\uF323"
+  },
+  {
+    "name": "expand-right-fill",
+    "unicode": "\\uF324"
+  },
+  {
+    "name": "expand-right-line",
+    "unicode": "\\uF325"
+  },
+  {
+    "name": "expand-up-down-fill",
+    "unicode": "\\uF326"
+  },
+  {
+    "name": "expand-up-down-line",
+    "unicode": "\\uF327"
+  },
+  {
+    "name": "flickr-fill",
+    "unicode": "\\uF328"
+  },
+  {
+    "name": "flickr-line",
+    "unicode": "\\uF329"
+  },
+  {
+    "name": "forward-10-fill",
+    "unicode": "\\uF32A"
+  },
+  {
+    "name": "forward-10-line",
+    "unicode": "\\uF32B"
+  },
+  {
+    "name": "forward-15-fill",
+    "unicode": "\\uF32C"
+  },
+  {
+    "name": "forward-15-line",
+    "unicode": "\\uF32D"
+  },
+  {
+    "name": "forward-30-fill",
+    "unicode": "\\uF32E"
+  },
+  {
+    "name": "forward-30-line",
+    "unicode": "\\uF32F"
+  },
+  {
+    "name": "forward-5-fill",
+    "unicode": "\\uF330"
+  },
+  {
+    "name": "forward-5-line",
+    "unicode": "\\uF331"
+  },
+  {
+    "name": "graduation-cap-fill",
+    "unicode": "\\uF332"
+  },
+  {
+    "name": "graduation-cap-line",
+    "unicode": "\\uF333"
+  },
+  {
+    "name": "home-office-fill",
+    "unicode": "\\uF334"
+  },
+  {
+    "name": "home-office-line",
+    "unicode": "\\uF335"
+  },
+  {
+    "name": "hourglass-2-fill",
+    "unicode": "\\uF336"
+  },
+  {
+    "name": "hourglass-2-line",
+    "unicode": "\\uF337"
+  },
+  {
+    "name": "hourglass-fill",
+    "unicode": "\\uF338"
+  },
+  {
+    "name": "hourglass-line",
+    "unicode": "\\uF339"
+  },
+  {
+    "name": "javascript-fill",
+    "unicode": "\\uF33A"
+  },
+  {
+    "name": "javascript-line",
+    "unicode": "\\uF33B"
+  },
+  {
+    "name": "loop-left-fill",
+    "unicode": "\\uF33C"
+  },
+  {
+    "name": "loop-left-line",
+    "unicode": "\\uF33D"
+  },
+  {
+    "name": "loop-right-fill",
+    "unicode": "\\uF33E"
+  },
+  {
+    "name": "loop-right-line",
+    "unicode": "\\uF33F"
+  },
+  {
+    "name": "memories-fill",
+    "unicode": "\\uF340"
+  },
+  {
+    "name": "memories-line",
+    "unicode": "\\uF341"
+  },
+  {
+    "name": "meta-fill",
+    "unicode": "\\uF342"
+  },
+  {
+    "name": "meta-line",
+    "unicode": "\\uF343"
+  },
+  {
+    "name": "microsoft-loop-fill",
+    "unicode": "\\uF344"
+  },
+  {
+    "name": "microsoft-loop-line",
+    "unicode": "\\uF345"
+  },
+  {
+    "name": "nft-fill",
+    "unicode": "\\uF346"
+  },
+  {
+    "name": "nft-line",
+    "unicode": "\\uF347"
+  },
+  {
+    "name": "notion-fill",
+    "unicode": "\\uF348"
+  },
+  {
+    "name": "notion-line",
+    "unicode": "\\uF349"
+  },
+  {
+    "name": "openai-fill",
+    "unicode": "\\uF34A"
+  },
+  {
+    "name": "openai-line",
+    "unicode": "\\uF34B"
+  },
+  {
+    "name": "overline",
+    "unicode": "\\uF34C"
+  },
+  {
+    "name": "p2p-fill",
+    "unicode": "\\uF34D"
+  },
+  {
+    "name": "p2p-line",
+    "unicode": "\\uF34E"
+  },
+  {
+    "name": "presentation-fill",
+    "unicode": "\\uF34F"
+  },
+  {
+    "name": "presentation-line",
+    "unicode": "\\uF350"
+  },
+  {
+    "name": "replay-10-fill",
+    "unicode": "\\uF351"
+  },
+  {
+    "name": "replay-10-line",
+    "unicode": "\\uF352"
+  },
+  {
+    "name": "replay-15-fill",
+    "unicode": "\\uF353"
+  },
+  {
+    "name": "replay-15-line",
+    "unicode": "\\uF354"
+  },
+  {
+    "name": "replay-30-fill",
+    "unicode": "\\uF355"
+  },
+  {
+    "name": "replay-30-line",
+    "unicode": "\\uF356"
+  },
+  {
+    "name": "replay-5-fill",
+    "unicode": "\\uF357"
+  },
+  {
+    "name": "replay-5-line",
+    "unicode": "\\uF358"
+  },
+  {
+    "name": "school-fill",
+    "unicode": "\\uF359"
+  },
+  {
+    "name": "school-line",
+    "unicode": "\\uF35A"
+  },
+  {
+    "name": "shining-2-fill",
+    "unicode": "\\uF35B"
+  },
+  {
+    "name": "shining-2-line",
+    "unicode": "\\uF35C"
+  },
+  {
+    "name": "shining-fill",
+    "unicode": "\\uF35D"
+  },
+  {
+    "name": "shining-line",
+    "unicode": "\\uF35E"
+  },
+  {
+    "name": "sketching",
+    "unicode": "\\uF35F"
+  },
+  {
+    "name": "skip-down-fill",
+    "unicode": "\\uF360"
+  },
+  {
+    "name": "skip-down-line",
+    "unicode": "\\uF361"
+  },
+  {
+    "name": "skip-left-fill",
+    "unicode": "\\uF362"
+  },
+  {
+    "name": "skip-left-line",
+    "unicode": "\\uF363"
+  },
+  {
+    "name": "skip-right-fill",
+    "unicode": "\\uF364"
+  },
+  {
+    "name": "skip-right-line",
+    "unicode": "\\uF365"
+  },
+  {
+    "name": "skip-up-fill",
+    "unicode": "\\uF366"
+  },
+  {
+    "name": "skip-up-line",
+    "unicode": "\\uF367"
+  },
+  {
+    "name": "slow-down-fill",
+    "unicode": "\\uF368"
+  },
+  {
+    "name": "slow-down-line",
+    "unicode": "\\uF369"
+  },
+  {
+    "name": "sparkling-2-fill",
+    "unicode": "\\uF36A"
+  },
+  {
+    "name": "sparkling-2-line",
+    "unicode": "\\uF36B"
+  },
+  {
+    "name": "sparkling-fill",
+    "unicode": "\\uF36C"
+  },
+  {
+    "name": "sparkling-line",
+    "unicode": "\\uF36D"
+  },
+  {
+    "name": "speak-fill",
+    "unicode": "\\uF36E"
+  },
+  {
+    "name": "speak-line",
+    "unicode": "\\uF36F"
+  },
+  {
+    "name": "speed-up-fill",
+    "unicode": "\\uF370"
+  },
+  {
+    "name": "speed-up-line",
+    "unicode": "\\uF371"
+  },
+  {
+    "name": "tiktok-fill",
+    "unicode": "\\uF372"
+  },
+  {
+    "name": "tiktok-line",
+    "unicode": "\\uF373"
+  },
+  {
+    "name": "token-swap-fill",
+    "unicode": "\\uF374"
+  },
+  {
+    "name": "token-swap-line",
+    "unicode": "\\uF375"
+  },
+  {
+    "name": "unpin-fill",
+    "unicode": "\\uF376"
+  },
+  {
+    "name": "unpin-line",
+    "unicode": "\\uF377"
+  },
+  {
+    "name": "wechat-channels-fill",
+    "unicode": "\\uF378"
+  },
+  {
+    "name": "wechat-channels-line",
+    "unicode": "\\uF379"
+  },
+  {
+    "name": "wordpress-fill",
+    "unicode": "\\uF37A"
+  },
+  {
+    "name": "wordpress-line",
+    "unicode": "\\uF37B"
+  },
+  {
+    "name": "blender-fill",
+    "unicode": "\\uF37C"
+  },
+  {
+    "name": "blender-line",
+    "unicode": "\\uF37D"
+  },
+  {
+    "name": "emoji-sticker-fill",
+    "unicode": "\\uF37E"
+  },
+  {
+    "name": "emoji-sticker-line",
+    "unicode": "\\uF37F"
+  },
+  {
+    "name": "git-close-pull-request-fill",
+    "unicode": "\\uF380"
+  },
+  {
+    "name": "git-close-pull-request-line",
+    "unicode": "\\uF381"
+  },
+  {
+    "name": "instance-fill",
+    "unicode": "\\uF382"
+  },
+  {
+    "name": "instance-line",
+    "unicode": "\\uF383"
+  },
+  {
+    "name": "megaphone-fill",
+    "unicode": "\\uF384"
+  },
+  {
+    "name": "megaphone-line",
+    "unicode": "\\uF385"
+  },
+  {
+    "name": "pass-expired-fill",
+    "unicode": "\\uF386"
+  },
+  {
+    "name": "pass-expired-line",
+    "unicode": "\\uF387"
+  },
+  {
+    "name": "pass-pending-fill",
+    "unicode": "\\uF388"
+  },
+  {
+    "name": "pass-pending-line",
+    "unicode": "\\uF389"
+  },
+  {
+    "name": "pass-valid-fill",
+    "unicode": "\\uF38A"
+  },
+  {
+    "name": "pass-valid-line",
+    "unicode": "\\uF38B"
+  },
+  {
+    "name": "ai-generate",
+    "unicode": "\\uF38C"
+  },
+  {
+    "name": "calendar-close-fill",
+    "unicode": "\\uF38D"
+  },
+  {
+    "name": "calendar-close-line",
+    "unicode": "\\uF38E"
+  },
+  {
+    "name": "draggable",
+    "unicode": "\\uF38F"
+  },
+  {
+    "name": "font-family",
+    "unicode": "\\uF390"
+  },
+  {
+    "name": "font-mono",
+    "unicode": "\\uF391"
+  },
+  {
+    "name": "font-sans-serif",
+    "unicode": "\\uF392"
+  },
+  {
+    "name": "font-sans",
+    "unicode": "\\uF393"
+  },
+  {
+    "name": "hard-drive-3-fill",
+    "unicode": "\\uF394"
+  },
+  {
+    "name": "hard-drive-3-line",
+    "unicode": "\\uF395"
+  },
+  {
+    "name": "kick-fill",
+    "unicode": "\\uF396"
+  },
+  {
+    "name": "kick-line",
+    "unicode": "\\uF397"
+  },
+  {
+    "name": "list-check-3",
+    "unicode": "\\uF398"
+  },
+  {
+    "name": "list-indefinite",
+    "unicode": "\\uF399"
+  },
+  {
+    "name": "list-ordered-2",
+    "unicode": "\\uF39A"
+  },
+  {
+    "name": "list-radio",
+    "unicode": "\\uF39B"
+  },
+  {
+    "name": "openbase-fill",
+    "unicode": "\\uF39C"
+  },
+  {
+    "name": "openbase-line",
+    "unicode": "\\uF39D"
+  },
+  {
+    "name": "planet-fill",
+    "unicode": "\\uF39E"
+  },
+  {
+    "name": "planet-line",
+    "unicode": "\\uF39F"
+  },
+  {
+    "name": "prohibited-fill",
+    "unicode": "\\uF3A0"
+  },
+  {
+    "name": "prohibited-line",
+    "unicode": "\\uF3A1"
+  },
+  {
+    "name": "quote-text",
+    "unicode": "\\uF3A2"
+  },
+  {
+    "name": "seo-fill",
+    "unicode": "\\uF3A3"
+  },
+  {
+    "name": "seo-line",
+    "unicode": "\\uF3A4"
+  },
+  {
+    "name": "slash-commands",
+    "unicode": "\\uF3A5"
   }
 ]
