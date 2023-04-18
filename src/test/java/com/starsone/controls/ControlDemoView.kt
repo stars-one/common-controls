@@ -23,6 +23,8 @@ class ControlDemoView : View("My View") {
             backgroundColor += c("white")
         }
 
+        remixIconText("arrow-up-double-line")
+
         xChooseFileDirectory("下载目录", dirPath)
 
         xChooseFileDirectory("下载目录", dirPath, 400.0, jfxbutton {
