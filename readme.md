@@ -784,7 +784,7 @@ hbox{
 - remixIconLabel() 本质上是Label组件
 - remixIconText 本质上是Text组件
 
-可以通过[Remix Icon - Open source icon library](https://remixicon.com/)来找到对应的图标名称,目前使用的Remix Icon版本为`2.5.0`
+可以通过[Remix Icon - Open source icon library](https://remixicon.com/)来找到对应的图标名称,目前使用的Remix Icon版本为`3.2.0`
 
 点开你需要用的图标即可看到名称,如下图所示
 
