@@ -8,7 +8,6 @@ import com.starsone.controls.utils.QRCodeUtil
 import com.starsone.controls.utils.TornadoFxUtil
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleStringProperty
-import javafx.embed.swing.SwingFXUtils
 import kfoenix.jfxbutton
 import tornadofx.*
 
@@ -58,20 +57,14 @@ class ControlDemoView : View("My View") {
 
 
         //得到的swing的image对象
-        val buImg = QRCodeUtil.getQRCodeImage("这是测试文本")
-        val buImg1 = QRCodeUtil.getQRCodeImage("这是测试文本", "底部文字")
-        val buImg2 = QRCodeUtil.getQRCodeImage("这是测试文本", resources.url("/x5.jpg"), "底部文字")
-        val buImg3 = QRCodeUtil.getQRCodeImage("这是测试文本", resources.url("/x5.jpg"), null)
+        val buImg = QRCodeUtil.getQRcodeFxImg("这是测试文本")
+        val buImg1 = QRCodeUtil.getQRcodeFxImg("这是测试文本", null, "底部文字")
+        val buImg2 = QRCodeUtil.getQRcodeFxImg("这是测试文本", "/x5.jpg", "底部文字")
 
-        val list = listOf(buImg, buImg1, buImg3)
-        val imgList = list.map {
-            //转换为fx中的image对象
-            val tempImage = SwingFXUtils.toFXImage(it, null)
-            tempImage
-        }
+        val list = listOf(buImg, buImg1, buImg2)
 
         hbox(20.0) {
-            imgList.forEach {
+            list.forEach {
                 imageview(it) {
                     fitWidth = 200.0
                     fitHeight = 200.0

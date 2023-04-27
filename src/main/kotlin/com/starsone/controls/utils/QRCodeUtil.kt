@@ -4,6 +4,8 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.qrcode.QRCodeWriter
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
+import javafx.embed.swing.SwingFXUtils
+import javafx.scene.image.WritableImage
 import org.apache.commons.lang3.StringUtils
 import sun.font.FontDesignMetrics
 import tornadofx.*
@@ -33,11 +35,30 @@ object QRCodeUtil {
      * @param bottomTextSize 底部文字大小,默认20px
      * @param qrcodeType 二维码图片格式,默认为png
      */
-    fun initConfig(qrcodeSize: Int=320, logoSize: Int=80, bottomTextSize: Int=20, qrcodeType: String="PNG") {
+    fun initConfig(qrcodeSize: Int = 320, logoSize: Int = 80, bottomTextSize: Int = 20, qrcodeType: String = "PNG") {
         QRCODE_SIZE = qrcodeSize
         LOGO_SIZE = logoSize
         BOTTOM_TEXT_SIZE = bottomTextSize
-        QRCODE_SIZE = qrcodeSize
+        FORMAT_TYPE = qrcodeType
+    }
+
+    /**
+     * 生成二维码图片
+     *
+     * @param data 二维码文本内容
+     * @param logoPath 图标图片的路径
+     * @param bottomText 底部文字
+     * @return
+     */
+    fun getQRcodeFxImg(data: String?, logoPath: String?=null, bottomText: String?=null): WritableImage {
+        val resources = ResourceLookup(this)
+        val url = if (logoPath == null) {
+            null
+        } else {
+            resources.url(logoPath)
+        }
+        val swingImg = getQRCodeSwingImg(data, url, bottomText)
+        return SwingFXUtils.toFXImage(swingImg,null)
     }
 
     /**
@@ -48,8 +69,8 @@ object QRCodeUtil {
      * @return 返回 BufferedImage 可以使用ImageIO.write(BufferedImage, "png", outputStream);输出
      */
     @Throws(Exception::class)
-    fun getQRCodeImage(dataStr: String?): BufferedImage {
-        return getQRCodeImage(dataStr, null, null)
+    fun getQRCodeSwingImg(dataStr: String?): BufferedImage {
+        return getQRCodeSwingImg(dataStr, null, null)
     }
 
     /**
@@ -60,7 +81,7 @@ object QRCodeUtil {
      */
     @Throws(Exception::class)
     fun getQRCodeByte(dataStr: String?): ByteArray {
-        val bufferedImage = getQRCodeImage(dataStr, null, null)
+        val bufferedImage = getQRCodeSwingImg(dataStr, null, null)
         val outputStream = ByteArrayOutputStream()
         ImageIO.write(bufferedImage, FORMAT_TYPE, outputStream)
         return outputStream.toByteArray()
@@ -74,8 +95,8 @@ object QRCodeUtil {
      * @return
      */
     @Throws(Exception::class)
-    fun getQRCodeImage(dataStr: String?, bottomText: String?): BufferedImage {
-        return getQRCodeImage(dataStr, null, bottomText)
+    fun getQRCodeSwingImg(dataStr: String?, bottomText: String?): BufferedImage {
+        return getQRCodeSwingImg(dataStr, null, bottomText)
     }
 
     /**
@@ -86,7 +107,7 @@ object QRCodeUtil {
      */
     @Throws(Exception::class)
     fun getQRCodeByte(dataStr: String?, bottomText: String?): ByteArray {
-        val bufferedImage = getQRCodeImage(dataStr, null, bottomText)
+        val bufferedImage = getQRCodeSwingImg(dataStr, null, bottomText)
         val outputStream = ByteArrayOutputStream()
         ImageIO.write(bufferedImage, FORMAT_TYPE, outputStream)
         return outputStream.toByteArray()
@@ -101,7 +122,7 @@ object QRCodeUtil {
      * @return
      */
     @Throws(Exception::class)
-    fun getQRCodeImage(dataStr: String?, url: URL?, bottomText: String?): BufferedImage {
+    fun getQRCodeSwingImg(dataStr: String?, url: URL?, bottomText: String?): BufferedImage {
         if (dataStr == null) {
             throw RuntimeException("未包含任何信息")
         }
