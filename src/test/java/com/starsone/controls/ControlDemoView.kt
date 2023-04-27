@@ -4,9 +4,11 @@ import com.starsone.controls.common.remixIconText
 import com.starsone.controls.common.xChooseFileDirectory
 import com.starsone.controls.common.xNoticeBar
 import com.starsone.controls.common.xSwitch
+import com.starsone.controls.utils.QRCodeUtil
 import com.starsone.controls.utils.TornadoFxUtil
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleStringProperty
+import javafx.embed.swing.SwingFXUtils
 import kfoenix.jfxbutton
 import tornadofx.*
 
@@ -37,9 +39,9 @@ class ControlDemoView : View("My View") {
 
         val select = SimpleBooleanProperty()
 
-        xSwitch( "开启自动更新",select) {
+        xSwitch("开启自动更新", select) {
             toggleColor = c("blue")
-            toggleLineColor =c("red")
+            toggleLineColor = c("red")
 
             unToggleColor = c("green")
             unToggleLineColor = c("orange")
@@ -52,9 +54,30 @@ class ControlDemoView : View("My View") {
         }
 
         val simpleStringProperty = SimpleStringProperty("        这里是滚动的测试文本示例...")
-        xNoticeBar(simpleStringProperty,speed = 4)
-        
+        xNoticeBar(simpleStringProperty, speed = 4)
 
+
+        //得到的swing的image对象
+        val buImg = QRCodeUtil.getQRCodeImage("这是测试文本")
+        val buImg1 = QRCodeUtil.getQRCodeImage("这是测试文本", "底部文字")
+        val buImg2 = QRCodeUtil.getQRCodeImage("这是测试文本", resources.url("/x5.jpg"), "底部文字")
+        val buImg3 = QRCodeUtil.getQRCodeImage("这是测试文本", resources.url("/x5.jpg"), null)
+
+        val list = listOf(buImg, buImg1, buImg3)
+        val imgList = list.map {
+            //转换为fx中的image对象
+            val tempImage = SwingFXUtils.toFXImage(it, null)
+            tempImage
+        }
+
+        hbox(20.0) {
+            imgList.forEach {
+                imageview(it) {
+                    fitWidth = 200.0
+                    fitHeight = 200.0
+                }
+            }
+        }
     }
 
 
