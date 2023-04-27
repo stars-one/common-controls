@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton
 import com.jfoenix.controls.JFXToggleButton
 import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
+import javafx.animation.Interpolator
 import javafx.beans.property.Property
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.value.ObservableValue
@@ -15,8 +16,10 @@ import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCombination
 import javafx.scene.input.TransferMode
 import javafx.scene.layout.HBox
+import javafx.scene.paint.Color
 import javafx.scene.paint.Paint
 import javafx.stage.FileChooser
+import javafx.util.Duration
 import kfoenix.jfxbutton
 import tornadofx.*
 import java.awt.Desktop
@@ -436,12 +439,12 @@ fun EventTarget.xChooseFileDirectory(tip: String, filePathProperty: SimpleString
  * 开关组件
  * - 想要文字在前,图标在后,可以设置属性`nodeOrientation = NodeOrientation.RIGHT_TO_LEFT`
  * - 修改颜色属性示例代码
- ```
-    toggleColor = c("blue")
-    toggleLineColor =c("red")
-    unToggleColor = c("green")
-    unToggleLineColor = c("orange")
-  ```
+```
+toggleColor = c("blue")
+toggleLineColor =c("red")
+unToggleColor = c("green")
+unToggleLineColor = c("orange")
+```
  * @param desc 描述内容
  * @param property 监听
  * @param op
@@ -465,14 +468,14 @@ fun EventTarget.xSwitch(desc: String, property: Property<Boolean>? = null, op: (
  * @receiver
  * @return
  */
-fun EventTarget.toggleButton(desc: String, property: Property<Boolean>? = null, op: (ToggleButton.() -> Unit) = {}): ToggleButton{
+fun EventTarget.toggleButton(desc: String, property: Property<Boolean>? = null, op: (ToggleButton.() -> Unit) = {}): ToggleButton {
     val node = ToggleButton(desc).apply {
         if (property != null) bind(property)
     }
-    return opcr(this,node,op)
+    return opcr(this, node, op)
 }
 
-fun ToggleButton.bind(property: ObservableValue<Boolean>, readonly: Boolean = false) =
+fun ToggleButton.bind(property: Property<Boolean>, readonly: Boolean = false) =
         selectedProperty().internalBind(property, readonly)
 
 fun <T> Property<T>.internalBind(property: ObservableValue<T>, readonly: Boolean) {
@@ -481,5 +484,59 @@ fun <T> Property<T>.internalBind(property: ObservableValue<T>, readonly: Boolean
     if (readonly || (property !is Property<*>)) bind(property) else bindBidirectional(property as Property<T>)
 }
 
+/**
+ * 水平自动滚动公告栏
+ * @param simpleNotice 为了好的展示效果,这里最好是开头加上8个空格,还有注意处理换行符
+ * @param onClickAction 点击公告事件
+ * @param width 公告栏的宽度
+ * @param speed 展示速度,默认1s滚动8字
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.xNoticeBar(simpleNotice: Property<String>, onClickAction: ((String) -> Unit)? = null, width:Double = 560.0, speed:Int=8, op: (ScrollPane.() -> Unit) = {}): ScrollPane {
+    val node = ScrollPane().apply {
+        this.prefWidth = width
+
+        style {
+            focusColor = Color.TRANSPARENT
+            borderWidth += box(0.px)
+            borderColor += box(Color.TRANSPARENT)
+            hBarPolicy = ScrollPane.ScrollBarPolicy.NEVER
+            vBarPolicy = ScrollPane.ScrollBarPolicy.NEVER
+            padding = box(0.px)
+        }
+
+        hbox {
+            translateY = 5.0
+            alignment = Pos.CENTER_LEFT
+
+            label(simpleNotice) {
+                val defaultValue = translateXProperty().value
+                //滚动的逻辑
+                val rollAction: ((String) -> Unit) = {
+                    val newValue = it
+                    //阅读速度,8个字1s
+                    val time = newValue.length / speed
+                    translateXProperty().animate(-(newValue.length * 10), Duration.seconds(time.toDouble()), Interpolator.LINEAR) {
+                        cycleCount = -1
+                        setOnFinished {
+                            translateXProperty().set(defaultValue)
+                        }
+                    }
+                }
+                simpleNotice.onChange {
+                    rollAction.invoke(it ?: "")
+                }
+                setOnMouseClicked {
+                    onClickAction?.invoke(simpleNotice.value)
+                }
+                rollAction.invoke(simpleNotice.value)
+            }
+        }
+    }
+
+    return opcr(this, node, op)
+}
 
 
