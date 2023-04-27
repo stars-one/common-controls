@@ -805,7 +805,7 @@ hbox{
 - `createShortCut()` 创建快捷方式
 - `setAppStartup()` 设置快捷方式为开机启动
 
-## 11.网络请求库
+## 12.网络请求库
 
 目前支持get post请求,可传json,且支持打印输出网络请求日志
 
