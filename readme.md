@@ -66,6 +66,13 @@ TornadoFX交流群：1071184701
     * [3.关于GlobalDataConfig方法补充](#3关于globaldataconfig方法补充)
   * [8.系统剪贴板监听](#8系统剪贴板监听)
   * [9.字体图标组件](#9字体图标组件)
+  * [10.扩展方法](#10扩展方法)
+  * [11.window快捷方式生成](#11window快捷方式生成)
+  * [12.网络请求库](#12网络请求库)
+  * [13.二维码生成工具类](#13二维码生成工具类)
+    * [方法](#方法)
+    * [使用示例](#使用示例)
+
 
 
 ## 引入依赖
@@ -829,4 +836,59 @@ NetworkUtil.get(url, data, hashMapOf(), object : NetworkUtil.RespCallBack<String
         e.printStackTrace()
     }
 })
+```
+
+## 13.二维码生成工具类
+
+`QRCodeUtil`
+
+生成二维码的工具,支持创建带logo,底部文本的二维码
+
+![](https://img2023.cnblogs.com/blog/1210268/202304/1210268-20230427164444385-2082749951.png)
+
+### 方法
+
+比较核心的就两个方法,如下面代码所示,其他的方法是带Swing关键字,就是生成Swing包中的Image对象
+
+`getQRcodeFxImg()`方法就是直接生成Fx的Image对象,可以JavaFx中直接使用
+
+```kotlin
+/**
+ * 初始化设置
+ *
+ * @param qrcodeSize 二维码尺寸，默认为320(即320*320)
+ * @param logoSize logo图标尺寸,默认为80(即80*80)
+ * @param bottomTextSize 底部文字大小,默认20px
+ * @param qrcodeType 二维码图片格式,默认为png
+ */
+fun initConfig(qrcodeSize: Int = 320, logoSize: Int = 80, bottomTextSize: Int = 20, qrcodeType: String = "PNG")
+
+/**
+ * 生成二维码图片
+ *
+ * @param data 二维码文本内容
+ * @param logoPath 图标图片的路径
+ * @param bottomText 底部文字
+ * @return fx的img对象
+ */
+fun getQRcodeFxImg(data: String?, logoPath: String?=null, bottomText: String?=null): WritableImage
+```
+
+### 使用示例
+```kotlin
+//得到的swing的image对象
+val buImg = QRCodeUtil.getQRcodeFxImg("这是测试文本")
+val buImg1 = QRCodeUtil.getQRcodeFxImg("这是测试文本", null, "底部文字")
+val buImg2 = QRCodeUtil.getQRcodeFxImg("这是测试文本", "/x5.jpg", "底部文字")
+
+val list = listOf(buImg, buImg1, buImg2)
+
+hbox(20.0) {
+    list.forEach {
+        imageview(it) {
+            fitWidth = 200.0
+            fitHeight = 200.0
+        }
+    }
+}
 ```
