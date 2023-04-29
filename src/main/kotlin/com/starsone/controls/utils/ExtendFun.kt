@@ -1,5 +1,6 @@
 package com.starsone.controls.utils
 
+import java.math.BigDecimal
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -27,5 +28,15 @@ fun Long.toUnitString(): String {
     }
 }
 
-
+/**
+ * Double保留几位小数
+ *
+ * @param num
+ * @return
+ */
+fun Double.toFix(num: Int=2):Double{
+    val one = this
+    val two = BigDecimal(one)
+    return two.setScale(num, BigDecimal.ROUND_HALF_UP).toDouble()
+}
 
