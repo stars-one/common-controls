@@ -416,6 +416,7 @@ jfxbutton("检测更新") {
 |remixIconButton|圆形图标按钮| remixIconButton("home-4-fill")|
 |remixIconButtonWithBorder|圆形图标按钮(带边框)|remixIconButtonWithBorder("home-4-fill")|
 |xSwitch|开关组件|xSwitch("功能开关")|
+|xCircleImageView|圆形头像框|xCircleImageView("/my.jpg")|
 
 
 ## 5.下载框架
