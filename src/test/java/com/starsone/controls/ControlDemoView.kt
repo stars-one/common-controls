@@ -1,9 +1,6 @@
 package com.starsone.controls
 
-import com.starsone.controls.common.remixIconText
-import com.starsone.controls.common.xChooseFileDirectory
-import com.starsone.controls.common.xNoticeBar
-import com.starsone.controls.common.xSwitch
+import com.starsone.controls.common.*
 import com.starsone.controls.utils.QRCodeUtil
 import com.starsone.controls.utils.TornadoFxUtil
 import javafx.beans.property.SimpleBooleanProperty
@@ -70,6 +67,11 @@ class ControlDemoView : View("My View") {
                     fitHeight = 200.0
                 }
             }
+        }
+
+        hbox(10.0) {
+            xCircleImageView("/x5.jpg", 50.0)
+            xCircleImageView(SimpleStringProperty("/x5.jpg"), 50.0)
         }
     }
 

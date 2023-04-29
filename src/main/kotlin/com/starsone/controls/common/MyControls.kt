@@ -12,12 +12,14 @@ import javafx.event.EventTarget
 import javafx.geometry.Pos
 import javafx.scene.Node
 import javafx.scene.control.*
+import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCombination
 import javafx.scene.input.TransferMode
 import javafx.scene.layout.HBox
 import javafx.scene.paint.Color
 import javafx.scene.paint.Paint
+import javafx.scene.shape.Circle
 import javafx.stage.FileChooser
 import javafx.util.Duration
 import kfoenix.jfxbutton
@@ -494,7 +496,7 @@ fun <T> Property<T>.internalBind(property: ObservableValue<T>, readonly: Boolean
  * @receiver
  * @return
  */
-fun EventTarget.xNoticeBar(simpleNotice: Property<String>, onClickAction: ((String) -> Unit)? = null, width:Double = 560.0, speed:Int=8, op: (ScrollPane.() -> Unit) = {}): ScrollPane {
+fun EventTarget.xNoticeBar(simpleNotice: Property<String>, onClickAction: ((String) -> Unit)? = null, width: Double = 560.0, speed: Int = 8, op: (ScrollPane.() -> Unit) = {}): ScrollPane {
     val node = ScrollPane().apply {
         this.prefWidth = width
 
@@ -539,4 +541,46 @@ fun EventTarget.xNoticeBar(simpleNotice: Property<String>, onClickAction: ((Stri
     return opcr(this, node, op)
 }
 
+/**
+ * 圆形头像框
+ *
+ */
+fun EventTarget.xCircleImageView(url: String? = null, fitWidth: Double, lazyload: Boolean = true, op: ImageView.() -> Unit = {}) =
+        opcr(this, if (url == null) ImageView().apply {
+            this.fitWidth = fitWidth
+            this.fitHeight = fitWidth
+            clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
+        } else ImageView(Image(url, lazyload)), op).apply {
+            this.fitWidth = fitWidth.toDouble()
+            this.fitHeight = fitWidth.toDouble()
+            clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
+        }
 
+fun EventTarget.xCircleImageView(
+        url: ObservableValue<String>,
+        fitWidth: Double,
+        lazyload: Boolean = true,
+        op: ImageView.() -> Unit = {}
+) = ImageView().attachTo(this, op) { imageView ->
+    imageView.imageProperty().bind(objectBinding(url) { value?.let { Image(it, lazyload) } })
+    imageView.apply {
+        this.fitWidth = fitWidth
+        this.fitHeight = fitWidth
+        clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
+    }
+}
+
+fun EventTarget.xCircleImageView(image: ObservableValue<Image?>,fitWidth: Double, op: ImageView.() -> Unit = {}) = ImageView().attachTo(this, op) {
+    it.imageProperty().bind(image)
+    it.apply {
+        this.fitWidth = fitWidth
+        this.fitHeight = fitWidth
+        clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
+    }
+}
+
+fun EventTarget.xCircleImageView(image: Image, fitWidth: Double,op: ImageView.() -> Unit = {}) = ImageView(image).apply {
+    this.fitWidth = fitWidth
+    this.fitHeight = fitWidth
+    clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
+}.attachTo(this, op)
