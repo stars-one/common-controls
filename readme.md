@@ -806,6 +806,14 @@ hbox{
 - `Button.addShortcut` 按钮设置快捷键
 - `Pane.setMargin()` pane设置margin
 
+位于ExtendFun.kt文件中
+
+- `Long.toDateString` long类型转时间字符串
+- `Date.toDateString` date类型转时间字符串
+- `Long.toUnitString` 字节转为对应的单位
+- `Double.toFix` double保留几位小数
+- `String.parseJsonToList` json字符串转List对象 
+
 ## 11.window快捷方式生成
 
 代码位于ShortCutUtils中
