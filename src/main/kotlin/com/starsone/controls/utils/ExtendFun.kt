@@ -1,5 +1,7 @@
 package com.starsone.controls.utils
 
+import com.google.gson.Gson
+import com.google.gson.internal.`$Gson$Types`
 import java.math.BigDecimal
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
@@ -40,3 +42,15 @@ fun Double.toFix(num: Int=2):Double{
     return two.setScale(num, BigDecimal.ROUND_HALF_UP).toDouble()
 }
 
+/**
+ * 将json数据转为List<T>
+ *
+ * @param T 数据类型
+ * @return
+ */
+fun <T> String.parseJsonToList(clazz: Class<T>): List<T> {
+    val gson = Gson()
+    val type = `$Gson$Types`.newParameterizedTypeWithOwner(null, ArrayList::class.java, clazz)
+    val data: List<T> = gson.fromJson(this, type)
+    return data
+}
