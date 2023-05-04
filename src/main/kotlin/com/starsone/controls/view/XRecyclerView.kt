@@ -1,4 +1,3 @@
-
 import javafx.geometry.Orientation
 import javafx.geometry.Pos
 import javafx.scene.Node
@@ -23,6 +22,11 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
     lateinit var adapter: RvAdapter<beanT, itemViewT>
 
     var noDataVBox: VBox? = null
+
+    /**
+     * 布局(是Vbox或FlowPane类型)
+     */
+    lateinit var containerPane: Pane
 
     /**
      * 设置adapter
@@ -73,7 +77,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
         }
 
 
-        val container = if (gridLayoutSetting != null) {
+        containerPane = if (gridLayoutSetting != null) {
             val pane = FlowPane(Orientation.HORIZONTAL)
             pane.hgap = gridLayoutSetting.hspace
             pane.vgap = gridLayoutSetting.vspace
@@ -83,21 +87,21 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
             VBox()
         }
 
-        container.fitToParentHeight()
-        container.fitToParentWidth()
-        root.add(container)
+        containerPane.fitToParentHeight()
+        containerPane.fitToParentWidth()
+        root.add(containerPane)
         root.fitToParentHeight()
         root.fitToParentWidth()
 
 
         itemViewObList.onChange { change ->
 
-            val nodeList = container.children
+            val nodeList = containerPane.children
 
             //如果存在暂无数据视图,则清除
             if (nodeList.contains(noDataVBox)) {
                 nodeList.clear()
-                container.setAlignment(gridLayoutSetting!=null, Pos.TOP_LEFT)
+                containerPane.setAlignment(gridLayoutSetting != null, Pos.TOP_LEFT)
             }
 
             while (change.next()) {
@@ -123,9 +127,9 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
 
                                     //当数据为0时,显示暂无数据占位图
                                     noDataVBox?.let {
-                                        container.fitToParentWidth()
-                                        container.fitToParentHeight()
-                                        container.setAlignment(gridLayoutSetting!=null, Pos.CENTER)
+                                        containerPane.fitToParentWidth()
+                                        containerPane.fitToParentHeight()
+                                        containerPane.setAlignment(gridLayoutSetting != null, Pos.CENTER)
                                         nodeList.add(it)
                                     }
                                 } else {
@@ -146,10 +150,10 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
         } else {
             noDataVBox?.let {
                 //减少20,保持scrollpane不显示滚动条
-                container.prefHeight = root.prefHeight - 20
-                container.prefWidth = root.prefWidth - 20
-                container.setAlignment(gridLayoutSetting!=null, Pos.CENTER)
-                container.children.add(it)
+                containerPane.prefHeight = root.prefHeight - 20
+                containerPane.prefWidth = root.prefWidth - 20
+                containerPane.setAlignment(gridLayoutSetting != null, Pos.CENTER)
+                containerPane.children.add(it)
             }
         }
 
@@ -165,7 +169,7 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
      */
     private fun createItemView(bean: beanT, index: Int): itemViewT {
         adapter.let { ada ->
-            val itemView = ada.onCreateView(bean,index)
+            val itemView = ada.onCreateView(bean, index)
             //绑定bean数据到itemView
             ada.onBindData(itemView, bean, index)
             //取消设置设置监听器
@@ -223,9 +227,9 @@ class XRecyclerView<beanT : Any, itemViewT : View> : View() {
      * @param node 组件
      * @return
      */
-    fun setNoDataMsg(node:Node): XRecyclerView<beanT, itemViewT> {
+    fun setNoDataMsg(node: Node): XRecyclerView<beanT, itemViewT> {
         noDataVBox = vbox {
-            this+=node
+            this += node
         }
         return this
     }
@@ -461,7 +465,6 @@ abstract class ItemViewBase<beanT : Any, itemViewT : View>(title: String?, icon:
 
     }
 }
-
 
 
 /**
