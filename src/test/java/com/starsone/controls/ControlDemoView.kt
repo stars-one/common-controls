@@ -73,6 +73,8 @@ class ControlDemoView : View("My View") {
             xCircleImageView("/x5.jpg", 50.0)
             xCircleImageView(SimpleStringProperty("/x5.jpg"), 50.0)
         }
+val simpleStringpro = SimpleStringProperty("免费")
+        xTag(simpleStringpro)
     }
 
 
