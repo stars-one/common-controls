@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXToggleButton
 import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
 import javafx.animation.Interpolator
+import javafx.beans.property.ObjectProperty
 import javafx.beans.property.Property
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.value.ObservableValue
@@ -584,3 +585,38 @@ fun EventTarget.xCircleImageView(image: Image, fitWidth: Double,op: ImageView.()
     this.fitHeight = fitWidth
     clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
 }.attachTo(this, op)
+
+/**
+ * tag标签
+ *
+ * @param tagText 文字
+ * @param bgColor 背景色
+ * @param textColor 文本颜色
+ * @param bgRadius 边框圆角
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.xTag(tagText: ObjectProperty<String>, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"), bgRadius:Int=8, op: (Label.() -> Unit) = {}): Label {
+    val vbox =  label(tagText){
+        padding= insets(6)
+        style{
+            backgroundColor+=bgColor
+            textFill=textColor
+            backgroundRadius+=box(bgRadius.px)
+        }
+    }
+    return opcr(this, vbox, op)
+}
+
+fun EventTarget.xTag(tagText: String, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"),bgRadius:Int=8, op: (Label.() -> Unit) = {}): Label {
+    val vbox =  label(tagText){
+        padding= insets(6)
+        style{
+            backgroundColor+=bgColor
+            textFill=textColor
+            backgroundRadius+=box(bgRadius.px)
+        }
+    }
+    return opcr(this, vbox, op)
+}
