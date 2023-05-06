@@ -5,7 +5,6 @@ import com.jfoenix.controls.JFXToggleButton
 import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
 import javafx.animation.Interpolator
-import javafx.beans.property.ObjectProperty
 import javafx.beans.property.Property
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.value.ObservableValue
@@ -597,7 +596,7 @@ fun EventTarget.xCircleImageView(image: Image, fitWidth: Double,op: ImageView.()
  * @receiver
  * @return
  */
-fun EventTarget.xTag(tagText: ObjectProperty<String>, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"), bgRadius:Int=8, op: (Label.() -> Unit) = {}): Label {
+fun EventTarget.xTag(tagText: ObservableValue<String>, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"), bgRadius:Int=8, op: (Label.() -> Unit) = {}): Label {
     val vbox =  label(tagText){
         padding= insets(6)
         style{
