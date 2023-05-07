@@ -54,3 +54,15 @@ fun <T> String.parseJsonToList(clazz: Class<T>): List<T> {
     val data: List<T> = gson.fromJson(this, type)
     return data
 }
+
+/**
+ * 将json字符串数据转为某个类
+ *
+ * @param T
+ * @return
+ */
+inline fun <reified T> String.parseJsonToObject(): T {
+    val gson = Gson()
+    val result = gson.fromJson(this, T::class.java)
+    return result
+}
