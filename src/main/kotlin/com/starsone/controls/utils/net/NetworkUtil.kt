@@ -169,9 +169,14 @@ object NetworkUtil {
             """$t=$u"""
         }.joinToString("&")
 
-        var finalUrl = url + param
-        if (!url.endsWith("?")) {
-            finalUrl = url + "?" + param
+        val finalUrl = if (url.endsWith("?")) {
+            url + param
+        } else {
+            if (param.isBlank()) {
+                url
+            } else {
+                "$url?$param"
+            }
         }
         val builder = Request.Builder()
                 .url(finalUrl)
@@ -197,10 +202,16 @@ object NetworkUtil {
             """$t=$u"""
         }.joinToString("&")
 
-        var finalUrl = url + param
-        if (!url.endsWith("?")) {
-            finalUrl = url + "?" + param
+        val finalUrl = if (url.endsWith("?")) {
+            url + param
+        } else {
+            if (param.isBlank()) {
+                url
+            } else {
+                "$url?$param"
+            }
         }
+
         val builder = Request.Builder()
                 .url(finalUrl)
         headers.forEach { (t, u) ->
@@ -247,7 +258,6 @@ object NetworkUtil {
     fun sendRequest(request: Request): Response {
         return okHttpClient.newCall(request).execute()
     }
-
 
 
     /**
