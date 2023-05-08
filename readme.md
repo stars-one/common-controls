@@ -814,6 +814,7 @@ hbox{
 - `Long.toUnitString` 字节转为对应的单位
 - `Double.toFix` double保留几位小数
 - `String.parseJsonToList` json字符串转List对象 
+- `String.parseJsonToObject` json字符串转Object对象
 
 ## 11.window快捷方式生成
 
