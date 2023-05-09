@@ -5,6 +5,7 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import tornadofx.*
 import java.net.URLEncoder
+import kotlin.math.roundToInt
 
 
 /**
@@ -52,7 +53,12 @@ class CommonHeaderInterceptor() : Interceptor {
         val props = System.getProperties()
         val osName = props.getProperty("os.name")
         val arch = props.getProperty("os.arch")
-        val osVersionCode = props.getProperty("os.version").toDouble().toInt()
+        val osVersionCode = try {
+            props.getProperty("os.version").toDouble().roundToInt()
+        } catch (e: Exception) {
+            1
+        }
+
         val resources = ResourceLookup(this)
         return try {
             //加载图标字体文件
