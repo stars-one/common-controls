@@ -810,8 +810,10 @@ hbox{
 位于ExtendFun.kt文件中
 
 - `Long.toDateString` long类型转时间字符串
-- `Date.toDateString` date类型转时间字符串
 - `Long.toUnitString` 字节转为对应的单位
+- `Long.fillZero` 前置补0
+- `Int.fillZero` 前置补0
+- `Date.toDateString` date类型转时间字符串
 - `Double.toFix` double保留几位小数
 - `String.parseJsonToList` json字符串转List对象 
 - `String.parseJsonToObject` json字符串转Object对象
