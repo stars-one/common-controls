@@ -66,3 +66,29 @@ inline fun <reified T> String.parseJsonToObject(): T {
     val result = gson.fromJson(this, T::class.java)
     return result
 }
+
+/**
+ * 前置补0操作
+ *
+ * 例子:
+ * - `1.fillZero(3)` //结果为"001"
+ * - `112.fillZero(3)` //结果为"112"
+ *
+ * @param maxLength 最大位数
+ */
+fun Int.fillZero(maxLength:Int):String{
+    return String.format("%0${maxLength}d", this)
+}
+
+/**
+ * 前置补0操作
+ *
+ * 例子:
+ * - `1L.fillZero(3)` //结果为"001"
+ * - `112L.fillZero(3)` //结果为"112"
+ *
+ * @param maxLength 最大位数
+ */
+fun Long.fillZero(maxLength:Int):String{
+    return String.format("%0${maxLength}d", this)
+}
