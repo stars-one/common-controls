@@ -21,6 +21,7 @@ import javafx.scene.layout.HBox
 import javafx.scene.paint.Color
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
+import javafx.scene.text.TextFlow
 import javafx.stage.FileChooser
 import javafx.util.Duration
 import kfoenix.jfxbutton
@@ -632,7 +633,7 @@ fun EventTarget.xTag(tagText: String, bgColor: Paint = c("#67c23a"), textColor: 
  * @receiver
  * @return
  */
-fun EventTarget.xCountDownBtn(text: String, countDownTime: Int, action:()->Unit, op: (JFXButton.() -> Unit) = {}): JFXButton {
+fun EventTarget.xCountDownBtn(text: String, countDownTime: Int, action: () -> Unit, op: (JFXButton.() -> Unit) = {}): JFXButton {
     //倒计时的按钮提示
     val tip = text
     val codeTip = SimpleStringProperty(tip)
@@ -667,4 +668,69 @@ fun EventTarget.xCountDownBtn(text: String, countDownTime: Int, action:()->Unit,
     }
 
     return opcr(this, vbox, op)
+}
+
+/**
+ * 关键字高亮textflow
+ *
+ * @param keyword 关键字
+ * @param text 文本
+ * @param keywordHighlightColor 关键字高亮颜色,默认`#ffff00`
+ * @param op
+ * @receiver
+ * @return
+ */
+fun EventTarget.xHighLightTextFlow(text: String, keyword: String, keywordHighlightColor: Color = c("#ffff00"), op: (TextFlow.() -> Unit) = {}): TextFlow {
+    val myTextFlow = textflow { }
+
+    //这里转为小写处理,方便后面得到index
+    val itemTitleLowcase = text.toLowerCase()
+    val keywordLowcase = keyword.toLowerCase()
+
+    val keyWordLength = keyword.length
+
+    when {
+        itemTitleLowcase.startsWith(keywordLowcase) -> {
+
+            //关键字位于开头
+            myTextFlow.apply {
+                label(text.substring(0, keyWordLength)) {
+                    style {
+                        backgroundColor += keywordHighlightColor
+                    }
+                }
+                label(text.substring(keyWordLength))
+            }
+        }
+        itemTitleLowcase.endsWith(keywordLowcase) -> {
+            val startIndex = itemTitleLowcase.indexOf(keywordLowcase)
+            //关键字位于结尾
+            myTextFlow.apply {
+                label(text.substring(0, startIndex))
+                label(text.substring(startIndex, itemTitleLowcase.length)) {
+                    style {
+                        backgroundColor += keywordHighlightColor
+                    }
+                }
+            }
+        }
+        else -> {
+            //关键字位于中间
+            val arr = itemTitleLowcase.split(keywordLowcase)
+            val range1 = arr.first().indices
+            val range2 = arr.first().length + keyWordLength until text.length
+
+            myTextFlow.apply {
+                label(text.substring(range1))
+                label(keyword) {
+                    style {
+                        backgroundColor += keywordHighlightColor
+                    }
+                }
+                label(text.substring(range2))
+            }
+        }
+
+    }
+    return opcr(this, myTextFlow, op)
 }
