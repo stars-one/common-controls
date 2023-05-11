@@ -73,8 +73,14 @@ class ControlDemoView : View("My View") {
             xCircleImageView("/x5.jpg", 50.0)
             xCircleImageView(SimpleStringProperty("/x5.jpg"), 50.0)
         }
-val simpleStringpro = SimpleStringProperty("免费")
+        val simpleStringpro = SimpleStringProperty("免费")
         xTag(simpleStringpro)
+
+        //倒计时的按钮提示
+        xCountDown("发送验证码", 90, {
+            //点击事件
+            println("已点击按钮...")
+        })
     }
 
 
