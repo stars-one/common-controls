@@ -418,6 +418,7 @@ jfxbutton("检测更新") {
 |xSwitch|开关组件|xSwitch("功能开关")|
 |xCircleImageView|圆形头像框|xCircleImageView("/my.jpg")|
 |xTag|标签|xTag("免费")|
+|xCountDown|倒计时按钮|xCountDown("发送验证码", 90, {})|
 
 
 ## 5.下载框架
