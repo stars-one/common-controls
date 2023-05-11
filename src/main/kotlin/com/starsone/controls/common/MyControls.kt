@@ -6,6 +6,7 @@ import com.starsone.controls.utils.TornadoFxUtil
 import com.starsone.controls.utils.TornadoFxUtil.Companion.completeUrl
 import javafx.animation.Interpolator
 import javafx.beans.property.Property
+import javafx.beans.property.SimpleIntegerProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.value.ObservableValue
 import javafx.event.EventTarget
@@ -570,7 +571,7 @@ fun EventTarget.xCircleImageView(
     }
 }
 
-fun EventTarget.xCircleImageView(image: ObservableValue<Image?>,fitWidth: Double, op: ImageView.() -> Unit = {}) = ImageView().attachTo(this, op) {
+fun EventTarget.xCircleImageView(image: ObservableValue<Image?>, fitWidth: Double, op: ImageView.() -> Unit = {}) = ImageView().attachTo(this, op) {
     it.imageProperty().bind(image)
     it.apply {
         this.fitWidth = fitWidth
@@ -579,7 +580,7 @@ fun EventTarget.xCircleImageView(image: ObservableValue<Image?>,fitWidth: Double
     }
 }
 
-fun EventTarget.xCircleImageView(image: Image, fitWidth: Double,op: ImageView.() -> Unit = {}) = ImageView(image).apply {
+fun EventTarget.xCircleImageView(image: Image, fitWidth: Double, op: ImageView.() -> Unit = {}) = ImageView(image).apply {
     this.fitWidth = fitWidth
     this.fitHeight = fitWidth
     clip = Circle(fitHeight / 2, fitWidth / 2, fitWidth / 2)
@@ -596,26 +597,74 @@ fun EventTarget.xCircleImageView(image: Image, fitWidth: Double,op: ImageView.()
  * @receiver
  * @return
  */
-fun EventTarget.xTag(tagText: ObservableValue<String>, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"), bgRadius:Int=8, op: (Label.() -> Unit) = {}): Label {
-    val vbox =  label(tagText){
-        padding= insets(6)
-        style{
-            backgroundColor+=bgColor
-            textFill=textColor
-            backgroundRadius+=box(bgRadius.px)
+fun EventTarget.xTag(tagText: ObservableValue<String>, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"), bgRadius: Int = 8, op: (Label.() -> Unit) = {}): Label {
+    val vbox = label(tagText) {
+        padding = insets(6)
+        style {
+            backgroundColor += bgColor
+            textFill = textColor
+            backgroundRadius += box(bgRadius.px)
         }
     }
     return opcr(this, vbox, op)
 }
 
-fun EventTarget.xTag(tagText: String, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"),bgRadius:Int=8, op: (Label.() -> Unit) = {}): Label {
-    val vbox =  label(tagText){
-        padding= insets(6)
-        style{
-            backgroundColor+=bgColor
-            textFill=textColor
-            backgroundRadius+=box(bgRadius.px)
+fun EventTarget.xTag(tagText: String, bgColor: Paint = c("#67c23a"), textColor: Paint = c("white"), bgRadius: Int = 8, op: (Label.() -> Unit) = {}): Label {
+    val vbox = label(tagText) {
+        padding = insets(6)
+        style {
+            backgroundColor += bgColor
+            textFill = textColor
+            backgroundRadius += box(bgRadius.px)
         }
     }
+    return opcr(this, vbox, op)
+}
+
+/**
+ * 倒计时组件(类似发送验证码)
+ *
+ * @param text 文本提示
+ * @param countDownTime 倒计时间
+ * @param action 按钮点击事件
+ * @param op
+ * @receiver
+ * @receiver
+ * @return
+ */
+fun EventTarget.xCountDown(text: String, countDownTime: Int,action:()->Unit, op: (JFXButton.() -> Unit) = {}): JFXButton {
+    //倒计时的按钮提示
+    val tip = text
+    val codeTip = SimpleStringProperty(tip)
+    val time = SimpleIntegerProperty(0)
+
+    val vbox = jfxbutton(codeTip) {
+        disableWhen { time.greaterThan(0) }
+
+        time.addListener { _, _, newValue ->
+            runLater {
+                if (newValue == 0) {
+                    codeTip.value = tip
+                } else {
+                    codeTip.value = "$tip(${newValue}S)"
+                }
+            }
+        }
+        action {
+            action.invoke()
+
+            time.value = countDownTime
+            runAsync {
+                repeat(60) {
+                    runLater {
+                        time.value = time.value - 1
+                    }
+                    Thread.sleep(1000)
+                }
+            }
+
+        }
+    }
+
     return opcr(this, vbox, op)
 }
