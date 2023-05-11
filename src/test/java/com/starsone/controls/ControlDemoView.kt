@@ -81,6 +81,9 @@ class ControlDemoView : View("My View") {
             //点击事件
             println("已点击按钮...")
         })
+
+        xHighLightTextFlow("已点击按钮我的454222ss","按钮")
+
     }
 
 
