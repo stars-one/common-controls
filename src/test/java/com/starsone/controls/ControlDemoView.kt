@@ -77,7 +77,7 @@ class ControlDemoView : View("My View") {
         xTag(simpleStringpro)
 
         //倒计时的按钮提示
-        xCountDown("发送验证码", 90, {
+        xCountDownBtn("发送验证码", 90, {
             //点击事件
             println("已点击按钮...")
         })

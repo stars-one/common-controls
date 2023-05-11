@@ -622,7 +622,7 @@ fun EventTarget.xTag(tagText: String, bgColor: Paint = c("#67c23a"), textColor: 
 }
 
 /**
- * 倒计时组件(类似发送验证码)
+ * 倒计时按钮组件(类似发送验证码)
  *
  * @param text 文本提示
  * @param countDownTime 倒计时间
@@ -632,7 +632,7 @@ fun EventTarget.xTag(tagText: String, bgColor: Paint = c("#67c23a"), textColor: 
  * @receiver
  * @return
  */
-fun EventTarget.xCountDown(text: String, countDownTime: Int,action:()->Unit, op: (JFXButton.() -> Unit) = {}): JFXButton {
+fun EventTarget.xCountDownBtn(text: String, countDownTime: Int, action:()->Unit, op: (JFXButton.() -> Unit) = {}): JFXButton {
     //倒计时的按钮提示
     val tip = text
     val codeTip = SimpleStringProperty(tip)
