@@ -689,30 +689,33 @@ fun EventTarget.xHighLightTextFlow(text: String, keyword: String, keywordHighlig
 
     val keyWordLength = keyword.length
 
-    when {
+    val labelList = when {
         itemTitleLowcase.startsWith(keywordLowcase) -> {
-
             //关键字位于开头
-            myTextFlow.apply {
-                label(text.substring(0, keyWordLength)) {
-                    style {
-                        backgroundColor += keywordHighlightColor
-                    }
-                }
-                label(text.substring(keyWordLength))
-            }
+
+            listOf(
+                    label(text.substring(0, keyWordLength)) {
+                        style {
+                            backgroundColor += keywordHighlightColor
+                        }
+                    },
+                    label(text.substring(keyWordLength))
+            )
+
         }
         itemTitleLowcase.endsWith(keywordLowcase) -> {
             val startIndex = itemTitleLowcase.indexOf(keywordLowcase)
             //关键字位于结尾
-            myTextFlow.apply {
-                label(text.substring(0, startIndex))
-                label(text.substring(startIndex, itemTitleLowcase.length)) {
-                    style {
-                        backgroundColor += keywordHighlightColor
+
+            listOf(
+                    label(text.substring(0, startIndex)),
+                    label(text.substring(startIndex, itemTitleLowcase.length)) {
+                        style {
+                            backgroundColor += keywordHighlightColor
+                        }
                     }
-                }
-            }
+            )
+
         }
         else -> {
             //关键字位于中间
@@ -720,17 +723,19 @@ fun EventTarget.xHighLightTextFlow(text: String, keyword: String, keywordHighlig
             val range1 = arr.first().indices
             val range2 = arr.first().length + keyWordLength until text.length
 
-            myTextFlow.apply {
-                label(text.substring(range1))
-                label(keyword) {
-                    style {
-                        backgroundColor += keywordHighlightColor
-                    }
-                }
-                label(text.substring(range2))
-            }
+            listOf(
+                    label(text.substring(range1)),
+                    label(keyword) {
+                        style {
+                            backgroundColor += keywordHighlightColor
+                        }
+                    },
+                    label(text.substring(range2))
+            )
         }
-
+    }
+    labelList.forEach {
+        myTextFlow.add(it)
     }
     return opcr(this, myTextFlow, op)
 }
