@@ -71,6 +71,42 @@ fun EventTarget.xUrlLink(text: String, url: String = "", op: (Hyperlink.() -> Un
     return opcr(this, urlLink, op)
 }
 
+fun EventTarget.xUrlLink(text: ObservableValue<String>, url: String = "", op: (Hyperlink.() -> Unit) = {}): Hyperlink {
+    //处理得到正确的网址
+
+    val webUrl = if (url.isBlank()) {
+        if (text.value.contains("http")) {
+            text.value
+        } else {
+            completeUrl(text.value)
+        }
+    } else {
+        completeUrl(url)
+    }
+    //网址转uri
+    val uri = URI(webUrl)
+
+    val urlLink = hyperlink(text) {
+        style {
+            border = null
+        }
+        action {
+            Desktop.getDesktop().browse(uri)
+        }
+    }
+    //创建右键菜单
+    val cm = contextmenu {
+        item("复制网址") {
+            action {
+                TornadoFxUtil.copyTextToClipboard(webUrl)
+            }
+        }
+    }
+    //设置右键菜单
+    urlLink.contextMenu = cm
+    return opcr(this, urlLink, op)
+}
+
 /**
  * 创建指定宽高的ImageView,单独指定[imgWidth]会生成正方形的图形
  */
