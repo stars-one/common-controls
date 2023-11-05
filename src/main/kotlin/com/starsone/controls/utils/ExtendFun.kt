@@ -34,6 +34,9 @@ fun Long.toUnitString(): String {
 
 /**
  * 将字节(B)转为对应的单位(保留2位小数),最大单位为GB
+ *
+ * - 如果[numUnit]为1,会进行额外的处理(超过100KB,转为MB单位;超过100MB,转为GB单位)
+ *
  * @param numUnit 最后输出保留[numUnit]位小数
  */
 fun Long.toUnitStringNew(numUnit: Int = 1): String {
@@ -68,6 +71,9 @@ fun Long.toUnitStringNew(numUnit: Int = 1): String {
 
 /**
  * 将字节(B)转为对应的单位Pair(数值和单位分开),最大单位为GB
+ *
+ * - 如果[numUnit]为1,会进行额外的处理(超过100KB,转为MB单位;超过100MB,转为GB单位)
+ *
  * @param numUnit 最后输出保留[numUnit]位小数
  * @return Pair<数值,单位>
  */
