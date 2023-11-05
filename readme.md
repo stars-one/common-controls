@@ -813,6 +813,8 @@ hbox{
 
 - `Long.toDateString` long类型转时间字符串
 - `Long.toUnitString` 字节转为对应的单位
+- `Long.toUnitStringNew` 字节转为对应的单位
+- `Long.toUnitStringNewWithUnit` 字节转为对应的单位,得到Pair类型结果的数值和单位分开
 - `Long.fillZero` 前置补0
 - `Int.fillZero` 前置补0
 - `Date.toDateString` date类型转时间字符串
